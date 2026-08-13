@@ -6,22 +6,16 @@ Gemini Notebook Prompt Lab should earn stars because it solves a repeatable prob
 
 This repository is intentionally focused on **Gemini Notebook / NotebookLM**. Unrelated future tools should use separate repositories.
 
-Current repository name:
+Current repository:
 
 ```text
-gemini-notebook-prompt-lab
+dennis23100/gemini-notebook-prompt-lab
 ```
 
 Recommended About description:
 
 ```text
 Local-first, source-grounded prompt library & workflow toolkit for Gemini Notebook (NotebookLM). 90 prompts · 30 themes · 3 audiences · 10 workflows.
-```
-
-Recommended website:
-
-```text
-https://dennis23100.github.io/gemini-notebook-prompt-lab/
 ```
 
 Recommended topics:
@@ -44,21 +38,24 @@ open-source
 ## Launch checklist
 
 - [x] Public repository.
-- [x] Live GitHub Pages app.
+- [x] Repository renamed to `gemini-notebook-prompt-lab`.
+- [x] Live GitHub Pages app on the renamed project URL.
+- [x] Pages / canonical / repository links migrated after the rename.
 - [x] Automated validation / tests.
 - [x] Repository-level MIT license.
-- [x] CONTRIBUTING, SECURITY, CODE_OF_CONDUCT, and MAINTAINERS files.
+- [x] CONTRIBUTING, SECURITY, CODE_OF_CONDUCT, CODEOWNERS, SUPPORT, and MAINTAINERS files.
 - [x] Real contribution issues opened and labeled.
-- [x] Versioned GitHub Releases published.
-- [x] Project story and showcase plan documented.
-- [x] Repository renamed to `gemini-notebook-prompt-lab`.
-- [x] Pages / canonical / repository links updated after the rename.
-- [x] Repository topics added.
-- [ ] Update the About description and website to the focused project values above.
-- [ ] Upload repository social preview in GitHub Settings.
+- [x] Versioned GitHub Releases and VERSION-driven release automation.
+- [x] Project story documented.
+- [x] Reproducible Showcase scaffold with one controlled source and nine exact output slots.
+- [x] URL-shareable filters.
+- [x] JSON / Markdown / CSV export.
+- [x] Local recent-prompt history.
+- [ ] Set the focused About description and new Pages website URL if GitHub still shows the old values.
+- [ ] Upload repository social preview in GitHub settings.
 - [ ] Pin the repository on the maintainer profile.
 - [ ] Add a privacy-reviewed teaching still or short clip.
-- [ ] Add the first 9 real generated showcase examples.
+- [ ] Fill the first 9 real generated Showcase examples.
 - [ ] Publish the first external launch posts and collect real feedback.
 
 ## Make the first 30 seconds strong
@@ -77,38 +74,40 @@ A visitor should immediately see:
 
 Do **not** start with 90 generated screenshots.
 
-First milestone:
+The public Showcase is now fixed to:
 
 ```text
-3 themes × 3 audiences = 9 generated examples
+1 controlled source
+× 3 themes
+× 3 audiences
+= 9 reproducible output slots
 ```
 
-Recommended themes:
+Recommended / implemented themes:
 
 - Flexible Comic;
 - Technology;
 - Ink Wash.
 
-Use one safe, redistributable source topic when possible so the age adaptation is easy to compare.
+The controlled source, exact Prompt IDs, filenames, and transparent missing-output placeholders are versioned in the repository. Only actual generated outputs should replace those placeholders.
 
 ## Create real contribution surface area
 
 Do not create empty issues to simulate activity. Issues should represent work users or contributors can genuinely complete.
 
-Current useful directions include:
+Completed contribution issues should be closed with a visible implementation/release trail. Current useful remaining directions include:
 
-- Markdown + CSV export;
-- URL-addressable filters;
 - keyboard/accessibility audit;
 - Japanese UI and metadata;
-- real generated showcase examples;
+- the first nine real generated Showcase outputs;
+- privacy-reviewed real-world teaching media;
 - focused prompt/data improvements with provenance.
 
 ## Share where users already are
 
 Good launch material is a **specific use case or technical lesson**, not “please star my repo.” Useful post formats include:
 
-- the same source shown as children / youth / adult variants;
+- the same controlled source shown as children / youth / adult variants;
 - a 20-second Choose → Copy → Open → Generate demo;
 - the real-world teaching origin;
 - why the app is local-first and zero-backend;
@@ -131,13 +130,12 @@ Keep that chain visible through Issues, Pull Requests, commits, CI, changelog en
 
 Prioritize improvements that reduce friction for existing users:
 
-1. real generated examples;
-2. recent prompts / local history;
-3. simple vs advanced UI mode;
-4. better export/share flows;
-5. accessibility;
-6. additional localization;
-7. optional browser extension with minimal permissions.
+1. fill the first nine real Showcase outputs;
+2. add privacy-reviewed teaching-origin media;
+3. accessibility improvements;
+4. additional localization;
+5. prompt/version comparison and contribution tooling;
+6. optional browser extension with minimal permissions.
 
 Do not add unrelated products to this repository simply to make it look larger.
 
