@@ -1,47 +1,63 @@
-# Contributing to Toolkit 60
+# Contributing to Gemini Notebook Prompt Lab
 
-Thanks for helping improve Toolkit 60. This repository is a monorepo: each major tool lives in its own folder and may have more specific contribution guidance.
+Thanks for helping improve the project. The repository is currently focused on the **Gemini Notebook / NotebookLM Prompt Lab**; unrelated future tools should use separate repositories.
 
 ## Start with an issue
 
-For non-trivial changes, please check the existing Issues first. If your idea is not already tracked, open an issue describing the problem, intended users, and the smallest useful outcome before investing in a large implementation.
+For non-trivial changes, check the existing Issues first. If your idea is not already tracked, open an issue describing:
 
-Good places to start are issues labeled `good first issue` or `help wanted`.
+1. the problem;
+2. who is affected;
+3. the smallest useful outcome;
+4. any UX, privacy, compatibility, or licensing tradeoffs.
 
-## Current projects
+Good places to start are issues labeled [`good first issue`](https://github.com/dennis23100/toolkit_60/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22) or [`help wanted`](https://github.com/dennis23100/toolkit_60/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22).
 
-- `notebooklm/` — Gemini Notebook Prompt Lab. Read [`notebooklm/CONTRIBUTING.md`](notebooklm/CONTRIBUTING.md) before changing prompt data, localization, UI behavior, or validation rules.
-- `video-editing/` — planned project; scope is still being defined.
+## Before opening a PR
 
-## Pull request expectations
-
-A useful PR should:
-
-1. Solve one clearly described problem.
-2. Keep unrelated refactors out of the same change when possible.
-3. Update documentation when behavior changes.
-4. Add or update tests for logic that can be tested deterministically.
-5. Preserve privacy-first / local-first behavior unless a proposal explicitly discusses a change.
-6. Avoid introducing dependencies without a clear reason and tradeoff discussion.
-7. Respect the licensing and provenance rules in the affected subproject.
-
-For NotebookLM changes, run:
+Run:
 
 ```bash
 cd notebooklm
 npm run check
 ```
 
-before opening a PR.
+A useful PR should:
 
-## Prompt and content contributions
+1. solve one clearly described problem;
+2. keep unrelated refactors out of the same change when possible;
+3. update documentation when behavior changes;
+4. add or update tests for deterministic logic;
+5. preserve local-first / privacy-first behavior unless the proposal explicitly discusses a change;
+6. avoid dependencies without a clear reason and tradeoff discussion;
+7. preserve accessibility in both light and dark themes;
+8. keep Traditional Chinese / English UI behavior coherent;
+9. respect licensing and provenance.
 
-Prompt contributions must preserve source-grounding behavior and should not silently add claims, doctrines, facts, or examples that are unsupported by the source. Keep provenance information when adapting work inspired by external repositories.
+## Prompt contributions
 
-Prompt/data licensing can differ from code licensing; see [`LICENSING.md`](LICENSING.md) and the subproject license files.
+Prompt changes must preserve source-grounding behavior. Do not silently add claims, doctrines, facts, quotations, or examples unsupported by the source.
 
-## Reviews and maintenance
+A new visual theme should normally include all required audience variants and the same validation expectations as existing built-in prompts.
 
-Maintainers may ask for smaller scope, tests, clearer reproduction steps, accessibility fixes, licensing clarification, or revisions before merging. Constructive disagreement is welcome; please focus criticism on the work rather than the contributor.
+Keep provenance information when adapting work inspired by external repositories.
 
-By contributing, you agree to follow the repository [`CODE_OF_CONDUCT.md`](CODE_OF_CONDUCT.md).
+## Generated showcase contributions
+
+Real output examples are welcome, but they must:
+
+- identify the Prompt ID, theme, audience, and generation context;
+- be labeled as examples, not guaranteed output;
+- use source material the contributor has the right to share, or omit the source itself when redistribution is not allowed;
+- disclose meaningful manual edits after generation;
+- avoid exposing private information or identifiable people without appropriate permission.
+
+See [`docs/SHOWCASE.md`](docs/SHOWCASE.md).
+
+## Review and maintenance
+
+Maintainers may ask for smaller scope, tests, clearer reproduction steps, accessibility fixes, licensing clarification, or revisions before merging.
+
+Constructive disagreement is welcome. Critique the work rather than the contributor.
+
+By contributing, you agree to follow [`CODE_OF_CONDUCT.md`](CODE_OF_CONDUCT.md).
