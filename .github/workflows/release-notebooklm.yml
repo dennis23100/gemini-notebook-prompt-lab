@@ -4,6 +4,7 @@ on:
   push:
     branches: [main]
     paths:
+      - 'notebooklm/VERSION'
       - 'notebooklm/RELEASE_NOTES.md'
   workflow_dispatch:
 
@@ -19,7 +20,7 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Validate Prompt Lab
+      - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 22
@@ -28,13 +29,18 @@ jobs:
         working-directory: notebooklm
         run: npm run check
 
-      - name: Create v1.0.0 release if missing
+      - name: Create release if missing
         env:
           GH_TOKEN: ${{ github.token }}
-          TAG: notebooklm-v1.0.0
         shell: bash
         run: |
           set -euo pipefail
+          VERSION="$(tr -d '[:space:]' < notebooklm/VERSION)"
+          if [[ ! "$VERSION" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
+            echo "Invalid VERSION: $VERSION"
+            exit 1
+          fi
+          TAG="notebooklm-v${VERSION}"
           if gh release view "$TAG" >/dev/null 2>&1; then
             echo "Release $TAG already exists; nothing to do."
             exit 0
@@ -42,5 +48,5 @@ jobs:
           git tag "$TAG" "$GITHUB_SHA"
           git push origin "$TAG"
           gh release create "$TAG" \
-            --title "Gemini Notebook Prompt Lab v1.0.0" \
+            --title "Gemini Notebook Prompt Lab v${VERSION}" \
             --notes-file notebooklm/RELEASE_NOTES.md
