@@ -1,5 +1,7 @@
 <div align="center">
 
+<img src="notebooklm/docs/hero.svg" alt="Gemini Notebook Prompt Lab" width="100%" />
+
 # 🧠 Gemini Notebook Prompt Lab
 
 **A local-first, source-grounded prompt library and workflow toolkit for Gemini Notebook (formerly NotebookLM).**
