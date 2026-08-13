@@ -1,3 +1,4 @@
+# Triggered via a normal GitHub merge so the bootstrap can run with the latest workflow definition.
 name: Bootstrap NotebookLM Prompt Lab
 
 on:
