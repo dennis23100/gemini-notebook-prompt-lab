@@ -4,7 +4,6 @@ on:
   push:
     branches: [main]
     paths:
-      - '.bootstrap/**'
       - '.github/workflows/bootstrap-notebooklm.yml'
   workflow_dispatch:
 
@@ -36,7 +35,7 @@ jobs:
           echo "b398e4019a44b8af2437f3174a786663df81bb54abb7838bc13838f3c0093d86  /tmp/toolkit60-payload.tar.xz" | sha256sum --check --strict
           tar -xJf /tmp/toolkit60-payload.tar.xz -C .
           rm -rf .bootstrap
-          rm -f .github/workflows/bootstrap-notebooklm.yml
+          rm -f .github/workflows/pages.yml .github/workflows/validate.yml
 
       - name: Validate NotebookLM project
         uses: actions/setup-node@v4
@@ -54,6 +53,8 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A
+          git restore --staged .github/workflows/bootstrap-notebooklm.yml || true
+          git restore .github/workflows/bootstrap-notebooklm.yml || true
           if git diff --cached --quiet; then
             echo "No source changes to commit."
           else
