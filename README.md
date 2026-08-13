@@ -32,9 +32,9 @@ An age-adaptive, source-grounded prompt library and workflow builder for **Gemin
 - Favorites, import/export, PWA/offline support
 - One-click workflow to `notebook.google.com`
 
-**→ [Explore the Notebook project](notebooklm/)**
+### 🚀 [Open Prompt Lab](https://dennis23100.github.io/toolkit_60/notebooklm/)
 
-> The web app will be published under the Toolkit 60 GitHub Pages site after deployment is enabled.
+**→ [View source & documentation](notebooklm/)**
 
 ---
 
@@ -88,11 +88,11 @@ Projects remain separated by folder so each tool can still grow independently.
 
 ## 🗺️ Current roadmap
 
-| Project | Status | Folder |
-|---|---|---|
-| Gemini Notebook Prompt Lab | 🟢 Active | [`notebooklm/`](notebooklm/) |
-| Video Editing Toolkit | 🟡 Planned | [`video-editing/`](video-editing/) |
-| More tools | ⚪ Future | To be announced |
+| Project | Status | Use it | Source |
+|---|---|---|---|
+| Gemini Notebook Prompt Lab | 🟢 Active | [Open Prompt Lab](https://dennis23100.github.io/toolkit_60/notebooklm/) | [`notebooklm/`](notebooklm/) |
+| Video Editing Toolkit | 🟡 Planned | Coming soon | [`video-editing/`](video-editing/) |
+| More tools | ⚪ Future | — | To be announced |
 
 ## 🤝 Contributing
 
