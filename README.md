@@ -1,132 +1,199 @@
 <div align="center">
 
-# 🧰 Toolkit 60
+# 🧠 Gemini Notebook Prompt Lab
 
-**A growing open-source toolbox for AI, content creation, automation, and practical creative workflows.**
+**A local-first, source-grounded prompt library and workflow toolkit for Gemini Notebook (formerly NotebookLM).**
 
-[繁體中文](README.zh-TW.md) · [Projects](#-projects) · [Contributing](#-contributing) · [Issues](../../issues)
+[繁體中文](README.zh-TW.md) · [🚀 Open the live app](https://dennis23100.github.io/toolkit_60/) · [Latest release](https://github.com/dennis23100/toolkit_60/releases/latest) · [Issues](https://github.com/dennis23100/toolkit_60/issues) · [Contributing](CONTRIBUTING.md)
 
-![Status](https://img.shields.io/badge/status-growing-2ea44f)
-![Projects](https://img.shields.io/badge/projects-2-5357e8)
+![Prompts](https://img.shields.io/badge/prompts-90-665fe8)
+![Themes](https://img.shields.io/badge/themes-30-15977f)
+![Audiences](https://img.shields.io/badge/audiences-3-7a74f0)
+![Workflows](https://img.shields.io/badge/workflows-10-5357e8)
+![Tests](https://img.shields.io/badge/tests-automated-success)
 ![License](https://img.shields.io/badge/code-MIT-blue)
 
 </div>
 
-## What is Toolkit 60?
+## The problem
 
-Toolkit 60 is a single home for practical tools I build and maintain. Each tool lives in its own folder, has its own README, documentation, and usage instructions, while sharing one repository for easier discovery, collaboration, and long-term development.
+Most prompt repositories are long lists. This project started from a more practical question:
 
-The goal is simple: **turn useful ideas into tools people can actually open, understand, fork, improve, and use.**
+> **Should the same trusted source be presented in exactly the same way to children, younger adults, and mature learners?**
 
-## 🚀 Projects
+Gemini Notebook Prompt Lab turns that problem into a reusable open-source workflow. It helps people choose or compose prompts that keep content grounded in the source while adapting tone, visual density, pacing, and presentation style to the intended audience.
 
-### 🧠 Gemini Notebook Prompt Lab — Available
+## Real-world teaching origin
 
-An age-adaptive, source-grounded prompt library and workflow builder for **Gemini Notebook (formerly NotebookLM)**.
+The project is informed by real teaching experience, including an in-person teaching session with **100+ attendees**. That experience reinforced a simple idea: good teaching is not only about having correct information; presentation, pacing, and audience fit matter too.
 
-- 90 age-adapted prompts
-- 30 visual themes
-- 3 audience profiles
-- 10 Notebook workflows
-- Prompt Lab, Prompt Chains, local Prompt Linter
-- Favorites, import/export, PWA/offline support
-- One-click workflow to `notebook.google.com`
+A privacy-reviewed teaching clip/still is being prepared for the public project story. It will be used as context for where the problem came from — **not** as a claim of 100+ GitHub users.
 
-### 🚀 [Open Prompt Lab](https://dennis23100.github.io/toolkit_60/notebooklm/)
+See [Project Story](docs/PROJECT_STORY.md).
 
-**→ [View source & documentation](notebooklm/)**  
-**→ [Gemini Notebook Prompt Lab v1.0.0 release](../../releases/tag/notebooklm-v1.0.0)**
+## What you can do
 
----
+### 📚 Prompt Library
 
-### 🎬 Video Editing Toolkit — Coming Soon
+Browse **90 age-adaptive prompts** across **30 visual themes** and **3 audience profiles**. Search, filter, favorite, compare age variants, copy, share, import, and export.
 
-A future collection of open-source tools for faster and more repeatable video-editing workflows.
+### 🧪 Prompt Lab
 
-Planned directions include:
+Compose a new source-grounded prompt from:
 
-- smart silence / dead-air handling
-- subtitle and caption workflows
-- batch processing
-- scene and shot utilities
-- short-form content helpers
-- editing automation
+- Gemini Notebook workflow/output type;
+- target audience;
+- focus topic;
+- visual theme;
+- difficulty/depth;
+- role;
+- extra constraints;
+- strict source-grounding rules.
 
-**→ [View the Video Editing project](video-editing/)**
+### 🔗 Prompt Chains — advanced
 
----
-
-## 📁 Repository structure
+Build repeatable multi-step flows such as:
 
 ```text
-toolkit_60/
+Extract → Create → Verify
+```
+
+### ✅ Quality Check — advanced
+
+Run a deterministic local linter that checks for source grounding, anti-invention language, audience, task, output format, constraints, and specificity.
+
+## How it works
+
+```text
+1. Choose a prompt or compose one
+                 ↓
+2. Copy it and open Gemini Notebook
+                 ↓
+3. Use it with your own trusted source material
+```
+
+The application itself does not upload your prompt text to a project server. There is no project backend, account system, analytics SDK, or embedded API key.
+
+## Why the age variants matter
+
+The project does not claim that one age range is universally correct for every teaching situation. The included profiles are configurable defaults from the original teaching workflow.
+
+The important idea is the **comparison**:
+
+| Same source | Children | Youth | Adults |
+|---|---|---|---|
+| Wording | shorter, familiar | engaging, moderate depth | mature, substantive |
+| Visual density | low | medium | controlled / information-rich |
+| Pacing | simple, guided | energetic | structured, deliberate |
+| Tone | warm, safe | relatable | steady, credible |
+
+## Visual examples
+
+The live library now includes lightweight **illustrative style previews** for its themes. These previews communicate visual direction; they are **not guaranteed Gemini Notebook output**.
+
+The next showcase milestone is deliberately small and evidence-focused: **3 representative themes × 3 audiences = 9 real generated examples**. That is enough to demonstrate the core age-adaptation idea without turning the repository into a gallery of 90 screenshots.
+
+See [Showcase Plan](docs/SHOWCASE.md) and [Issue #6](https://github.com/dennis23100/toolkit_60/issues/6).
+
+## Current scope
+
+- **90 prompts**
+- **30 themes**
+- **3 audience profiles**
+- **10 Gemini Notebook workflows**
+- Traditional Chinese + English UI
+- local favorites / custom prompts / chains
+- JSON import/export
+- PWA/offline support
+- source-grounding validation
+- automated tests and GitHub Actions
+- GitHub Pages live demo
+
+## Open-source maintenance
+
+This is an actively maintained public project, not a one-time prompt dump.
+
+- [Latest Release](https://github.com/dennis23100/toolkit_60/releases/latest)
+- [Open Issues](https://github.com/dennis23100/toolkit_60/issues)
+- [`good first issue`](https://github.com/dennis23100/toolkit_60/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22)
+- [`help wanted`](https://github.com/dennis23100/toolkit_60/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22)
+- [Contributing](CONTRIBUTING.md)
+- [Maintainers](MAINTAINERS.md)
+- [Security Policy](SECURITY.md)
+- [Code of Conduct](CODE_OF_CONDUCT.md)
+- [Licensing](LICENSING.md)
+
+Before submitting NotebookLM code/data changes, run:
+
+```bash
+cd notebooklm
+npm run check
+```
+
+## Current contribution opportunities
+
+Good places to help right now include:
+
+- Markdown + CSV export;
+- URL-shareable filters;
+- keyboard/accessibility audit;
+- Japanese UI/metadata localization;
+- the first 9 real generated showcase examples.
+
+Please use Issues rather than opening a large PR without context.
+
+## Roadmap
+
+The project is intentionally staying focused on Gemini Notebook / NotebookLM for now. High-value next steps are:
+
+1. **real generated showcase examples** for selected themes and audiences;
+2. **recently used prompts / local history**;
+3. **simple vs advanced UI mode**;
+4. better export and share workflows;
+5. accessibility improvements;
+6. additional languages;
+7. an **optional browser extension** that reduces the Copy → Open → Paste friction while keeping permissions minimal.
+
+Unrelated tools such as video-editing utilities will live in separate repositories if/when they are built.
+
+## Repository structure
+
+```text
+.
 ├── README.md
 ├── README.zh-TW.md
 ├── CONTRIBUTING.md
 ├── MAINTAINERS.md
 ├── SECURITY.md
 ├── LICENSE
-├── notebooklm/
-│   ├── README.md
-│   ├── README.zh-TW.md
-│   └── ...
-├── video-editing/
-│   ├── README.md
-│   ├── README.zh-TW.md
-│   └── ...
-└── .github/
+├── docs/
+└── notebooklm/
+    ├── index.html
+    ├── assets/
+    ├── data/
+    ├── tests/
+    ├── README.md
+    ├── README.zh-TW.md
+    ├── AGENTS.md
+    └── ...
 ```
 
-Every major project folder has its **own README**. When you open that folder on GitHub, the project-specific README becomes the guide for that tool — with its features, screenshots, live demo, setup, architecture, and contribution notes.
+The application implementation currently remains inside `notebooklm/`; the repository homepage is the project overview.
 
-## 🌱 Why one toolkit repository?
+## Attribution and licensing
 
-Keeping related creator tools together makes it easier to:
+- Repository / application code: **MIT**.
+- Project-authored prompt transformations and metadata: see `notebooklm/LICENSE-DATA.md` and [LICENSING.md](LICENSING.md).
+- Upstream inspirations and provenance are documented in `notebooklm/THIRD_PARTY_NOTICES.md`.
 
-- discover multiple useful tools from one GitHub page
-- follow one repository for future releases
-- contribute across projects
-- reuse shared documentation and automation
-- build a clearer long-term open-source portfolio
-
-Projects remain separated by folder so each tool can still grow independently. If a subproject eventually develops its own maintainer community or release cadence, it can be split out later without changing the Toolkit 60 mission.
-
-## 🗺️ Current roadmap
-
-| Project | Status | Use it | Source |
-|---|---|---|---|
-| Gemini Notebook Prompt Lab | 🟢 Active | [Open Prompt Lab](https://dennis23100.github.io/toolkit_60/notebooklm/) | [`notebooklm/`](notebooklm/) |
-| Video Editing Toolkit | 🟡 Planned | Coming soon | [`video-editing/`](video-editing/) |
-| More tools | ⚪ Future | — | To be announced |
-
-## 🤝 Contributing
-
-Real feedback, bug reports, prompt improvements, documentation fixes, accessibility reviews, translations, and pull requests are welcome.
-
-- **Start here:** [CONTRIBUTING.md](CONTRIBUTING.md)
-- **Open work:** [Issues](../../issues)
-- **New contributors:** look for `good first issue`
-- **Community help:** look for `help wanted`
-- **Maintainers:** [MAINTAINERS.md](MAINTAINERS.md)
-
-Project-specific instructions live inside each project folder as well.
-
-## 🛡️ Project health
-
-- [Security policy](SECURITY.md)
-- [Code of Conduct](CODE_OF_CONDUCT.md)
-- [Licensing overview](LICENSING.md)
-- [MIT code license](LICENSE)
-- [Latest release](../../releases/latest)
-
-## ⭐ Support the toolkit
-
-If one of these tools is useful to you, starring **Toolkit 60** helps more people discover the whole collection. A real bug report, feature request, pull request, or usage example is even more valuable because it helps the tools improve.
+This project is not affiliated with Google. “Gemini Notebook” and “NotebookLM” are used only to describe product compatibility.
 
 ---
 
 <div align="center">
 
-**Built as a practical, evolving open-source toolbox.**
+### 🚀 [Open Gemini Notebook Prompt Lab](https://dennis23100.github.io/toolkit_60/)
+
+If the project is useful, a GitHub star helps other educators, knowledge workers, and prompt builders discover it. Even better: use it, open an issue, improve a prompt, or submit a focused pull request.
 
 </div>
