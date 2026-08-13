@@ -6,9 +6,9 @@
 
 **一套為 Gemini Notebook（原 NotebookLM）設計的「分齡 × 來源限定 × 可組合」開源 Prompt Library 與工作流工具。**
 
-[English](README.md) · [🚀 打開 Prompt Lab](https://dennis23100.github.io/toolkit_60/notebooklm/) · [返回 Toolkit 60](../README.zh-TW.md) · [參與貢獻](CONTRIBUTING.md)
+[English](README.md) · [🚀 打開 Prompt Lab](https://dennis23100.github.io/gemini-notebook-prompt-lab/) · [返回專案首頁](../README.zh-TW.md) · [參與貢獻](CONTRIBUTING.md)
 
-## 🚀 [打開 Prompt Lab](https://dennis23100.github.io/toolkit_60/notebooklm/)
+## 🚀 [打開 Prompt Lab](https://dennis23100.github.io/gemini-notebook-prompt-lab/)
 
 **先打開我們自己的 Prompt Lab。準備把 Prompt 交給 Gemini Notebook 時，再按網站裡醒目的 📓 Gemini Notebook 按鈕；它會用新分頁開啟，不會蓋掉目前頁面。**
 
@@ -46,8 +46,8 @@
 ## 快速開始
 
 ```bash
-git clone https://github.com/dennis23100/toolkit_60.git
-cd toolkit_60/notebooklm
+git clone https://github.com/dennis23100/gemini-notebook-prompt-lab.git
+cd gemini-notebook-prompt-lab/notebooklm
 npm run dev
 ```
 
@@ -67,7 +67,7 @@ python -m http.server 4173
 
 ## 部署到 GitHub Pages
 
-母專案 Toolkit 60 的根目錄會放置 `.github/workflows/pages.yml`，負責驗證此子專案並部署 GitHub Pages：
+本 repository 的根目錄放置 `.github/workflows/pages.yml`，負責驗證此 App 並部署 GitHub Pages：
 
 1. 把 repo push 到 GitHub。
 2. 進入 **Settings → Pages**。
@@ -93,57 +93,27 @@ python -m http.server 4173
 
 ### 2. Prompt Lab
 
-使用者可以選：
-
-- 工作流／產出類型
-- 受眾
-- 聚焦主題
-- 簡報視覺主題
-- 深度／難度
-- 角色
-- 額外限制
-- 是否啟用嚴格來源限定
-
-完成後可以直接複製、開啟 Gemini Notebook、加入 Chain 或丟到 Quality Check。
+使用者可以選：工作流／產出類型、受眾、聚焦主題、簡報視覺主題、深度／難度、角色、額外限制與是否啟用嚴格來源限定。完成後可以直接複製、開啟 Gemini Notebook、加入 Chain 或丟到 Quality Check。
 
 ### 3. Prompt Chain
 
-Chain 是一組可編輯、可排序的 Prompt。預設範例：
-
-1. **萃取**來源中的核心概念。
-2. **轉換**成教學產出。
-3. **驗證**前一步是否加入了來源沒有支持的內容。
-
-Chain 會儲存在 `localStorage`，不會上傳到任何伺服器。
+Chain 是一組可編輯、可排序的 Prompt。預設範例：萃取來源中的核心概念 → 轉換成教學產出 → 驗證前一步是否加入來源沒有支持的內容。Chain 會儲存在 `localStorage`，不會上傳到任何伺服器。
 
 ### 4. Prompt Quality Check
 
-品質分數不是「AI 幫 AI 打分」，而是完全透明的 deterministic rules：
-
-- 有沒有要求以來源為依據
-- 有沒有禁止杜撰／補外部知識
-- 有沒有定義受眾
-- 有沒有清楚任務動詞
-- 有沒有指定輸出格式
-- 有沒有約束條件
-- Prompt 是否足夠具體
-- 兒少版本是否有安全、易讀提示
-
-因為規則是公開的，所以大家可以直接討論它哪裡不合理，甚至用 PR 改進。
+品質分數不是「AI 幫 AI 打分」，而是完全透明的 deterministic rules：來源限定、防杜撰、受眾、任務、輸出格式、約束、具體性與兒少版本安全提示。
 
 ## 現在的 Gemini Notebook 相容性
 
-工作流清單已依 2026 年 8 月 Google 公開文件重新確認。目前 Google 文件列出的 Studio 產出包含 Audio Overview、Video Overview、Mind Maps、Reports、Data Tables、Flashcards／Quizzes、Slide Decks 與 Infographics。
+工作流清單依 Google 公開文件維護；相容性資訊放在 `data/workflows.json`，避免散落寫死在程式裡。
 
 - Gemini Notebook 官方介紹：https://notebooklm.google/
 - 官方說明中心：https://support.google.com/notebooklm
 - 目前 Web App：https://notebook.google.com/
 
-因為 Google 隨時可能改功能，因此相容性資訊放在 `data/workflows.json`，而不是散落寫死在程式裡。
-
 ## 為什麼值得 Fork
 
-這個 repo 的核心不是特定佛堂，而是以下架構：
+這個 repo 的核心不是特定佛堂，而是：
 
 ```text
 可信來源
@@ -159,16 +129,7 @@ Chain 會儲存在 `localStorage`，不會上傳到任何伺服器。
 Gemini Notebook
 ```
 
-你可以把「佛堂」換成：
-
-- 國中／高中課程
-- 大學講義
-- 企業教育訓練
-- 讀書會
-- 社區課程
-- 專業證照
-- 研究文獻整理
-- 自己的 Prompt Pack
+你可以把原始場景換成國中／高中課程、大學講義、企業教育訓練、讀書會、社區課程、專業證照、研究文獻整理或自己的 Prompt Pack。
 
 ## 開源與授權
 
@@ -180,34 +141,18 @@ Gemini Notebook
 
 ## 參與貢獻
 
-很適合第一次 PR 的項目：
-
-- 改善某一個分齡 Prompt，但不能改掉來源的核心意思
-- 新增一個主題，並補齊三個年齡版本
-- 改善某個工作流 recipe
-- 新增 Prompt Linter 規則與測試
-- 翻譯 UI 或 Prompt metadata
-- 改善手機版與 accessibility
+適合第一次 PR 的項目包含：改善分齡 Prompt、新增完整三受眾主題、改善工作流 recipe、新增 Prompt Linter 規則與測試、翻譯 UI / metadata，以及手機版與 accessibility。
 
 詳細規則請看 [CONTRIBUTING.md](CONTRIBUTING.md)。
 
 ## Roadmap
 
-請看 [ROADMAP.md](ROADMAP.md)。我最推薦接下來做：
+請看 [ROADMAP.md](ROADMAP.md)。目前優先是真實成果 Showcase、最近使用紀錄、Accessibility、更多語言與可選的低權限 Browser Extension。
 
-- Gemini Notebook browser extension：從網站選 Prompt 後，直接填入目前打開的 Studio panel
-- 社群 Prompt Packs
-- Prompt 版本差異比較
-- 更多語言
-- Accessibility 自動檢查
-- 可選的跨裝置同步（預設關閉，維持 privacy-first）
+## 發布與 Star 成長
+
+Repo 描述、Topics、Social Preview、Issues 與發布分享策略請看 [`docs/launch-and-growth.md`](docs/launch-and-growth.md)。
 
 ## 如果這個專案有幫到你
 
 可以按一顆 GitHub ⭐。更好的方式是 Fork 後加一個你真的會用的 Prompt／工作流，再送 PR 回來。
-
-
-
-## 發布與 Star 成長
-
-Repo 描述、Topics、Social Preview、第一批 Issues 與發布分享策略請看 [`docs/launch-and-growth.md`](docs/launch-and-growth.md)。
