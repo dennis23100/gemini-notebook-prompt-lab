@@ -29,7 +29,9 @@ Gemini Notebook 提示詞工作室把這個問題做成可重複使用的開源�
 
 這個專案受到真實教學經驗影響，其中包含一次**台下 100+ 位聽眾**的實體教學分享。這段經驗讓一件事情更明確：教學不只是「資訊正確」就夠了，如何呈現、節奏怎麼安排、受眾是否適配，同樣會影響理解。
 
-我們會另外準備一段經過隱私檢查的教學現場短片／截圖，作為「這個問題從哪裡來」的背景；**不會把 100+ 位現場聽眾包裝成 100+ GitHub 使用者。**
+<img src="notebooklm/docs/teaching-origin.svg" alt="真實教學起源示意卡" width="100%" />
+
+上面這張是專案自行繪製的「起源說明圖」，不是現場照片。之後如果加入真正的教學現場截圖／短片，也會先做隱私檢查；而且**不會把 100+ 位現場聽眾包裝成 100+ GitHub 使用者。**
 
 更多背景請看：[專案故事](docs/PROJECT_STORY.zh-TW.md)。
 
@@ -48,16 +50,7 @@ Gemini Notebook 提示詞工作室把這個問題做成可重複使用的開源�
 
 ### 🧪 提示詞工作室
 
-依照下列條件快速組出新的來源限定英文 Prompt：
-
-- Gemini Notebook 工作流／產出類型；
-- 受眾；
-- 聚焦主題；
-- 視覺主題；
-- 深度／難度；
-- 角色；
-- 額外限制；
-- 嚴格來源限定規則。
+依工作流、受眾、聚焦主題、視覺主題、深度／難度、角色、額外限制與來源限定規則快速組出新的英文 Prompt。
 
 ### 🔗 流程串接 — 進階
 
@@ -71,7 +64,7 @@ Gemini Notebook 提示詞工作室把這個問題做成可重複使用的開源�
 
 用透明、可重現的本機規則檢查 Prompt 是否包含來源限定、防杜撰、受眾、任務、輸出格式、約束與足夠具體性。
 
-第一次使用時預設是**簡易模式**，主要只看到「提示詞庫＋提示詞工作室」；有需要再展開流程串接與品質檢查。
+第一次使用時預設是**簡易模式**，主要只看到「提示詞庫＋提示詞工作室」；有需要再展開進階功能。
 
 ## 使用方式其實只有 3 步
 
@@ -83,7 +76,7 @@ Gemini Notebook 提示詞工作室把這個問題做成可重複使用的開源�
 3. 搭配你自己的可信來源資料使用
 ```
 
-這個網站本身不會把你的 Prompt 傳到專案伺服器，因為專案沒有後端、登入系統、分析 SDK、資料庫或內嵌 API key。
+這個網站本身沒有後端、登入系統、分析 SDK、資料庫或內嵌 API key。
 
 ## 為什麼分齡版本值得做？
 
@@ -98,11 +91,13 @@ Gemini Notebook 提示詞工作室把這個問題做成可重複使用的開源�
 | 節奏 | 簡單、引導式 | 較有動能 | 結構清楚、穩定 |
 | 語氣 | 溫暖、安全 | 好理解、有共感 | 穩重、可信 |
 
+### 視覺概念示意
+
+<img src="notebooklm/docs/showcase-preview.svg" alt="3 × 3 分齡視覺概念示意" width="100%" />
+
+這張圖是**專案自行製作的 mockup，不是 Gemini Notebook 生成結果**。它要表達的是我們正在測試的設計假說：來源事實固定，但不同受眾與主題可以有不同的資訊密度、節奏與成熟度。
+
 ## 可重現成果 Showcase
-
-網站的 Prompt 卡目前有輕量的**「風格預覽・示意」**，幫助使用者先理解視覺方向；這些示意圖**不是 Gemini Notebook 保證會生成的成果**。
-
-真實成果則已經建立一套 controlled showcase：
 
 ### 🖼️ [打開 3 × 3 Showcase](https://dennis23100.github.io/gemini-notebook-prompt-lab/showcase.html)
 
@@ -115,16 +110,15 @@ Gemini Notebook 提示詞工作室把這個問題做成可重複使用的開源�
 = 9 個可重現成果位置
 ```
 
-每個位置都連到精確的 Prompt。真正的生成圖還沒加入前，只會顯示透明 placeholder，**不會拿 mockup 冒充 Gemini Notebook 真實輸出**。
+每個位置都連到精確的 Prompt。真正的生成圖還沒加入前，只會顯示 placeholder，**不會拿 mockup 冒充 Gemini Notebook 真實輸出**。
+
+Repository 還提供 **Showcase Pack** workflow，會把固定 source 與 9 組精確 Prompt 打包成可下載 artifact，讓外部貢獻者也能重現，不用猜該使用哪一組 Prompt。
 
 請看：[成果展示規劃](docs/SHOWCASE.zh-TW.md)、[固定測試來源](notebooklm/docs/showcase/SOURCE.md) 與 [Issue #6](https://github.com/dennis23100/gemini-notebook-prompt-lab/issues/6)。
 
 ## 目前規模
 
-- **90 組 Prompt**
-- **30 種視覺主題**
-- **3 種受眾設定**
-- **10 種 Gemini Notebook 工作流**
+- **90 組 Prompt · 30 種視覺主題 · 3 種受眾 · 10 種工作流**
 - 繁體中文 + 英文介面
 - 簡易／進階介面模式
 - 本機收藏／自訂 Prompt／Chain／最近使用紀錄
@@ -137,8 +131,6 @@ Gemini Notebook 提示詞工作室把這個問題做成可重複使用的開源�
 
 ## 這是一個持續維護的 OSS
 
-它不是一次性把 Prompt 丟上 GitHub 就結束。
-
 - [最新 Release](https://github.com/dennis23100/gemini-notebook-prompt-lab/releases/latest)
 - [Open Issues](https://github.com/dennis23100/gemini-notebook-prompt-lab/issues)
 - [`good first issue`](https://github.com/dennis23100/gemini-notebook-prompt-lab/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22)
@@ -149,7 +141,7 @@ Gemini Notebook 提示詞工作室把這個問題做成可重複使用的開源�
 - [Code of Conduct](CODE_OF_CONDUCT.md)
 - [授權說明](LICENSING.md)
 
-修改 NotebookLM 程式或資料前，請先跑：
+修改程式或資料前：
 
 ```bash
 cd notebooklm
@@ -164,47 +156,16 @@ npm run check
 - 經過隱私檢查的真實教學現場素材；
 - 有清楚來源／用途的 Prompt 或文件改善。
 
-如果是比較大的改動，請先從 Issue 開始，不要直接送一個範圍很大的 PR。
-
 ## Roadmap
 
-現階段這個 repository **專心主打 Gemini Notebook / NotebookLM**。
-
-接下來優先順序：
-
 1. **填入第一批 9 張真實 Showcase 成果**；
-2. 加入**經過隱私檢查的教學現場截圖／短片**；
+2. 視情況加入**經過隱私檢查的真實教學現場截圖／短片**；
 3. Accessibility；
 4. 更多語言；
 5. Prompt／版本差異與貢獻流程再強化；
-6. 一個**可選的 Browser Extension**，在保持低權限的前提下減少「複製 → 開啟 → 貼上」的摩擦。
+6. 可選、低權限的 Browser Extension。
 
 未來如果真的做剪片工具，會另外開 repository，不再混在這個專案裡。
-
-## Repository 架構
-
-```text
-.
-├── README.md
-├── README.zh-TW.md
-├── CONTRIBUTING.md
-├── MAINTAINERS.md
-├── SECURITY.md
-├── LICENSE
-├── docs/
-└── notebooklm/
-    ├── index.html
-    ├── showcase.html
-    ├── assets/
-    ├── data/
-    ├── tests/
-    ├── README.md
-    ├── README.zh-TW.md
-    ├── AGENTS.md
-    └── ...
-```
-
-目前 Web App 實作仍放在 `notebooklm/`；根 README 則負責當整個專案首頁。
 
 ## 授權與來源
 
@@ -220,6 +181,6 @@ npm run check
 
 ### 🚀 [直接打開 Gemini Notebook 提示詞工作室](https://dennis23100.github.io/gemini-notebook-prompt-lab/)
 
-如果這個專案對你有幫助，GitHub ⭐ 可以讓更多教育者、知識工作者與 Prompt 使用者看到它。更有價值的方式是：真的使用它、提出 Issue、改進一個 Prompt，或送一個範圍清楚的 PR。
+如果這個專案對你有幫助，最有價值的方式是：真的使用它、提出 Issue、改進一個 Prompt、送一個範圍清楚的 PR，或按下 ⭐ 讓更多人找到它。
 
 </div>
