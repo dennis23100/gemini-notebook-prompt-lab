@@ -1,0 +1,84 @@
+{
+  "schemaVersion": "1.0.0",
+  "source": {
+    "title": "The Community Garden Plan",
+    "path": "./docs/showcase/SOURCE.md",
+    "license": "CC BY 4.0",
+    "fictional": true
+  },
+  "note": "Images are real-output slots. Do not add an image unless it was actually generated from the documented source and matching prompt.",
+  "examples": [
+    {
+      "id": "comic-flex-children",
+      "themeId": "comic-flex",
+      "theme": {"en": "Flexible Comic", "zh-TW": "漫畫（不拘）"},
+      "audience": {"id": "children", "en": "Children", "zh-TW": "幼兒"},
+      "promptId": "children-comic-flex",
+      "image": "./assets/showcase/comic-flex-children.webp"
+    },
+    {
+      "id": "comic-flex-youth",
+      "themeId": "comic-flex",
+      "theme": {"en": "Flexible Comic", "zh-TW": "漫畫（不拘）"},
+      "audience": {"id": "youth", "en": "Youth", "zh-TW": "青年"},
+      "promptId": "youth-comic-flex",
+      "image": "./assets/showcase/comic-flex-youth.webp"
+    },
+    {
+      "id": "comic-flex-adult",
+      "themeId": "comic-flex",
+      "theme": {"en": "Flexible Comic", "zh-TW": "漫畫（不拘）"},
+      "audience": {"id": "adult", "en": "Adults", "zh-TW": "壯年"},
+      "promptId": "adult-comic-flex",
+      "image": "./assets/showcase/comic-flex-adult.webp"
+    },
+    {
+      "id": "tech-children",
+      "themeId": "tech",
+      "theme": {"en": "Technology", "zh-TW": "科技"},
+      "audience": {"id": "children", "en": "Children", "zh-TW": "幼兒"},
+      "promptId": "children-tech",
+      "image": "./assets/showcase/tech-children.webp"
+    },
+    {
+      "id": "tech-youth",
+      "themeId": "tech",
+      "theme": {"en": "Technology", "zh-TW": "科技"},
+      "audience": {"id": "youth", "en": "Youth", "zh-TW": "青年"},
+      "promptId": "youth-tech",
+      "image": "./assets/showcase/tech-youth.webp"
+    },
+    {
+      "id": "tech-adult",
+      "themeId": "tech",
+      "theme": {"en": "Technology", "zh-TW": "科技"},
+      "audience": {"id": "adult", "en": "Adults", "zh-TW": "壯年"},
+      "promptId": "adult-tech",
+      "image": "./assets/showcase/tech-adult.webp"
+    },
+    {
+      "id": "ink-children",
+      "themeId": "ink",
+      "theme": {"en": "Ink Wash", "zh-TW": "水墨"},
+      "audience": {"id": "children", "en": "Children", "zh-TW": "幼兒"},
+      "promptId": "children-ink",
+      "image": "./assets/showcase/ink-children.webp"
+    },
+    {
+      "id": "ink-youth",
+      "themeId": "ink",
+      "theme": {"en": "Ink Wash", "zh-TW": "水墨"},
+      "audience": {"id": "youth", "en": "Youth", "zh-TW": "青年"},
+      "promptId": "youth-ink",
+      "image": "./assets/showcase/ink-youth.webp"
+    },
+    {
+      "id": "ink-adult",
+      "themeId": "ink",
+      "theme": {"en": "Ink Wash", "zh-TW": "水墨"},
+      "audience": {"id": "adult", "en": "Adults", "zh-TW": "壯年"},
+      "promptId": "adult-ink",
+      "image": "./assets/showcase/ink-adult.webp"
+    }
+  ]
+}
