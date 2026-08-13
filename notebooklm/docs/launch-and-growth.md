@@ -1,105 +1,114 @@
-# Launch & Star Growth Playbook
+# Launch & Growth Playbook
 
-Toolkit 60 should earn stars because its tools solve repeatable problems, not because people are pressured to star the repository.
-
-The active launch project is **Gemini Notebook Prompt Lab** inside the `notebooklm/` folder. Keep the monorepo focused enough that each new tool fits the shared idea: practical, local-first open-source tools that reduce repetitive creative or knowledge work.
+Gemini Notebook Prompt Lab should earn stars because it solves a repeatable problem and is actively maintained — not because people are pressured to star it.
 
 ## Repository positioning
 
-Current repository:
+This repository is now intentionally focused on **Gemini Notebook / NotebookLM**. Unrelated future tools should use separate repositories.
+
+Recommended final repository name:
 
 ```text
-dennis23100/toolkit_60
+gemini-notebook-prompt-lab
 ```
 
 Recommended About description:
 
 ```text
-Local-first open-source tools for AI, knowledge work & creators. Home of Gemini Notebook Prompt Lab: 90 prompts · 30 themes · 10 workflows.
-```
-
-Recommended website:
-
-```text
-https://dennis23100.github.io/toolkit_60/
+Local-first, source-grounded prompt library & workflow toolkit for Gemini Notebook (NotebookLM). 90 prompts · 30 themes · 3 audiences · 10 workflows.
 ```
 
 Recommended topics:
 
 ```text
-open-source
-local-first
-creator-tools
 gemini-notebook
 notebooklm
 prompt-engineering
+prompt-library
 education
+teaching-tools
+local-first
 pwa
 github-pages
 vanilla-javascript
+open-source
 ```
 
-The repository can remain a monorepo while the first user/community signals are forming. Consider spinning a subproject into its own repository later only if it develops an independent maintainer community, release cadence, or ecosystem role.
+## Launch checklist
 
-## Repository launch checklist
-
-- [x] GitHub Pages enabled through Actions.
-- [x] Live Prompt Lab deployed.
+- [x] Public repository.
+- [x] Live GitHub Pages app.
+- [x] Automated validation / tests.
 - [x] Repository-level MIT license.
-- [x] Repository-level CONTRIBUTING, SECURITY, CODE_OF_CONDUCT, and MAINTAINERS files.
-- [x] First real contribution issues opened and labeled.
+- [x] CONTRIBUTING, SECURITY, CODE_OF_CONDUCT, and MAINTAINERS files.
+- [x] Real contribution issues opened and labeled.
 - [x] `notebooklm-v1.0.0` release published.
-- [ ] Set the repository About description.
-- [ ] Put the Toolkit 60 Pages URL in the About website field.
+- [x] Project story and showcase plan documented.
+- [ ] Rename repository to `gemini-notebook-prompt-lab`.
+- [ ] Update Pages / canonical / repository links after the rename.
+- [ ] Set About description and website.
 - [ ] Add repository topics.
-- [ ] Upload a repository social preview.
-- [ ] Pin Toolkit 60 on the maintainer profile.
+- [ ] Upload repository social preview.
+- [ ] Pin the repository on the maintainer profile.
+- [ ] Add a privacy-reviewed teaching still or short clip.
+- [ ] Add the first 9 real generated showcase examples.
 - [ ] Publish the first external launch posts and collect real feedback.
 
 ## Make the first 30 seconds strong
 
 A visitor should immediately see:
 
-- what Toolkit 60 is;
-- which project is ready today;
+- the problem: one trusted source often needs different presentation for different audiences;
 - a live demo;
-- the 90 / 30 / 3 / 10 scope numbers for Prompt Lab;
-- a clear route to source, Issues, and contribution docs;
-- a real reason to use or fork the project.
+- 90 prompts / 30 themes / 3 audiences / 10 workflows;
+- the primary workflow: Choose → Copy → Open Gemini Notebook;
+- real-world teaching origin;
+- a clear path to Issues, Release, and contribution docs;
+- examples that show outcomes, not only prompt text.
 
-For the Prompt Lab itself, the primary workflow is still:
+## Showcase strategy
+
+Do **not** start with 90 generated screenshots.
+
+First milestone:
 
 ```text
-Choose a prompt → Copy → Open Gemini Notebook → Generate
+3 themes × 3 audiences = 9 generated examples
 ```
+
+Recommended themes:
+
+- Flexible Comic;
+- Technology;
+- Ink Wash.
+
+Use one safe, redistributable source topic when possible so the age adaptation is easy to compare.
 
 ## Create real contribution surface area
 
-Do not create empty issues just to make the repository look active. Issues should represent work that users or contributors can genuinely complete.
+Do not create empty issues to simulate activity. Issues should represent work users or contributors can genuinely complete.
 
-Current useful contribution directions include:
+Current useful directions include:
 
 - Markdown + CSV export;
 - URL-addressable filters;
 - keyboard/accessibility audit;
-- additional locale metadata and UI translations;
-- community example previews with clear provenance;
-- new prompt themes with all required audience variants and grounding rules.
+- Japanese UI and metadata;
+- real generated showcase examples;
+- focused prompt/data improvements with provenance.
 
-Use `good first issue` for tasks with a small, well-defined implementation surface and `help wanted` when contributor expertise or review is genuinely useful.
-
-## Share where the users already are
+## Share where users already are
 
 Good launch material is a **specific use case or technical lesson**, not “please star my repo.” Useful post formats include:
 
-- one source topic shown as children / youth / adult variants;
-- a 20-second Copy → Open → Generate demo;
-- a Prompt Lab example that turns one source into different outputs;
-- a short technical post about deterministic prompt linting;
-- a local-first / zero-backend architecture post;
-- a release post that explains which user feedback changed the product.
+- the same source shown as children / youth / adult variants;
+- a 20-second Choose → Copy → Open → Generate demo;
+- the real-world teaching origin;
+- why the app is local-first and zero-backend;
+- how the deterministic prompt linter works;
+- a release post explaining which user feedback changed the product.
 
-Adapt the framing to the community instead of copying one promotional post everywhere.
+Adapt each post to the community instead of copying one promotional message everywhere.
 
 ## Build the maintenance evidence chain
 
@@ -109,16 +118,20 @@ The healthiest growth loop is:
 real user → feedback / issue → triage → fix / PR → tests → release → follow-up
 ```
 
-Keep that chain visible through Issues, Pull Requests, commits, CI, changelog entries, and small releases. Close obvious bugs quickly, explain rejected requests respectfully, review external PRs carefully, and turn recurring feedback into documented decisions.
+Keep that chain visible through Issues, Pull Requests, commits, CI, changelog entries, and releases.
 
-## High-value future features
+## High-value next features
 
-Prioritize improvements that reduce friction for existing users before adding unrelated tools. Strong candidates include:
+Prioritize improvements that reduce friction for existing users:
 
-- real example previews for selected visual themes;
-- recent prompts / usage history stored locally;
-- simple vs advanced UI mode;
-- an optional browser extension that inserts a selected prompt into an active Gemini Notebook workflow;
-- additional export formats and localization.
+1. real generated examples;
+2. recent prompts / local history;
+3. simple vs advanced UI mode;
+4. better export/share flows;
+5. accessibility;
+6. additional localization;
+7. optional browser extension with minimal permissions.
+
+Do not add unrelated products to this repository simply to make it look larger.
 
 Avoid buying stars, star-for-star schemes, mass unsolicited promotion, fake issues, fake contributors, or inflated usage claims.
