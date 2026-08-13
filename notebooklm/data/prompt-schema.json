@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dennis23100.github.io/toolkit_60/notebooklm/data/prompt-schema.json",
+  "title": "Gemini Notebook Prompt Entry",
+  "type": "object",
+  "required": ["id", "themeId", "ageGroup", "title", "summary", "category", "prompt", "sources"],
+  "properties": {
+    "id": {"type": "string", "pattern": "^[a-z0-9-]+$"},
+    "themeId": {"type": "string", "pattern": "^[a-z0-9-]+$"},
+    "ageGroup": {"enum": ["children", "youth", "adult"]},
+    "title": {"type": "object", "required": ["zh-TW", "en"]},
+    "summary": {"type": "object", "required": ["zh-TW", "en"]},
+    "category": {"type": "object", "required": ["zh-TW", "en"]},
+    "prompt": {"type": "string", "minLength": 80},
+    "sources": {"type": "array", "items": {"type": "string"}}
+  }
+}

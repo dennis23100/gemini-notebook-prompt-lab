@@ -1,0 +1,17 @@
+{
+  "name": "toolkit-60-notebooklm-prompt-lab",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Age-adaptive, source-grounded prompt library and workflow lab for Gemini Notebook (formerly NotebookLM).",
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/dev-server.mjs",
+    "validate": "node scripts/validate-prompts.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "check": "npm run validate && npm test"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "MIT"
+}

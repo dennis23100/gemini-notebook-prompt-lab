@@ -1,171 +1,254 @@
 <div align="center">
 
-# 🧠 Gemini Notebook Prompt Lab
+<img src="docs/hero.svg" alt="Gemini Notebook Prompt Lab" width="100%" />
 
-**Age-adaptive, source-grounded prompt workflows for Gemini Notebook (formerly NotebookLM).**
+# Gemini Notebook Prompt Lab
 
-[繁體中文](README.zh-TW.md) · [Open Gemini Notebook](https://notebook.google.com/) · [Back to Toolkit 60](../README.md)
+**An age-adaptive, source-grounded prompt library and workflow builder for Gemini Notebook (formerly NotebookLM).**
+
+[繁體中文](README.zh-TW.md) · [🚀 Open Prompt Lab](https://dennis23100.github.io/toolkit_60/notebooklm/) · [Back to Toolkit 60](../README.md) · [Contributing](CONTRIBUTING.md)
+
+## 🚀 [Open Prompt Lab](https://dennis23100.github.io/toolkit_60/notebooklm/)
+
+**Open the project itself first. From inside Prompt Lab, use the prominent 📓 Gemini Notebook button when you are ready to paste and generate.**
 
 ![Prompts](https://img.shields.io/badge/prompts-90-5357e8)
 ![Themes](https://img.shields.io/badge/themes-30-13a37f)
 ![Workflows](https://img.shields.io/badge/workflows-10-7c82ff)
-![Runtime](https://img.shields.io/badge/runtime_dependencies-0-success)
+![Dependencies](https://img.shields.io/badge/runtime_dependencies-0-success)
+![License](https://img.shields.io/badge/code-MIT-blue)
+![Prompt Data](https://img.shields.io/badge/prompt_data-CC_BY_4.0-orange)
 
 </div>
 
-## What is this?
+> **Name update:** Google renamed NotebookLM to **Gemini Notebook** in July 2026. This project keeps “NotebookLM” in documentation and metadata for discoverability while using the current product name and `notebook.google.com` workflow.
 
-Gemini Notebook Prompt Lab is a browser-based toolkit for finding, composing, checking, and reusing prompts designed around **source-grounded Gemini Notebook workflows**.
+## Why this project exists
 
-It started from a practical teaching problem: the same source material should not be presented in exactly the same way to children, younger learners, and mature learners. The project turns that idea into a reusable open-source prompt system.
+Most prompt repositories stop at a long Markdown list. This project turns prompts into a small, forkable product:
 
-## 🚀 Quick access
+- **90 age-adapted slide prompts** across 30 visual themes and 3 audience profiles.
+- **Same-theme comparison** so educators can see how one concept changes for children, youth, and adults.
+- **Prompt Lab** for Slide Deck, Audio Overview, Video Overview, Infographic, Quiz, Flashcards, Report, Data Table, source-grounded Chat, and Mind Map companion workflows.
+- **Prompt Chain Builder** for repeatable multi-step workflows such as extract → create → verify.
+- **Local Prompt Linter** with transparent rules for source grounding, anti-hallucination language, audience, task, format, and constraints.
+- **Favorites, imports, exports, and custom prompts** stored locally in the browser.
+- **One-click “Copy & Open Gemini Notebook”** that opens `https://notebook.google.com/` in a new tab.
+- **PWA/offline support** with no account, backend, analytics, API key, or runtime dependency.
 
-### [Open Gemini Notebook →](https://notebook.google.com/)
+## Origin story
 
-The app is designed around a simple workflow:
+The first prompt pack was built for **age-adaptive teaching in a temple/community learning setting**. The practical problem was simple: the same source material should not be presented with the same wording, visual density, or emotional pacing to a child, a young adult, and a mature learner.
 
-1. Choose or build a prompt here.
-2. Copy it.
-3. Open Gemini Notebook in a new tab.
-4. Paste it into the matching Studio or chat workflow.
+The repository generalizes that idea into a reusable open-source tool for educators, community teachers, trainers, researchers, and knowledge workers.
 
-> **Live Web App:** the Toolkit 60 GitHub Pages deployment will expose this project under `/notebooklm/` once Pages is enabled.
+## Quick start
 
-## ✨ Core features
-
-### Prompt Library
-
-Browse and search **90 age-adapted prompts** across **30 themes** and **3 audience profiles**.
-
-### Same-theme age comparison
-
-Compare how the same concept changes across:
-
-| Audience | Design goal |
-|---|---|
-| Children | Warm, clear, playful, emotionally safe |
-| Youth | Stylish, engaging, shareable, moderately deep |
-| Adults | Mature, readable, steady, substantive |
-
-### Prompt Lab
-
-Compose reusable prompts for:
-
-- Slide Deck
-- Audio Overview
-- Video Overview
-- Infographic
-- Quiz
-- Flashcards
-- Reports
-- Data Tables
-- Source-grounded Chat
-- Mind Map companion workflows
-
-### Prompt Chains
-
-Build repeatable multi-step workflows such as:
-
-1. **Extract** source-supported ideas.
-2. **Transform** them into a teaching or presentation artifact.
-3. **Verify** the result against the original sources.
-
-### Local Prompt Linter
-
-The linter uses transparent deterministic rules instead of calling another AI model. It checks for signals such as:
-
-- source grounding
-- anti-hallucination instructions
-- audience definition
-- clear task objective
-- output format
-- useful constraints
-- specificity
-- child-safe framing when relevant
-
-### Privacy-first architecture
-
-The project is designed as a static browser app:
-
-- no backend required
-- no API key required
-- no analytics required
-- custom data stays in browser storage unless the user exports it
-
-## 📦 Planned project structure
-
-```text
-notebooklm/
-├── README.md
-├── README.zh-TW.md
-├── index.html
-├── assets/
-├── data/
-├── docs/
-├── scripts/
-├── tests/
-├── service-worker.js
-└── manifest.webmanifest
+```bash
+git clone https://github.com/dennis23100/toolkit_60.git
+cd toolkit_60/notebooklm
+npm run dev
 ```
 
-The full web app files will live inside this folder so the Toolkit 60 root stays clean and future tools can coexist without mixing codebases.
+Then open `http://localhost:4173`.
 
-## 🧩 Why source grounding matters
+There are **no package dependencies**. The included Node development server only serves the static files.
 
-Visual-style prompts can easily become ambiguous if they describe only appearance. A strong Gemini Notebook prompt should make it explicit that:
+You can also use Python:
 
-- the selected Notebook sources are the subject matter
-- unsupported claims should not be invented
-- the design instructions describe presentation style, not content
-- missing information should be acknowledged rather than fabricated
+```bash
+python -m http.server 4173
+```
 
-This project makes those rules reusable and testable.
+## Deploy to GitHub Pages
 
-## 🌐 Language support
+The parent Toolkit 60 repo includes `.github/workflows/pages.yml`, which validates this subproject and publishes the repository as a Pages artifact.
 
-The first public version focuses on:
+1. Push the repository to GitHub.
+2. Open **Settings → Pages**.
+3. Set **Source** to **GitHub Actions**.
+4. Push to `main` (or run the workflow manually).
+5. Your site will be available at `https://<username>.github.io/<repo>/`.
 
-- English
-- Traditional Chinese (`zh-TW`)
+All app paths are relative, so the site works correctly under a GitHub Pages project subdirectory.
 
-More languages can be added later without changing the core architecture.
+## Features
 
-## 🛠️ Development goals
+### 1. Age-adaptive Prompt Library
 
-The project intentionally stays lightweight and forkable. High-value next steps include:
+Each of the 30 themes has three variants:
 
-- browser extension integration with Gemini Notebook
-- validated community prompt packs
-- prompt version / diff history
-- accessibility checks
-- optional sync that remains off by default
-- more age-adaptive teaching workflows
+| Audience | Default profile | Design goal |
+|---|---|---|
+| Children | 15 and below | Warm, playful, clear, emotionally safe |
+| Youth | 16–35 | Stylish, engaging, shareable, moderately deep |
+| Adults | 35 and above | Mature, steady, readable, substantive |
 
-## 🤝 Contributing
+The age ranges follow the original teaching pack and are intentionally configurable rather than treated as universal pedagogical rules.
 
-Useful contribution ideas include:
+### 2. Prompt Lab
 
-- improve one age adaptation
-- propose a new theme across all audience groups
+Compose prompts by selecting:
+
+- workflow/output type
+- target audience
+- focus topic
+- visual theme (for slide decks)
+- depth/difficulty
+- role
+- extra constraints
+- strict source-grounding mode
+
+The generated prompt can be copied, opened in Gemini Notebook, added to a chain, or sent to the local linter.
+
+### 3. Prompt Chains
+
+A chain is a sequence of editable prompts. A useful default pattern is:
+
+1. **Extract** source-supported key ideas.
+2. **Transform** them into a teaching artifact.
+3. **Verify** the output against the source and identify unsupported claims.
+
+Chains are saved to `localStorage` and can be copied as one reusable workflow.
+
+### 4. Local Prompt Linter
+
+The linter is deliberately deterministic. It does **not** call an AI model or pretend to know whether a prompt is objectively “good.” It checks for explicit, inspectable signals:
+
+- source grounding
+- anti-hallucination / missing-information behavior
+- audience definition
+- task objective
+- output format
+- constraints
+- prompt specificity
+- child-safe framing when relevant
+
+This makes the score reproducible and easy to challenge or improve through pull requests.
+
+### 5. Privacy-first static architecture
+
+Everything runs in the browser:
+
+```text
+prompts.json manifest + data/packs/*.json ─┐
+workflows.json ├─> vanilla JS app ─> localStorage / clipboard / downloads
+user imports ─┘
+```
+
+No prompt text is sent to this project’s server because there is no application server.
+
+## Current Gemini Notebook compatibility
+
+The workflow list was reviewed against Google’s public Gemini Notebook / NotebookLM documentation in August 2026. Google currently documents Studio outputs including Audio Overviews, Video Overviews, Mind Maps, Reports, Data Tables, Flashcards/Quizzes, Slide Decks, and Infographics.
+
+- Product overview: https://notebooklm.google/
+- Help center: https://support.google.com/notebooklm
+- Current app: https://notebook.google.com/
+
+Because Google can change Studio UI and capabilities, this project treats workflow metadata as versioned data (`data/workflows.json`) rather than hard-coding assumptions throughout the UI.
+
+## Project structure
+
+```text
+.
+├── index.html
+├── assets/
+│   ├── app.js
+│   ├── styles.css
+│   └── favicon.svg
+├── data/
+│   ├── prompts.json          # pack manifest
+│   ├── packs/                # six review-friendly prompt packs
+│   ├── workflows.json
+│   └── prompt-schema.json
+├── scripts/
+│   ├── dev-server.mjs
+│   └── validate-prompts.mjs
+├── tests/
+│   └── data.test.mjs
+├── docs/
+│   ├── hero.svg
+│   ├── social-preview.png
+│   ├── prompt-design.md
+│   ├── research-notes.md
+│   └── launch-and-growth.md
+├── .github/
+│   ├── ISSUE_TEMPLATE/
+│   └── workflows/
+├── service-worker.js
+├── manifest.webmanifest
+├── README.md
+├── README.zh-TW.md
+├── AGENTS.md
+├── ARCHITECTURE.md
+├── CONTRIBUTING.md
+├── LICENSE
+├── LICENSE-DATA.md
+└── THIRD_PARTY_NOTICES.md
+```
+
+## Data model
+
+A prompt entry is intentionally simple:
+
+```json
+{
+  "id": "children-tech",
+  "themeId": "tech",
+  "ageGroup": "children",
+  "title": {"zh-TW": "科技", "en": "Technology"},
+  "summary": {"zh-TW": "...", "en": "..."},
+  "category": {"zh-TW": "數位與媒體", "en": "Digital & Media"},
+  "prompt": "...",
+  "sources": ["https://github.com/..."]
+}
+```
+
+See [`data/prompt-schema.json`](data/prompt-schema.json) and run:
+
+```bash
+npm run validate
+npm test
+```
+
+## Contributing
+
+The easiest contributions are:
+
+- improve one age adaptation without changing the source meaning
+- add a new reusable visual theme across all three audiences
 - improve a workflow recipe
-- add or refine a linter rule
+- add a linter rule with a clear false-positive/false-negative rationale
+- translate interface strings or prompt metadata
 - improve accessibility or mobile UX
-- add translations
-- report Gemini Notebook UI changes that affect the workflow
 
-## 📜 Licensing
+Read [CONTRIBUTING.md](CONTRIBUTING.md) before submitting a PR.
 
-Application code and prompt data will keep their licensing and attribution documented inside this project folder when the full source tree is published.
+## Attribution and licensing
 
-## ⭐ Support
+- **Application code:** MIT — see [LICENSE](LICENSE).
+- **Project-authored prompt transformations and metadata:** CC BY 4.0 — see [LICENSE-DATA.md](LICENSE-DATA.md).
+- Upstream inspirations and their licenses are documented in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
 
-If this project saves you time, star the parent **[Toolkit 60](../README.md)** repository. That one star follows the entire tool collection, including future creator tools.
+The project does not claim ownership over Google/Gemini/NotebookLM trademarks. “Gemini Notebook” and “NotebookLM” are used only to describe compatibility with Google’s product.
 
----
+## Roadmap
 
-<div align="center">
+See [ROADMAP.md](ROADMAP.md). High-value next steps include:
 
-**Part of [Toolkit 60](../README.md)**
+- optional browser extension that can send a selected prompt into the active Gemini Notebook Studio panel
+- community prompt packs with schema validation
+- prompt-diff view and version history
+- optional cloud sync that remains off by default
+- automated accessibility checks
+- more languages beyond Traditional Chinese and English
 
-</div>
+## Launch & Star Growth
+
+For the repository description, topics, social preview, first issues, and an ethical launch plan, see [`docs/launch-and-growth.md`](docs/launch-and-growth.md).
+
+## Star the project
+
+If the project saves you time, a GitHub star helps other educators and prompt builders discover it. Better yet: fork it, add one useful prompt or workflow improvement, and open a PR.
+

@@ -1,0 +1,326 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "life-rhythm",
+  "category": {
+    "en": "Life & Rhythm",
+    "zh-TW": "生活與節奏"
+  },
+  "promptCount": 9,
+  "prompts": [
+    {
+      "id": "children-music",
+      "themeId": "music",
+      "order": 13,
+      "ageGroup": "children",
+      "ageLabel": {
+        "zh-TW": "幼兒",
+        "en": "Children"
+      },
+      "ageRange": {
+        "zh-TW": "15歲以下",
+        "en": "15 and below"
+      },
+      "title": {
+        "zh-TW": "音樂",
+        "en": "Music"
+      },
+      "summary": {
+        "zh-TW": "用旋律、節奏、舞台與樂器感呈現內容，增強節拍與情緒",
+        "en": "Use melody, rhythm, stage, and instrument cues to strengthen pacing and emotion."
+      },
+      "category": {
+        "zh-TW": "生活與節奏",
+        "en": "Life & Rhythm"
+      },
+      "prompt": "Please transform the uploaded source material into a NotebookLM presentation using a 音樂 direction.\n\nUse only the uploaded source material. Keep the original meaning, key terms, quotations, and teaching points accurate. Do not invent facts, doctrines, scenes, or examples that are not supported by the source. If the source is spiritual or moral teaching, keep the tone respectful, but do not force religious iconography unless the user explicitly asks for it. The output language should match the user's prompt and source language.\n\nMake it appropriate for learners aged 15 and below: warm, playful, visually clear, emotionally safe, and easy to follow. Use short sentences, familiar words, one main idea per slide, gentle brightness, and friendly imagery.\n\nTheme Direction: Use a music-and-performance direction with rhythm, instruments, stage energy, harmony, and emotional pacing. The visual flow should feel musical without becoming chaotic.\n\nOutput Goal: Create a slide flow with clear titles, strong visual hierarchy, memorable scenes, and accurate content transfer from the source. Let the theme shape the presentation style, but keep the topic itself faithful to the source material.\n\nAvoid dense text, heavy abstraction, dark or scary visuals, sarcasm, and layouts that feel too busy.",
+      "status": "完整",
+      "notes": "適用年齡：15歲以下；同主題對應青年版、壯年版；可直接貼入 NotebookLM",
+      "sources": [
+        "https://github.com/serenakeyitan/awesome-notebookLM-prompts",
+        "https://github.com/arlinamid/notebooklm-browser-plugin"
+      ],
+      "sourceName": "ChatGPT整理（綜合公開開源 prompt 邏輯 + 佛堂教學需求改寫）",
+      "licenseNote": "Project-authored adaptation; upstream inspiration links preserved."
+    },
+    {
+      "id": "children-sports",
+      "themeId": "sports",
+      "order": 14,
+      "ageGroup": "children",
+      "ageLabel": {
+        "zh-TW": "幼兒",
+        "en": "Children"
+      },
+      "ageRange": {
+        "zh-TW": "15歲以下",
+        "en": "15 and below"
+      },
+      "title": {
+        "zh-TW": "運動",
+        "en": "Sports"
+      },
+      "summary": {
+        "zh-TW": "用競技、練習、團隊與衝刺感表現內容，強化動能",
+        "en": "Use competition, practice, teamwork, and momentum to create energy."
+      },
+      "category": {
+        "zh-TW": "生活與節奏",
+        "en": "Life & Rhythm"
+      },
+      "prompt": "Please transform the uploaded source material into a NotebookLM presentation using a 運動 direction.\n\nUse only the uploaded source material. Keep the original meaning, key terms, quotations, and teaching points accurate. Do not invent facts, doctrines, scenes, or examples that are not supported by the source. If the source is spiritual or moral teaching, keep the tone respectful, but do not force religious iconography unless the user explicitly asks for it. The output language should match the user's prompt and source language.\n\nMake it appropriate for learners aged 15 and below: warm, playful, visually clear, emotionally safe, and easy to follow. Use short sentences, familiar words, one main idea per slide, gentle brightness, and friendly imagery.\n\nTheme Direction: Use a sports direction with motion, teamwork, discipline, progress, and highlight moments. The presentation should feel energetic and goal-oriented.\n\nOutput Goal: Create a slide flow with clear titles, strong visual hierarchy, memorable scenes, and accurate content transfer from the source. Let the theme shape the presentation style, but keep the topic itself faithful to the source material.\n\nAvoid dense text, heavy abstraction, dark or scary visuals, sarcasm, and layouts that feel too busy.",
+      "status": "完整",
+      "notes": "適用年齡：15歲以下；同主題對應青年版、壯年版；可直接貼入 NotebookLM",
+      "sources": [
+        "https://github.com/serenakeyitan/awesome-notebookLM-prompts",
+        "https://github.com/arlinamid/notebooklm-browser-plugin"
+      ],
+      "sourceName": "ChatGPT整理（綜合公開開源 prompt 邏輯 + 佛堂教學需求改寫）",
+      "licenseNote": "Project-authored adaptation; upstream inspiration links preserved."
+    },
+    {
+      "id": "children-street",
+      "themeId": "street",
+      "order": 15,
+      "ageGroup": "children",
+      "ageLabel": {
+        "zh-TW": "幼兒",
+        "en": "Children"
+      },
+      "ageRange": {
+        "zh-TW": "15歲以下",
+        "en": "15 and below"
+      },
+      "title": {
+        "zh-TW": "潮流",
+        "en": "Contemporary / Street"
+      },
+      "summary": {
+        "zh-TW": "用當代流行與街頭感包裝內容，提升吸睛度與分享感",
+        "en": "Use contemporary and street-inspired visuals for a shareable, energetic feel."
+      },
+      "category": {
+        "zh-TW": "生活與節奏",
+        "en": "Life & Rhythm"
+      },
+      "prompt": "Please transform the uploaded source material into a NotebookLM presentation using a 潮流 direction.\n\nUse only the uploaded source material. Keep the original meaning, key terms, quotations, and teaching points accurate. Do not invent facts, doctrines, scenes, or examples that are not supported by the source. If the source is spiritual or moral teaching, keep the tone respectful, but do not force religious iconography unless the user explicitly asks for it. The output language should match the user's prompt and source language.\n\nMake it appropriate for learners aged 15 and below: warm, playful, visually clear, emotionally safe, and easy to follow. Use short sentences, familiar words, one main idea per slide, gentle brightness, and friendly imagery.\n\nTheme Direction: Use a trend-forward, contemporary street or lifestyle direction. Keep it current, stylish, and visually confident while still preserving clarity and substance.\n\nOutput Goal: Create a slide flow with clear titles, strong visual hierarchy, memorable scenes, and accurate content transfer from the source. Let the theme shape the presentation style, but keep the topic itself faithful to the source material.\n\nAvoid dense text, heavy abstraction, dark or scary visuals, sarcasm, and layouts that feel too busy.",
+      "status": "完整",
+      "notes": "適用年齡：15歲以下；同主題對應青年版、壯年版；可直接貼入 NotebookLM",
+      "sources": [
+        "https://github.com/serenakeyitan/awesome-notebookLM-prompts",
+        "https://github.com/arlinamid/notebooklm-browser-plugin"
+      ],
+      "sourceName": "ChatGPT整理（綜合公開開源 prompt 邏輯 + 佛堂教學需求改寫）",
+      "licenseNote": "Project-authored adaptation; upstream inspiration links preserved."
+    },
+    {
+      "id": "youth-music",
+      "themeId": "music",
+      "order": 13,
+      "ageGroup": "youth",
+      "ageLabel": {
+        "zh-TW": "青年",
+        "en": "Youth"
+      },
+      "ageRange": {
+        "zh-TW": "16–35歲",
+        "en": "16–35"
+      },
+      "title": {
+        "zh-TW": "音樂",
+        "en": "Music"
+      },
+      "summary": {
+        "zh-TW": "用旋律、節奏、舞台與樂器感呈現內容，增強節拍與情緒",
+        "en": "Use melody, rhythm, stage, and instrument cues to strengthen pacing and emotion."
+      },
+      "category": {
+        "zh-TW": "生活與節奏",
+        "en": "Life & Rhythm"
+      },
+      "prompt": "Please transform the uploaded source material into a NotebookLM presentation using a 音樂 direction.\n\nUse only the uploaded source material. Keep the original meaning, key terms, quotations, and teaching points accurate. Do not invent facts, doctrines, scenes, or examples that are not supported by the source. If the source is spiritual or moral teaching, keep the tone respectful, but do not force religious iconography unless the user explicitly asks for it. The output language should match the user's prompt and source language.\n\nMake it appropriate for ages 16 to 35: stylish, engaging, emotionally resonant, and easy to share. Use clear structure, stronger visual rhythm, relatable situations, and moderate depth without becoming too childish or too corporate.\n\nTheme Direction: Use a music-and-performance direction with rhythm, instruments, stage energy, harmony, and emotional pacing. The visual flow should feel musical without becoming chaotic.\n\nOutput Goal: Create a slide flow with clear titles, strong visual hierarchy, memorable scenes, and accurate content transfer from the source. Let the theme shape the presentation style, but keep the topic itself faithful to the source material.\n\nAvoid over-explaining, stiff business styling, low-energy visuals, or childish treatment that weakens credibility.",
+      "status": "完整",
+      "notes": "適用年齡：16–35歲；同主題對應幼兒版、壯年版；可直接貼入 NotebookLM",
+      "sources": [
+        "https://github.com/serenakeyitan/awesome-notebookLM-prompts",
+        "https://github.com/arlinamid/notebooklm-browser-plugin"
+      ],
+      "sourceName": "ChatGPT整理（綜合公開開源 prompt 邏輯 + 佛堂教學需求改寫）",
+      "licenseNote": "Project-authored adaptation; upstream inspiration links preserved."
+    },
+    {
+      "id": "youth-sports",
+      "themeId": "sports",
+      "order": 14,
+      "ageGroup": "youth",
+      "ageLabel": {
+        "zh-TW": "青年",
+        "en": "Youth"
+      },
+      "ageRange": {
+        "zh-TW": "16–35歲",
+        "en": "16–35"
+      },
+      "title": {
+        "zh-TW": "運動",
+        "en": "Sports"
+      },
+      "summary": {
+        "zh-TW": "用競技、練習、團隊與衝刺感表現內容，強化動能",
+        "en": "Use competition, practice, teamwork, and momentum to create energy."
+      },
+      "category": {
+        "zh-TW": "生活與節奏",
+        "en": "Life & Rhythm"
+      },
+      "prompt": "Please transform the uploaded source material into a NotebookLM presentation using a 運動 direction.\n\nUse only the uploaded source material. Keep the original meaning, key terms, quotations, and teaching points accurate. Do not invent facts, doctrines, scenes, or examples that are not supported by the source. If the source is spiritual or moral teaching, keep the tone respectful, but do not force religious iconography unless the user explicitly asks for it. The output language should match the user's prompt and source language.\n\nMake it appropriate for ages 16 to 35: stylish, engaging, emotionally resonant, and easy to share. Use clear structure, stronger visual rhythm, relatable situations, and moderate depth without becoming too childish or too corporate.\n\nTheme Direction: Use a sports direction with motion, teamwork, discipline, progress, and highlight moments. The presentation should feel energetic and goal-oriented.\n\nOutput Goal: Create a slide flow with clear titles, strong visual hierarchy, memorable scenes, and accurate content transfer from the source. Let the theme shape the presentation style, but keep the topic itself faithful to the source material.\n\nAvoid over-explaining, stiff business styling, low-energy visuals, or childish treatment that weakens credibility.",
+      "status": "完整",
+      "notes": "適用年齡：16–35歲；同主題對應幼兒版、壯年版；可直接貼入 NotebookLM",
+      "sources": [
+        "https://github.com/serenakeyitan/awesome-notebookLM-prompts",
+        "https://github.com/arlinamid/notebooklm-browser-plugin"
+      ],
+      "sourceName": "ChatGPT整理（綜合公開開源 prompt 邏輯 + 佛堂教學需求改寫）",
+      "licenseNote": "Project-authored adaptation; upstream inspiration links preserved."
+    },
+    {
+      "id": "youth-street",
+      "themeId": "street",
+      "order": 15,
+      "ageGroup": "youth",
+      "ageLabel": {
+        "zh-TW": "青年",
+        "en": "Youth"
+      },
+      "ageRange": {
+        "zh-TW": "16–35歲",
+        "en": "16–35"
+      },
+      "title": {
+        "zh-TW": "潮流",
+        "en": "Contemporary / Street"
+      },
+      "summary": {
+        "zh-TW": "用當代流行與街頭感包裝內容，提升吸睛度與分享感",
+        "en": "Use contemporary and street-inspired visuals for a shareable, energetic feel."
+      },
+      "category": {
+        "zh-TW": "生活與節奏",
+        "en": "Life & Rhythm"
+      },
+      "prompt": "Please transform the uploaded source material into a NotebookLM presentation using a 潮流 direction.\n\nUse only the uploaded source material. Keep the original meaning, key terms, quotations, and teaching points accurate. Do not invent facts, doctrines, scenes, or examples that are not supported by the source. If the source is spiritual or moral teaching, keep the tone respectful, but do not force religious iconography unless the user explicitly asks for it. The output language should match the user's prompt and source language.\n\nMake it appropriate for ages 16 to 35: stylish, engaging, emotionally resonant, and easy to share. Use clear structure, stronger visual rhythm, relatable situations, and moderate depth without becoming too childish or too corporate.\n\nTheme Direction: Use a trend-forward, contemporary street or lifestyle direction. Keep it current, stylish, and visually confident while still preserving clarity and substance.\n\nOutput Goal: Create a slide flow with clear titles, strong visual hierarchy, memorable scenes, and accurate content transfer from the source. Let the theme shape the presentation style, but keep the topic itself faithful to the source material.\n\nAvoid over-explaining, stiff business styling, low-energy visuals, or childish treatment that weakens credibility.",
+      "status": "完整",
+      "notes": "適用年齡：16–35歲；同主題對應幼兒版、壯年版；可直接貼入 NotebookLM",
+      "sources": [
+        "https://github.com/serenakeyitan/awesome-notebookLM-prompts",
+        "https://github.com/arlinamid/notebooklm-browser-plugin"
+      ],
+      "sourceName": "ChatGPT整理（綜合公開開源 prompt 邏輯 + 佛堂教學需求改寫）",
+      "licenseNote": "Project-authored adaptation; upstream inspiration links preserved."
+    },
+    {
+      "id": "adult-music",
+      "themeId": "music",
+      "order": 13,
+      "ageGroup": "adult",
+      "ageLabel": {
+        "zh-TW": "壯年",
+        "en": "Adults"
+      },
+      "ageRange": {
+        "zh-TW": "35歲以上",
+        "en": "35 and above"
+      },
+      "title": {
+        "zh-TW": "音樂",
+        "en": "Music"
+      },
+      "summary": {
+        "zh-TW": "用旋律、節奏、舞台與樂器感呈現內容，增強節拍與情緒",
+        "en": "Use melody, rhythm, stage, and instrument cues to strengthen pacing and emotion."
+      },
+      "category": {
+        "zh-TW": "生活與節奏",
+        "en": "Life & Rhythm"
+      },
+      "prompt": "Please transform the uploaded source material into a NotebookLM presentation using a 音樂 direction.\n\nUse only the uploaded source material. Keep the original meaning, key terms, quotations, and teaching points accurate. Do not invent facts, doctrines, scenes, or examples that are not supported by the source. If the source is spiritual or moral teaching, keep the tone respectful, but do not force religious iconography unless the user explicitly asks for it. The output language should match the user's prompt and source language.\n\nMake it appropriate for ages 35 and above: mature, steady, warm, dignified, and highly readable. Use calm pacing, meaningful emphasis, clear hierarchy, and concise but substantive wording.\n\nTheme Direction: Use a music-and-performance direction with rhythm, instruments, stage energy, harmony, and emotional pacing. The visual flow should feel musical without becoming chaotic.\n\nOutput Goal: Create a slide flow with clear titles, strong visual hierarchy, memorable scenes, and accurate content transfer from the source. Let the theme shape the presentation style, but keep the topic itself faithful to the source material.\n\nAvoid gimmicky effects, excessive flash, tiny text, noisy clutter, or overly juvenile visual language.",
+      "status": "完整",
+      "notes": "適用年齡：35歲以上；同主題對應幼兒版、青年版；可直接貼入 NotebookLM",
+      "sources": [
+        "https://github.com/serenakeyitan/awesome-notebookLM-prompts",
+        "https://github.com/arlinamid/notebooklm-browser-plugin"
+      ],
+      "sourceName": "ChatGPT整理（綜合公開開源 prompt 邏輯 + 佛堂教學需求改寫）",
+      "licenseNote": "Project-authored adaptation; upstream inspiration links preserved."
+    },
+    {
+      "id": "adult-sports",
+      "themeId": "sports",
+      "order": 14,
+      "ageGroup": "adult",
+      "ageLabel": {
+        "zh-TW": "壯年",
+        "en": "Adults"
+      },
+      "ageRange": {
+        "zh-TW": "35歲以上",
+        "en": "35 and above"
+      },
+      "title": {
+        "zh-TW": "運動",
+        "en": "Sports"
+      },
+      "summary": {
+        "zh-TW": "用競技、練習、團隊與衝刺感表現內容，強化動能",
+        "en": "Use competition, practice, teamwork, and momentum to create energy."
+      },
+      "category": {
+        "zh-TW": "生活與節奏",
+        "en": "Life & Rhythm"
+      },
+      "prompt": "Please transform the uploaded source material into a NotebookLM presentation using a 運動 direction.\n\nUse only the uploaded source material. Keep the original meaning, key terms, quotations, and teaching points accurate. Do not invent facts, doctrines, scenes, or examples that are not supported by the source. If the source is spiritual or moral teaching, keep the tone respectful, but do not force religious iconography unless the user explicitly asks for it. The output language should match the user's prompt and source language.\n\nMake it appropriate for ages 35 and above: mature, steady, warm, dignified, and highly readable. Use calm pacing, meaningful emphasis, clear hierarchy, and concise but substantive wording.\n\nTheme Direction: Use a sports direction with motion, teamwork, discipline, progress, and highlight moments. The presentation should feel energetic and goal-oriented.\n\nOutput Goal: Create a slide flow with clear titles, strong visual hierarchy, memorable scenes, and accurate content transfer from the source. Let the theme shape the presentation style, but keep the topic itself faithful to the source material.\n\nAvoid gimmicky effects, excessive flash, tiny text, noisy clutter, or overly juvenile visual language.",
+      "status": "完整",
+      "notes": "適用年齡：35歲以上；同主題對應幼兒版、青年版；可直接貼入 NotebookLM",
+      "sources": [
+        "https://github.com/serenakeyitan/awesome-notebookLM-prompts",
+        "https://github.com/arlinamid/notebooklm-browser-plugin"
+      ],
+      "sourceName": "ChatGPT整理（綜合公開開源 prompt 邏輯 + 佛堂教學需求改寫）",
+      "licenseNote": "Project-authored adaptation; upstream inspiration links preserved."
+    },
+    {
+      "id": "adult-street",
+      "themeId": "street",
+      "order": 15,
+      "ageGroup": "adult",
+      "ageLabel": {
+        "zh-TW": "壯年",
+        "en": "Adults"
+      },
+      "ageRange": {
+        "zh-TW": "35歲以上",
+        "en": "35 and above"
+      },
+      "title": {
+        "zh-TW": "潮流",
+        "en": "Contemporary / Street"
+      },
+      "summary": {
+        "zh-TW": "用當代流行與街頭感包裝內容，提升吸睛度與分享感",
+        "en": "Use contemporary and street-inspired visuals for a shareable, energetic feel."
+      },
+      "category": {
+        "zh-TW": "生活與節奏",
+        "en": "Life & Rhythm"
+      },
+      "prompt": "Please transform the uploaded source material into a NotebookLM presentation using a 潮流 direction.\n\nUse only the uploaded source material. Keep the original meaning, key terms, quotations, and teaching points accurate. Do not invent facts, doctrines, scenes, or examples that are not supported by the source. If the source is spiritual or moral teaching, keep the tone respectful, but do not force religious iconography unless the user explicitly asks for it. The output language should match the user's prompt and source language.\n\nMake it appropriate for ages 35 and above: mature, steady, warm, dignified, and highly readable. Use calm pacing, meaningful emphasis, clear hierarchy, and concise but substantive wording.\n\nTheme Direction: Use a trend-forward, contemporary street or lifestyle direction. Keep it current, stylish, and visually confident while still preserving clarity and substance.\n\nOutput Goal: Create a slide flow with clear titles, strong visual hierarchy, memorable scenes, and accurate content transfer from the source. Let the theme shape the presentation style, but keep the topic itself faithful to the source material.\n\nAvoid gimmicky effects, excessive flash, tiny text, noisy clutter, or overly juvenile visual language.",
+      "status": "完整",
+      "notes": "適用年齡：35歲以上；同主題對應幼兒版、青年版；可直接貼入 NotebookLM",
+      "sources": [
+        "https://github.com/serenakeyitan/awesome-notebookLM-prompts",
+        "https://github.com/arlinamid/notebooklm-browser-plugin"
+      ],
+      "sourceName": "ChatGPT整理（綜合公開開源 prompt 邏輯 + 佛堂教學需求改寫）",
+      "licenseNote": "Project-authored adaptation; upstream inspiration links preserved."
+    }
+  ]
+}

@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#111827" />
+  <meta name="description" content="Age-adaptive prompt library and workflow lab for Gemini Notebook (formerly NotebookLM)." />
+  <meta property="og:title" content="Gemini Notebook Prompt Lab" />
+  <meta property="og:description" content="90 age-adaptive prompts, workflow recipes, prompt chains, and local quality checks." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://dennis23100.github.io/toolkit_60/notebooklm/" />
+  <meta property="og:image" content="https://dennis23100.github.io/toolkit_60/notebooklm/docs/social-preview.png" />
+  <meta property="og:image:width" content="1280" />
+  <meta property="og:image:height" content="640" />
+  <meta property="og:image:alt" content="Gemini Notebook Prompt Lab — age-adaptive, source-grounded prompt library and workflow builder" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="canonical" href="https://dennis23100.github.io/toolkit_60/notebooklm/" />
+  <title>Gemini Notebook Prompt Lab</title>
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
+  <link rel="manifest" href="./manifest.webmanifest" />
+  <link rel="stylesheet" href="./assets/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="topbar">
+    <a class="brand" href="./" aria-label="Gemini Notebook Prompt Lab home">
+      <span class="brand-mark" aria-hidden="true">📓</span>
+      <span>
+        <strong>Gemini Notebook Prompt Lab</strong>
+        <small>formerly NotebookLM</small>
+      </span>
+    </a>
+
+    <nav class="top-actions" aria-label="Primary actions">
+      <button id="installBtn" class="button ghost compact hidden" type="button" data-i18n="install">安裝 App</button>
+      <button id="langBtn" class="button ghost compact" type="button" aria-label="Switch language">EN</button>
+      <a class="button ghost compact" href="https://github.com/dennis23100/toolkit_60/tree/main/notebooklm" target="_blank" rel="noopener noreferrer">GitHub ★</a>
+      <a class="button primary compact notebook-launch" href="https://notebook.google.com/" target="_blank" rel="noopener noreferrer" data-i18n="openNotebook">📓 開啟 Gemini Notebook ↗</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero shell">
+      <div class="hero-copy">
+        <span class="eyebrow" data-i18n="eyebrow">來源導向 · 分齡 · 可分享 · 隱私優先</span>
+        <h1 data-i18n="heroTitle">把「找 Prompt」變成一套可重複的 Gemini Notebook 工作流。</h1>
+        <p data-i18n="heroBody">從 90 組分齡簡報 Prompt 出發，再加上多格式工作流、Prompt Chain、品質檢查與一鍵開啟 Gemini Notebook。所有資料都在瀏覽器本機執行。</p>
+        <div class="hero-actions">
+          <button class="button primary" type="button" data-tab-target="library" data-i18n="browsePrompts">瀏覽 Prompt</button>
+          <button class="button secondary" type="button" data-tab-target="lab" data-i18n="buildPrompt">建立 Prompt</button>
+        </div>
+      </div>
+      <div class="hero-panel" aria-label="Project statistics">
+        <div class="stat"><strong id="statPrompts">90</strong><span data-i18n="statPrompts">分齡 Prompt</span></div>
+        <div class="stat"><strong>30</strong><span data-i18n="statThemes">視覺主題</span></div>
+        <div class="stat"><strong>3</strong><span data-i18n="statAges">年齡層</span></div>
+        <div class="stat"><strong>10</strong><span data-i18n="statWorkflows">工作流</span></div>
+        <div class="privacy-note"><span aria-hidden="true">◌</span><span data-i18n="privacyNote">不需登入、不上傳你的 Prompt、不使用追蹤器。</span></div>
+      </div>
+    </section>
+
+    <section class="quickstart shell" aria-labelledby="quickstart-title">
+      <div class="section-heading inline-heading">
+        <div>
+          <span class="eyebrow" data-i18n="quickEyebrow">30 秒上手</span>
+          <h2 id="quickstart-title" data-i18n="quickTitle">Copy → Open → Generate</h2>
+        </div>
+      </div>
+      <div class="steps">
+        <article><span>01</span><h3 data-i18n="step1Title">選受眾</h3><p data-i18n="step1Body">幼兒、青年或壯年，讓語氣、閱讀密度與視覺節奏跟著調整。</p></article>
+        <article><span>02</span><h3 data-i18n="step2Title">複製 Prompt</h3><p data-i18n="step2Body">使用既有模板，或在 Prompt Lab 依任務快速組合。</p></article>
+        <article><span>03</span><h3 data-i18n="step3Title">開新分頁</h3><p data-i18n="step3Body">按一下直接開啟 Gemini Notebook，不會覆蓋目前頁面。</p></article>
+      </div>
+    </section>
+
+    <section class="workspace shell">
+      <div class="tabs" role="tablist" aria-label="Prompt Lab sections">
+        <button class="tab active" id="tab-library" data-tab="library" role="tab" aria-selected="true" data-i18n="tabLibrary">Prompt Library</button>
+        <button class="tab" id="tab-lab" data-tab="lab" role="tab" aria-selected="false" data-i18n="tabLab">Prompt Lab</button>
+        <button class="tab" id="tab-chain" data-tab="chain" role="tab" aria-selected="false" data-i18n="tabChain">Chain Builder</button>
+        <button class="tab" id="tab-lint" data-tab="lint" role="tab" aria-selected="false" data-i18n="tabLint">Quality Check</button>
+      </div>
+
+      <section id="panel-library" class="tab-panel active" role="tabpanel" aria-labelledby="tab-library">
+        <div class="library-toolbar">
+          <label class="search-box">
+            <span class="sr-only" data-i18n="search">搜尋</span>
+            <span aria-hidden="true">⌕</span>
+            <input id="searchInput" type="search" autocomplete="off" placeholder="搜尋主題、分類或 Prompt…" />
+            <kbd>/</kbd>
+          </label>
+          <div class="toolbar-actions">
+            <button id="favoritesOnlyBtn" class="button ghost compact" type="button" aria-pressed="false" data-i18n="favorites">☆ 收藏</button>
+            <button id="exportBtn" class="button ghost compact" type="button" data-i18n="export">匯出</button>
+            <label class="button ghost compact file-button"><span data-i18n="import">匯入</span><input id="importInput" type="file" accept="application/json,.json" /></label>
+          </div>
+        </div>
+
+        <div class="filter-block">
+          <div class="filter-row" aria-label="Age group filters">
+            <span class="filter-label" data-i18n="age">年齡</span>
+            <div id="ageFilters" class="chips"></div>
+          </div>
+          <div class="filter-row" aria-label="Category filters">
+            <span class="filter-label" data-i18n="category">分類</span>
+            <div id="categoryFilters" class="chips"></div>
+          </div>
+        </div>
+
+        <div class="results-line">
+          <span id="resultCount">0 prompts</span>
+          <button id="clearFiltersBtn" class="link-button" type="button" data-i18n="clearFilters">清除篩選</button>
+        </div>
+        <div id="promptGrid" class="prompt-grid" aria-live="polite"></div>
+        <div id="emptyState" class="empty-state hidden"><strong data-i18n="emptyTitle">找不到符合條件的 Prompt</strong><p data-i18n="emptyBody">換一個關鍵字，或清除篩選條件。</p></div>
+      </section>
+
+      <section id="panel-lab" class="tab-panel" role="tabpanel" aria-labelledby="tab-lab" hidden>
+        <div class="split-layout">
+          <div class="builder-card">
+            <div class="section-heading compact-heading"><span class="eyebrow" data-i18n="composerEyebrow">Prompt Composer</span><h2 data-i18n="composerTitle">用任務組合，而不是從空白開始</h2></div>
+            <div class="form-grid">
+              <label><span data-i18n="workflow">工作流</span><select id="workflowSelect"></select></label>
+              <label><span data-i18n="audience">受眾</span><select id="audienceSelect"></select></label>
+              <label class="wide"><span data-i18n="focus">聚焦主題</span><input id="focusInput" type="text" placeholder="例如：孝道在現代家庭中的實踐" /></label>
+              <label id="themeField"><span data-i18n="visualTheme">視覺主題</span><select id="themeSelect"></select></label>
+              <label><span data-i18n="difficulty">深度 / 難度</span><select id="difficultySelect"><option value="beginner">Beginner</option><option value="balanced" selected>Balanced</option><option value="advanced">Advanced</option></select></label>
+              <label><span data-i18n="role">角色</span><input id="roleInput" type="text" value="source-grounded tutor" /></label>
+              <label class="wide"><span data-i18n="extra">額外要求</span><textarea id="extraInput" rows="3" placeholder="例如：每頁最多 45 字；最後加 3 個反思問題"></textarea></label>
+            </div>
+            <div class="toggle-row"><label><input id="strictGrounding" type="checkbox" checked /><span data-i18n="strictGrounding">嚴格來源限定：來源沒有寫，就不要補。</span></label></div>
+            <div class="button-row"><button id="generatePromptBtn" class="button primary" type="button" data-i18n="generatePrompt">產生 Prompt</button><button id="addLabToChainBtn" class="button secondary" type="button" data-i18n="addToChain">加入 Chain</button></div>
+          </div>
+
+          <div class="preview-card">
+            <div class="preview-head"><div><span class="eyebrow" data-i18n="preview">Preview</span><h2 data-i18n="generatedPrompt">產生的 Prompt</h2></div><div id="labScore" class="score-badge">—</div></div>
+            <textarea id="labOutput" class="prompt-editor" spellcheck="false"></textarea>
+            <div class="button-row wrap"><button id="copyLabBtn" class="button primary" type="button" data-i18n="copy">複製</button><button id="copyOpenLabBtn" class="button secondary" type="button" data-i18n="copyOpen">複製並開啟 Gemini Notebook ↗</button><button id="lintLabBtn" class="button ghost" type="button" data-i18n="checkQuality">檢查品質</button></div>
+            <div id="labLintMini" class="lint-mini"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="panel-chain" class="tab-panel" role="tabpanel" aria-labelledby="tab-chain" hidden>
+        <div class="chain-header">
+          <div class="section-heading compact-heading"><span class="eyebrow">Multi-step Workflow</span><h2 data-i18n="chainTitle">把多個 Prompt 串成可重複流程</h2><p data-i18n="chainBody">適合「先萃取 → 再產出 → 最後檢查」這類任務。所有步驟都可以編輯與重新排序。</p></div>
+          <div class="button-row wrap"><button id="defaultChainBtn" class="button secondary" type="button" data-i18n="loadExample">載入範例 Chain</button><button id="copyChainBtn" class="button primary" type="button" data-i18n="copyChain">複製整個 Chain</button><button id="clearChainBtn" class="button ghost" type="button" data-i18n="clear">清空</button></div>
+        </div>
+        <div id="chainList" class="chain-list"></div>
+        <div id="chainEmpty" class="empty-state"><strong data-i18n="chainEmptyTitle">Chain 還是空的</strong><p data-i18n="chainEmptyBody">從 Library 或 Prompt Lab 加入 Prompt，或載入範例流程。</p></div>
+      </section>
+
+      <section id="panel-lint" class="tab-panel" role="tabpanel" aria-labelledby="tab-lint" hidden>
+        <div class="split-layout lint-layout">
+          <div class="builder-card">
+            <div class="section-heading compact-heading"><span class="eyebrow">Local Prompt Linter</span><h2 data-i18n="lintTitle">在送進 Gemini Notebook 前先做品質檢查</h2><p data-i18n="lintBody">這不是 AI 評審，而是一套透明的本機規則：來源限定、受眾、任務、輸出格式、約束與防杜撰。</p></div>
+            <textarea id="lintInput" class="prompt-editor tall" placeholder="Paste a prompt here…" spellcheck="false"></textarea>
+            <div class="button-row"><button id="runLintBtn" class="button primary" type="button" data-i18n="runCheck">執行檢查</button><button id="useSelectedLintBtn" class="button ghost" type="button" data-i18n="useSelected">使用目前選取 Prompt</button></div>
+          </div>
+          <div class="preview-card">
+            <div class="score-panel"><div id="lintScore" class="big-score">—</div><div><strong data-i18n="qualityScore">Prompt Quality Score</strong><p id="lintSummary" data-i18n="lintIdle">貼上 Prompt 後執行檢查。</p></div></div>
+            <div id="lintResults" class="lint-results"></div>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <section class="why shell">
+      <div class="section-heading"><span class="eyebrow" data-i18n="whyEyebrow">Why this repo?</span><h2 data-i18n="whyTitle">不是「Prompt 越多越好」，而是要能被使用、修改、驗證與貢獻。</h2></div>
+      <div class="feature-grid">
+        <article><span>◎</span><h3 data-i18n="f1Title">分齡對照</h3><p data-i18n="f1Body">同一主題可以直接比較三種年齡層的表達差異。</p></article>
+        <article><span>✓</span><h3 data-i18n="f2Title">Source-grounded</h3><p data-i18n="f2Body">Prompt 明確要求只使用來源，降低內容被風格指令帶偏。</p></article>
+        <article><span>⌁</span><h3 data-i18n="f3Title">可組合工作流</h3><p data-i18n="f3Body">Slide、Audio、Video、Quiz、Report 等任務用同一套 Composer 組合。</p></article>
+        <article><span>◇</span><h3 data-i18n="f4Title">Privacy-first</h3><p data-i18n="f4Body">收藏、自訂與 Chain 儲存在 localStorage；沒有帳號與伺服器。</p></article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer shell">
+    <div><strong>Gemini Notebook Prompt Lab</strong><p data-i18n="footerOrigin">起源於分齡佛堂教學需求，設計成可被任何教育與知識工作者 fork 的開源工具。</p></div>
+    <div class="footer-links"><a href="./README.md">README</a><a href="./CONTRIBUTING.md">Contributing</a><a href="./LICENSE">MIT</a><a href="https://notebook.google.com/" target="_blank" rel="noopener noreferrer">Gemini Notebook ↗</a></div>
+  </footer>
+
+  <dialog id="promptDialog" class="prompt-dialog">
+    <form method="dialog" class="dialog-shell">
+      <div class="dialog-head">
+        <div><div id="dialogBadges" class="badges"></div><h2 id="dialogTitle"></h2><p id="dialogSummary"></p></div>
+        <button class="icon-button" value="cancel" aria-label="Close dialog">×</button>
+      </div>
+      <div id="compareBar" class="compare-bar"></div>
+      <textarea id="dialogPrompt" class="prompt-editor dialog-editor" spellcheck="false"></textarea>
+      <div class="dialog-actions">
+        <button id="favoriteDialogBtn" class="button ghost" type="button">☆</button>
+        <button id="shareDialogBtn" class="button ghost" type="button" data-i18n="share">分享</button>
+        <button id="addDialogChainBtn" class="button ghost" type="button" data-i18n="addToChain">加入 Chain</button>
+        <span class="grow"></span>
+        <button id="copyDialogBtn" class="button primary" type="button" data-i18n="copy">複製</button>
+        <button id="copyOpenDialogBtn" class="button secondary" type="button" data-i18n="copyOpenShort">複製並開啟 ↗</button>
+      </div>
+      <details class="source-details"><summary data-i18n="sources">來源與授權</summary><div id="dialogSources"></div></details>
+    </form>
+  </dialog>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script type="module" src="./assets/app.js"></script>
+</body>
+</html>

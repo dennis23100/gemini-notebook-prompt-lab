@@ -1,167 +1,213 @@
 <div align="center">
 
-# 🧠 Gemini Notebook Prompt Lab
+<img src="docs/hero.svg" alt="Gemini Notebook Prompt Lab" width="100%" />
 
-**為 Gemini Notebook（原 NotebookLM）打造的分齡、來源限定 Prompt 工作流工具。**
+# Gemini Notebook Prompt Lab
 
-[English](README.md) · [開啟 Gemini Notebook](https://notebook.google.com/) · [回到 Toolkit 60](../README.zh-TW.md)
+**一套為 Gemini Notebook（原 NotebookLM）設計的「分齡 × 來源限定 × 可組合」開源 Prompt Library 與工作流工具。**
+
+[English](README.md) · [🚀 打開 Prompt Lab](https://dennis23100.github.io/toolkit_60/notebooklm/) · [返回 Toolkit 60](../README.zh-TW.md) · [參與貢獻](CONTRIBUTING.md)
+
+## 🚀 [打開 Prompt Lab](https://dennis23100.github.io/toolkit_60/notebooklm/)
+
+**先打開我們自己的 Prompt Lab。準備把 Prompt 交給 Gemini Notebook 時，再按網站裡醒目的 📓 Gemini Notebook 按鈕；它會用新分頁開啟，不會蓋掉目前頁面。**
 
 ![Prompts](https://img.shields.io/badge/prompts-90-5357e8)
 ![Themes](https://img.shields.io/badge/themes-30-13a37f)
 ![Workflows](https://img.shields.io/badge/workflows-10-7c82ff)
-![Runtime](https://img.shields.io/badge/runtime_dependencies-0-success)
+![Dependencies](https://img.shields.io/badge/runtime_dependencies-0-success)
+![License](https://img.shields.io/badge/code-MIT-blue)
+![Prompt Data](https://img.shields.io/badge/prompt_data-CC_BY_4.0-orange)
 
 </div>
 
-## 這是什麼？
+> **名稱更新：** Google 已於 2026 年 7 月把 NotebookLM 正式更名為 **Gemini Notebook**。本專案使用現在的產品名稱與 `notebook.google.com`，同時保留 NotebookLM 關鍵字，方便既有使用者搜尋與理解。
 
-Gemini Notebook Prompt Lab 是一套可在瀏覽器使用的 Prompt 工具，用來**尋找、組合、檢查與重複使用來源限定的 Gemini Notebook 工作流**。
+## 這個專案不是單純「放很多 Prompt」
 
-它最早來自一個很實際的教學問題：同一份來源資料，不應該用完全相同的文字密度、視覺節奏與表達方式去教幼兒、青年與成熟學習者。這個專案把這個概念整理成可重複使用的開源 Prompt 系統。
+很多 Prompt repository 最後只會變成一大篇 Markdown。這個專案的目標是把 Prompt 做成一個真的可以使用、Fork、修改、驗證與共同維護的小產品：
 
-## 🚀 快速開始
+- **90 組分齡簡報 Prompt**：30 個視覺主題 × 3 種受眾。
+- **同主題跨年齡比較**：直接比較幼兒、青年、壯年版如何調整語氣、密度與視覺節奏。
+- **Prompt Lab**：支援 Slide Deck、Audio Overview、Video Overview、Infographic、Quiz、Flashcards、Report、Data Table、來源問答與 Mind Map 輔助工作流。
+- **Prompt Chain Builder**：把「萃取 → 產出 → 驗證」做成可重複流程。
+- **本機 Prompt Linter**：透明檢查來源限定、防杜撰、受眾、任務、輸出格式與約束條件。
+- **收藏、自訂、匯入、匯出**：全部存在瀏覽器本機。
+- **一鍵「複製並開啟 Gemini Notebook」**：以新分頁開啟 `https://notebook.google.com/`，不會覆蓋目前頁面。
+- **PWA / 離線支援**：不需要帳號、後端、API key、分析追蹤或 runtime dependency。
+- **可維護 Prompt Packs**：90 筆 Prompt 拆成 6 個可獨立 review 的資料包，讓 GitHub diff、PR 與社群貢獻更清楚。
 
-### [直接開啟 Gemini Notebook →](https://notebook.google.com/)
+## 專案起源
 
-基本流程很簡單：
+最初的需求來自**佛堂／社群教學的分齡簡報**：同一份來源內容，給 15 歲以下、16–35 歲與較成熟的學習者時，不應該使用完全相同的字量、情緒節奏與視覺語言。
 
-1. 在這裡挑選或組合 Prompt。
-2. 一鍵複製。
-3. 以新分頁開啟 Gemini Notebook。
-4. 貼到對應的 Studio 或 Chat 工作流中。
+因此這套工具不是把宗教內容硬塞給所有人，而是把「**同一份可信來源，依不同受眾重新設計呈現方式**」這個方法抽象化，讓教育者、講師、社群教學者、研究者與知識工作者都可以 Fork 使用。
 
-> **Live Web App：** Toolkit 60 的 GitHub Pages 啟用後，這個專案會部署在 `/notebooklm/` 子路徑。
+## 快速開始
 
-## ✨ 核心功能
-
-### Prompt Library
-
-瀏覽與搜尋 **90 組分齡 Prompt**，涵蓋 **30 種主題**與 **3 種受眾設定**。
-
-### 同主題分齡比較
-
-同一主題可以直接比較不同受眾版本：
-
-| 對象 | 設計目標 |
-|---|---|
-| 幼兒／兒童 | 溫暖、清楚、有趣、情緒安全 |
-| 青年 | 有設計感、吸引人、好分享、具適度深度 |
-| 壯年／成熟學習者 | 穩重、清楚、易讀、有內容深度 |
-
-### Prompt Lab
-
-可組合以下 Gemini Notebook 工作流：
-
-- Slide Deck
-- Audio Overview
-- Video Overview
-- Infographic
-- Quiz
-- Flashcards
-- Reports
-- Data Tables
-- Source-grounded Chat
-- Mind Map 輔助工作流
-
-### Prompt Chains
-
-把多個 Prompt 串成可重複的流程，例如：
-
-1. **Extract**：先從來源中萃取有依據的重點。
-2. **Transform**：轉換成教學、簡報或內容成品。
-3. **Verify**：再回頭核對來源，找出可能沒有依據的內容。
-
-### 本機 Prompt Linter
-
-Linter 不會再呼叫另一個 AI 模型，而是用透明、可重現的規則檢查：
-
-- 是否限定以來源為依據
-- 是否有防止杜撰的指示
-- 是否定義清楚受眾
-- 是否有明確任務
-- 是否指定輸出格式
-- 是否有有效限制條件
-- Prompt 是否足夠具體
-- 兒童情境是否有安全與適齡框架
-
-### Privacy-first 架構
-
-專案設計成純前端靜態工具：
-
-- 不需要後端
-- 不需要 API key
-- 不需要分析追蹤
-- 自訂資料預設只留在瀏覽器，除非使用者主動匯出
-
-## 📦 預計資料夾架構
-
-```text
-notebooklm/
-├── README.md
-├── README.zh-TW.md
-├── index.html
-├── assets/
-├── data/
-├── docs/
-├── scripts/
-├── tests/
-├── service-worker.js
-└── manifest.webmanifest
+```bash
+git clone https://github.com/dennis23100/toolkit_60.git
+cd toolkit_60/notebooklm
+npm run dev
 ```
 
-完整 Web App 會全部放在這個資料夾內，讓 Toolkit 60 根目錄維持乾淨，未來剪片或其他工具也不會混在一起。
+瀏覽器開啟：
 
-## 🧩 為什麼要做 Source Grounding？
+```text
+http://localhost:4173
+```
 
-只有視覺風格、沒有來源規則的 Prompt，很容易讓模型把「設計說明」誤當成內容主題。因此這套 Prompt 會強調：
+本專案**沒有 npm 套件相依**。`npm run dev` 只是使用專案內建的 Node 靜態伺服器。
 
-- 選取的 Notebook Sources 才是內容主體
-- 沒有來源支持的內容不要自行補造
-- 設計指示只描述呈現風格，不是文章主題
-- 資料不足時要說明不足，而不是猜答案
+也可以直接：
 
-這些規則也能透過 Linter 做一致性檢查。
+```bash
+python -m http.server 4173
+```
 
-## 🌐 語言
+## 部署到 GitHub Pages
 
-第一版主要支援：
+母專案 Toolkit 60 的根目錄會放置 `.github/workflows/pages.yml`，負責驗證此子專案並部署 GitHub Pages：
 
-- 繁體中文（zh-TW）
-- English
+1. 把 repo push 到 GitHub。
+2. 進入 **Settings → Pages**。
+3. **Source** 選 **GitHub Actions**。
+4. Push 到 `main`，或手動執行 Pages workflow。
+5. 網站會出現在 `https://<username>.github.io/<repo>/`。
 
-未來可再擴充更多語言。
+所有檔案都使用相對路徑，因此可以直接放在 GitHub Pages 的專案子路徑。
 
-## 🛠️ 下一步
+## 主要功能
 
-高價值的後續方向包括：
+### 1. 分齡 Prompt Library
 
-- Gemini Notebook Browser Extension
-- 可驗證的社群 Prompt Packs
-- Prompt 版本／Diff 歷史
+每一個主題都有三種版本：
+
+| 受眾 | 原始預設 | 設計重點 |
+|---|---|---|
+| 幼兒 | 15 歲以下 | 溫暖、活潑、清楚、情緒安全 |
+| 青年 | 16–35 歲 | 有風格、好理解、可分享、保留適度深度 |
+| 壯年 | 35 歲以上 | 穩重、成熟、可讀性高、內容有份量 |
+
+年齡範圍沿用原始教學資料，網站不把它當作普遍教育學定律；如果你 Fork 專案，可以直接改成自己的受眾定義。
+
+### 2. Prompt Lab
+
+使用者可以選：
+
+- 工作流／產出類型
+- 受眾
+- 聚焦主題
+- 簡報視覺主題
+- 深度／難度
+- 角色
+- 額外限制
+- 是否啟用嚴格來源限定
+
+完成後可以直接複製、開啟 Gemini Notebook、加入 Chain 或丟到 Quality Check。
+
+### 3. Prompt Chain
+
+Chain 是一組可編輯、可排序的 Prompt。預設範例：
+
+1. **萃取**來源中的核心概念。
+2. **轉換**成教學產出。
+3. **驗證**前一步是否加入了來源沒有支持的內容。
+
+Chain 會儲存在 `localStorage`，不會上傳到任何伺服器。
+
+### 4. Prompt Quality Check
+
+品質分數不是「AI 幫 AI 打分」，而是完全透明的 deterministic rules：
+
+- 有沒有要求以來源為依據
+- 有沒有禁止杜撰／補外部知識
+- 有沒有定義受眾
+- 有沒有清楚任務動詞
+- 有沒有指定輸出格式
+- 有沒有約束條件
+- Prompt 是否足夠具體
+- 兒少版本是否有安全、易讀提示
+
+因為規則是公開的，所以大家可以直接討論它哪裡不合理，甚至用 PR 改進。
+
+## 現在的 Gemini Notebook 相容性
+
+工作流清單已依 2026 年 8 月 Google 公開文件重新確認。目前 Google 文件列出的 Studio 產出包含 Audio Overview、Video Overview、Mind Maps、Reports、Data Tables、Flashcards／Quizzes、Slide Decks 與 Infographics。
+
+- Gemini Notebook 官方介紹：https://notebooklm.google/
+- 官方說明中心：https://support.google.com/notebooklm
+- 目前 Web App：https://notebook.google.com/
+
+因為 Google 隨時可能改功能，因此相容性資訊放在 `data/workflows.json`，而不是散落寫死在程式裡。
+
+## 為什麼值得 Fork
+
+這個 repo 的核心不是特定佛堂，而是以下架構：
+
+```text
+可信來源
+  ↓
+受眾適配（年齡／程度）
+  ↓
+呈現主題（30 styles）
+  ↓
+工作流（slides/audio/video/quiz/...）
+  ↓
+品質檢查
+  ↓
+Gemini Notebook
+```
+
+你可以把「佛堂」換成：
+
+- 國中／高中課程
+- 大學講義
+- 企業教育訓練
+- 讀書會
+- 社區課程
+- 專業證照
+- 研究文獻整理
+- 自己的 Prompt Pack
+
+## 開源與授權
+
+- **網站與工具程式碼：MIT**，見 [LICENSE](LICENSE)。
+- **本專案自行改寫／建立的 Prompt 與 metadata：CC BY 4.0**，見 [LICENSE-DATA.md](LICENSE-DATA.md)。
+- 參考過的上游開源專案與授權說明：見 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。
+
+本專案與 Google 無官方關係；Gemini Notebook、NotebookLM 等名稱只用來描述相容產品。
+
+## 參與貢獻
+
+很適合第一次 PR 的項目：
+
+- 改善某一個分齡 Prompt，但不能改掉來源的核心意思
+- 新增一個主題，並補齊三個年齡版本
+- 改善某個工作流 recipe
+- 新增 Prompt Linter 規則與測試
+- 翻譯 UI 或 Prompt metadata
+- 改善手機版與 accessibility
+
+詳細規則請看 [CONTRIBUTING.md](CONTRIBUTING.md)。
+
+## Roadmap
+
+請看 [ROADMAP.md](ROADMAP.md)。我最推薦接下來做：
+
+- Gemini Notebook browser extension：從網站選 Prompt 後，直接填入目前打開的 Studio panel
+- 社群 Prompt Packs
+- Prompt 版本差異比較
+- 更多語言
 - Accessibility 自動檢查
-- 預設關閉的可選同步
-- 更多分齡與教學工作流
+- 可選的跨裝置同步（預設關閉，維持 privacy-first）
 
-## 🤝 參與貢獻
+## 如果這個專案有幫到你
 
-可以從這些地方開始：
+可以按一顆 GitHub ⭐。更好的方式是 Fork 後加一個你真的會用的 Prompt／工作流，再送 PR 回來。
 
-- 改進某一個分齡版本
-- 新增三種受眾都有對應版本的視覺主題
-- 改良工作流 Prompt
-- 新增或改善 Linter 規則
-- 改善手機版與無障礙體驗
-- 增加翻譯
-- 回報 Gemini Notebook UI 更新造成的相容性問題
 
-## ⭐ 支持專案
 
-如果這個工具對你有幫助，可以替母專案 **[Toolkit 60](../README.zh-TW.md)** 按一顆 Star。這一顆 Star 也會一起支持之後的剪片與其他開源工具。
+## 發布與 Star 成長
 
----
-
-<div align="center">
-
-**Toolkit 60 的第一個正式子專案。**
-
-</div>
+Repo 描述、Topics、Social Preview、第一批 Issues 與發布分享策略請看 [`docs/launch-and-growth.md`](docs/launch-and-growth.md)。

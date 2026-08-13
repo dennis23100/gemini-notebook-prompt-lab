@@ -1,0 +1,30 @@
+name: Bug report
+description: Report a reproducible problem in the web app or prompt data.
+title: "[Bug]: "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: Thanks for helping make the project more reliable.
+  - type: textarea
+    id: problem
+    attributes:
+      label: What happened?
+      description: Describe the problem and what you expected instead.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Reproduction steps
+      placeholder: "1. Open ...\n2. Select ...\n3. Click ..."
+    validations:
+      required: true
+  - type: input
+    id: browser
+    attributes:
+      label: Browser / device
+  - type: textarea
+    id: context
+    attributes:
+      label: Extra context or screenshots

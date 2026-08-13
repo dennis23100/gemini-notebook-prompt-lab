@@ -1,0 +1,87 @@
+{
+  "schemaVersion": "1.0.0",
+  "verifiedAt": "2026-08-13",
+  "product": "Gemini Notebook (formerly NotebookLM)",
+  "workflows": [
+    {
+      "id": "slide-deck",
+      "name": {"zh-TW": "簡報", "en": "Slide Deck"},
+      "icon": "▤",
+      "promptable": true,
+      "description": {"zh-TW": "把來源轉成有結構、可展示的簡報。可搭配 30 種視覺主題與 3 種年齡層。", "en": "Turn sources into structured presentation decks with 30 visual themes and 3 audience profiles."},
+      "starter": "Use only the selected sources. Create a clear slide deck for {{audience}} about {{focus}}. Keep every claim grounded in the sources. Use one main idea per slide, strong hierarchy, and concise wording."
+    },
+    {
+      "id": "audio-overview",
+      "name": {"zh-TW": "音訊總覽", "en": "Audio Overview"},
+      "icon": "◉",
+      "promptable": true,
+      "description": {"zh-TW": "聚焦 Deep Dive、Brief、Critique 或 Debate 等音訊方向。", "en": "Focus an audio generation such as Deep Dive, Brief, Critique, or Debate."},
+      "starter": "Use only the selected sources. Focus the audio overview on {{focus}} for {{audience}}. Explain the most important connections in plain language, distinguish source facts from interpretation, and avoid adding unsupported examples."
+    },
+    {
+      "id": "video-overview",
+      "name": {"zh-TW": "影片總覽", "en": "Video Overview"},
+      "icon": "▶",
+      "promptable": true,
+      "description": {"zh-TW": "為 Explainer 或 Brief 影片指定受眾、重點與敘事節奏。", "en": "Set audience, focus, and pacing for Explainer or Brief video overviews."},
+      "starter": "Use only the selected sources. Create a visual explainer focused on {{focus}} for {{audience}}. Build a beginning-middle-end structure, visualize relationships rather than decorating them, and never invent scenes or claims not supported by the sources."
+    },
+    {
+      "id": "infographic",
+      "name": {"zh-TW": "資訊圖表", "en": "Infographic"},
+      "icon": "▦",
+      "promptable": true,
+      "description": {"zh-TW": "把來源濃縮成單頁視覺摘要，適合比較、流程與重點數據。", "en": "Compress sources into a one-page visual summary for comparisons, processes, or key data."},
+      "starter": "Use only the selected sources. Create an infographic about {{focus}} for {{audience}}. Prioritize 3–5 key takeaways, clear relationships, readable labels, and source-faithful numbers. Do not invent statistics, icons with misleading meaning, or unsupported comparisons."
+    },
+    {
+      "id": "quiz",
+      "name": {"zh-TW": "測驗", "en": "Quiz"},
+      "icon": "?",
+      "promptable": true,
+      "description": {"zh-TW": "做理解、應用、情境題，避免只考死背。", "en": "Generate comprehension, application, and scenario questions instead of rote recall only."},
+      "starter": "Use only the selected sources. Create a {{difficulty}} quiz for {{audience}} focused on {{focus}}. Mix recall with application and scenario-based questions. Make distractors plausible but source-consistent, and explain each answer from the source material."
+    },
+    {
+      "id": "flashcards",
+      "name": {"zh-TW": "學習卡", "en": "Flashcards"},
+      "icon": "▣",
+      "promptable": true,
+      "description": {"zh-TW": "把關鍵概念拆成短題面與精準答案。", "en": "Break key concepts into short fronts and precise source-grounded answers."},
+      "starter": "Use only the selected sources. Create flashcards for {{audience}} on {{focus}}. Keep each card front short and specific. Put one concept per card, use concise answers, and preserve exact source terminology where it matters."
+    },
+    {
+      "id": "report",
+      "name": {"zh-TW": "報告", "en": "Report"},
+      "icon": "≡",
+      "promptable": true,
+      "description": {"zh-TW": "產出 briefing、study guide、blog-style 或自訂報告。", "en": "Create briefings, study guides, blog-style outputs, or custom reports."},
+      "starter": "Use only the selected sources. Write a structured report for {{audience}} about {{focus}}. Start with the main conclusion, organize evidence by theme, preserve important caveats, and make unsupported gaps explicit instead of filling them with outside knowledge."
+    },
+    {
+      "id": "data-table",
+      "name": {"zh-TW": "資料表", "en": "Data Table"},
+      "icon": "#",
+      "promptable": true,
+      "description": {"zh-TW": "把來源整理成可比較、可匯出的欄列資料。", "en": "Extract sources into comparable, exportable rows and columns."},
+      "starter": "Use only the selected sources. Build a data table focused on {{focus}} for {{audience}}. Choose columns that support comparison, keep one entity or finding per row, preserve units and dates exactly, and leave cells blank when the sources do not provide an answer."
+    },
+    {
+      "id": "chat",
+      "name": {"zh-TW": "來源問答", "en": "Source-grounded Chat"},
+      "icon": "⌁",
+      "promptable": true,
+      "description": {"zh-TW": "用來源限定、角色與回答格式建立可重複問答流程。", "en": "Create a reusable source-grounded chat workflow with role and response structure."},
+      "starter": "Answer only from the selected sources. Act as a {{role}} helping {{audience}} understand {{focus}}. Cite the relevant source passages when possible. If the sources do not support an answer, say what is missing instead of guessing."
+    },
+    {
+      "id": "mind-map",
+      "name": {"zh-TW": "心智圖輔助", "en": "Mind Map Companion"},
+      "icon": "⌘",
+      "promptable": false,
+      "description": {"zh-TW": "心智圖本身由 Studio 生成；這裡提供生成前後的聚焦問句與檢查清單。", "en": "Mind maps are generated in Studio; this recipe helps you focus and review them before and after generation."},
+      "starter": "Before generating a mind map, identify the 3–7 main themes in the selected sources about {{focus}} and list the most important relationships among them. After the map is generated, check whether any major source-supported relationship is missing or overstated."
+    }
+  ]
+}

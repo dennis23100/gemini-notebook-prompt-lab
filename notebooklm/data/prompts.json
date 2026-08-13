@@ -1,0 +1,90 @@
+{
+  "schemaVersion": "1.0.0",
+  "project": "Gemini Notebook Prompt Lab",
+  "formerly": "NotebookLM",
+  "updated": "2026-08-13",
+  "counts": {
+    "prompts": 90,
+    "themes": 30,
+    "ageGroups": 3
+  },
+  "ageGroups": [
+    {
+      "id": "children",
+      "zh-TW": "幼兒",
+      "en": "Children",
+      "rangeZh": "15歲以下",
+      "rangeEn": "15 and below"
+    },
+    {
+      "id": "youth",
+      "zh-TW": "青年",
+      "en": "Youth",
+      "rangeZh": "16–35歲",
+      "rangeEn": "16–35"
+    },
+    {
+      "id": "adult",
+      "zh-TW": "壯年",
+      "en": "Adults",
+      "rangeZh": "35歲以上",
+      "rangeEn": "35 and above"
+    }
+  ],
+  "packs": [
+    {
+      "id": "narrative-characters",
+      "path": "./data/packs/narrative-characters.json",
+      "category": {
+        "en": "Narrative & Characters",
+        "zh-TW": "敘事與角色"
+      },
+      "promptCount": 15
+    },
+    {
+      "id": "nature-exploration",
+      "path": "./data/packs/nature-exploration.json",
+      "category": {
+        "en": "Nature & Exploration",
+        "zh-TW": "自然與探索"
+      },
+      "promptCount": 21
+    },
+    {
+      "id": "life-rhythm",
+      "path": "./data/packs/life-rhythm.json",
+      "category": {
+        "en": "Life & Rhythm",
+        "zh-TW": "生活與節奏"
+      },
+      "promptCount": 9
+    },
+    {
+      "id": "digital-media",
+      "path": "./data/packs/digital-media.json",
+      "category": {
+        "en": "Digital & Media",
+        "zh-TW": "數位與媒體"
+      },
+      "promptCount": 15
+    },
+    {
+      "id": "humanities-spirituality",
+      "path": "./data/packs/humanities-spirituality.json",
+      "category": {
+        "en": "Humanities & Spirituality",
+        "zh-TW": "人文與靈性"
+      },
+      "promptCount": 15
+    },
+    {
+      "id": "emotion-life",
+      "path": "./data/packs/emotion-life.json",
+      "category": {
+        "en": "Emotion & Life",
+        "zh-TW": "情感與人生"
+      },
+      "promptCount": 15
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "name": "Gemini Notebook Prompt Lab",
+  "short_name": "Prompt Lab",
+  "description": "Age-adaptive prompt library and workflow lab for Gemini Notebook.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#0c1018",
+  "theme_color": "#111827",
+  "icons": [
+    {"src":"./assets/favicon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}
+  ]
+}

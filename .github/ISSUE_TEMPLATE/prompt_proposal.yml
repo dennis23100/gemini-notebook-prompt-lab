@@ -1,0 +1,43 @@
+name: Prompt or workflow proposal
+description: Propose a reusable prompt, theme, workflow, or linter improvement.
+title: "[Prompt]: "
+labels: [enhancement, prompt]
+body:
+  - type: input
+    id: usecase
+    attributes:
+      label: Use case
+      description: What real task does this make easier?
+    validations:
+      required: true
+  - type: dropdown
+    id: type
+    attributes:
+      label: Proposal type
+      options:
+        - New visual theme (3 age variants)
+        - Improve existing prompt
+        - Workflow recipe
+        - Prompt linter rule
+        - Translation
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: draft
+    attributes:
+      label: Draft / proposed behavior
+    validations:
+      required: true
+  - type: textarea
+    id: grounding
+    attributes:
+      label: Source-grounding behavior
+      description: How does this avoid filling source gaps with invented content?
+    validations:
+      required: true
+  - type: textarea
+    id: provenance
+    attributes:
+      label: Sources / provenance / license
+      description: List inspirations or third-party material, if any.

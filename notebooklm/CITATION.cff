@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+title: "Gemini Notebook Prompt Lab"
+message: "If you use this project in teaching or research, please cite the repository."
+type: software
+authors:
+  - family-names: "Chen"
+    given-names: "Ulin"
+    alias: "dennis23100"
+repository-code: "https://github.com/dennis23100/toolkit_60/tree/main/notebooklm"
+url: "https://dennis23100.github.io/toolkit_60/notebooklm/"
+version: "1.0.0"
+date-released: "2026-08-13"
+license: MIT
+keywords:
+  - Gemini Notebook
+  - NotebookLM
+  - prompt engineering
+  - education
+  - source grounding
