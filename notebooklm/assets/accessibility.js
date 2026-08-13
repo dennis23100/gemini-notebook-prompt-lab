@@ -108,6 +108,13 @@ document.addEventListener('click', event => {
   }
 });
 
-const a11yObserver = new MutationObserver(() => patchA11y());
-a11yObserver.observe(document.body, {subtree: true, childList: true});
-a11yObserver.observe(document.documentElement, {attributes: true, attributeFilter: ['lang']});
+// Only watch the dynamic prompt grid. A page-wide body observer is unnecessary
+// and can interfere with native form controls when several UI layers rerender.
+const promptGridA11y = document.querySelector('#promptGrid');
+if (promptGridA11y) {
+  const a11yObserver = new MutationObserver(() => requestAnimationFrame(patchA11y));
+  a11yObserver.observe(promptGridA11y, {childList: true});
+}
+
+const langA11yObserver = new MutationObserver(() => requestAnimationFrame(patchA11y));
+langA11yObserver.observe(document.documentElement, {attributes: true, attributeFilter: ['lang']});
