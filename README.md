@@ -29,7 +29,9 @@ Gemini Notebook Prompt Lab turns that problem into a reusable open-source workfl
 
 The project is informed by real teaching experience, including an in-person teaching session with **100+ attendees**. That experience reinforced a simple idea: correct information matters, but presentation, pacing, and audience fit matter too.
 
-A privacy-reviewed teaching still/clip is planned for the public project story. It will be used as context for where the problem came from — **not** as a claim of 100+ GitHub users.
+<img src="notebooklm/docs/teaching-origin.svg" alt="Illustrated real-world teaching origin card" width="100%" />
+
+The card above is a project-created illustration of the origin story, not a photograph. A privacy-reviewed real teaching still/clip may be added later as context — **not** as a claim of 100+ GitHub users.
 
 See [Project Story](docs/PROJECT_STORY.md).
 
@@ -87,6 +89,12 @@ The project does not claim that one age range is universally correct for every t
 | Pacing | simple, guided | energetic | structured, deliberate |
 | Tone | warm, safe | relatable | steady, credible |
 
+### Visual concept — illustrative only
+
+<img src="notebooklm/docs/showcase-preview.svg" alt="Illustrative 3 by 3 audience adaptation preview" width="100%" />
+
+This board is a **project-created mockup**, not Gemini Notebook output. It shows the design hypothesis being tested: source facts stay fixed while visual density, pacing, and presentation maturity change with audience and theme.
+
 ## Reproducible visual Showcase
 
 The live library includes lightweight illustrative style previews, but those are **not guaranteed Gemini Notebook output**.
@@ -103,6 +111,8 @@ The first controlled experiment uses:
 ```
 
 Every slot links to the exact matching Prompt. A slot remains an explicit placeholder until an actual generated result is contributed; mockups are not labeled as Gemini Notebook output.
+
+The repository also includes a **Showcase Pack** workflow that exports the nine exact prompts and the shared demo source so contributors can reproduce the experiment without guessing which prompt to use.
 
 See [Showcase Plan](docs/SHOWCASE.md), the [controlled source](notebooklm/docs/showcase/SOURCE.md), and [Issue #6](https://github.com/dennis23100/gemini-notebook-prompt-lab/issues/6).
 
@@ -151,7 +161,7 @@ npm run check
 ## Roadmap
 
 1. fill the first nine real Showcase outputs;
-2. add a privacy-reviewed teaching still / short clip;
+2. add a privacy-reviewed real teaching still / short clip when appropriate;
 3. accessibility improvements;
 4. additional languages;
 5. prompt/version comparison and contribution workflows;
