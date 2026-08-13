@@ -8,7 +8,8 @@
     "dev": "node scripts/dev-server.mjs",
     "validate": "node scripts/validate-prompts.mjs",
     "test": "node --test tests/*.test.mjs",
-    "check": "npm run validate && npm test"
+    "check": "npm run validate && npm test",
+    "showcase:export": "node scripts/export-showcase-prompts.mjs"
   },
   "engines": {
     "node": ">=20"
