@@ -116,7 +116,7 @@ const DIFFICULTY = {
 
 const THEME_MIGRATION_VERSION = '2';
 const UI_MODE_KEY = 'gnpl.uiMode';
-const FEEDBACK_URL = 'https://github.com/dennis23100/toolkit_60/issues/new/choose';
+const FEEDBACK_URL = 'https://github.com/dennis23100/gemini-notebook-prompt-lab/issues/new/choose';
 const isZh = () => document.documentElement.lang.toLowerCase().startsWith('zh');
 
 function applyTheme(theme) {
