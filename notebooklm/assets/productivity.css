@@ -1,0 +1,117 @@
+/* Productivity layer: recent history, shareable filters, and export formats. */
+
+.recent-section {
+  margin: 14px 0 2px;
+  padding: 13px 15px;
+  border: 1px solid color-mix(in srgb, var(--line) 88%, var(--primary) 12%);
+  border-radius: 16px;
+  background: color-mix(in srgb, var(--panel) 88%, transparent);
+  box-shadow: 0 6px 22px color-mix(in srgb, var(--text) 3%, transparent);
+  backdrop-filter: blur(12px) saturate(112%);
+}
+
+.recent-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.recent-head > div {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--text);
+}
+
+.recent-head > div > span { color: var(--primary); }
+.recent-head strong { font-size: 13px; }
+
+.recent-list {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 2px;
+  scrollbar-width: thin;
+}
+
+.recent-chip {
+  flex: 0 0 auto;
+  min-width: 128px;
+  max-width: 210px;
+  display: grid;
+  gap: 3px;
+  text-align: left;
+  padding: 9px 11px;
+  border: 1px solid color-mix(in srgb, var(--line) 84%, transparent);
+  border-radius: 12px;
+  background: color-mix(in srgb, var(--panel-2) 68%, transparent);
+  color: var(--text);
+  cursor: pointer;
+  transition: transform .14s ease, border-color .14s ease, background .14s ease;
+}
+
+.recent-chip:hover {
+  transform: translateY(-1px);
+  border-color: color-mix(in srgb, var(--primary) 38%, var(--line));
+  background: color-mix(in srgb, var(--primary) 6%, var(--panel));
+}
+
+.recent-chip span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.recent-chip small {
+  color: var(--muted);
+  font-size: 10px;
+}
+
+.export-wrap {
+  position: relative;
+  display: inline-flex;
+}
+
+.export-menu {
+  position: absolute;
+  z-index: 40;
+  top: calc(100% + 8px);
+  right: 0;
+  width: 210px;
+  padding: 7px;
+  border: 1px solid color-mix(in srgb, var(--line) 82%, var(--primary) 18%);
+  border-radius: 14px;
+  background: color-mix(in srgb, var(--panel) 96%, transparent);
+  box-shadow: 0 18px 48px color-mix(in srgb, var(--text) 14%, transparent);
+  backdrop-filter: blur(18px) saturate(120%);
+}
+
+.export-menu button {
+  width: 100%;
+  display: grid;
+  gap: 2px;
+  padding: 10px 11px;
+  border: 0;
+  border-radius: 10px;
+  background: transparent;
+  color: var(--text);
+  text-align: left;
+  cursor: pointer;
+}
+
+.export-menu button:hover {
+  background: color-mix(in srgb, var(--primary) 8%, var(--panel));
+}
+
+.export-menu strong { font-size: 12px; }
+.export-menu small { color: var(--muted); font-size: 10px; }
+
+@media (max-width: 640px) {
+  .recent-section { padding: 11px 12px; }
+  .recent-chip { min-width: 118px; max-width: 165px; }
+  .export-menu { width: 190px; right: -4px; }
+}
