@@ -391,6 +391,8 @@ document.addEventListener('click', event => {
   if (event.target.closest('#langBtn')) setTimeout(schedulePatch, 0);
 });
 
+// Watch only the language attribute. Watching every child-list mutation here
+// created a self-sustaining DOM patch loop that could peg the CPU and make
+// native <select> menus appear frozen or impossible to dismiss.
 const observer = new MutationObserver(() => schedulePatch());
 observer.observe(document.documentElement, { attributes: true, attributeFilter: ['lang'] });
-observer.observe(document.body, { childList: true, subtree: true });
