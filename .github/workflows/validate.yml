@@ -1,0 +1,30 @@
+name: Validate Toolkit 60
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'notebooklm/**'
+      - '.github/workflows/validate.yml'
+  pull_request:
+    paths:
+      - 'notebooklm/**'
+      - '.github/workflows/validate.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  notebooklm:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Validate and test Prompt Lab
+        working-directory: notebooklm
+        run: npm run check
