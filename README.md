@@ -4,11 +4,11 @@
 
 **A growing open-source toolbox for AI, content creation, automation, and practical creative workflows.**
 
-[繁體中文](README.zh-TW.md) · [Projects](#-projects) · [Contributing](#-contributing)
+[繁體中文](README.zh-TW.md) · [Projects](#-projects) · [Contributing](#-contributing) · [Issues](../../issues)
 
 ![Status](https://img.shields.io/badge/status-growing-2ea44f)
 ![Projects](https://img.shields.io/badge/projects-2-5357e8)
-![Open Source](https://img.shields.io/badge/open-source-orange)
+![License](https://img.shields.io/badge/code-MIT-blue)
 
 </div>
 
@@ -34,7 +34,8 @@ An age-adaptive, source-grounded prompt library and workflow builder for **Gemin
 
 ### 🚀 [Open Prompt Lab](https://dennis23100.github.io/toolkit_60/notebooklm/)
 
-**→ [View source & documentation](notebooklm/)**
+**→ [View source & documentation](notebooklm/)**  
+**→ [Gemini Notebook Prompt Lab v1.0.0 release](../../releases/tag/notebooklm-v1.0.0)**
 
 ---
 
@@ -61,6 +62,10 @@ Planned directions include:
 toolkit_60/
 ├── README.md
 ├── README.zh-TW.md
+├── CONTRIBUTING.md
+├── MAINTAINERS.md
+├── SECURITY.md
+├── LICENSE
 ├── notebooklm/
 │   ├── README.md
 │   ├── README.zh-TW.md
@@ -84,7 +89,7 @@ Keeping related creator tools together makes it easier to:
 - reuse shared documentation and automation
 - build a clearer long-term open-source portfolio
 
-Projects remain separated by folder so each tool can still grow independently.
+Projects remain separated by folder so each tool can still grow independently. If a subproject eventually develops its own maintainer community or release cadence, it can be split out later without changing the Toolkit 60 mission.
 
 ## 🗺️ Current roadmap
 
@@ -96,11 +101,27 @@ Projects remain separated by folder so each tool can still grow independently.
 
 ## 🤝 Contributing
 
-Suggestions, bug reports, prompt improvements, documentation fixes, and future tool ideas are welcome. Project-specific contribution instructions will live inside each project folder as the toolkit grows.
+Real feedback, bug reports, prompt improvements, documentation fixes, accessibility reviews, translations, and pull requests are welcome.
+
+- **Start here:** [CONTRIBUTING.md](CONTRIBUTING.md)
+- **Open work:** [Issues](../../issues)
+- **New contributors:** look for `good first issue`
+- **Community help:** look for `help wanted`
+- **Maintainers:** [MAINTAINERS.md](MAINTAINERS.md)
+
+Project-specific instructions live inside each project folder as well.
+
+## 🛡️ Project health
+
+- [Security policy](SECURITY.md)
+- [Code of Conduct](CODE_OF_CONDUCT.md)
+- [Licensing overview](LICENSING.md)
+- [MIT code license](LICENSE)
+- [Latest release](../../releases/latest)
 
 ## ⭐ Support the toolkit
 
-If one of these tools is useful to you, starring **Toolkit 60** helps more people discover the whole collection. Forks, issues, and pull requests are even more valuable.
+If one of these tools is useful to you, starring **Toolkit 60** helps more people discover the whole collection. A real bug report, feature request, pull request, or usage example is even more valuable because it helps the tools improve.
 
 ---
 
