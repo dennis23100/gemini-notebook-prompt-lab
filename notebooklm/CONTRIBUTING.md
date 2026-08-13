@@ -1,12 +1,12 @@
 # Contributing
 
-Thanks for improving Gemini Notebook Prompt Lab. The goal is not to maximize prompt count; it is to make prompts **more reusable, more source-grounded, easier to compare, and easier to trust**.
+Thanks for improving Gemini Notebook Prompt Lab. The goal is not to maximize prompt count; it is to make prompts more reusable, more source-grounded, easier to compare, and easier to trust.
 
 ## Before you start
 
 ```bash
-git clone https://github.com/dennis23100/toolkit_60.git
-cd toolkit_60/notebooklm
+git clone https://github.com/dennis23100/gemini-notebook-prompt-lab.git
+cd gemini-notebook-prompt-lab/notebooklm
 npm run check
 npm run dev
 ```
@@ -25,31 +25,16 @@ No package install is required. The project intentionally has zero runtime and d
 
 ## Prompt rules
 
-Every contributed prompt should:
-
-1. Say what artifact or task is being created.
-2. Define its intended audience when audience matters.
-3. Explicitly ground factual content in the selected/uploaded sources.
-4. Tell the model what to do when the source does not contain an answer.
-5. Separate **content instructions** from **style instructions**.
-6. Avoid pretending a visual style itself is source content.
-7. Avoid unsafe or manipulative instructions for children.
-8. Avoid trademark-dependent style names when a generic description works.
+Every contributed prompt should define the task and intended audience when relevant, keep factual content grounded in selected sources, say what to do when information is missing, separate content from style instructions, and avoid treating visual style as source content.
 
 Run `npm run validate` after editing `data/prompts.json` or `data/packs/*.json`.
 
 ## Data shape
 
-Use the schema in `data/prompt-schema.json`. Each visual theme should normally have one `children`, one `youth`, and one `adults` entry with the same `themeId`.
+Use the schema in `data/prompt-schema.json`. Each visual theme should normally have one `children`, one `youth`, and one `adult` entry with the same `themeId`.
 
 ## Pull requests
 
-Keep PRs focused. In the description, explain:
-
-- what problem you are solving;
-- which prompts/workflows changed;
-- how source grounding is preserved;
-- which checks you ran;
-- screenshots for meaningful UI changes.
+Keep PRs focused. Explain the problem being solved, what changed, how source grounding is preserved, which checks you ran, and include screenshots for meaningful UI changes.
 
 By contributing, you agree that your code contribution may be distributed under MIT and your project-authored prompt/data contribution may be distributed under CC BY 4.0, unless the PR explicitly documents another compatible license.
