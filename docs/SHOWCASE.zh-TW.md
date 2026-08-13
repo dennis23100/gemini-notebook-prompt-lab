@@ -6,9 +6,20 @@
 
 第一個里程碑刻意只做 **9 個成果**，不是 90 個。
 
+## 已建立可重現 Showcase
+
+現在 repository 已經有一套公開、可重現的 Showcase 骨架：
+
+- 線上頁面：`https://dennis23100.github.io/gemini-notebook-prompt-lab/showcase.html`
+- 固定測試來源：[`notebooklm/docs/showcase/SOURCE.md`](../notebooklm/docs/showcase/SOURCE.md)
+- 9 格設定檔：[`notebooklm/docs/showcase/manifest.json`](../notebooklm/docs/showcase/manifest.json)
+- 圖片上傳規則：[`notebooklm/assets/showcase/README.md`](../notebooklm/assets/showcase/README.md)
+
+在真正成果圖還沒放進去以前，線上頁面只會顯示透明的 placeholder，並提供對應 Prompt 的直接入口，**不會拿 mockup 冒充 Gemini Notebook 真實輸出**。
+
 ## 第一批展示矩陣
 
-如果可以，9 個範例盡量使用同一份可公開、可重新散布的安全來源主題，這樣更容易比較不同受眾的差異。
+九個範例全部固定使用專案自行撰寫、可公開重新散布的虛構教學來源 **The Community Garden Plan**，這樣才能公平比較受眾與視覺主題差異。
 
 | 主題 | 幼兒 | 青年 | 壯年 |
 |---|---|---|---|
@@ -18,10 +29,12 @@
 
 總共是 **3 個主題 × 3 種受眾 = 9 個範例**。
 
+精確 Prompt ID 已經固定寫進 `notebooklm/docs/showcase/manifest.json`，未來可以重現與比對。
+
 ## 為什麼先選這三種？
 
-- **漫畫（不拘）**：最容易看出分齡與節奏的差異。
-- **科技**：證明這個工具不只適合童趣／教學風格。
+- **漫畫（不拘）**：最容易看出分齡與節奏差異。
+- **科技**：證明工具不只適合童趣／教學風格。
 - **水墨**：視覺語言與前兩種差異很大，也能展示較成熟、沉穩的方向。
 
 三種放在一起就能展示範圍，不需要一開始就把 README 塞滿 90 張圖片。
@@ -38,7 +51,7 @@ Prompt ID：
 生成後是否人工修改：是／否 + 說明
 ```
 
-如果來源本身不能重新公開，就不要 commit 原始來源，只需要用高階描述說明即可。
+第一批九張必須使用上面固定的 controlled source，除非未來明確修改 Showcase 規格並留下紀錄。
 
 ## 標示規則
 
@@ -49,26 +62,22 @@ Prompt ID：
 
 即使是真實生成成果，也只能稱為「範例」，**不能保證另一個人重新生成時會長得完全一樣**。
 
-## 建議檔案結構
+## 第一批檔案結構
 
 ```text
-notebooklm/docs/showcase/
-├── README.md
-├── comic-flex/
-│   ├── children.webp
-│   ├── youth.webp
-│   └── adult.webp
-├── tech/
-│   ├── children.webp
-│   ├── youth.webp
-│   └── adult.webp
-└── ink/
-    ├── children.webp
-    ├── youth.webp
-    └── adult.webp
+notebooklm/assets/showcase/
+├── comic-flex-children.webp
+├── comic-flex-youth.webp
+├── comic-flex-adult.webp
+├── tech-children.webp
+├── tech-youth.webp
+├── tech-adult.webp
+├── ink-children.webp
+├── ink-youth.webp
+└── ink-adult.webp
 ```
 
-圖片優先使用 WebP 等適合網站的格式；不必要的超高解析原圖不要全部塞進 repository。
+圖片優先使用 WebP；不必要的超高解析原圖不要全部塞進 repository。
 
 ## 現在先不要做的事
 
@@ -80,4 +89,4 @@ notebooklm/docs/showcase/
 - contributor 提供合法、可公開且有價值的範例；
 - 新範例能增加理解，而不是只是重複既有畫面。
 
-追蹤 Issue：[#6](https://github.com/dennis23100/toolkit_60/issues/6)。
+追蹤 Issue：[#6](https://github.com/dennis23100/gemini-notebook-prompt-lab/issues/6)。
