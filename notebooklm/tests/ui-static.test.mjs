@@ -27,9 +27,9 @@ test('all static element ids referenced with $(#id) exist in index.html', () => 
 });
 
 test('social preview metadata is configured for the canonical Pages root', () => {
-  assert.match(html, /og:url" content="https:\/\/dennis23100\.github\.io\/toolkit_60\/"/);
-  assert.match(html, /canonical" href="https:\/\/dennis23100\.github\.io\/toolkit_60\/"/);
-  assert.match(html, /og:image" content="https:\/\/dennis23100\.github\.io\/toolkit_60\/docs\/social-preview\.png"/);
+  assert.match(html, /og:url" content="https:\/\/dennis23100\.github\.io\/gemini-notebook-prompt-lab\/"/);
+  assert.match(html, /canonical" href="https:\/\/dennis23100\.github\.io\/gemini-notebook-prompt-lab\/"/);
+  assert.match(html, /og:image" content="https:\/\/dennis23100\.github\.io\/gemini-notebook-prompt-lab\/docs\/social-preview\.png"/);
   assert.match(html, /og:image:width" content="1280"/);
   assert.match(html, /og:image:height" content="640"/);
 });
