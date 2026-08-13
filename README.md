@@ -6,7 +6,7 @@
 
 **A local-first, source-grounded prompt library and workflow toolkit for Gemini Notebook (formerly NotebookLM).**
 
-[繁體中文](README.zh-TW.md) · [🚀 Open the live app](https://dennis23100.github.io/gemini-notebook-prompt-lab/) · [Latest release](https://github.com/dennis23100/gemini-notebook-prompt-lab/releases/latest) · [Issues](https://github.com/dennis23100/gemini-notebook-prompt-lab/issues) · [Contributing](CONTRIBUTING.md)
+[繁體中文](README.zh-TW.md) · [🚀 Open the live app](https://dennis23100.github.io/gemini-notebook-prompt-lab/) · [🖼️ Reproducible Showcase](https://dennis23100.github.io/gemini-notebook-prompt-lab/showcase.html) · [Latest release](https://github.com/dennis23100/gemini-notebook-prompt-lab/releases/latest) · [Issues](https://github.com/dennis23100/gemini-notebook-prompt-lab/issues)
 
 ![Prompts](https://img.shields.io/badge/prompts-90-665fe8)
 ![Themes](https://img.shields.io/badge/themes-30-15977f)
@@ -39,6 +39,13 @@ See [Project Story](docs/PROJECT_STORY.md).
 
 Browse **90 age-adaptive prompts** across **30 visual themes** and **3 audience profiles**. Search, filter, favorite, compare age variants, copy, share, import, and export.
 
+The library now also includes:
+
+- **shareable filter URLs** for age, category, search, and favorites-only views;
+- **recently used prompts**, stored only in browser `localStorage`;
+- export as **JSON, Markdown, or CSV**;
+- lightweight visual-direction previews for the 30 themes.
+
 ### 🧪 Prompt Lab
 
 Compose a new source-grounded prompt from:
@@ -63,6 +70,8 @@ Extract → Create → Verify
 ### ✅ Quality Check — advanced
 
 Run a deterministic local linter that checks for source grounding, anti-invention language, audience, task, output format, constraints, and specificity.
+
+First-time users see a **simple mode** focused on Prompt Library + Prompt Lab. Chain Builder and Quality Check can be revealed as advanced tools when needed.
 
 ## How it works
 
@@ -89,13 +98,26 @@ The important idea is the **comparison**:
 | Pacing | simple, guided | energetic | structured, deliberate |
 | Tone | warm, safe | relatable | steady, credible |
 
-## Visual examples
+## Reproducible visual showcase
 
-The live library now includes lightweight **illustrative style previews** for its themes. These previews communicate visual direction; they are **not guaranteed Gemini Notebook output**.
+The live library includes lightweight **illustrative style previews**. These communicate visual direction; they are **not guaranteed Gemini Notebook output**.
 
-The next showcase milestone is deliberately small and evidence-focused: **3 representative themes × 3 audiences = 9 real generated examples**. That is enough to demonstrate the core age-adaptation idea without turning the repository into a gallery of 90 screenshots.
+For real examples, the project now has a controlled showcase system:
 
-See [Showcase Plan](docs/SHOWCASE.md) and [Issue #6](https://github.com/dennis23100/gemini-notebook-prompt-lab/issues/6).
+### 🖼️ [Open the 3 × 3 Showcase](https://dennis23100.github.io/gemini-notebook-prompt-lab/showcase.html)
+
+The first milestone uses:
+
+```text
+1 controlled source
+× 3 themes (Flexible Comic / Technology / Ink Wash)
+× 3 audiences (Children / Youth / Adults)
+= 9 reproducible example slots
+```
+
+Every slot links to the exact matching Prompt. A slot remains a transparent placeholder until an actual generated result is contributed; mockups are not labeled as Gemini Notebook outputs.
+
+See [Showcase Plan](docs/SHOWCASE.md), the [controlled source](notebooklm/docs/showcase/SOURCE.md), and [Issue #6](https://github.com/dennis23100/gemini-notebook-prompt-lab/issues/6).
 
 ## Current scope
 
@@ -104,12 +126,14 @@ See [Showcase Plan](docs/SHOWCASE.md) and [Issue #6](https://github.com/dennis23
 - **3 audience profiles**
 - **10 Gemini Notebook workflows**
 - Traditional Chinese + English UI
-- local favorites / custom prompts / chains
-- JSON import/export
+- simple / advanced UI modes
+- local favorites / custom prompts / chains / recent history
+- URL-shareable library filters
+- JSON / Markdown / CSV export
 - PWA/offline support
 - source-grounding validation
 - automated tests and GitHub Actions
-- GitHub Pages live demo
+- GitHub Pages live demo + reproducible Showcase
 
 ## Open-source maintenance
 
@@ -136,25 +160,24 @@ npm run check
 
 Good places to help right now include:
 
-- Markdown + CSV export;
-- URL-shareable filters;
 - keyboard/accessibility audit;
 - Japanese UI/metadata localization;
-- the first 9 real generated showcase examples.
+- the first 9 real generated showcase examples;
+- privacy-reviewed media for the real-world teaching origin story;
+- focused prompt or documentation improvements with clear provenance.
 
 Please use Issues rather than opening a large PR without context.
 
 ## Roadmap
 
-The project is intentionally staying focused on Gemini Notebook / NotebookLM for now. High-value next steps are:
+The project is intentionally staying focused on Gemini Notebook / NotebookLM. High-value next steps are:
 
-1. **real generated showcase examples** for selected themes and audiences;
-2. **recently used prompts / local history**;
-3. **simple vs advanced UI mode**;
-4. better export and share workflows;
-5. accessibility improvements;
-6. additional languages;
-7. an **optional browser extension** that reduces the Copy → Open → Paste friction while keeping permissions minimal.
+1. **fill the first nine real Showcase outputs**;
+2. add a **privacy-reviewed teaching still / short clip** to the project story;
+3. accessibility improvements;
+4. additional languages;
+5. improve prompt/version comparison and contribution workflows;
+6. an **optional browser extension** that reduces the Copy → Open → Paste friction while keeping permissions minimal.
 
 Unrelated tools such as video-editing utilities will live in separate repositories if/when they are built.
 
@@ -171,6 +194,7 @@ Unrelated tools such as video-editing utilities will live in separate repositori
 ├── docs/
 └── notebooklm/
     ├── index.html
+    ├── showcase.html
     ├── assets/
     ├── data/
     ├── tests/
