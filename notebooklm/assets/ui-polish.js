@@ -1,50 +1,96 @@
 const ZH_TEXT = {
-  install: '安裝 App',
+  install: '安裝網站',
+  openNotebook: '📓 開啟 Gemini Notebook ↗',
   eyebrow: '來源限定 · 分齡適配 · 可分享 · 隱私優先',
   heroTitle: '把「找提示詞」變成一套可重複的 Gemini Notebook 工作流。',
   heroBody: '從 90 組分齡簡報提示詞出發，再加上多格式工作流、流程串接、品質檢查與一鍵開啟 Gemini Notebook。所有資料都在瀏覽器本機執行。',
   browsePrompts: '瀏覽提示詞',
   buildPrompt: '建立提示詞',
   statPrompts: '分齡提示詞',
+  statThemes: '視覺主題',
+  statAges: '年齡層',
+  statWorkflows: '工作流',
   privacyNote: '不需登入、不上傳你的提示詞、不使用追蹤器。',
+  quickEyebrow: '30 秒上手',
   quickTitle: '複製 → 開啟 → 生成',
+  step1Title: '選受眾',
+  step1Body: '幼兒、青年或壯年，讓語氣、閱讀密度與視覺節奏跟著調整。',
   step2Title: '複製提示詞',
   step2Body: '使用既有模板，或在提示詞工作室依任務快速組合。',
+  step3Title: '開新分頁',
+  step3Body: '按一下直接開啟 Gemini Notebook，不會覆蓋目前頁面。',
   tabLibrary: '📚 提示詞庫',
   tabLab: '🧪 提示詞工作室',
   tabChain: '🔗 流程串接',
   tabLint: '✅ 品質檢查',
+  search: '搜尋',
+  favorites: '☆ 收藏',
+  export: '匯出',
+  import: '匯入',
+  age: '年齡',
+  category: '分類',
+  clearFilters: '清除篩選',
   emptyTitle: '找不到符合條件的提示詞',
+  emptyBody: '換一個關鍵字，或清除篩選條件。',
   composerEyebrow: '提示詞組合器',
+  composerTitle: '用任務組合，而不是從空白開始',
+  workflow: '工作流',
+  audience: '受眾',
+  focus: '聚焦主題',
+  visualTheme: '視覺主題',
+  difficulty: '深度 / 難度',
+  role: '角色',
+  extra: '額外要求',
+  strictGrounding: '嚴格來源限定：來源沒有寫，就不要補。',
   generatePrompt: '產生提示詞',
   addToChain: '加入流程',
   preview: '預覽',
-  generatedPrompt: '產生的英文 Prompt',
+  generatedPrompt: '產生的英文提示詞',
+  copy: '複製',
+  copyOpen: '複製並開啟 Gemini Notebook ↗',
+  checkQuality: '檢查品質',
   chainTitle: '把多個提示詞串成可重複流程',
   chainBody: '適合「先萃取 → 再產出 → 最後檢查」這類任務。所有步驟都可以編輯與重新排序。',
   loadExample: '載入範例流程',
   copyChain: '複製整個流程',
+  clear: '清空',
   chainEmptyTitle: '流程還是空的',
   chainEmptyBody: '從提示詞庫或提示詞工作室加入提示詞，或載入範例流程。',
   lintTitle: '在送進 Gemini Notebook 前先做品質檢查',
   lintBody: '這不是 AI 評審，而是一套透明的本機規則：來源限定、受眾、任務、輸出格式、約束與防杜撰。',
+  runCheck: '執行檢查',
   useSelected: '使用目前選取的提示詞',
   qualityScore: '提示詞品質分數',
-  lintIdle: '貼上英文 Prompt 後執行檢查。',
+  lintIdle: '貼上英文提示詞後執行檢查。',
   whyEyebrow: '為什麼做這個工具？',
   whyTitle: '不是「提示詞越多越好」，而是要能被使用、修改、驗證與共同維護。',
+  f1Title: '分齡對照',
   f1Body: '同一主題可以直接比較三種年齡層的提示詞差異。',
   f2Title: '來源限定',
   f2Body: '提示詞明確要求只使用來源，降低內容被風格指令帶偏。',
+  f3Title: '可組合工作流',
   f3Body: '簡報、音訊、影片、測驗、報告等任務都能用同一套組合器完成。',
   f4Title: '隱私優先',
   f4Body: '收藏、自訂內容與流程都存在瀏覽器本機；沒有帳號與伺服器。',
   footerOrigin: '起源於分齡佛堂教學需求，後來整理成任何教育與知識工作者都能自行改作的開源工具。',
-  results: '個提示詞',
+  share: '分享',
+  copyOpenShort: '複製並開啟 ↗',
+  sources: '來源與授權',
+  all: '全部',
+  view: '查看',
+  copied: '已複製',
+  favoriteAdded: '已加入收藏',
+  favoriteRemoved: '已取消收藏',
+  shared: '分享連結已複製',
   imported: '已匯入提示詞',
-  export: '匯出',
-  import: '匯入',
-  favorites: '☆ 收藏',
+  importError: '匯入失敗：JSON 格式不符合需求',
+  exported: '已匯出目前篩選結果',
+  addedChain: '已加入流程',
+  chainCopied: '流程已複製',
+  chainLoaded: '範例流程已載入',
+  noFocus: '請先輸入聚焦主題',
+  results: '個提示詞',
+  custom: '自訂',
   compare: '比較年齡版本'
 };
 
@@ -68,13 +114,15 @@ const DIFFICULTY = {
   advanced: { zh: '進階', en: 'Advanced' }
 };
 
+const THEME_MIGRATION_VERSION = '2';
 const isZh = () => document.documentElement.lang.toLowerCase().startsWith('zh');
 
 function applyTheme(theme) {
   document.documentElement.dataset.theme = theme;
   localStorage.setItem('gnpl.theme', theme);
+  localStorage.setItem('gnpl.themeVersion', THEME_MIGRATION_VERSION);
   const meta = document.querySelector('meta[name="theme-color"]');
-  if (meta) meta.content = theme === 'dark' ? '#111827' : '#f4f6fb';
+  if (meta) meta.content = theme === 'dark' ? '#151b27' : '#f6f8fc';
   updateThemeButton();
 }
 
@@ -109,7 +157,7 @@ function ensureRolePreset() {
   if (!input || document.querySelector('#rolePreset')) return;
   const select = document.createElement('select');
   select.id = 'rolePreset';
-  select.setAttribute('aria-label', 'Role preset');
+  select.setAttribute('aria-label', '角色預設');
   select.addEventListener('change', () => { input.value = select.value; });
   input.type = 'hidden';
   input.insertAdjacentElement('afterend', select);
@@ -137,6 +185,35 @@ function localizeDifficulty() {
   });
 }
 
+function markAdvancedTabs() {
+  const zh = isZh();
+  ['#tab-chain', '#tab-lint'].forEach(selector => {
+    const el = document.querySelector(selector);
+    if (!el) return;
+    el.classList.add('tab-advanced');
+    el.dataset.advancedLabel = zh ? '進階' : 'Advanced';
+  });
+}
+
+function ensureAdvancedNotes() {
+  const zh = isZh();
+  const configs = [
+    ['#panel-chain .compact-heading', zh ? '適合需要「多步驟、重複執行」的進階使用者。一般使用者可先從提示詞庫與提示詞工作室開始。' : 'Best for repeatable multi-step workflows. New users can start with Library and Prompt Lab.'],
+    ['#panel-lint .compact-heading', zh ? '適合檢查自訂或外部提示詞。網站內建提示詞本身已經過規則檢查。' : 'Best for custom or external prompts. Built-in prompts are already checked by the project rules.']
+  ];
+  configs.forEach(([selector, text]) => {
+    const host = document.querySelector(selector);
+    if (!host) return;
+    let note = host.querySelector('.advanced-note');
+    if (!note) {
+      note = document.createElement('div');
+      note.className = 'advanced-note';
+      host.appendChild(note);
+    }
+    note.innerHTML = `<strong>${zh ? '進階工具' : 'Advanced tool'}</strong><span>${text}</span>`;
+  });
+}
+
 function patchStaticLabels() {
   const zh = isZh();
   if (zh) {
@@ -153,7 +230,7 @@ function patchStaticLabels() {
     const lintEyebrow = document.querySelector('#panel-lint .eyebrow');
     if (lintEyebrow) lintEyebrow.textContent = '本機提示詞檢查器';
     const lintInput = document.querySelector('#lintInput');
-    if (lintInput) lintInput.placeholder = '在這裡貼上英文 Prompt…';
+    if (lintInput) lintInput.placeholder = '在這裡貼上英文提示詞…';
     const search = document.querySelector('#searchInput');
     if (search) search.placeholder = '搜尋主題、分類或提示詞…';
     const footerLinks = document.querySelectorAll('.footer-links a');
@@ -182,24 +259,26 @@ function patchStaticLabels() {
   }
   localizeDifficulty();
   renderRolePreset();
+  markAdvancedTabs();
+  ensureAdvancedNotes();
   updateThemeButton();
 }
 
 function addHelpfulTitles() {
   const titles = isZh() ? {
     '#tab-library': '瀏覽、搜尋、收藏與複製現成提示詞',
-    '#tab-lab': '依工作流、受眾與主題組合新的英文 Prompt',
-    '#tab-chain': '把多個 Prompt 依序串成「萃取 → 產出 → 檢查」流程',
-    '#tab-lint': '檢查 Prompt 是否包含來源限定、受眾、格式與防杜撰規則'
+    '#tab-lab': '依工作流、受眾與主題組合新的英文提示詞',
+    '#tab-chain': '進階：把多個提示詞串成「萃取 → 產出 → 檢查」流程',
+    '#tab-lint': '進階：檢查自訂提示詞是否包含來源限定、受眾、格式與防杜撰規則'
   } : {
     '#tab-library': 'Browse, search, favorite, and copy curated prompts',
     '#tab-lab': 'Compose a new prompt from workflow, audience, and topic',
-    '#tab-chain': 'Connect multiple prompts into an extract → create → verify flow',
-    '#tab-lint': 'Check grounding, audience, format, constraints, and anti-hallucination rules'
+    '#tab-chain': 'Advanced: connect prompts into an extract → create → verify flow',
+    '#tab-lint': 'Advanced: check grounding, audience, format, constraints, and anti-hallucination rules'
   };
   Object.entries(titles).forEach(([selector, title]) => {
     const el = document.querySelector(selector);
-    if (el) title ? el.title = title : el.removeAttribute('title');
+    if (el) el.title = title;
   });
 }
 
@@ -216,8 +295,13 @@ function schedulePatch() {
   });
 }
 
-const storedTheme = localStorage.getItem('gnpl.theme') || 'light';
-applyTheme(storedTheme === 'dark' ? 'dark' : 'light');
+const previousThemeVersion = localStorage.getItem('gnpl.themeVersion');
+const storedTheme = localStorage.getItem('gnpl.theme');
+if (previousThemeVersion !== THEME_MIGRATION_VERSION) {
+  applyTheme('light');
+} else {
+  applyTheme(storedTheme === 'dark' ? 'dark' : 'light');
+}
 
 window.addEventListener('DOMContentLoaded', () => {
   schedulePatch();
