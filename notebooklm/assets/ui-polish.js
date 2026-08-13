@@ -115,6 +115,8 @@ const DIFFICULTY = {
 };
 
 const THEME_MIGRATION_VERSION = '2';
+const UI_MODE_KEY = 'gnpl.uiMode';
+const FEEDBACK_URL = 'https://github.com/dennis23100/toolkit_60/issues/new/choose';
 const isZh = () => document.documentElement.lang.toLowerCase().startsWith('zh');
 
 function applyTheme(theme) {
@@ -150,6 +152,76 @@ function ensureThemeToggle() {
   });
   lang.parentElement.insertBefore(btn, lang);
   updateThemeButton();
+}
+
+function ensureFeedbackLink() {
+  const actions = document.querySelector('.top-actions');
+  if (!actions) return;
+  let link = document.querySelector('#feedbackLink');
+  if (!link) {
+    link = document.createElement('a');
+    link.id = 'feedbackLink';
+    link.className = 'button ghost compact feedback-link';
+    link.href = FEEDBACK_URL;
+    link.target = '_blank';
+    link.rel = 'noopener noreferrer';
+    const githubLink = [...actions.querySelectorAll('a')].find(a => /github\.com/i.test(a.href));
+    if (githubLink) actions.insertBefore(link, githubLink);
+    else actions.appendChild(link);
+  }
+  link.textContent = isZh() ? '💬 回饋' : '💬 Feedback';
+  link.title = isZh() ? '回報問題、提出功能建議或分享使用心得' : 'Report a problem, request a feature, or share feedback';
+}
+
+function applyUiMode(mode) {
+  const normalized = mode === 'advanced' ? 'advanced' : 'simple';
+  localStorage.setItem(UI_MODE_KEY, normalized);
+  document.documentElement.dataset.uiMode = normalized;
+
+  ['#tab-chain', '#tab-lint'].forEach(selector => {
+    const tab = document.querySelector(selector);
+    if (!tab) return;
+    tab.classList.toggle('hidden', normalized === 'simple');
+  });
+
+  if (normalized === 'simple') {
+    const activeAdvanced = document.querySelector('#tab-chain.active, #tab-lint.active');
+    if (activeAdvanced) document.querySelector('#tab-library')?.click();
+  }
+  updateUiModeButton();
+}
+
+function updateUiModeButton() {
+  const btn = document.querySelector('#uiModeToggleBtn');
+  if (!btn) return;
+  const mode = document.documentElement.dataset.uiMode || 'simple';
+  const zh = isZh();
+  const showAdvanced = mode === 'simple';
+  btn.textContent = zh
+    ? (showAdvanced ? '⚙️ 顯示進階功能' : '✨ 回到簡易模式')
+    : (showAdvanced ? '⚙️ Show advanced' : '✨ Simple mode');
+  btn.title = zh
+    ? (showAdvanced ? '顯示流程串接與品質檢查' : '只顯示提示詞庫與提示詞工作室')
+    : (showAdvanced ? 'Show Chain Builder and Quality Check' : 'Show only Library and Prompt Lab');
+}
+
+function ensureUiModeToggle() {
+  const tabs = document.querySelector('.tabs');
+  if (!tabs) return;
+  let btn = document.querySelector('#uiModeToggleBtn');
+  if (!btn) {
+    btn = document.createElement('button');
+    btn.id = 'uiModeToggleBtn';
+    btn.type = 'button';
+    btn.className = 'button ghost compact ui-mode-toggle';
+    btn.style.marginLeft = 'auto';
+    btn.addEventListener('click', () => {
+      const current = document.documentElement.dataset.uiMode || 'simple';
+      applyUiMode(current === 'simple' ? 'advanced' : 'simple');
+    });
+    tabs.appendChild(btn);
+  }
+  applyUiMode(localStorage.getItem(UI_MODE_KEY) || 'simple');
 }
 
 function ensureRolePreset() {
@@ -261,7 +333,9 @@ function patchStaticLabels() {
   renderRolePreset();
   markAdvancedTabs();
   ensureAdvancedNotes();
+  ensureFeedbackLink();
   updateThemeButton();
+  updateUiModeButton();
 }
 
 function addHelpfulTitles() {
@@ -289,6 +363,8 @@ function schedulePatch() {
   requestAnimationFrame(() => {
     scheduled = false;
     ensureThemeToggle();
+    ensureFeedbackLink();
+    ensureUiModeToggle();
     ensureRolePreset();
     patchStaticLabels();
     addHelpfulTitles();
@@ -302,6 +378,8 @@ if (previousThemeVersion !== THEME_MIGRATION_VERSION) {
 } else {
   applyTheme(storedTheme === 'dark' ? 'dark' : 'light');
 }
+
+document.documentElement.dataset.uiMode = localStorage.getItem(UI_MODE_KEY) || 'simple';
 
 window.addEventListener('DOMContentLoaded', () => {
   schedulePatch();
