@@ -1,4 +1,4 @@
-/* Toolkit 60 Prompt Lab — UI polish v2
+/* Toolkit 60 Prompt Lab — UI polish v3
    Light-first, approachable, Notebook-inspired interface.
    Dark mode remains available as an explicit user choice.
 */
@@ -19,6 +19,10 @@ html[data-theme="light"] {
   --danger: #d94f5c;
   --warning: #bd7510;
   --shadow: 0 14px 42px rgba(55, 67, 110, .09);
+  --ambient-a: rgba(114, 104, 238, .18);
+  --ambient-b: rgba(73, 203, 176, .13);
+  --ambient-c: rgba(255, 190, 111, .10);
+  --dot: rgba(92, 106, 145, .12);
 }
 
 html[data-theme="dark"] {
@@ -35,22 +39,62 @@ html[data-theme="dark"] {
   --danger: #ff7e89;
   --warning: #ffc166;
   --shadow: 0 16px 44px rgba(2, 8, 23, .22);
+  --ambient-a: rgba(126, 119, 244, .16);
+  --ambient-b: rgba(65, 190, 166, .11);
+  --ambient-c: rgba(225, 158, 91, .07);
+  --dot: rgba(181, 196, 222, .09);
 }
 
 body {
   min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
   background:
     radial-gradient(circle at 8% -8%, color-mix(in srgb, var(--primary) 10%, transparent), transparent 30rem),
     radial-gradient(circle at 94% 4%, color-mix(in srgb, var(--accent) 7%, transparent), transparent 27rem),
     var(--bg);
 }
 
+/* Ambient brand layer: soft aurora + editorial dot texture. */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse 38rem 28rem at 7% 18%, var(--ambient-a), transparent 70%),
+    radial-gradient(ellipse 34rem 24rem at 94% 27%, var(--ambient-b), transparent 72%),
+    radial-gradient(ellipse 30rem 22rem at 62% 86%, var(--ambient-c), transparent 73%);
+  opacity: .78;
+  z-index: 0;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image: radial-gradient(circle, var(--dot) 1px, transparent 1.15px);
+  background-size: 27px 27px;
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,.72), rgba(0,0,0,.24) 48%, transparent 88%);
+  mask-image: linear-gradient(to bottom, rgba(0,0,0,.72), rgba(0,0,0,.24) 48%, transparent 88%);
+  opacity: .42;
+  z-index: 0;
+}
+
+body > main,
+body > footer,
+body > .toast {
+  position: relative;
+  z-index: 1;
+}
+
 .shell { --max: 1240px; }
 
 .topbar {
-  background: color-mix(in srgb, var(--bg) 93%, transparent);
+  background: color-mix(in srgb, var(--bg) 90%, transparent);
   box-shadow: 0 1px 0 color-mix(in srgb, var(--line) 65%, transparent);
-  backdrop-filter: blur(18px);
+  backdrop-filter: blur(20px) saturate(125%);
 }
 
 .brand-mark {
@@ -65,9 +109,10 @@ body {
 .tabs {
   gap: 7px;
   padding: 7px;
-  background: color-mix(in srgb, var(--panel) 97%, var(--primary) 3%);
+  background: color-mix(in srgb, var(--panel) 88%, transparent);
   border-color: color-mix(in srgb, var(--line) 88%, var(--primary) 12%);
   box-shadow: 0 8px 28px color-mix(in srgb, var(--text) 5%, transparent);
+  backdrop-filter: blur(15px) saturate(115%);
 }
 
 .tab {
@@ -89,9 +134,7 @@ body {
   box-shadow: 0 7px 18px rgba(98, 94, 226, .22);
 }
 
-.tab-advanced {
-  position: relative;
-}
+.tab-advanced { position: relative; }
 
 .tab-advanced::after {
   content: attr(data-advanced-label);
@@ -111,7 +154,7 @@ body {
   color: #fff;
 }
 
-/* Softer surfaces: less 'developer dashboard', more content/product tool. */
+/* Softer surfaces: less developer dashboard, more content/product tool. */
 .builder-card,
 .preview-card,
 .prompt-card,
@@ -127,15 +170,80 @@ body {
 .builder-card,
 .preview-card,
 .prompt-card,
-.filter-block,
 .steps article,
 .feature-grid article {
-  background: color-mix(in srgb, var(--panel) 98%, var(--primary) 2%);
+  background: color-mix(in srgb, var(--panel) 94%, transparent);
   box-shadow: 0 4px 18px color-mix(in srgb, var(--text) 3.5%, transparent);
+  backdrop-filter: blur(8px);
+}
+
+/* Cleaner filter block: no redundant 'All' pills. Empty selection already means all. */
+.chips .chip[data-age="all"],
+.chips .chip[data-category="all"] {
+  display: none !important;
 }
 
 .filter-block {
-  padding: 17px 18px;
+  margin-top: 18px;
+  padding: 13px 17px;
+  background:
+    linear-gradient(120deg, color-mix(in srgb, var(--primary) 4%, transparent), transparent 42%),
+    color-mix(in srgb, var(--panel) 88%, transparent);
+  box-shadow: 0 7px 24px color-mix(in srgb, var(--text) 3%, transparent);
+  backdrop-filter: blur(13px) saturate(112%);
+}
+
+.filter-row {
+  align-items: center;
+  padding: 8px 0;
+}
+
+.filter-row + .filter-row {
+  border-top: 1px dashed color-mix(in srgb, var(--line) 76%, transparent);
+}
+
+.filter-label {
+  position: relative;
+  color: var(--text);
+  font-weight: 850;
+  padding-top: 0;
+}
+
+.filter-label::before {
+  content: "";
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  margin-right: 8px;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--primary) 8%, transparent);
+  vertical-align: 1px;
+}
+
+.chips { gap: 8px; }
+
+.chip {
+  background: color-mix(in srgb, var(--panel-2) 70%, transparent);
+  border-color: color-mix(in srgb, var(--line) 82%, transparent);
+  transition: transform .14s ease, background .14s ease, border-color .14s ease, color .14s ease;
+}
+
+.chip:hover {
+  transform: translateY(-1px);
+  color: var(--text);
+  border-color: color-mix(in srgb, var(--primary) 28%, var(--line));
+  background: color-mix(in srgb, var(--primary) 5%, var(--panel));
+}
+
+.chip.active {
+  color: var(--primary);
+  background: color-mix(in srgb, var(--primary) 9%, var(--panel));
+  border-color: color-mix(in srgb, var(--primary) 38%, var(--line));
+}
+
+.results-line {
+  padding-inline: 3px;
 }
 
 .prompt-card {
@@ -152,8 +260,9 @@ body {
 .prompt-card h3 { line-height: 1.35; }
 
 .search-box {
-  background: color-mix(in srgb, var(--panel) 99%, var(--primary) 1%);
+  background: color-mix(in srgb, var(--panel) 91%, transparent);
   box-shadow: 0 3px 12px color-mix(in srgb, var(--text) 3%, transparent);
+  backdrop-filter: blur(12px);
 }
 
 input,
@@ -186,11 +295,6 @@ textarea:focus {
 
 .button.ghost:hover {
   background: color-mix(in srgb, var(--primary) 5%, var(--panel));
-}
-
-.chip.active {
-  color: var(--primary);
-  background: color-mix(in srgb, var(--primary) 9%, var(--panel));
 }
 
 .prompt-editor {
@@ -229,12 +333,14 @@ textarea:focus {
 /* Light mode gets a touch more warmth and whitespace. */
 html[data-theme="light"] .hero-panel {
   background:
-    radial-gradient(circle at 8% 8%, rgba(102,95,232,.08), transparent 42%),
-    #ffffff;
+    radial-gradient(circle at 8% 8%, rgba(102,95,232,.10), transparent 42%),
+    radial-gradient(circle at 91% 82%, rgba(78,199,174,.07), transparent 40%),
+    rgba(255,255,255,.88);
+  backdrop-filter: blur(12px);
 }
 
 html[data-theme="light"] .stat {
-  background: #f8f9fd;
+  background: rgba(248,249,253,.84);
 }
 
 html[data-theme="light"] .prompt-editor {
@@ -260,11 +366,11 @@ html[data-theme="dark"] .feature-grid article {
 }
 
 @media (max-width: 640px) {
-  .theme-toggle {
-    min-width: auto;
-    padding-inline: 9px;
-  }
+  body::after { background-size: 22px 22px; opacity: .28; }
+  .theme-toggle { min-width: auto; padding-inline: 9px; }
   .theme-toggle .theme-label { display: none; }
   .tab { padding-inline: 13px; }
   .tabs { gap: 3px; }
+  .filter-row { align-items: flex-start; }
+  .filter-label { padding-top: 5px; }
 }
