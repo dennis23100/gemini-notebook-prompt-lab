@@ -1,6 +1,6 @@
 # Maintainers
 
-Toolkit 60 is currently maintained by:
+Gemini Notebook Prompt Lab is currently maintained by:
 
 - **@dennis23100** — primary maintainer
 
@@ -10,22 +10,17 @@ The primary maintainer is responsible for:
 
 - reviewing and merging pull requests;
 - triaging issues and feature requests;
-- maintaining CI and GitHub Pages deployment;
+- maintaining automated tests, CI, and GitHub Pages deployment;
 - preparing and publishing releases;
 - reviewing security-sensitive changes;
 - keeping project scope, documentation, and licensing understandable;
-- deciding when a subproject is mature enough to gain additional maintainers or move into its own repository.
+- preserving source-grounding and provenance rules for prompt/data contributions;
+- deciding when contributor activity justifies additional maintainers.
 
-## Project ownership
+## Current project scope
 
-### Gemini Notebook Prompt Lab (`notebooklm/`)
-
-@dennis23100 is the primary maintainer for the current public release and prompt/workflow data.
-
-### Video Editing Toolkit (`video-editing/`)
-
-The project is currently in planning status and does not yet have a stable implementation or additional maintainers.
+The repository is focused on the Gemini Notebook / NotebookLM Prompt Lab. Unrelated creator tools, including future video-editing utilities, should live in separate repositories so this project retains a clear ecosystem purpose.
 
 ## Becoming a maintainer
 
-Regular contributors who demonstrate good judgment through useful issues, reviews, documentation, tests, or code contributions may be invited to take on broader review or maintenance responsibilities as the project grows.
+Regular contributors who demonstrate good judgment through useful issues, reviews, documentation, tests, accessibility work, prompt/data improvements, or code contributions may be invited to take on broader review or maintenance responsibilities.
