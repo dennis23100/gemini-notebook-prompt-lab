@@ -1,5 +1,7 @@
 <div align="center">
 
+<img src="notebooklm/docs/hero.svg" alt="Gemini Notebook 提示詞工作室" width="100%" />
+
 # 🧠 Gemini Notebook 提示詞工作室
 
 **為 Gemini Notebook（原 NotebookLM）打造的本機優先、來源限定、分齡提示詞庫與工作流工具。**
