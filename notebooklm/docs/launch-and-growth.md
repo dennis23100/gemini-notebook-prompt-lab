@@ -4,9 +4,9 @@ Gemini Notebook Prompt Lab should earn stars because it solves a repeatable prob
 
 ## Repository positioning
 
-This repository is now intentionally focused on **Gemini Notebook / NotebookLM**. Unrelated future tools should use separate repositories.
+This repository is intentionally focused on **Gemini Notebook / NotebookLM**. Unrelated future tools should use separate repositories.
 
-Recommended final repository name:
+Current repository name:
 
 ```text
 gemini-notebook-prompt-lab
@@ -18,6 +18,12 @@ Recommended About description:
 Local-first, source-grounded prompt library & workflow toolkit for Gemini Notebook (NotebookLM). 90 prompts · 30 themes · 3 audiences · 10 workflows.
 ```
 
+Recommended website:
+
+```text
+https://dennis23100.github.io/gemini-notebook-prompt-lab/
+```
+
 Recommended topics:
 
 ```text
@@ -27,6 +33,7 @@ prompt-engineering
 prompt-library
 education
 teaching-tools
+source-grounding
 local-first
 pwa
 github-pages
@@ -42,13 +49,13 @@ open-source
 - [x] Repository-level MIT license.
 - [x] CONTRIBUTING, SECURITY, CODE_OF_CONDUCT, and MAINTAINERS files.
 - [x] Real contribution issues opened and labeled.
-- [x] `notebooklm-v1.0.0` release published.
+- [x] Versioned GitHub Releases published.
 - [x] Project story and showcase plan documented.
-- [ ] Rename repository to `gemini-notebook-prompt-lab`.
-- [ ] Update Pages / canonical / repository links after the rename.
-- [ ] Set About description and website.
-- [ ] Add repository topics.
-- [ ] Upload repository social preview.
+- [x] Repository renamed to `gemini-notebook-prompt-lab`.
+- [x] Pages / canonical / repository links updated after the rename.
+- [x] Repository topics added.
+- [ ] Update the About description and website to the focused project values above.
+- [ ] Upload repository social preview in GitHub Settings.
 - [ ] Pin the repository on the maintainer profile.
 - [ ] Add a privacy-reviewed teaching still or short clip.
 - [ ] Add the first 9 real generated showcase examples.
