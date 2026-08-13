@@ -6,7 +6,7 @@
 
 **為 Gemini Notebook（原 NotebookLM）打造的本機優先、來源限定、分齡提示詞庫與工作流工具。**
 
-[English](README.md) · [🚀 直接打開網站](https://dennis23100.github.io/gemini-notebook-prompt-lab/) · [最新版本](https://github.com/dennis23100/gemini-notebook-prompt-lab/releases/latest) · [Issues](https://github.com/dennis23100/gemini-notebook-prompt-lab/issues) · [參與貢獻](CONTRIBUTING.md)
+[English](README.md) · [🚀 直接打開網站](https://dennis23100.github.io/gemini-notebook-prompt-lab/) · [🖼️ 可重現成果 Showcase](https://dennis23100.github.io/gemini-notebook-prompt-lab/showcase.html) · [最新版本](https://github.com/dennis23100/gemini-notebook-prompt-lab/releases/latest) · [Issues](https://github.com/dennis23100/gemini-notebook-prompt-lab/issues)
 
 ![Prompts](https://img.shields.io/badge/prompts-90-665fe8)
 ![Themes](https://img.shields.io/badge/themes-30-15977f)
@@ -39,6 +39,13 @@ Gemini Notebook 提示詞工作室把這個問題做成可重複使用的開源�
 
 瀏覽 **90 組分齡提示詞**、**30 種視覺主題**、**3 種受眾設定**。可以搜尋、篩選、收藏、比較不同年齡版本、複製、分享、匯入與匯出。
 
+提示詞庫現在也包含：
+
+- **可分享的篩選網址**：年齡、分類、搜尋與「只看收藏」都能放進 URL；
+- **最近使用紀錄**：只存在瀏覽器 `localStorage`；
+- **JSON / Markdown / CSV** 三種匯出格式；
+- 30 種主題的輕量視覺方向預覽。
+
 ### 🧪 提示詞工作室
 
 依照下列條件快速組出新的來源限定英文 Prompt：
@@ -63,6 +70,8 @@ Gemini Notebook 提示詞工作室把這個問題做成可重複使用的開源�
 ### ✅ 品質檢查 — 進階
 
 用透明、可重現的本機規則檢查 Prompt 是否包含來源限定、防杜撰、受眾、任務、輸出格式、約束與足夠具體性。
+
+第一次使用時預設是**簡易模式**，主要只看到「提示詞庫＋提示詞工作室」；有需要再展開流程串接與品質檢查。
 
 ## 使用方式其實只有 3 步
 
@@ -89,13 +98,26 @@ Gemini Notebook 提示詞工作室把這個問題做成可重複使用的開源�
 | 節奏 | 簡單、引導式 | 較有動能 | 結構清楚、穩定 |
 | 語氣 | 溫暖、安全 | 好理解、有共感 | 穩重、可信 |
 
-## 成果預覽
+## 可重現成果 Showcase
 
-網站目前已加入輕量的**「風格預覽・示意」**，幫助使用者在看 Prompt 前先理解主題的視覺氣氛。這些示意圖**不是 Gemini Notebook 保證會生成的成果**。
+網站的 Prompt 卡目前有輕量的**「風格預覽・示意」**，幫助使用者先理解視覺方向；這些示意圖**不是 Gemini Notebook 保證會生成的成果**。
 
-下一個展示里程碑不會一口氣做 30 × 3 = 90 張，而是先做 **3 個代表性主題 × 3 種受眾 = 9 個真實生成範例**。這樣就足以把「同一份可信來源，如何依受眾改變呈現」這個核心價值說清楚，也比較容易維護。
+真實成果則已經建立一套 controlled showcase：
 
-請看：[成果展示規劃](docs/SHOWCASE.zh-TW.md) 與 [Issue #6](https://github.com/dennis23100/gemini-notebook-prompt-lab/issues/6)。
+### 🖼️ [打開 3 × 3 Showcase](https://dennis23100.github.io/gemini-notebook-prompt-lab/showcase.html)
+
+第一批固定使用：
+
+```text
+1 份相同的 controlled source
+× 3 種主題（漫畫／科技／水墨）
+× 3 種受眾（幼兒／青年／壯年）
+= 9 個可重現成果位置
+```
+
+每個位置都連到精確的 Prompt。真正的生成圖還沒加入前，只會顯示透明 placeholder，**不會拿 mockup 冒充 Gemini Notebook 真實輸出**。
+
+請看：[成果展示規劃](docs/SHOWCASE.zh-TW.md)、[固定測試來源](notebooklm/docs/showcase/SOURCE.md) 與 [Issue #6](https://github.com/dennis23100/gemini-notebook-prompt-lab/issues/6)。
 
 ## 目前規模
 
@@ -104,12 +126,14 @@ Gemini Notebook 提示詞工作室把這個問題做成可重複使用的開源�
 - **3 種受眾設定**
 - **10 種 Gemini Notebook 工作流**
 - 繁體中文 + 英文介面
-- 本機收藏／自訂 Prompt／Chain
-- JSON 匯入／匯出
+- 簡易／進階介面模式
+- 本機收藏／自訂 Prompt／Chain／最近使用紀錄
+- 可分享的 URL 篩選狀態
+- JSON / Markdown / CSV 匯出
 - PWA／離線支援
 - 來源限定驗證
 - 自動測試與 GitHub Actions
-- GitHub Pages Live Demo
+- GitHub Pages Live Demo + 可重現 Showcase
 
 ## 這是一個持續維護的 OSS
 
@@ -134,27 +158,26 @@ npm run check
 
 ## 現在最適合參與的項目
 
-- Markdown + CSV 匯出；
-- 可分享的 URL 篩選狀態；
 - 鍵盤操作／Accessibility audit；
 - 日文 UI / metadata 翻譯；
-- 第一批 9 張真實生成成果範例。
+- 第一批 9 張真實生成成果；
+- 經過隱私檢查的真實教學現場素材；
+- 有清楚來源／用途的 Prompt 或文件改善。
 
 如果是比較大的改動，請先從 Issue 開始，不要直接送一個範圍很大的 PR。
 
 ## Roadmap
 
-現階段這個 repository **專心主打 Gemini Notebook / NotebookLM**，不再同時放未完成的剪片工具。
+現階段這個 repository **專心主打 Gemini Notebook / NotebookLM**。
 
 接下來優先順序：
 
-1. **真實生成成果 Showcase**；
-2. **最近使用／本機歷史紀錄**；
-3. **簡易模式 / 進階模式**；
-4. 更好的匯出與分享；
-5. Accessibility；
-6. 更多語言；
-7. 一個**可選的 Browser Extension**，在保持低權限的前提下減少「複製 → 開啟 → 貼上」的摩擦。
+1. **填入第一批 9 張真實 Showcase 成果**；
+2. 加入**經過隱私檢查的教學現場截圖／短片**；
+3. Accessibility；
+4. 更多語言；
+5. Prompt／版本差異與貢獻流程再強化；
+6. 一個**可選的 Browser Extension**，在保持低權限的前提下減少「複製 → 開啟 → 貼上」的摩擦。
 
 未來如果真的做剪片工具，會另外開 repository，不再混在這個專案裡。
 
@@ -171,6 +194,7 @@ npm run check
 ├── docs/
 └── notebooklm/
     ├── index.html
+    ├── showcase.html
     ├── assets/
     ├── data/
     ├── tests/
