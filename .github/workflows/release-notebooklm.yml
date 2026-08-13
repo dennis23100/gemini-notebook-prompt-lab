@@ -1,11 +1,10 @@
-name: Release NotebookLM Prompt Lab
+name: Release Gemini Notebook Prompt Lab
 
 on:
   push:
     branches: [main]
     paths:
       - 'notebooklm/VERSION'
-      - 'notebooklm/RELEASE_NOTES.md'
   workflow_dispatch:
 
 permissions:
