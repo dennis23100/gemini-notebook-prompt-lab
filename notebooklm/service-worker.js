@@ -1,4 +1,4 @@
-const CACHE='gnpl-v11';
+const CACHE='gnpl-v12';
 const ASSETS=['./','./index.html','./assets/styles.css','./assets/ui-polish.css','./assets/style-previews.css','./assets/app.js','./assets/ui-polish.js','./assets/productivity.css','./assets/productivity.js','./assets/accessibility.css','./assets/accessibility.js','./assets/favicon.svg','./data/prompts.json','./data/packs/narrative-characters.json','./data/packs/nature-exploration.json','./data/packs/life-rhythm.json','./data/packs/digital-media.json','./data/packs/humanities-spirituality.json','./data/packs/emotion-life.json','./data/workflows.json','./manifest.webmanifest'];
 self.addEventListener('install',e=>e.waitUntil(caches.open(CACHE).then(c=>c.addAll(ASSETS)).then(()=>self.skipWaiting())));
 self.addEventListener('activate',e=>e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim())));
