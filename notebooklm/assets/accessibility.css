@@ -1,0 +1,48 @@
+/* Accessibility layer: visible keyboard focus, motion preferences, and high-contrast support. */
+
+:where(a, button, input, select, textarea, summary, [tabindex]):focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--primary) 78%, #ffffff 22%);
+  outline-offset: 3px;
+  border-radius: 8px;
+}
+
+.tab:focus-visible,
+.chip:focus-visible,
+.favorite-button:focus-visible,
+.icon-button:focus-visible {
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--primary) 18%, transparent);
+}
+
+.prompt-dialog:focus-visible { outline: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto !important; }
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media (prefers-contrast: more) {
+  .button,
+  .chip,
+  .prompt-card,
+  .builder-card,
+  .preview-card,
+  .filter-block,
+  .search-box,
+  input,
+  select,
+  textarea {
+    border-width: 2px;
+  }
+
+  .muted,
+  .prompt-card p,
+  .advanced-note,
+  .privacy-note {
+    color: var(--text);
+  }
+}
