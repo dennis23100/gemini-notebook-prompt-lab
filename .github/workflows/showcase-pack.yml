@@ -1,0 +1,60 @@
+name: Prepare Showcase Pack
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'notebooklm/data/packs/**'
+      - 'notebooklm/scripts/export-showcase-prompts.mjs'
+      - 'docs/showcase/source.md'
+      - '.github/workflows/showcase-pack.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  build-showcase-pack:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Validate project
+        working-directory: notebooklm
+        run: npm run check
+
+      - name: Export nine reproducible showcase prompts
+        working-directory: notebooklm
+        run: npm run showcase:export
+
+      - name: Verify nine unique cases
+        run: |
+          node --input-type=module <<'NODE'
+          import { readFile } from 'node:fs/promises';
+          const path = 'docs/showcase/generated-prompts/cases.json';
+          const manifest = JSON.parse(await readFile(path, 'utf8'));
+          if (!Array.isArray(manifest.cases) || manifest.cases.length !== 9) {
+            throw new Error(`Expected 9 cases, got ${manifest.cases?.length ?? 'invalid'}`);
+          }
+          const promptIds = new Set(manifest.cases.map(item => item.promptId));
+          if (promptIds.size !== 9) throw new Error('Prompt IDs must be unique');
+          console.log('Prepared 9 unique showcase cases.');
+          NODE
+
+      - name: Upload ready-to-copy showcase pack
+        uses: actions/upload-artifact@v4
+        with:
+          name: gemini-notebook-showcase-prompts
+          path: |
+            docs/showcase/source.md
+            docs/showcase/SUBMISSION.md
+            docs/showcase/generated-prompts/
+          if-no-files-found: error
+          retention-days: 30
