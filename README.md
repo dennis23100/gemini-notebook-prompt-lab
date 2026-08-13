@@ -48,30 +48,17 @@ The library now also includes:
 
 ### 🧪 Prompt Lab
 
-Compose a new source-grounded prompt from:
-
-- Gemini Notebook workflow/output type;
-- target audience;
-- focus topic;
-- visual theme;
-- difficulty/depth;
-- role;
-- extra constraints;
-- strict source-grounding rules.
+Compose a new source-grounded prompt from workflow type, audience, focus topic, visual theme, difficulty, role, extra constraints, and strict grounding rules.
 
 ### 🔗 Prompt Chains — advanced
 
-Build repeatable multi-step flows such as:
-
-```text
-Extract → Create → Verify
-```
+Build repeatable multi-step flows such as `Extract → Create → Verify`.
 
 ### ✅ Quality Check — advanced
 
-Run a deterministic local linter that checks for source grounding, anti-invention language, audience, task, output format, constraints, and specificity.
+Run a deterministic local linter for source grounding, anti-invention language, audience, task, output format, constraints, and specificity.
 
-First-time users see a **simple mode** focused on Prompt Library + Prompt Lab. Chain Builder and Quality Check can be revealed as advanced tools when needed.
+First-time users see a **simple mode** focused on Prompt Library + Prompt Lab. Advanced tools can be revealed when needed.
 
 ## How it works
 
@@ -83,13 +70,9 @@ First-time users see a **simple mode** focused on Prompt Library + Prompt Lab. C
 3. Use it with your own trusted source material
 ```
 
-The application itself does not upload your prompt text to a project server. There is no project backend, account system, analytics SDK, or embedded API key.
+The app has no project backend, account system, analytics SDK, or embedded API key.
 
 ## Why the age variants matter
-
-The project does not claim that one age range is universally correct for every teaching situation. The included profiles are configurable defaults from the original teaching workflow.
-
-The important idea is the **comparison**:
 
 | Same source | Children | Youth | Adults |
 |---|---|---|---|
@@ -100,31 +83,17 @@ The important idea is the **comparison**:
 
 ## Reproducible visual showcase
 
-The live library includes lightweight **illustrative style previews**. These communicate visual direction; they are **not guaranteed Gemini Notebook output**.
-
-For real examples, the project now has a controlled showcase system:
+The live library includes lightweight illustrative style previews, but those are **not guaranteed Gemini Notebook output**.
 
 ### 🖼️ [Open the 3 × 3 Showcase](https://dennis23100.github.io/gemini-notebook-prompt-lab/showcase.html)
 
-The first milestone uses:
-
-```text
-1 controlled source
-× 3 themes (Flexible Comic / Technology / Ink Wash)
-× 3 audiences (Children / Youth / Adults)
-= 9 reproducible example slots
-```
-
-Every slot links to the exact matching Prompt. A slot remains a transparent placeholder until an actual generated result is contributed; mockups are not labeled as Gemini Notebook outputs.
+The first milestone uses one controlled source × 3 themes (Flexible Comic / Technology / Ink Wash) × 3 audiences = **9 reproducible example slots**. Each slot links to the exact matching Prompt and remains a transparent placeholder until an actual generated result is contributed.
 
 See [Showcase Plan](docs/SHOWCASE.md), the [controlled source](notebooklm/docs/showcase/SOURCE.md), and [Issue #6](https://github.com/dennis23100/gemini-notebook-prompt-lab/issues/6).
 
 ## Current scope
 
-- **90 prompts**
-- **30 themes**
-- **3 audience profiles**
-- **10 Gemini Notebook workflows**
+- **90 prompts** · **30 themes** · **3 audiences** · **10 workflows**
 - Traditional Chinese + English UI
 - simple / advanced UI modes
 - local favorites / custom prompts / chains / recent history
@@ -137,19 +106,13 @@ See [Showcase Plan](docs/SHOWCASE.md), the [controlled source](notebooklm/docs/s
 
 ## Open-source maintenance
 
-This is an actively maintained public project, not a one-time prompt dump.
-
 - [Latest Release](https://github.com/dennis23100/gemini-notebook-prompt-lab/releases/latest)
 - [Open Issues](https://github.com/dennis23100/gemini-notebook-prompt-lab/issues)
 - [`good first issue`](https://github.com/dennis23100/gemini-notebook-prompt-lab/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22)
 - [`help wanted`](https://github.com/dennis23100/gemini-notebook-prompt-lab/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22)
-- [Contributing](CONTRIBUTING.md)
-- [Maintainers](MAINTAINERS.md)
-- [Security Policy](SECURITY.md)
-- [Code of Conduct](CODE_OF_CONDUCT.md)
-- [Licensing](LICENSING.md)
+- [Contributing](CONTRIBUTING.md) · [Maintainers](MAINTAINERS.md) · [Security](SECURITY.md) · [Licensing](LICENSING.md)
 
-Before submitting NotebookLM code/data changes, run:
+Before submitting code/data changes:
 
 ```bash
 cd notebooklm
@@ -158,61 +121,30 @@ npm run check
 
 ## Current contribution opportunities
 
-Good places to help right now include:
-
 - keyboard/accessibility audit;
 - Japanese UI/metadata localization;
-- the first 9 real generated showcase examples;
-- privacy-reviewed media for the real-world teaching origin story;
+- the first 9 real generated Showcase examples;
+- privacy-reviewed teaching-origin media;
 - focused prompt or documentation improvements with clear provenance.
-
-Please use Issues rather than opening a large PR without context.
 
 ## Roadmap
 
-The project is intentionally staying focused on Gemini Notebook / NotebookLM. High-value next steps are:
-
-1. **fill the first nine real Showcase outputs**;
-2. add a **privacy-reviewed teaching still / short clip** to the project story;
+1. fill the first nine real Showcase outputs;
+2. add a privacy-reviewed teaching still / short clip;
 3. accessibility improvements;
 4. additional languages;
-5. improve prompt/version comparison and contribution workflows;
-6. an **optional browser extension** that reduces the Copy → Open → Paste friction while keeping permissions minimal.
+5. prompt/version comparison and contribution workflows;
+6. optional low-permission browser extension.
 
-Unrelated tools such as video-editing utilities will live in separate repositories if/when they are built.
-
-## Repository structure
-
-```text
-.
-├── README.md
-├── README.zh-TW.md
-├── CONTRIBUTING.md
-├── MAINTAINERS.md
-├── SECURITY.md
-├── LICENSE
-├── docs/
-└── notebooklm/
-    ├── index.html
-    ├── showcase.html
-    ├── assets/
-    ├── data/
-    ├── tests/
-    ├── README.md
-    ├── README.zh-TW.md
-    ├── AGENTS.md
-    └── ...
-```
-
-The application implementation currently remains inside `notebooklm/`; the repository homepage is the project overview.
+Unrelated tools such as video-editing utilities will live in separate repositories.
 
 ## Attribution and licensing
 
-- Repository / application code: **MIT**.
+- Repository/application code: **MIT**.
 - Project-authored prompt transformations and metadata: see `notebooklm/LICENSE-DATA.md` and [LICENSING.md](LICENSING.md).
-- Upstream inspirations and provenance are documented in `notebooklm/THIRD_PARTY_NOTICES.md`.
+- Upstream inspirations and provenance: `notebooklm/THIRD_PARTY_NOTICES.md`.
 
-This project is not affiliated with Google. “Gemini Notebook” and “NotebookLM” are used only to describe product compatibility.
+This project is not affiliated with Google. “Gemini Notebook” and “NotebookLM” describe compatibility only.
 
 ---
 
@@ -220,6 +152,6 @@ This project is not affiliated with Google. “Gemini Notebook” and “Noteboo
 
 ### 🚀 [Open Gemini Notebook Prompt Lab](https://dennis23100.github.io/gemini-notebook-prompt-lab/)
 
-If the project is useful, a GitHub star helps other educators, knowledge workers, and prompt builders discover it. Even better: use it, open an issue, improve a prompt, or submit a focused pull request.
+If the project is useful, use it, open an issue, improve a prompt, submit a focused PR, or star it so more people can discover it.
 
 </div>
