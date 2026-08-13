@@ -1,0 +1,71 @@
+name: User feedback / UX suggestion
+description: Share what worked, what was confusing, or what would make the Prompt Lab more useful.
+title: "[Feedback] "
+labels:
+  - enhancement
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for trying Gemini Notebook Prompt Lab. Real usage feedback is especially helpful.
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Which area is this about?
+      options:
+        - Prompt Library
+        - Prompt Lab
+        - Generated prompt quality
+        - Age/audience adaptation
+        - Style previews / showcase
+        - Chain Builder
+        - Quality Check
+        - Mobile / accessibility
+        - Documentation / onboarding
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: use-case
+    attributes:
+      label: What were you trying to do?
+      description: Please describe the real task or workflow, not only the feature name.
+      placeholder: I was trying to...
+    validations:
+      required: true
+
+  - type: textarea
+    id: worked
+    attributes:
+      label: What worked well?
+      placeholder: The useful part was...
+
+  - type: textarea
+    id: friction
+    attributes:
+      label: What was confusing or slow?
+      placeholder: I expected... but instead...
+    validations:
+      required: true
+
+  - type: textarea
+    id: improvement
+    attributes:
+      label: What is the smallest improvement that would help?
+      placeholder: It would help if...
+
+  - type: input
+    id: browser
+    attributes:
+      label: Browser / device (optional)
+      placeholder: Chrome 151 on Windows 11 / iPhone / etc.
+
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Privacy check
+      options:
+        - label: I removed private source text, personal information, and anything I do not want published publicly.
+          required: true
