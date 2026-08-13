@@ -1,15 +1,14 @@
 # Deployment
 
-Gemini Notebook Prompt Lab is published as part of the **Toolkit 60** GitHub Pages site.
+Gemini Notebook Prompt Lab is published directly through this repository's GitHub Pages workflow.
 
-## Live URLs
+## Live URL
 
-- Toolkit 60: https://dennis23100.github.io/toolkit_60/
-- Prompt Lab: https://dennis23100.github.io/toolkit_60/notebooklm/
+- Prompt Lab: https://dennis23100.github.io/gemini-notebook-prompt-lab/
 
 ## Deployment model
 
-The repository-level workflow at `../.github/workflows/pages.yml` validates the NotebookLM subproject, builds a small Toolkit 60 landing page, copies this project to `/notebooklm/`, and deploys the resulting artifact with GitHub Pages.
+The repository-level workflow at `../.github/workflows/pages.yml` validates the app, publishes the Prompt Lab at the repository Pages root, and also keeps a `/notebooklm/` compatibility copy for older shared links.
 
 Changes under `notebooklm/**` automatically trigger both validation and Pages deployment.
 
