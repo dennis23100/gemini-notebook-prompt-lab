@@ -1,0 +1,86 @@
+name: Deploy Toolkit 60 Pages
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'notebooklm/**'
+      - 'video-editing/**'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Validate Prompt Lab
+        working-directory: notebooklm
+        run: npm run check
+
+      - name: Build Pages artifact
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -rf dist
+          mkdir -p dist
+          cp -R notebooklm dist/notebooklm
+          cat > dist/index.html <<'HTML'
+          <!doctype html>
+          <html lang="en">
+          <head>
+            <meta charset="utf-8" />
+            <meta name="viewport" content="width=device-width,initial-scale=1" />
+            <title>Toolkit 60</title>
+            <style>
+              body{font-family:system-ui,-apple-system,sans-serif;max-width:900px;margin:0 auto;padding:64px 24px;background:#0c1018;color:#f8fafc}
+              a{color:#a5b4fc}.card{border:1px solid #334155;border-radius:18px;padding:24px;margin:20px 0;background:#111827}
+              .muted{color:#94a3b8}.button{display:inline-block;padding:10px 16px;border-radius:10px;background:#4f46e5;color:white;text-decoration:none;font-weight:700}
+            </style>
+          </head>
+          <body>
+            <h1>🧰 Toolkit 60</h1>
+            <p class="muted">Open-source tools for AI, content creation, automation, and practical creative workflows.</p>
+            <div class="card">
+              <h2>🧠 Gemini Notebook Prompt Lab</h2>
+              <p>90 age-adaptive prompts, 30 themes, 10 workflows, Prompt Chains and local quality checks.</p>
+              <a class="button" href="./notebooklm/">Open Prompt Lab →</a>
+            </div>
+            <div class="card">
+              <h2>🎬 Video Editing Toolkit</h2>
+              <p class="muted">Coming soon.</p>
+            </div>
+          </body>
+          </html>
+          HTML
+          touch dist/.nojekyll
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+      - name: Deploy Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
