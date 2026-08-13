@@ -4,11 +4,11 @@
 
 **持續成長中的開源工具集：AI、內容創作、自動化與實用工作流程。**
 
-[English](README.md) · [工具列表](#-目前工具) · [參與貢獻](#-參與貢獻)
+[English](README.md) · [工具列表](#-目前工具) · [參與貢獻](#-參與貢獻) · [Issues](../../issues)
 
 ![Status](https://img.shields.io/badge/status-growing-2ea44f)
 ![Projects](https://img.shields.io/badge/projects-2-5357e8)
-![Open Source](https://img.shields.io/badge/open-source-orange)
+![License](https://img.shields.io/badge/code-MIT-blue)
 
 </div>
 
@@ -34,7 +34,8 @@ Toolkit 60 是我集中開發、維護實用工具的開源工具集。每一個
 
 ### 🚀 [直接打開 Prompt Lab](https://dennis23100.github.io/toolkit_60/notebooklm/)
 
-**→ [查看原始碼與完整文件](notebooklm/)**
+**→ [查看原始碼與完整文件](notebooklm/)**  
+**→ [Gemini Notebook Prompt Lab v1.0.0 Release](../../releases/tag/notebooklm-v1.0.0)**
 
 ---
 
@@ -61,6 +62,10 @@ Toolkit 60 是我集中開發、維護實用工具的開源工具集。每一個
 toolkit_60/
 ├── README.md
 ├── README.zh-TW.md
+├── CONTRIBUTING.md
+├── MAINTAINERS.md
+├── SECURITY.md
+├── LICENSE
 ├── notebooklm/
 │   ├── README.md
 │   ├── README.zh-TW.md
@@ -84,6 +89,8 @@ toolkit_60/
 - 可以共用 GitHub Actions、文件與維護規範
 - 長期看起來更像一套持續成長的開源作品集
 
+如果未來某個子專案真的長出自己的使用者、maintainer 或獨立 release 節奏，再把它拆成獨立 repository 也不遲；現在先把第一批真實使用與貢獻集中起來。
+
 ## 🗺️ 目前 Roadmap
 
 | 專案 | 狀態 | 直接使用 | 原始碼 |
@@ -94,16 +101,32 @@ toolkit_60/
 
 ## 🤝 參與貢獻
 
-歡迎提出 Bug、功能建議、Prompt 改進、文件修正或新的工具想法。隨著 Toolkit 60 擴充，每個子專案也會有更具體的貢獻說明。
+真正的使用回饋、Bug、功能建議、Prompt 改進、文件修正、無障礙檢查、翻譯與 Pull Request 都很歡迎。
+
+- **先看這裡：** [CONTRIBUTING.md](CONTRIBUTING.md)
+- **目前待辦：** [Issues](../../issues)
+- **適合第一次貢獻：** `good first issue`
+- **需要社群協助：** `help wanted`
+- **維護者：** [MAINTAINERS.md](MAINTAINERS.md)
+
+每個子專案資料夾也會有更具體的貢獻說明。
+
+## 🛡️ 專案健康度
+
+- [Security Policy](SECURITY.md)
+- [Code of Conduct](CODE_OF_CONDUCT.md)
+- [授權總覽](LICENSING.md)
+- [MIT 程式碼授權](LICENSE)
+- [最新 Release](../../releases/latest)
 
 ## ⭐ 支持 Toolkit 60
 
-如果其中任何一個工具對你有幫助，可以替 **Toolkit 60** 按一顆 Star，讓更多人看到整套工具。Fork、Issue 與 Pull Request 對專案也非常有幫助。
+如果其中任何一個工具對你有幫助，可以替 **Toolkit 60** 按一顆 Star，讓更多人看到整套工具。比 Star 更有價值的是：留下真實使用回饋、Issue、功能需求、PR 或實際使用案例，因為這些會直接讓專案變得更好。
 
 ---
 
 <div align="center">
 
-**持續做真正能用的開源工具。**
+**持續做真正能用、也能被共同維護的開源工具。**
 
 </div>
