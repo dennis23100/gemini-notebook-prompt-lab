@@ -6,7 +6,7 @@
 
 **A local-first, source-grounded prompt library and workflow toolkit for Gemini Notebook (formerly NotebookLM).**
 
-[繁體中文](README.zh-TW.md) · [🚀 Open the live app](https://dennis23100.github.io/toolkit_60/) · [Latest release](https://github.com/dennis23100/toolkit_60/releases/latest) · [Issues](https://github.com/dennis23100/toolkit_60/issues) · [Contributing](CONTRIBUTING.md)
+[繁體中文](README.zh-TW.md) · [🚀 Open the live app](https://dennis23100.github.io/gemini-notebook-prompt-lab/) · [Latest release](https://github.com/dennis23100/gemini-notebook-prompt-lab/releases/latest) · [Issues](https://github.com/dennis23100/gemini-notebook-prompt-lab/issues) · [Contributing](CONTRIBUTING.md)
 
 ![Prompts](https://img.shields.io/badge/prompts-90-665fe8)
 ![Themes](https://img.shields.io/badge/themes-30-15977f)
@@ -95,7 +95,7 @@ The live library now includes lightweight **illustrative style previews** for it
 
 The next showcase milestone is deliberately small and evidence-focused: **3 representative themes × 3 audiences = 9 real generated examples**. That is enough to demonstrate the core age-adaptation idea without turning the repository into a gallery of 90 screenshots.
 
-See [Showcase Plan](docs/SHOWCASE.md) and [Issue #6](https://github.com/dennis23100/toolkit_60/issues/6).
+See [Showcase Plan](docs/SHOWCASE.md) and [Issue #6](https://github.com/dennis23100/gemini-notebook-prompt-lab/issues/6).
 
 ## Current scope
 
@@ -115,10 +115,10 @@ See [Showcase Plan](docs/SHOWCASE.md) and [Issue #6](https://github.com/dennis23
 
 This is an actively maintained public project, not a one-time prompt dump.
 
-- [Latest Release](https://github.com/dennis23100/toolkit_60/releases/latest)
-- [Open Issues](https://github.com/dennis23100/toolkit_60/issues)
-- [`good first issue`](https://github.com/dennis23100/toolkit_60/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22)
-- [`help wanted`](https://github.com/dennis23100/toolkit_60/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22)
+- [Latest Release](https://github.com/dennis23100/gemini-notebook-prompt-lab/releases/latest)
+- [Open Issues](https://github.com/dennis23100/gemini-notebook-prompt-lab/issues)
+- [`good first issue`](https://github.com/dennis23100/gemini-notebook-prompt-lab/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22)
+- [`help wanted`](https://github.com/dennis23100/gemini-notebook-prompt-lab/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22)
 - [Contributing](CONTRIBUTING.md)
 - [Maintainers](MAINTAINERS.md)
 - [Security Policy](SECURITY.md)
@@ -194,7 +194,7 @@ This project is not affiliated with Google. “Gemini Notebook” and “Noteboo
 
 <div align="center">
 
-### 🚀 [Open Gemini Notebook Prompt Lab](https://dennis23100.github.io/toolkit_60/)
+### 🚀 [Open Gemini Notebook Prompt Lab](https://dennis23100.github.io/gemini-notebook-prompt-lab/)
 
 If the project is useful, a GitHub star helps other educators, knowledge workers, and prompt builders discover it. Even better: use it, open an issue, improve a prompt, or submit a focused pull request.
 
