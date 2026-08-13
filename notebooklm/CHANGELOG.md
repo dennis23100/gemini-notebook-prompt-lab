@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented here.
 
+## [1.2.1] - 2026-08-13
+
+### Added
+
+- Keyboard navigation for the primary tab interface with Arrow keys, Home, and End.
+- Explicit tab/panel ARIA relationships and dialog labeling.
+- Dialog focus restoration to the opening Prompt control.
+- Bilingual accessible labels and pressed state for favorite controls.
+- Strong `:focus-visible` keyboard focus styling.
+- Reduced-motion and increased-contrast preference support.
+- Accessibility checklist and static regression tests.
+
+### Notes
+
+- Manual cross-browser, zoom, contrast-tool, and screen-reader audit remains tracked in Issue #4; this release does not claim full accessibility conformance.
+
 ## [1.2.0] - 2026-08-13
 
 ### Added
