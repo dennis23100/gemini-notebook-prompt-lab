@@ -1,0 +1,7 @@
+# Default maintainer review
+* @dennis23100
+
+# Prompt/data changes deserve explicit maintainer review
+/notebooklm/data/ @dennis23100
+/notebooklm/scripts/ @dennis23100
+/.github/workflows/ @dennis23100
