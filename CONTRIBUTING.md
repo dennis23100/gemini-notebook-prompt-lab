@@ -11,7 +11,7 @@ For non-trivial changes, check the existing Issues first. If your idea is not al
 3. the smallest useful outcome;
 4. any UX, privacy, compatibility, or licensing tradeoffs.
 
-Good places to start are issues labeled [`good first issue`](https://github.com/dennis23100/toolkit_60/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22) or [`help wanted`](https://github.com/dennis23100/toolkit_60/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22).
+Good places to start are issues labeled [`good first issue`](https://github.com/dennis23100/gemini-notebook-prompt-lab/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22) or [`help wanted`](https://github.com/dennis23100/gemini-notebook-prompt-lab/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22).
 
 ## Before opening a PR
 
