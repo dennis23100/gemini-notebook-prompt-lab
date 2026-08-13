@@ -1,0 +1,182 @@
+/* Toolkit 60 Prompt Lab UI polish
+   - friendlier light-first visual theme
+   - softer midnight dark mode
+   - accessible active tabs
+*/
+
+html[data-theme="light"] {
+  color-scheme: light;
+  --bg: #f4f6fb;
+  --panel: #ffffff;
+  --panel-2: #f0f3f9;
+  --text: #182033;
+  --muted: #69758d;
+  --line: #dce3ef;
+  --primary: #6869e8;
+  --primary-2: #7e7ff3;
+  --accent: #12997e;
+  --danger: #d94f5c;
+  --warning: #c77b12;
+  --shadow: 0 18px 48px rgba(54, 63, 105, .10);
+}
+
+html[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #111827;
+  --panel: #182235;
+  --panel-2: #202c42;
+  --text: #f7f9fd;
+  --muted: #b1bdd0;
+  --line: #34425a;
+  --primary: #8587f5;
+  --primary-2: #9a9cfb;
+  --accent: #53d7b3;
+  --danger: #ff7e89;
+  --warning: #ffc166;
+  --shadow: 0 18px 48px rgba(2, 8, 23, .26);
+}
+
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 10% -12%, color-mix(in srgb, var(--primary) 11%, transparent), transparent 34rem),
+    radial-gradient(circle at 92% 3%, color-mix(in srgb, var(--accent) 8%, transparent), transparent 28rem),
+    var(--bg);
+}
+
+.topbar {
+  background: color-mix(in srgb, var(--bg) 91%, transparent);
+  box-shadow: 0 1px 0 color-mix(in srgb, var(--line) 55%, transparent);
+}
+
+.brand-mark {
+  background: linear-gradient(145deg, #7778ee, #55cdb0);
+  box-shadow: 0 8px 22px color-mix(in srgb, var(--primary) 22%, transparent);
+}
+
+.tabs {
+  gap: 7px;
+  background: color-mix(in srgb, var(--panel) 94%, var(--primary) 6%);
+  border-color: color-mix(in srgb, var(--line) 82%, var(--primary) 18%);
+  box-shadow: 0 8px 28px color-mix(in srgb, var(--text) 6%, transparent);
+}
+
+.tab {
+  color: var(--muted);
+  padding: 11px 17px;
+  transition: color .16s ease, background .16s ease, transform .16s ease, box-shadow .16s ease;
+}
+
+.tab:hover:not(.active) {
+  color: var(--text);
+  background: color-mix(in srgb, var(--primary) 8%, transparent);
+}
+
+/* Fixes the previous white-on-white selected tab in dark mode. */
+.tab.active {
+  color: #ffffff;
+  background: linear-gradient(135deg, #6869e8, #7e7ff3);
+  box-shadow: 0 7px 18px rgba(104, 105, 232, .24);
+}
+
+html[data-theme="light"] .tab.active {
+  color: #ffffff;
+}
+
+.builder-card,
+.preview-card,
+.prompt-card,
+.filter-block,
+.steps article,
+.feature-grid article,
+.hero-panel,
+.empty-state {
+  border-color: color-mix(in srgb, var(--line) 88%, var(--primary) 12%);
+}
+
+.builder-card,
+.preview-card,
+.prompt-card,
+.filter-block,
+.steps article,
+.feature-grid article {
+  background: color-mix(in srgb, var(--panel) 97%, var(--primary) 3%);
+}
+
+.prompt-card:hover {
+  transform: translateY(-3px);
+  border-color: color-mix(in srgb, var(--primary) 45%, var(--line));
+  box-shadow: 0 13px 34px color-mix(in srgb, var(--primary) 10%, transparent);
+}
+
+.search-box,
+input,
+select,
+textarea {
+  border-color: color-mix(in srgb, var(--line) 90%, var(--primary) 10%);
+}
+
+.search-box:focus-within,
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: color-mix(in srgb, var(--primary) 62%, var(--line));
+}
+
+.button.primary {
+  background: linear-gradient(135deg, #6869e8, #7e7ff3);
+  box-shadow: 0 7px 18px rgba(104, 105, 232, .16);
+}
+
+.button.primary:hover {
+  background: linear-gradient(135deg, #7475ee, #8c8df8);
+}
+
+.button.secondary {
+  background: color-mix(in srgb, var(--primary) 9%, var(--panel));
+}
+
+.chip.active {
+  color: var(--primary);
+  background: color-mix(in srgb, var(--primary) 10%, var(--panel));
+}
+
+.prompt-editor {
+  background: color-mix(in srgb, var(--panel-2) 94%, var(--primary) 6%);
+  line-height: 1.65;
+}
+
+.score-badge,
+.big-score {
+  background: linear-gradient(145deg, color-mix(in srgb, var(--primary) 10%, var(--panel)), var(--panel-2));
+}
+
+.theme-toggle {
+  min-width: 88px;
+  white-space: nowrap;
+}
+
+.ui-note {
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 500;
+}
+
+/* Slightly reduce the heavy black feeling while retaining depth. */
+html[data-theme="dark"] .prompt-dialog::backdrop {
+  background: rgba(5, 12, 27, .70);
+}
+
+@media (max-width: 640px) {
+  .theme-toggle {
+    min-width: auto;
+    padding-inline: 9px;
+  }
+  .theme-toggle .theme-label {
+    display: none;
+  }
+  .tab {
+    padding-inline: 13px;
+  }
+}
