@@ -1,0 +1,46 @@
+name: Release NotebookLM Prompt Lab
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'notebooklm/RELEASE_NOTES.md'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Validate Prompt Lab
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Run checks
+        working-directory: notebooklm
+        run: npm run check
+
+      - name: Create v1.0.0 release if missing
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: notebooklm-v1.0.0
+        shell: bash
+        run: |
+          set -euo pipefail
+          if gh release view "$TAG" >/dev/null 2>&1; then
+            echo "Release $TAG already exists; nothing to do."
+            exit 0
+          fi
+          git tag "$TAG" "$GITHUB_SHA"
+          git push origin "$TAG"
+          gh release create "$TAG" \
+            --title "Gemini Notebook Prompt Lab v1.0.0" \
+            --notes-file notebooklm/RELEASE_NOTES.md
