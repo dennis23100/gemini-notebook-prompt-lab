@@ -6,7 +6,7 @@
 
 **為 Gemini Notebook（原 NotebookLM）打造的本機優先、來源限定、分齡提示詞庫與工作流工具。**
 
-[English](README.md) · [🚀 直接打開網站](https://dennis23100.github.io/toolkit_60/) · [最新版本](https://github.com/dennis23100/toolkit_60/releases/latest) · [Issues](https://github.com/dennis23100/toolkit_60/issues) · [參與貢獻](CONTRIBUTING.md)
+[English](README.md) · [🚀 直接打開網站](https://dennis23100.github.io/gemini-notebook-prompt-lab/) · [最新版本](https://github.com/dennis23100/gemini-notebook-prompt-lab/releases/latest) · [Issues](https://github.com/dennis23100/gemini-notebook-prompt-lab/issues) · [參與貢獻](CONTRIBUTING.md)
 
 ![Prompts](https://img.shields.io/badge/prompts-90-665fe8)
 ![Themes](https://img.shields.io/badge/themes-30-15977f)
@@ -95,7 +95,7 @@ Gemini Notebook 提示詞工作室把這個問題做成可重複使用的開源�
 
 下一個展示里程碑不會一口氣做 30 × 3 = 90 張，而是先做 **3 個代表性主題 × 3 種受眾 = 9 個真實生成範例**。這樣就足以把「同一份可信來源，如何依受眾改變呈現」這個核心價值說清楚，也比較容易維護。
 
-請看：[成果展示規劃](docs/SHOWCASE.zh-TW.md) 與 [Issue #6](https://github.com/dennis23100/toolkit_60/issues/6)。
+請看：[成果展示規劃](docs/SHOWCASE.zh-TW.md) 與 [Issue #6](https://github.com/dennis23100/gemini-notebook-prompt-lab/issues/6)。
 
 ## 目前規模
 
@@ -115,10 +115,10 @@ Gemini Notebook 提示詞工作室把這個問題做成可重複使用的開源�
 
 它不是一次性把 Prompt 丟上 GitHub 就結束。
 
-- [最新 Release](https://github.com/dennis23100/toolkit_60/releases/latest)
-- [Open Issues](https://github.com/dennis23100/toolkit_60/issues)
-- [`good first issue`](https://github.com/dennis23100/toolkit_60/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22)
-- [`help wanted`](https://github.com/dennis23100/toolkit_60/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22)
+- [最新 Release](https://github.com/dennis23100/gemini-notebook-prompt-lab/releases/latest)
+- [Open Issues](https://github.com/dennis23100/gemini-notebook-prompt-lab/issues)
+- [`good first issue`](https://github.com/dennis23100/gemini-notebook-prompt-lab/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22)
+- [`help wanted`](https://github.com/dennis23100/gemini-notebook-prompt-lab/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22)
 - [如何參與](CONTRIBUTING.md)
 - [Maintainers](MAINTAINERS.md)
 - [Security Policy](SECURITY.md)
@@ -194,7 +194,7 @@ npm run check
 
 <div align="center">
 
-### 🚀 [直接打開 Gemini Notebook 提示詞工作室](https://dennis23100.github.io/toolkit_60/)
+### 🚀 [直接打開 Gemini Notebook 提示詞工作室](https://dennis23100.github.io/gemini-notebook-prompt-lab/)
 
 如果這個專案對你有幫助，GitHub ⭐ 可以讓更多教育者、知識工作者與 Prompt 使用者看到它。更有價值的方式是：真的使用它、提出 Issue、改進一個 Prompt，或送一個範圍清楚的 PR。
 
