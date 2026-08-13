@@ -20,4 +20,4 @@ Do not put sensitive source material, private personal data, API keys, or securi
 
 ## Live app
 
-https://dennis23100.github.io/toolkit_60/
+https://dennis23100.github.io/gemini-notebook-prompt-lab/
