@@ -23,13 +23,13 @@ Most prompt repositories are long lists. This project started from a more practi
 
 > **Should the same trusted source be presented in exactly the same way to children, younger adults, and mature learners?**
 
-Gemini Notebook Prompt Lab turns that problem into a reusable open-source workflow. It helps people choose or compose prompts that keep content grounded in the source while adapting tone, visual density, pacing, and presentation style to the intended audience.
+Gemini Notebook Prompt Lab turns that problem into a reusable open-source workflow. It keeps content grounded in the source while adapting tone, information density, pacing, and presentation style to the intended audience.
 
 ## Real-world teaching origin
 
-The project is informed by real teaching experience, including an in-person teaching session with **100+ attendees**. That experience reinforced a simple idea: good teaching is not only about having correct information; presentation, pacing, and audience fit matter too.
+The project is informed by real teaching experience, including an in-person teaching session with **100+ attendees**. That experience reinforced a simple idea: correct information matters, but presentation, pacing, and audience fit matter too.
 
-A privacy-reviewed teaching clip/still is being prepared for the public project story. It will be used as context for where the problem came from — **not** as a claim of 100+ GitHub users.
+A privacy-reviewed teaching still/clip is planned for the public project story. It will be used as context for where the problem came from — **not** as a claim of 100+ GitHub users.
 
 See [Project Story](docs/PROJECT_STORY.md).
 
@@ -39,20 +39,24 @@ See [Project Story](docs/PROJECT_STORY.md).
 
 Browse **90 age-adaptive prompts** across **30 visual themes** and **3 audience profiles**. Search, filter, favorite, compare age variants, copy, share, import, and export.
 
-The library now also includes:
+The library also includes:
 
 - **shareable filter URLs** for age, category, search, and favorites-only views;
 - **recently used prompts**, stored only in browser `localStorage`;
-- export as **JSON, Markdown, or CSV**;
+- **JSON, Markdown, and CSV export** of the current filtered result set;
 - lightweight visual-direction previews for the 30 themes.
 
 ### 🧪 Prompt Lab
 
-Compose a new source-grounded prompt from workflow type, audience, focus topic, visual theme, difficulty, role, extra constraints, and strict grounding rules.
+Compose a new source-grounded prompt from workflow/output type, audience, focus topic, visual theme, difficulty/depth, role, extra constraints, and strict grounding rules.
 
 ### 🔗 Prompt Chains — advanced
 
-Build repeatable multi-step flows such as `Extract → Create → Verify`.
+Build repeatable multi-step flows such as:
+
+```text
+Extract → Create → Verify
+```
 
 ### ✅ Quality Check — advanced
 
@@ -70,9 +74,11 @@ First-time users see a **simple mode** focused on Prompt Library + Prompt Lab. A
 3. Use it with your own trusted source material
 ```
 
-The app has no project backend, account system, analytics SDK, or embedded API key.
+The app has no project backend, account system, analytics SDK, database, or embedded API key.
 
 ## Why the age variants matter
+
+The project does not claim that one age range is universally correct for every teaching situation. The included profiles are configurable defaults from the original teaching workflow. What matters is comparing how one trusted source can be presented for different audiences.
 
 | Same source | Children | Youth | Adults |
 |---|---|---|---|
@@ -81,19 +87,28 @@ The app has no project backend, account system, analytics SDK, or embedded API k
 | Pacing | simple, guided | energetic | structured, deliberate |
 | Tone | warm, safe | relatable | steady, credible |
 
-## Reproducible visual showcase
+## Reproducible visual Showcase
 
 The live library includes lightweight illustrative style previews, but those are **not guaranteed Gemini Notebook output**.
 
 ### 🖼️ [Open the 3 × 3 Showcase](https://dennis23100.github.io/gemini-notebook-prompt-lab/showcase.html)
 
-The first milestone uses one controlled source × 3 themes (Flexible Comic / Technology / Ink Wash) × 3 audiences = **9 reproducible example slots**. Each slot links to the exact matching Prompt and remains a transparent placeholder until an actual generated result is contributed.
+The first controlled experiment uses:
+
+```text
+1 controlled source
+× 3 themes (Flexible Comic / Technology / Ink Wash)
+× 3 audiences (Children / Youth / Adults)
+= 9 reproducible output slots
+```
+
+Every slot links to the exact matching Prompt. A slot remains an explicit placeholder until an actual generated result is contributed; mockups are not labeled as Gemini Notebook output.
 
 See [Showcase Plan](docs/SHOWCASE.md), the [controlled source](notebooklm/docs/showcase/SOURCE.md), and [Issue #6](https://github.com/dennis23100/gemini-notebook-prompt-lab/issues/6).
 
 ## Current scope
 
-- **90 prompts** · **30 themes** · **3 audiences** · **10 workflows**
+- **90 prompts · 30 themes · 3 audiences · 10 workflows**
 - Traditional Chinese + English UI
 - simple / advanced UI modes
 - local favorites / custom prompts / chains / recent history
@@ -106,11 +121,17 @@ See [Showcase Plan](docs/SHOWCASE.md), the [controlled source](notebooklm/docs/s
 
 ## Open-source maintenance
 
+This is an actively maintained public project, not a one-time prompt dump.
+
 - [Latest Release](https://github.com/dennis23100/gemini-notebook-prompt-lab/releases/latest)
 - [Open Issues](https://github.com/dennis23100/gemini-notebook-prompt-lab/issues)
 - [`good first issue`](https://github.com/dennis23100/gemini-notebook-prompt-lab/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22)
 - [`help wanted`](https://github.com/dennis23100/gemini-notebook-prompt-lab/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22)
-- [Contributing](CONTRIBUTING.md) · [Maintainers](MAINTAINERS.md) · [Security](SECURITY.md) · [Licensing](LICENSING.md)
+- [Contributing](CONTRIBUTING.md)
+- [Maintainers](MAINTAINERS.md)
+- [Security Policy](SECURITY.md)
+- [Code of Conduct](CODE_OF_CONDUCT.md)
+- [Licensing](LICENSING.md)
 
 Before submitting code/data changes:
 
@@ -136,7 +157,7 @@ npm run check
 5. prompt/version comparison and contribution workflows;
 6. optional low-permission browser extension.
 
-Unrelated tools such as video-editing utilities will live in separate repositories.
+Unrelated tools such as video-editing utilities will live in separate repositories if/when they are built.
 
 ## Attribution and licensing
 
