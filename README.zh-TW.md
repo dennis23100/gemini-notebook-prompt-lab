@@ -32,9 +32,9 @@ Toolkit 60 是我集中開發、維護實用工具的開源工具集。每一個
 - 收藏、匯入／匯出、PWA／離線支援
 - 一鍵前往 `notebook.google.com`
 
-**→ [進入 Notebook 專案](notebooklm/)**
+### 🚀 [直接打開 Prompt Lab](https://dennis23100.github.io/toolkit_60/notebooklm/)
 
-> GitHub Pages 啟用後，Web App 會部署在 Toolkit 60 的網站子路徑。
+**→ [查看原始碼與完整文件](notebooklm/)**
 
 ---
 
@@ -86,11 +86,11 @@ toolkit_60/
 
 ## 🗺️ 目前 Roadmap
 
-| 專案 | 狀態 | 資料夾 |
-|---|---|---|
-| Gemini Notebook Prompt Lab | 🟢 Active | [`notebooklm/`](notebooklm/) |
-| Video Editing Toolkit | 🟡 Planned | [`video-editing/`](video-editing/) |
-| 更多工具 | ⚪ Future | 後續公布 |
+| 專案 | 狀態 | 直接使用 | 原始碼 |
+|---|---|---|---|
+| Gemini Notebook Prompt Lab | 🟢 Active | [打開 Prompt Lab](https://dennis23100.github.io/toolkit_60/notebooklm/) | [`notebooklm/`](notebooklm/) |
+| Video Editing Toolkit | 🟡 Planned | Coming soon | [`video-editing/`](video-editing/) |
+| 更多工具 | ⚪ Future | — | 後續公布 |
 
 ## 🤝 參與貢獻
 
