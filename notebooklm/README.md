@@ -6,9 +6,9 @@
 
 **An age-adaptive, source-grounded prompt library and workflow builder for Gemini Notebook (formerly NotebookLM).**
 
-[繁體中文](README.zh-TW.md) · [🚀 Open Prompt Lab](https://dennis23100.github.io/toolkit_60/notebooklm/) · [Back to Toolkit 60](../README.md) · [Contributing](CONTRIBUTING.md)
+[繁體中文](README.zh-TW.md) · [🚀 Open Prompt Lab](https://dennis23100.github.io/gemini-notebook-prompt-lab/) · [Project home](../README.md) · [Contributing](CONTRIBUTING.md)
 
-## 🚀 [Open Prompt Lab](https://dennis23100.github.io/toolkit_60/notebooklm/)
+## 🚀 [Open Prompt Lab](https://dennis23100.github.io/gemini-notebook-prompt-lab/)
 
 **Open the project itself first. From inside Prompt Lab, use the prominent 📓 Gemini Notebook button when you are ready to paste and generate.**
 
@@ -45,8 +45,8 @@ The repository generalizes that idea into a reusable open-source tool for educat
 ## Quick start
 
 ```bash
-git clone https://github.com/dennis23100/toolkit_60.git
-cd toolkit_60/notebooklm
+git clone https://github.com/dennis23100/gemini-notebook-prompt-lab.git
+cd gemini-notebook-prompt-lab/notebooklm
 npm run dev
 ```
 
@@ -62,7 +62,7 @@ python -m http.server 4173
 
 ## Deploy to GitHub Pages
 
-The parent Toolkit 60 repo includes `.github/workflows/pages.yml`, which validates this subproject and publishes the repository as a Pages artifact.
+The repository includes `.github/workflows/pages.yml`, which validates this app and publishes it as a Pages artifact.
 
 1. Push the repository to GitHub.
 2. Open **Settings → Pages**.
@@ -158,24 +158,13 @@ Because Google can change Studio UI and capabilities, this project treats workfl
 │   ├── styles.css
 │   └── favicon.svg
 ├── data/
-│   ├── prompts.json          # pack manifest
-│   ├── packs/                # six review-friendly prompt packs
+│   ├── prompts.json
+│   ├── packs/
 │   ├── workflows.json
 │   └── prompt-schema.json
 ├── scripts/
-│   ├── dev-server.mjs
-│   └── validate-prompts.mjs
 ├── tests/
-│   └── data.test.mjs
 ├── docs/
-│   ├── hero.svg
-│   ├── social-preview.png
-│   ├── prompt-design.md
-│   ├── research-notes.md
-│   └── launch-and-growth.md
-├── .github/
-│   ├── ISSUE_TEMPLATE/
-│   └── workflows/
 ├── service-worker.js
 ├── manifest.webmanifest
 ├── README.md
@@ -190,22 +179,7 @@ Because Google can change Studio UI and capabilities, this project treats workfl
 
 ## Data model
 
-A prompt entry is intentionally simple:
-
-```json
-{
-  "id": "children-tech",
-  "themeId": "tech",
-  "ageGroup": "children",
-  "title": {"zh-TW": "科技", "en": "Technology"},
-  "summary": {"zh-TW": "...", "en": "..."},
-  "category": {"zh-TW": "數位與媒體", "en": "Digital & Media"},
-  "prompt": "...",
-  "sources": ["https://github.com/..."]
-}
-```
-
-See [`data/prompt-schema.json`](data/prompt-schema.json) and run:
+A prompt entry is intentionally simple. See [`data/prompt-schema.json`](data/prompt-schema.json) and run:
 
 ```bash
 npm run validate
@@ -235,20 +209,12 @@ The project does not claim ownership over Google/Gemini/NotebookLM trademarks. �
 
 ## Roadmap
 
-See [ROADMAP.md](ROADMAP.md). High-value next steps include:
-
-- optional browser extension that can send a selected prompt into the active Gemini Notebook Studio panel
-- community prompt packs with schema validation
-- prompt-diff view and version history
-- optional cloud sync that remains off by default
-- automated accessibility checks
-- more languages beyond Traditional Chinese and English
+See [ROADMAP.md](ROADMAP.md). High-value next steps include real generated examples, recent prompt history, accessibility improvements, more languages, and an optional low-permission browser extension.
 
 ## Launch & Star Growth
 
-For the repository description, topics, social preview, first issues, and an ethical launch plan, see [`docs/launch-and-growth.md`](docs/launch-and-growth.md).
+For the repository description, topics, social preview, contribution issues, and ethical launch plan, see [`docs/launch-and-growth.md`](docs/launch-and-growth.md).
 
 ## Star the project
 
 If the project saves you time, a GitHub star helps other educators and prompt builders discover it. Better yet: fork it, add one useful prompt or workflow improvement, and open a PR.
-
