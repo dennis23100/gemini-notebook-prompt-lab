@@ -5,10 +5,12 @@ on:
     branches: [main]
     paths:
       - 'notebooklm/**'
+      - 'docs/showcase/**'
       - '.github/workflows/validate.yml'
   pull_request:
     paths:
       - 'notebooklm/**'
+      - 'docs/showcase/**'
       - '.github/workflows/validate.yml'
   workflow_dispatch:
 
@@ -21,10 +23,28 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 22
+
       - name: Validate and test Prompt Lab
         working-directory: notebooklm
         run: npm run check
+
+      - name: Prepare reproducible showcase cases
+        working-directory: notebooklm
+        run: |
+          set -euo pipefail
+          npm run showcase:export
+          node --input-type=module <<'NODE'
+          import { readFile } from 'node:fs/promises';
+          const manifest = JSON.parse(await readFile('../docs/showcase/generated-prompts/cases.json', 'utf8'));
+          if (!Array.isArray(manifest.cases) || manifest.cases.length !== 9) {
+            throw new Error(`Expected 9 showcase cases; got ${manifest.cases?.length ?? 'invalid manifest'}`);
+          }
+          const ids = new Set(manifest.cases.map(item => item.promptId));
+          if (ids.size !== 9) throw new Error('Showcase prompt IDs are not unique');
+          console.log('Showcase manifest validated: 9 unique cases.');
+          NODE
