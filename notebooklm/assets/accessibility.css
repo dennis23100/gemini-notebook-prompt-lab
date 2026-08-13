@@ -15,6 +15,23 @@
 
 .prompt-dialog:focus-visible { outline: none; }
 
+/* Prompt Lab select stability.
+   Keep native dropdowns outside backdrop-filter compositor layers so the OS/browser
+   menu can open, select, and dismiss normally. This file loads last and therefore
+   safely overrides decorative blur from ui-polish.css without changing the layout. */
+#panel-lab .builder-card,
+#panel-lab .preview-card {
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+#panel-lab select {
+  appearance: auto;
+  -webkit-appearance: menulist;
+  pointer-events: auto !important;
+  transform: none !important;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto !important; }
   *, *::before, *::after {
