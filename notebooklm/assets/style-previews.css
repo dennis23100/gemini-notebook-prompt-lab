@@ -1,0 +1,365 @@
+/*
+  Toolkit 60 — lightweight style preview thumbnails
+  These are illustrative mock previews, not generated Gemini Notebook output.
+  Each built-in theme keeps a stable visual identity across age variants.
+*/
+
+.prompt-card {
+  position: relative;
+  --pv-a: #665fe8;
+  --pv-b: #55cbb0;
+  --pv-c: #f6c85f;
+  --pv-ink: #ffffff;
+  --pv-art:
+    radial-gradient(circle at 20% 30%, color-mix(in srgb, var(--pv-c) 88%, white) 0 13%, transparent 14%),
+    radial-gradient(circle at 78% 66%, color-mix(in srgb, var(--pv-b) 80%, white) 0 17%, transparent 18%);
+}
+
+.prompt-card::before {
+  content: "";
+  display: block;
+  flex: 0 0 92px;
+  width: 100%;
+  margin: 0 0 15px;
+  border-radius: 14px;
+  border: 1px solid color-mix(in srgb, var(--pv-a) 20%, transparent);
+  background:
+    var(--pv-art),
+    linear-gradient(135deg, var(--pv-a), var(--pv-b));
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.22);
+  overflow: hidden;
+}
+
+.prompt-card::after {
+  position: absolute;
+  top: 28px;
+  left: 29px;
+  z-index: 2;
+  padding: 4px 7px;
+  border-radius: 999px;
+  color: var(--pv-ink);
+  background: rgba(8, 15, 30, .42);
+  border: 1px solid rgba(255,255,255,.20);
+  backdrop-filter: blur(5px);
+  font-size: 9px;
+  line-height: 1.2;
+  font-weight: 900;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  pointer-events: none;
+}
+
+html[lang^="zh"] .prompt-card::after { content: "風格預覽 · 示意"; }
+html[lang="en"] .prompt-card::after { content: "STYLE PREVIEW · MOCK"; }
+
+/* 01 — Flexible Comic */
+.prompt-card[data-id$="-comic-flex"] {
+  --pv-a: #ffcf4a; --pv-b: #ef5c67; --pv-c: #4267d5; --pv-ink: #181818;
+  --pv-art:
+    radial-gradient(circle at 79% 27%, #fff 0 9%, #191919 10% 11%, transparent 12%),
+    linear-gradient(90deg, transparent 0 31%, #191919 32% 34%, transparent 35% 66%, #191919 67% 69%, transparent 70%),
+    linear-gradient(0deg, transparent 0 48%, #191919 49% 52%, transparent 53%),
+    radial-gradient(#191919 1px, transparent 1.5px);
+}
+.prompt-card[data-id$="-comic-flex"]::before { background-size: auto, auto, auto, 8px 8px, auto; }
+.prompt-card[data-id$="-comic-flex"]::after { background: rgba(255,255,255,.76); border-color: rgba(0,0,0,.14); }
+
+/* 02 — 3–4 Panel Comic */
+.prompt-card[data-id$="-comic-panels"] {
+  --pv-a: #f7f2df; --pv-b: #ffd65a; --pv-c: #e95c69; --pv-ink: #202020;
+  --pv-art:
+    linear-gradient(90deg, transparent 0 32%, #202020 33% 35%, transparent 36% 65%, #202020 66% 68%, transparent 69%),
+    linear-gradient(0deg, transparent 0 47%, #202020 48% 51%, transparent 52%),
+    radial-gradient(circle at 17% 29%, #e95c69 0 8%, transparent 9%),
+    radial-gradient(circle at 51% 72%, #4267d5 0 9%, transparent 10%),
+    radial-gradient(circle at 83% 28%, #ffcc4a 0 9%, transparent 10%);
+}
+.prompt-card[data-id$="-comic-panels"]::after { background: rgba(255,255,255,.78); border-color: rgba(0,0,0,.12); }
+
+/* 03 — Cartoon */
+.prompt-card[data-id$="-cartoon"] {
+  --pv-a: #75d6ff; --pv-b: #786ff0; --pv-c: #ffcf5c;
+  --pv-art:
+    radial-gradient(ellipse at 24% 65%, #fff 0 14%, transparent 15%),
+    radial-gradient(ellipse at 65% 28%, #ffcf5c 0 12%, transparent 13%),
+    radial-gradient(ellipse at 81% 72%, #ff7aa2 0 15%, transparent 16%),
+    radial-gradient(ellipse at 42% 38%, rgba(255,255,255,.40) 0 6%, transparent 7%);
+}
+
+/* 04 — Fairy-tale Animation */
+.prompt-card[data-id$="-fairy-animation"] {
+  --pv-a: #7b68d8; --pv-b: #f49fc8; --pv-c: #ffe5a7;
+  --pv-art:
+    radial-gradient(circle at 78% 20%, #fff8c8 0 7%, transparent 8%),
+    radial-gradient(circle at 28% 28%, #fff 0 2%, transparent 3%),
+    radial-gradient(circle at 48% 18%, #fff 0 1.5%, transparent 2.5%),
+    radial-gradient(circle at 66% 46%, #fff 0 1.5%, transparent 2.5%),
+    radial-gradient(ellipse at 38% 106%, rgba(255,255,255,.55) 0 42%, transparent 43%);
+}
+
+/* 05 — Fairy Tale / Storybook */
+.prompt-card[data-id$="-fairy-tale"] {
+  --pv-a: #d9b6ef; --pv-b: #7ab4d8; --pv-c: #fff0c9; --pv-ink: #3a3050;
+  --pv-art:
+    radial-gradient(ellipse at 50% 108%, #fff0c9 0 39%, transparent 40%),
+    radial-gradient(circle at 23% 25%, rgba(255,255,255,.9) 0 2%, transparent 3%),
+    radial-gradient(circle at 74% 21%, rgba(255,255,255,.9) 0 2%, transparent 3%),
+    linear-gradient(90deg, transparent 47%, rgba(255,255,255,.55) 48% 52%, transparent 53%);
+}
+.prompt-card[data-id$="-fairy-tale"]::after { background: rgba(255,255,255,.66); border-color: rgba(70,45,85,.10); }
+
+/* 06 — Animals */
+.prompt-card[data-id$="-animals"] {
+  --pv-a: #74c98b; --pv-b: #f0b968; --pv-c: #f8e8c9; --pv-ink: #173e2b;
+  --pv-art:
+    radial-gradient(circle at 28% 48%, #3f744f 0 7%, transparent 8%),
+    radial-gradient(circle at 22% 36%, #3f744f 0 3%, transparent 4%),
+    radial-gradient(circle at 34% 35%, #3f744f 0 3%, transparent 4%),
+    radial-gradient(circle at 73% 60%, rgba(255,255,255,.50) 0 16%, transparent 17%);
+}
+.prompt-card[data-id$="-animals"]::after { background: rgba(255,255,255,.66); border-color: rgba(23,62,43,.10); }
+
+/* 07 — Nature */
+.prompt-card[data-id$="-nature"] {
+  --pv-a: #8fd3a6; --pv-b: #4c9f8a; --pv-c: #f5d87a;
+  --pv-art:
+    radial-gradient(circle at 79% 24%, #f8df79 0 10%, transparent 11%),
+    radial-gradient(ellipse at 19% 105%, #2f765d 0 42%, transparent 43%),
+    radial-gradient(ellipse at 60% 114%, #65ad77 0 47%, transparent 48%),
+    linear-gradient(180deg, rgba(255,255,255,.34), transparent 55%);
+}
+
+/* 08 — Ocean */
+.prompt-card[data-id$="-ocean"] {
+  --pv-a: #4ba7d8; --pv-b: #2264b7; --pv-c: #79e0d6;
+  --pv-art:
+    radial-gradient(ellipse at 25% 105%, rgba(121,224,214,.70) 0 36%, transparent 37%),
+    radial-gradient(ellipse at 67% 111%, rgba(255,255,255,.20) 0 42%, transparent 43%),
+    repeating-radial-gradient(ellipse at 0% 110%, rgba(255,255,255,.26) 0 4px, transparent 5px 15px);
+}
+
+/* 09 — Jungle */
+.prompt-card[data-id$="-jungle"] {
+  --pv-a: #245c45; --pv-b: #5e9b58; --pv-c: #d9d46f;
+  --pv-art:
+    radial-gradient(ellipse at 8% 23%, #78aa62 0 16%, transparent 17%),
+    radial-gradient(ellipse at 92% 19%, #3c7a54 0 17%, transparent 18%),
+    radial-gradient(ellipse at 26% 91%, #315f45 0 20%, transparent 21%),
+    radial-gradient(ellipse at 78% 86%, #9ab563 0 18%, transparent 19%),
+    radial-gradient(circle at 53% 49%, #e3d771 0 5%, transparent 6%);
+}
+
+/* 10 — Mountain Journey */
+.prompt-card[data-id$="-mountain"] {
+  --pv-a: #7aa8c7; --pv-b: #465c75; --pv-c: #f1c27b;
+  --pv-art:
+    conic-gradient(from 315deg at 28% 95%, transparent 0 25%, #364a60 26% 49%, transparent 50%),
+    conic-gradient(from 315deg at 62% 100%, transparent 0 25%, #58728c 26% 49%, transparent 50%),
+    radial-gradient(circle at 79% 22%, #f1c27b 0 8%, transparent 9%);
+}
+
+/* 11 — Stars & Space */
+.prompt-card[data-id$="-stars"] {
+  --pv-a: #171c4d; --pv-b: #493b8d; --pv-c: #f8dc79;
+  --pv-art:
+    radial-gradient(circle at 75% 28%, #f8dc79 0 8%, transparent 9%),
+    radial-gradient(circle at 24% 24%, #fff 0 1.5%, transparent 2.5%),
+    radial-gradient(circle at 41% 60%, #fff 0 1.5%, transparent 2.5%),
+    radial-gradient(circle at 64% 18%, #fff 0 1%, transparent 2%),
+    radial-gradient(circle at 86% 66%, #fff 0 1.4%, transparent 2.4%),
+    radial-gradient(circle at 16% 76%, #a7e4ff 0 2%, transparent 3%);
+}
+
+/* 12 — Four Seasons */
+.prompt-card[data-id$="-seasons"] {
+  --pv-a: #8fcf8b; --pv-b: #75b8dc; --pv-c: #e8a55c; --pv-ink: #253641;
+  --pv-art:
+    conic-gradient(from 0deg at 50% 50%, #efb4cd 0 25%, #86c987 0 50%, #efb65f 0 75%, #8bb8da 0 100%),
+    radial-gradient(circle at 50% 50%, rgba(255,255,255,.45) 0 16%, transparent 17%);
+}
+.prompt-card[data-id$="-seasons"]::after { background: rgba(255,255,255,.72); border-color: rgba(0,0,0,.10); }
+
+/* 13 — Music */
+.prompt-card[data-id$="-music"] {
+  --pv-a: #6d4dd0; --pv-b: #eb5f9a; --pv-c: #5de0cc;
+  --pv-art:
+    repeating-linear-gradient(0deg, transparent 0 10px, rgba(255,255,255,.22) 11px 12px),
+    radial-gradient(circle at 27% 42%, #fff 0 5%, transparent 6%),
+    radial-gradient(circle at 67% 62%, #5de0cc 0 6%, transparent 7%),
+    linear-gradient(110deg, transparent 42%, rgba(255,255,255,.35) 43% 46%, transparent 47%);
+}
+
+/* 14 — Sports */
+.prompt-card[data-id$="-sports"] {
+  --pv-a: #1f8a70; --pv-b: #2f65c6; --pv-c: #ffcb4b;
+  --pv-art:
+    linear-gradient(90deg, transparent 0 48%, rgba(255,255,255,.65) 49% 51%, transparent 52%),
+    linear-gradient(0deg, transparent 0 48%, rgba(255,255,255,.55) 49% 51%, transparent 52%),
+    radial-gradient(circle at 50% 50%, transparent 0 15%, rgba(255,255,255,.55) 16% 18%, transparent 19%),
+    repeating-linear-gradient(135deg, transparent 0 17px, rgba(255,255,255,.10) 18px 19px);
+}
+
+/* 15 — Contemporary / Street */
+.prompt-card[data-id$="-street"] {
+  --pv-a: #161b28; --pv-b: #6d5ef1; --pv-c: #ff6c8e;
+  --pv-art:
+    linear-gradient(155deg, transparent 0 28%, #ffcc4f 29% 38%, transparent 39%),
+    linear-gradient(22deg, transparent 0 58%, #ff6c8e 59% 68%, transparent 69%),
+    repeating-linear-gradient(90deg, rgba(255,255,255,.10) 0 2px, transparent 2px 13px);
+}
+
+/* 16 — Pixel / Retro Digital */
+.prompt-card[data-id$="-pixel"] {
+  --pv-a: #342b62; --pv-b: #286c75; --pv-c: #ffe066;
+  --pv-art:
+    conic-gradient(from 90deg at 30% 35%, #ffe066 0 25%, transparent 0 100%),
+    conic-gradient(from 180deg at 70% 65%, #59d7b2 0 25%, transparent 0 100%),
+    repeating-linear-gradient(0deg, transparent 0 9px, rgba(255,255,255,.10) 10px 11px),
+    repeating-linear-gradient(90deg, transparent 0 9px, rgba(255,255,255,.10) 10px 11px);
+}
+
+/* 17 — Technology */
+.prompt-card[data-id$="-tech"] {
+  --pv-a: #17284c; --pv-b: #325b9a; --pv-c: #54e1c1;
+  --pv-art:
+    linear-gradient(90deg, transparent 0 19%, rgba(84,225,193,.28) 20%, transparent 21% 39%, rgba(84,225,193,.20) 40%, transparent 41%),
+    linear-gradient(0deg, transparent 0 19%, rgba(84,225,193,.24) 20%, transparent 21% 39%, rgba(84,225,193,.16) 40%, transparent 41%),
+    radial-gradient(circle at 73% 39%, #54e1c1 0 4%, transparent 5%),
+    radial-gradient(circle at 34% 65%, #8ca8ff 0 3%, transparent 4%);
+}
+
+/* 18 — Cinema */
+.prompt-card[data-id$="-cinema"] {
+  --pv-a: #171717; --pv-b: #6c2e35; --pv-c: #f0b85a;
+  --pv-art:
+    linear-gradient(0deg, #0d0d0d 0 12%, transparent 13% 87%, #0d0d0d 88% 100%),
+    radial-gradient(ellipse at 62% 46%, rgba(240,184,90,.52) 0 19%, transparent 45%),
+    linear-gradient(120deg, transparent 0 48%, rgba(255,255,255,.20) 49% 51%, transparent 52%);
+}
+
+/* 19 — Magazine Editorial */
+.prompt-card[data-id$="-magazine"] {
+  --pv-a: #f3efe7; --pv-b: #d25252; --pv-c: #20252c; --pv-ink: #1d2538;
+  --pv-art:
+    linear-gradient(90deg, #20252c 0 33%, transparent 34%),
+    linear-gradient(0deg, transparent 0 72%, #d25252 73% 100%),
+    repeating-linear-gradient(0deg, transparent 0 8px, rgba(32,37,44,.18) 9px 10px);
+}
+.prompt-card[data-id$="-magazine"]::after { background: rgba(255,255,255,.80); border-color: rgba(0,0,0,.10); }
+
+/* 20 — Art & Exhibition */
+.prompt-card[data-id$="-art"] {
+  --pv-a: #f1e9dc; --pv-b: #5e6bc5; --pv-c: #ed765f; --pv-ink: #23283a;
+  --pv-art:
+    radial-gradient(ellipse at 22% 62%, #ed765f 0 19%, transparent 20%),
+    radial-gradient(ellipse at 59% 38%, #5e6bc5 0 15%, transparent 16%),
+    radial-gradient(ellipse at 83% 70%, #e4b84c 0 13%, transparent 14%),
+    linear-gradient(116deg, transparent 0 46%, rgba(35,40,58,.22) 47% 49%, transparent 50%);
+}
+.prompt-card[data-id$="-art"]::after { background: rgba(255,255,255,.76); border-color: rgba(0,0,0,.08); }
+
+/* 21 — Architecture */
+.prompt-card[data-id$="-architecture"] {
+  --pv-a: #dbe7ef; --pv-b: #788fa2; --pv-c: #2d4d63; --pv-ink: #183043;
+  --pv-art:
+    repeating-linear-gradient(0deg, transparent 0 13px, rgba(45,77,99,.16) 14px 15px),
+    repeating-linear-gradient(90deg, transparent 0 13px, rgba(45,77,99,.16) 14px 15px),
+    linear-gradient(90deg, transparent 0 27%, #2d4d63 28% 31%, transparent 32% 66%, #788fa2 67% 71%, transparent 72%);
+}
+.prompt-card[data-id$="-architecture"]::after { background: rgba(255,255,255,.76); border-color: rgba(24,48,67,.10); }
+
+/* 22 — Classical */
+.prompt-card[data-id$="-classical"] {
+  --pv-a: #efe3c7; --pv-b: #b8925e; --pv-c: #734f35; --pv-ink: #4b321f;
+  --pv-art:
+    linear-gradient(90deg, rgba(115,79,53,.16) 0 1px, transparent 1px 99%, rgba(115,79,53,.16) 99%),
+    linear-gradient(0deg, rgba(115,79,53,.13) 0 1px, transparent 1px 99%, rgba(115,79,53,.13) 99%),
+    radial-gradient(ellipse at 50% 50%, rgba(255,255,255,.40) 0 37%, transparent 38%);
+}
+.prompt-card[data-id$="-classical"]::after { background: rgba(255,250,238,.75); border-color: rgba(75,50,31,.12); }
+
+/* 23 — Ink Wash */
+.prompt-card[data-id$="-ink"] {
+  --pv-a: #ecece7; --pv-b: #777a78; --pv-c: #272b2b; --pv-ink: #262a2a;
+  --pv-art:
+    radial-gradient(ellipse at 24% 66%, rgba(35,39,39,.84) 0 18%, transparent 24%),
+    radial-gradient(ellipse at 56% 42%, rgba(70,74,73,.52) 0 20%, transparent 29%),
+    radial-gradient(ellipse at 82% 73%, rgba(20,23,23,.68) 0 10%, transparent 18%),
+    linear-gradient(110deg, transparent 0 43%, rgba(38,42,42,.18) 44% 46%, transparent 47%);
+}
+.prompt-card[data-id$="-ink"]::after { background: rgba(255,255,252,.72); border-color: rgba(38,42,42,.12); }
+
+/* 24 — Spiritual / Sacred */
+.prompt-card[data-id$="-spiritual"] {
+  --pv-a: #7e76cf; --pv-b: #d5b76f; --pv-c: #fff3ba;
+  --pv-art:
+    radial-gradient(circle at 50% 47%, rgba(255,246,194,.98) 0 8%, rgba(255,229,142,.55) 9% 19%, transparent 38%),
+    radial-gradient(ellipse at 50% 112%, rgba(255,255,255,.32) 0 45%, transparent 46%),
+    linear-gradient(90deg, transparent 49%, rgba(255,255,255,.30) 50% 51%, transparent 52%);
+}
+
+/* 25 — Finance & Value */
+.prompt-card[data-id$="-finance"] {
+  --pv-a: #214b56; --pv-b: #347c6e; --pv-c: #e0b856;
+  --pv-art:
+    linear-gradient(90deg, transparent 0 18%, #e0b856 19% 29%, transparent 30% 39%, #8fd1b9 40% 54%, transparent 55% 64%, #dfe8d9 65% 83%, transparent 84%),
+    linear-gradient(0deg, rgba(255,255,255,.35) 0 1px, transparent 1px 25%, rgba(255,255,255,.20) 26% 27%, transparent 28% 52%, rgba(255,255,255,.15) 53% 54%, transparent 55%);
+}
+
+/* 26 — Family */
+.prompt-card[data-id$="-family"] {
+  --pv-a: #e58d7e; --pv-b: #e9bd76; --pv-c: #f7e3c6; --pv-ink: #57362c;
+  --pv-art:
+    conic-gradient(from 315deg at 51% 58%, transparent 0 25%, #fff0d8 26% 49%, transparent 50%),
+    linear-gradient(0deg, transparent 0 47%, #fff0d8 48% 80%, transparent 81%),
+    radial-gradient(circle at 24% 27%, rgba(255,255,255,.55) 0 11%, transparent 12%);
+}
+.prompt-card[data-id$="-family"]::after { background: rgba(255,248,237,.72); border-color: rgba(87,54,44,.08); }
+
+/* 27 — Travel */
+.prompt-card[data-id$="-travel"] {
+  --pv-a: #6ca7ba; --pv-b: #c58a63; --pv-c: #f4dfaa; --pv-ink: #254352;
+  --pv-art:
+    radial-gradient(circle at 21% 68%, #f4dfaa 0 5%, #254352 6% 7%, transparent 8%),
+    radial-gradient(circle at 75% 27%, #f4dfaa 0 5%, #254352 6% 7%, transparent 8%),
+    repeating-radial-gradient(ellipse at 20% 70%, transparent 0 12px, rgba(255,255,255,.33) 13px 14px, transparent 15px 25px),
+    linear-gradient(155deg, transparent 0 44%, rgba(255,255,255,.50) 45% 47%, transparent 48%);
+}
+.prompt-card[data-id$="-travel"]::after { background: rgba(255,255,255,.68); border-color: rgba(37,67,82,.10); }
+
+/* 28 — Festival */
+.prompt-card[data-id$="-festival"] {
+  --pv-a: #d84e62; --pv-b: #f09b57; --pv-c: #ffd55c;
+  --pv-art:
+    radial-gradient(circle at 20% 30%, #ffd55c 0 3%, transparent 4%),
+    radial-gradient(circle at 36% 68%, #fff 0 2%, transparent 3%),
+    radial-gradient(circle at 55% 24%, #63d0b4 0 3%, transparent 4%),
+    radial-gradient(circle at 74% 62%, #7a78ed 0 3%, transparent 4%),
+    linear-gradient(64deg, transparent 0 20%, rgba(255,255,255,.32) 21% 23%, transparent 24% 56%, rgba(255,255,255,.26) 57% 59%, transparent 60%);
+}
+
+/* 29 — Nostalgia */
+.prompt-card[data-id$="-nostalgia"] {
+  --pv-a: #8b7256; --pv-b: #c5a879; --pv-c: #ead8b3; --pv-ink: #4a3828;
+  --pv-art:
+    linear-gradient(90deg, transparent 0 12%, rgba(255,250,233,.72) 13% 42%, transparent 43% 57%, rgba(255,250,233,.56) 58% 86%, transparent 87%),
+    linear-gradient(0deg, transparent 0 14%, rgba(70,49,34,.18) 15% 17%, transparent 18% 82%, rgba(70,49,34,.18) 83% 85%, transparent 86%),
+    repeating-linear-gradient(0deg, rgba(255,255,255,.05) 0 2px, transparent 2px 5px);
+}
+.prompt-card[data-id$="-nostalgia"]::after { background: rgba(250,240,218,.72); border-color: rgba(74,56,40,.10); }
+
+/* 30 — Light & Hope */
+.prompt-card[data-id$="-light"] {
+  --pv-a: #8dc8dc; --pv-b: #f2bf70; --pv-c: #fff4ba; --pv-ink: #31485a;
+  --pv-art:
+    radial-gradient(circle at 50% 87%, #fff4ba 0 10%, rgba(255,231,150,.72) 11% 22%, transparent 36%),
+    linear-gradient(165deg, transparent 0 44%, rgba(255,255,255,.30) 45% 47%, transparent 48%),
+    radial-gradient(ellipse at 50% 124%, rgba(255,255,255,.42) 0 46%, transparent 47%);
+}
+.prompt-card[data-id$="-light"]::after { background: rgba(255,255,255,.68); border-color: rgba(49,72,90,.08); }
+
+/* Small screens: preserve the idea without making cards excessively tall. */
+@media (max-width: 640px) {
+  .prompt-card::before { flex-basis: 78px; border-radius: 12px; margin-bottom: 12px; }
+  .prompt-card::after { top: 27px; left: 27px; font-size: 8px; }
+}
