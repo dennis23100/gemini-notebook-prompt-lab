@@ -1,5 +1,5 @@
 const NOTEBOOK_URL = 'https://notebook.google.com/';
-const REPO_URL = 'https://github.com/dennis23100/toolkit_60/tree/main/notebooklm';
+const REPO_URL = 'https://github.com/dennis23100/gemini-notebook-prompt-lab';
 const $ = (sel, root = document) => root.querySelector(sel);
 const $$ = (sel, root = document) => [...root.querySelectorAll(sel)];
 
