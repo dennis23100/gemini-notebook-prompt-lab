@@ -23,7 +23,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          for i in 00 01 02 03 04 05 06 07; do
+          for i in $(seq -w 0 11); do
             [[ -f ".preview-pack-v5/piece${i}" ]] || { echo "Waiting for piece${i}"; exit 0; }
           done
 
