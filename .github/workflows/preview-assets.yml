@@ -1,0 +1,33 @@
+name: Validate real preview assets
+
+on:
+  push:
+    branches: [fix/preview-render-v2]
+    paths:
+      - 'notebooklm/assets/real-previews/**'
+      - '.github/workflows/preview-assets.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate-previews:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install image validator
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends imagemagick
+      - name: Validate source JPEG sprites
+        run: |
+          set -euo pipefail
+          for f in \
+            notebooklm/assets/real-previews/comic-sprite.jpg \
+            notebooklm/assets/real-previews/stars-sprite.jpg \
+            notebooklm/assets/real-previews/fairy-animation-sprite.jpg; do
+            test -s "$f"
+            identify "$f"
+            convert "$f" -regard-warnings -format '%w %h\n' info:
+          done
