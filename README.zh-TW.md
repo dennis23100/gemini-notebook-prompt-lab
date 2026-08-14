@@ -6,7 +6,7 @@
 
 **為 Gemini Notebook（原 NotebookLM）打造的本機優先、來源限定、分齡提示詞庫與工作流工具。**
 
-[English](README.md) · [🚀 直接打開網站](https://dennis23100.github.io/gemini-notebook-prompt-lab/) · [🖼️ 可重現成果 Showcase](https://dennis23100.github.io/gemini-notebook-prompt-lab/showcase.html) · [最新版本](https://github.com/dennis23100/gemini-notebook-prompt-lab/releases/latest) · [Issues](https://github.com/dennis23100/gemini-notebook-prompt-lab/issues)
+[English](README.md) · [🚀 直接打開網站](https://dennis23100.github.io/gemini-notebook-prompt-lab/) · [🖼️ 可重現 Showcase](https://dennis23100.github.io/gemini-notebook-prompt-lab/showcase.html) · [最新版本](https://github.com/dennis23100/gemini-notebook-prompt-lab/releases/latest) · [Issues](https://github.com/dennis23100/gemini-notebook-prompt-lab/issues)
 
 ![Prompts](https://img.shields.io/badge/prompts-90-665fe8)
 ![Themes](https://img.shields.io/badge/themes-30-15977f)
@@ -17,117 +17,74 @@
 
 </div>
 
+## 先看成果，再決定要不要用
+
+<img src="notebooklm/docs/real-output-gallery.webp" alt="漫畫、星星、童話動畫電影三種視覺主題，分別比較兒童、青年與成熟讀者的實際生成範例" width="100%" />
+
+**同一份來源概念 × 三種視覺方向 × 三種受眾。** 上面是代表性的**實際生成範例**，不是手畫 mockup。
+
+| 受眾 | 預設年齡區間 | 呈現方向 |
+|---|---:|---|
+| **兒童** | 15 歲以下 | 清楚、溫暖、好記、降低資訊密度 |
+| **青年** | 16–34 歲 | 有動能、好共感、保留適度深度 |
+| **成熟讀者** | 35 歲以上 | 穩重、有內容、高可讀性 |
+
+實際生成不是固定模板，因此不同來源、不同次生成仍可能出現不同視覺表現。像 **「漫畫（不拘）」** 本來就是方向而不是死板畫風；它可以依來源與受眾變成漫畫、水墨式敘事、電影感分鏡或其他合適的視覺語言。
+
+### 🚀 [直接打開 Prompt Lab 試用](https://dennis23100.github.io/gemini-notebook-prompt-lab/)
+
 ## 這個專案在解決什麼？
 
 很多 Prompt repository 最後只是一長串文字清單。這個專案從一個更實際的問題開始：
 
-> **同一份可信來源，真的應該用完全相同的方式呈現給幼兒、青年與較成熟的學習者嗎？**
+> **同一份可信來源，真的應該用完全相同的方式呈現給兒童、青年與成熟讀者嗎？**
 
-Gemini Notebook 提示詞工作室把這個問題做成可重複使用的開源工作流：內容仍然以來源為依據，但可以依受眾調整語氣、資訊密度、節奏與視覺方向。
-
-## 來自真實教學情境
-
-這個專案受到真實教學經驗影響，其中包含一次**台下 100+ 位聽眾**的實體教學分享。這段經驗讓一件事情更明確：教學不只是「資訊正確」就夠了，如何呈現、節奏怎麼安排、受眾是否適配，同樣會影響理解。
-
-<img src="notebooklm/docs/teaching-origin.svg" alt="真實教學起源示意卡" width="100%" />
-
-上面這張是專案自行繪製的「起源說明圖」，不是現場照片。之後如果加入真正的教學現場截圖／短片，也會先做隱私檢查；而且**不會把 100+ 位現場聽眾包裝成 100+ GitHub 使用者。**
-
-更多背景請看：[專案故事](docs/PROJECT_STORY.zh-TW.md)。
+Gemini Notebook 提示詞工作室會維持來源內容的忠實度，同時依受眾調整用字、資訊密度、節奏與視覺方向。
 
 ## 你可以做什麼？
 
-### 📚 提示詞庫
+- **📚 提示詞庫**：90 組 Prompt = 30 種視覺主題 × 3 種受眾。
+- **🧪 提示詞工作室**：依工作流、受眾、聚焦主題、視覺主題、難度、角色與額外要求快速組合 Prompt。
+- **🔗 流程串接**：把「萃取 → 產出 → 驗證」做成可重複工作流。
+- **✅ 品質檢查**：用透明本機規則檢查來源限定、防杜撰、受眾、任務、格式與約束。
+- **⭐ 收藏／最近使用／匯入／匯出**：全部存在瀏覽器本機。
+- **🔗 可分享篩選網址**：目前提示詞庫的篩選狀態可以放進 URL。
+- **📦 JSON / Markdown / CSV**：可匯出目前篩選結果。
+- **📱 PWA / 離線**：不需要專案帳號或後端。
 
-瀏覽 **90 組分齡提示詞**、**30 種視覺主題**、**3 種受眾設定**。可以搜尋、篩選、收藏、比較不同年齡版本、複製、分享、匯入與匯出。
+提示詞庫會**預設選擇「兒童」**，一開始只顯示 30 組，不再把 90 組全部混在一起。年齡是三選一，永遠保留一個選擇；分類／風格則可以再次點擊目前選項來取消，立刻回到該年齡的全部 30 種主題。
 
-提示詞庫現在也包含：
-
-- **可分享的篩選網址**：年齡、分類、搜尋與「只看收藏」都能放進 URL；
-- **最近使用紀錄**：只存在瀏覽器 `localStorage`；
-- **JSON / Markdown / CSV** 三種匯出格式；
-- 30 種主題的輕量視覺方向預覽。
-
-### 🧪 提示詞工作室
-
-依工作流、受眾、聚焦主題、視覺主題、深度／難度、角色、額外限制與來源限定規則快速組出新的英文 Prompt。
-
-### 🔗 流程串接 — 進階
-
-建立可重複執行的多步驟流程，例如：
+## 使用方式
 
 ```text
-萃取 → 產出 → 驗證
+1. 選受眾 + 視覺主題
+           ↓
+2. 複製來源限定 Prompt
+           ↓
+3. 用新分頁打開 Gemini Notebook
+           ↓
+4. 搭配自己的可信來源生成
 ```
 
-### ✅ 品質檢查 — 進階
+網站本身沒有專案後端、登入系統、分析 SDK、資料庫或內嵌 API key。
 
-用透明、可重現的本機規則檢查 Prompt 是否包含來源限定、防杜撰、受眾、任務、輸出格式、約束與足夠具體性。
+## 真實範例與可重現 Benchmark 分開
 
-第一次使用時預設是**簡易模式**，主要只看到「提示詞庫＋提示詞工作室」；有需要再展開進階功能。
+README 最上面的成果圖，是為了讓第一次來的人快速理解工具會產生什麼差異。每一列都用代表性的 **漫畫（不拘）／星星／童話動畫電影** 實際輸出做比較。
 
-## 使用方式其實只有 3 步
+另外，專案仍保留一套**可重現 Showcase**：使用固定的專案自製測試來源與精確 Prompt manifest，讓貢獻者不用猜來源或 Prompt 就能重做比較。
 
-```text
-1. 選一個 Prompt，或自己組一個
-                 ↓
-2. 複製並開啟 Gemini Notebook
-                 ↓
-3. 搭配你自己的可信來源資料使用
-```
+### 🖼️ [打開可重現 Showcase](https://dennis23100.github.io/gemini-notebook-prompt-lab/showcase.html)
 
-這個網站本身沒有後端、登入系統、分析 SDK、資料庫或內嵌 API key。
+Mockup 不會冒充真實生成結果；實際輸出也會明確標示為「範例」，因為生成本來就不是完全 deterministic。
 
-## 為什麼分齡版本值得做？
+## 來自真實教學情境
 
-這個專案不主張某組年齡切分是放諸四海皆準的教育學定律；目前範圍是原始教學流程的可調整預設。
+這個專案受到真實教學經驗影響，其中包含一次**台下 100+ 位聽眾**的實體教學分享。這段經驗讓一件事情更明確：教學不只是資訊正確，呈現方式、節奏與受眾適配同樣重要。
 
-真正重要的是**比較同一份來源在不同受眾下的呈現差異**：
+<img src="notebooklm/docs/teaching-origin.svg" alt="真實教學起源示意卡" width="100%" />
 
-| 同一份來源 | 幼兒 | 青年 | 壯年 |
-|---|---|---|---|
-| 用字 | 短、熟悉 | 有吸引力、保留適度深度 | 成熟、有內容 |
-| 視覺密度 | 低 | 中 | 控制良好的資訊量 |
-| 節奏 | 簡單、引導式 | 較有動能 | 結構清楚、穩定 |
-| 語氣 | 溫暖、安全 | 好理解、有共感 | 穩重、可信 |
-
-### 視覺概念示意
-
-<img src="notebooklm/docs/showcase-preview.svg" alt="3 × 3 分齡視覺概念示意" width="100%" />
-
-這張圖是**專案自行製作的 mockup，不是 Gemini Notebook 生成結果**。它要表達的是我們正在測試的設計假說：來源事實固定，但不同受眾與主題可以有不同的資訊密度、節奏與成熟度。
-
-## 可重現成果 Showcase
-
-### 🖼️ [打開 3 × 3 Showcase](https://dennis23100.github.io/gemini-notebook-prompt-lab/showcase.html)
-
-第一批固定使用：
-
-```text
-1 份相同的 controlled source
-× 3 種主題（漫畫／科技／水墨）
-× 3 種受眾（幼兒／青年／壯年）
-= 9 個可重現成果位置
-```
-
-每個位置都連到精確的 Prompt。真正的生成圖還沒加入前，只會顯示 placeholder，**不會拿 mockup 冒充 Gemini Notebook 真實輸出**。
-
-Repository 還提供 **Showcase Pack** workflow，會把固定 source 與 9 組精確 Prompt 打包成可下載 artifact，讓外部貢獻者也能重現，不用猜該使用哪一組 Prompt。
-
-請看：[成果展示規劃](docs/SHOWCASE.zh-TW.md)、[固定測試來源](notebooklm/docs/showcase/SOURCE.md) 與 [Issue #6](https://github.com/dennis23100/gemini-notebook-prompt-lab/issues/6)。
-
-## 目前規模
-
-- **90 組 Prompt · 30 種視覺主題 · 3 種受眾 · 10 種工作流**
-- 繁體中文 + 英文介面
-- 簡易／進階介面模式
-- 本機收藏／自訂 Prompt／Chain／最近使用紀錄
-- 可分享的 URL 篩選狀態
-- JSON / Markdown / CSV 匯出
-- PWA／離線支援
-- 來源限定驗證
-- 自動測試與 GitHub Actions
-- GitHub Pages Live Demo + 可重現 Showcase
+上面是專案自行製作的起源示意圖，不是現場照片。更多背景請看：[專案故事](docs/PROJECT_STORY.zh-TW.md)。
 
 ## 這是一個持續維護的 OSS
 
@@ -136,10 +93,8 @@ Repository 還提供 **Showcase Pack** workflow，會把固定 source 與 9 組�
 - [`good first issue`](https://github.com/dennis23100/gemini-notebook-prompt-lab/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22)
 - [`help wanted`](https://github.com/dennis23100/gemini-notebook-prompt-lab/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22)
 - [如何參與](CONTRIBUTING.md)
-- [Maintainers](MAINTAINERS.md)
-- [Security Policy](SECURITY.md)
+- [Security](SECURITY.md)
 - [Code of Conduct](CODE_OF_CONDUCT.md)
-- [授權說明](LICENSING.md)
 
 修改程式或資料前：
 
@@ -148,24 +103,13 @@ cd notebooklm
 npm run check
 ```
 
-## 現在最適合參與的項目
+## 現在適合參與的項目
 
-- 鍵盤操作／Accessibility audit；
+- 跨瀏覽器鍵盤／Accessibility 測試；
 - 日文 UI / metadata 翻譯；
-- 第一批 9 張真實生成成果；
-- 經過隱私檢查的真實教學現場素材；
-- 有清楚來源／用途的 Prompt 或文件改善。
-
-## Roadmap
-
-1. **填入第一批 9 張真實 Showcase 成果**；
-2. 視情況加入**經過隱私檢查的真實教學現場截圖／短片**；
-3. Accessibility；
-4. 更多語言；
-5. Prompt／版本差異與貢獻流程再強化；
-6. 可選、低權限的 Browser Extension。
-
-未來如果真的做剪片工具，會另外開 repository，不再混在這個專案裡。
+- 有清楚來源紀錄的更多真實輸出範例；
+- Community Prompt Packs；
+- Prompt、文件與 UX 的小型改善。
 
 ## 授權與來源
 
@@ -173,7 +117,7 @@ npm run check
 - 本專案自行建立與改寫的 Prompt、metadata：請看 `notebooklm/LICENSE-DATA.md` 與 [LICENSING.md](LICENSING.md)。
 - 上游靈感來源與 attribution：`notebooklm/THIRD_PARTY_NOTICES.md`。
 
-本專案與 Google 無官方關係；Gemini Notebook、NotebookLM 等名稱只用來描述相容產品。
+本專案與 Google 無官方關係；Gemini Notebook、NotebookLM 名稱只用來描述相容產品。
 
 ---
 
@@ -181,6 +125,6 @@ npm run check
 
 ### 🚀 [直接打開 Gemini Notebook 提示詞工作室](https://dennis23100.github.io/gemini-notebook-prompt-lab/)
 
-如果這個專案對你有幫助，最有價值的方式是：真的使用它、提出 Issue、改進一個 Prompt、送一個範圍清楚的 PR，或按下 ⭐ 讓更多人找到它。
+如果這個專案對你有用，請真的使用、回報問題、改善 Prompt、送一個聚焦 PR，或 Star 讓更多人找到它。
 
 </div>
