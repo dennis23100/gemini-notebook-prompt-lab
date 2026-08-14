@@ -33,14 +33,15 @@ jobs:
           done
 
           mkdir -p notebooklm/assets/real-previews
-          cat .preview-b64/comic-sprite.part* | base64 -d > notebooklm/assets/real-previews/comic-sprite.jpg
-          cat .preview-b64/stars-sprite.part* | base64 -d > notebooklm/assets/real-previews/stars-sprite.jpg
-          cat .preview-b64/fairy-animation-sprite.part* | base64 -d > notebooklm/assets/real-previews/fairy-animation-sprite.jpg
+          cat .preview-b64/comic-sprite.part* | base64 -d > notebooklm/assets/real-previews/comic-sprite-v2.jpg
+          cat .preview-b64/stars-sprite.part* | base64 -d > notebooklm/assets/real-previews/stars-sprite-v2.jpg
+          cat .preview-b64/fairy-animation-sprite.part* | base64 -d > notebooklm/assets/real-previews/fairy-animation-sprite-v2.jpg
 
+          python3 -m pip install --disable-pip-version-check --quiet pillow
           python3 - <<'PY'
           from pathlib import Path
           from PIL import Image
-          for name in ('comic-sprite.jpg','stars-sprite.jpg','fairy-animation-sprite.jpg'):
+          for name in ('comic-sprite-v2.jpg','stars-sprite-v2.jpg','fairy-animation-sprite-v2.jpg'):
               p=Path('notebooklm/assets/real-previews')/name
               with Image.open(p) as im:
                   im.verify()
@@ -50,13 +51,13 @@ jobs:
                   assert p.stat().st_size > 40_000
           PY
 
-          if git diff --quiet -- notebooklm/assets/real-previews/*.jpg; then
+          if git diff --quiet -- notebooklm/assets/real-previews/*-sprite-v2.jpg; then
             echo 'Preview JPEGs already match; nothing to commit.'
             exit 0
           fi
 
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add notebooklm/assets/real-previews/*.jpg
-          git commit -m 'fix(previews): replace corrupted JPEG assets'
+          git add notebooklm/assets/real-previews/*-sprite-v2.jpg
+          git commit -m 'fix(previews): add fresh validated JPEG assets'
           git push origin HEAD:fix/individual-real-previews
