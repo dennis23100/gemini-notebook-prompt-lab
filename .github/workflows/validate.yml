@@ -46,22 +46,22 @@ jobs:
 
           root = Path('notebooklm/assets/real-previews')
           names = [
-              'comic-sprite.jpg',
-              'stars-sprite.jpg',
-              'fairy-animation-sprite.jpg',
+              'comic-sprite-v2.jpg',
+              'stars-sprite-v2.jpg',
+              'fairy-animation-sprite-v2.jpg',
           ]
           for name in names:
               path = root / name
               if not path.is_file():
                   raise SystemExit(f'Missing preview asset: {path}')
-              if path.stat().st_size < 20_000:
+              if path.stat().st_size < 40_000:
                   raise SystemExit(f'Preview asset suspiciously small: {path} ({path.stat().st_size} bytes)')
               with Image.open(path) as image:
                   image.verify()
               with Image.open(path) as image:
                   width, height = image.size
-                  if width < 900 or height < 160:
-                      raise SystemExit(f'Preview asset too small: {path} ({width}x{height})')
+                  if (width, height) != (1080, 201):
+                      raise SystemExit(f'Unexpected preview dimensions: {path} ({width}x{height})')
                   print(f'OK {name}: {width}x{height}, {path.stat().st_size} bytes')
           PY
 
