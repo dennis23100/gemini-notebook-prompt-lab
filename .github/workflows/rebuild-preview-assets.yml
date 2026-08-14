@@ -1,0 +1,63 @@
+name: Rebuild real-output preview assets
+
+on:
+  push:
+    branches: [fix/individual-real-previews]
+    paths:
+      - '.preview-b64/**'
+      - '.github/workflows/rebuild-preview-assets.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: fix/individual-real-previews
+          fetch-depth: 0
+
+      - name: Rebuild when all chunks exist
+        shell: bash
+        run: |
+          set -euo pipefail
+          expected=(
+            comic-sprite.part01 comic-sprite.part02 comic-sprite.part03 comic-sprite.part04 comic-sprite.part05
+            stars-sprite.part01 stars-sprite.part02 stars-sprite.part03
+            fairy-animation-sprite.part01 fairy-animation-sprite.part02 fairy-animation-sprite.part03 fairy-animation-sprite.part04
+          )
+          for f in "${expected[@]}"; do
+            [[ -f ".preview-b64/$f" ]] || { echo "Waiting for $f"; exit 0; }
+          done
+
+          mkdir -p notebooklm/assets/real-previews
+          cat .preview-b64/comic-sprite.part* | base64 -d > notebooklm/assets/real-previews/comic-sprite-v2.jpg
+          cat .preview-b64/stars-sprite.part* | base64 -d > notebooklm/assets/real-previews/stars-sprite-v2.jpg
+          cat .preview-b64/fairy-animation-sprite.part* | base64 -d > notebooklm/assets/real-previews/fairy-animation-sprite-v2.jpg
+
+          python3 -m pip install --disable-pip-version-check --quiet pillow
+          python3 - <<'PY'
+          from pathlib import Path
+          from PIL import Image
+          for name in ('comic-sprite-v2.jpg','stars-sprite-v2.jpg','fairy-animation-sprite-v2.jpg'):
+              p=Path('notebooklm/assets/real-previews')/name
+              with Image.open(p) as im:
+                  im.verify()
+              with Image.open(p) as im:
+                  print(name, im.size, p.stat().st_size)
+                  assert im.width == 1080 and im.height == 201
+                  assert p.stat().st_size > 40_000
+          PY
+
+          if git diff --quiet -- notebooklm/assets/real-previews/*-sprite-v2.jpg; then
+            echo 'Preview JPEGs already match; nothing to commit.'
+            exit 0
+          fi
+
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add notebooklm/assets/real-previews/*-sprite-v2.jpg
+          git commit -m 'fix(previews): add fresh validated JPEG assets'
+          git push origin HEAD:fix/individual-real-previews
