@@ -40,6 +40,23 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
+
+          # GitHub's README image proxy has been inconsistent with the source WebP
+          # gallery. Generate a JPEG copy for README embeds while keeping the WebP
+          # source asset in the repository.
+          GALLERY_IN="notebooklm/docs/real-output-gallery.webp"
+          GALLERY_OUT="notebooklm/docs/real-output-gallery.jpg"
+          if command -v magick >/dev/null 2>&1; then
+            magick "$GALLERY_IN" -quality 88 "$GALLERY_OUT"
+          elif command -v convert >/dev/null 2>&1; then
+            convert "$GALLERY_IN" -quality 88 "$GALLERY_OUT"
+          elif command -v ffmpeg >/dev/null 2>&1; then
+            ffmpeg -hide_banner -loglevel error -y -i "$GALLERY_IN" -q:v 2 "$GALLERY_OUT"
+          else
+            echo "No WebP-to-JPEG converter is available on the runner." >&2
+            exit 1
+          fi
+
           rm -rf dist
           mkdir -p dist
 
