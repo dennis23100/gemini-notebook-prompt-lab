@@ -4,7 +4,7 @@ on:
   push:
     branches: [fix/real-previews-v3]
     paths:
-      - '.preview-pack/**'
+      - '.preview-pack/READY'
       - '.github/workflows/rebuild-individual-previews.yml'
 
 permissions:
@@ -19,12 +19,12 @@ jobs:
           ref: fix/real-previews-v3
           fetch-depth: 0
 
-      - name: Rebuild preview package when all chunks exist
+      - name: Rebuild preview package
         shell: bash
         run: |
           set -euo pipefail
           for i in $(seq -w 0 29); do
-            [[ -f ".preview-pack/part${i}" ]] || { echo "Waiting for part${i}"; exit 0; }
+            [[ -f ".preview-pack/part${i}" ]] || { echo "Missing part${i}"; exit 1; }
           done
 
           cat .preview-pack/part* | base64 -d > /tmp/real-previews.tar.gz
