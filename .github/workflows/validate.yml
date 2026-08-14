@@ -39,18 +39,11 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          python3 -m pip install --disable-pip-version-check --quiet pillow
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends imagemagick
           INPUT="notebooklm/docs/real-output-gallery.webp"
           OUTPUT="${RUNNER_TEMP}/real-output-gallery.jpg"
-          INPUT="$INPUT" OUTPUT="$OUTPUT" python3 - <<'PY'
-          import os
-          from PIL import Image
-
-          src = os.environ['INPUT']
-          dst = os.environ['OUTPUT']
-          with Image.open(src) as image:
-              image.convert('RGB').save(dst, 'JPEG', quality=88, optimize=True, progressive=True)
-          PY
+          convert "$INPUT" -quality 88 "$OUTPUT"
           test -s "$OUTPUT"
           file "$OUTPUT"
 
