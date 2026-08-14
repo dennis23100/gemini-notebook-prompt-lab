@@ -23,12 +23,12 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          for i in $(seq -w 0 11); do
-            [[ -f ".preview-sheet-v4/part${i}" ]] || { echo "Waiting for part${i}"; exit 0; }
+          for i in 00 01 02 03 04; do
+            [[ -f ".preview-sheet-v4/piece${i}" ]] || { echo "Waiting for piece${i}"; exit 0; }
           done
 
           mkdir -p notebooklm/assets/real-previews/individual
-          cat .preview-sheet-v4/part* | base64 -d > notebooklm/assets/real-previews/real-output-sheet-v1.jpg
+          cat .preview-sheet-v4/piece* | base64 -d > notebooklm/assets/real-previews/real-output-sheet-v2.jpg
 
           python3 -m pip install --disable-pip-version-check --quiet pillow
           python3 - <<'PY'
@@ -36,21 +36,21 @@ jobs:
           from PIL import Image
 
           root = Path('notebooklm/assets/real-previews')
-          source = root / 'real-output-sheet-v1.jpg'
+          source = root / 'real-output-sheet-v2.jpg'
           with Image.open(source) as im:
               im.verify()
           with Image.open(source) as im:
-              if im.size != (1200, 669):
+              if im.size != (1920, 1071):
                   raise SystemExit(f'Unexpected source-sheet size: {im.size}')
               im = im.convert('RGB')
               cols = ['children', 'youth', 'mature']
               rows = ['comic', 'stars', 'fairy']
-              tile_w, tile_h = 400, 223
+              tile_w, tile_h = 640, 357
               for r, theme in enumerate(rows):
                   for c, audience in enumerate(cols):
                       crop = im.crop((c*tile_w, r*tile_h, (c+1)*tile_w, (r+1)*tile_h))
                       out = root / 'individual' / f'{theme}-{audience}.jpg'
-                      crop.save(out, 'JPEG', quality=92, optimize=True, progressive=True)
+                      crop.save(out, 'JPEG', quality=94, optimize=True, progressive=True)
 
           expected = [
               'comic-children.jpg','comic-youth.jpg','comic-mature.jpg',
@@ -62,9 +62,9 @@ jobs:
               with Image.open(p) as im:
                   im.verify()
               with Image.open(p) as im:
-                  if im.size != (400, 223):
+                  if im.size != (640, 357):
                       raise SystemExit(f'Unexpected crop size {name}: {im.size}')
-              if p.stat().st_size < 18000:
+              if p.stat().st_size < 35000:
                   raise SystemExit(f'Unexpectedly small preview {name}: {p.stat().st_size}')
               print(f'OK {name}: {p.stat().st_size} bytes')
           PY
@@ -74,5 +74,5 @@ jobs:
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add -A notebooklm/assets/real-previews .preview-sheet-v4
-          git commit -m 'fix(previews): add nine clear independent real-output images'
+          git commit -m 'fix(previews): add nine clear 640px real-output images'
           git push origin HEAD:fix/real-previews-v4
