@@ -35,6 +35,36 @@ jobs:
         working-directory: notebooklm
         run: npm run check
 
+      - name: Decode real-output preview images
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -m pip install --disable-pip-version-check --quiet pillow
+          python3 - <<'PY'
+          from pathlib import Path
+          from PIL import Image
+
+          root = Path('notebooklm/assets/real-previews')
+          names = [
+              'comic-sprite.jpg',
+              'stars-sprite.jpg',
+              'fairy-animation-sprite.jpg',
+          ]
+          for name in names:
+              path = root / name
+              if not path.is_file():
+                  raise SystemExit(f'Missing preview asset: {path}')
+              if path.stat().st_size < 20_000:
+                  raise SystemExit(f'Preview asset suspiciously small: {path} ({path.stat().st_size} bytes)')
+              with Image.open(path) as image:
+                  image.verify()
+              with Image.open(path) as image:
+                  width, height = image.size
+                  if width < 900 or height < 160:
+                      raise SystemExit(f'Preview asset too small: {path} ({width}x{height})')
+                  print(f'OK {name}: {width}x{height}, {path.stat().st_size} bytes')
+          PY
+
       - name: Prepare reproducible showcase cases
         working-directory: notebooklm
         run: |
