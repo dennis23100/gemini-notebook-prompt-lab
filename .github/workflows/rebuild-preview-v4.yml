@@ -23,7 +23,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          for i in $(seq -w 0 16); do
+          for i in $(seq -w 0 18); do
             [[ -f ".preview-sheet-v4/part${i}" ]] || { echo "Waiting for part${i}"; exit 0; }
           done
 
