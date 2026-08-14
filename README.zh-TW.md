@@ -19,14 +19,9 @@
 
 ## 先看成果，再決定要不要用
 
-|  | 漫畫（不拘） | 星星 | 童話動畫電影 |
-|---|---|---|---|
-| **兒童 · 15歲以下** | <img src="notebooklm/assets/real-previews/comic-flex-children.svg" width="250" /> | <img src="notebooklm/assets/real-previews/stars-children.svg" width="250" /> | <img src="notebooklm/assets/real-previews/fairy-animation-children.svg" width="250" /> |
-| **青年 · 16–34歲** | <img src="notebooklm/assets/real-previews/comic-flex-youth.svg" width="250" /> | <img src="notebooklm/assets/real-previews/stars-youth.svg" width="250" /> | <img src="notebooklm/assets/real-previews/fairy-animation-youth.svg" width="250" /> |
-| **成熟讀者 · 35歲以上** | <img src="notebooklm/assets/real-previews/comic-flex-adult.svg" width="250" /> | <img src="notebooklm/assets/real-previews/stars-adult.svg" width="250" /> | <img src="notebooklm/assets/real-previews/fairy-animation-adult.svg" width="250" /> |
+<img src="notebooklm/docs/real-output-gallery.webp" alt="漫畫、星星、童話動畫電影三種視覺主題，分別比較兒童、青年與成熟讀者的實際生成範例" width="100%" />
 
-**同一份來源概念 × 三種視覺方向 × 三種受眾。**  
-上面這張不是手畫 mockup，而是代表性的**實際生成範例**。
+**同一份來源概念 × 三種視覺方向 × 三種受眾。** 上面是代表性的**實際生成範例**，不是手畫 mockup。
 
 | 受眾 | 預設年齡區間 | 呈現方向 |
 |---|---:|---|
@@ -34,7 +29,7 @@
 | **青年** | 16–34 歲 | 有動能、好共感、保留適度深度 |
 | **成熟讀者** | 35 歲以上 | 穩重、有內容、高可讀性 |
 
-實際生成不是固定模板，所以不同來源、不同次生成仍可能出現不同視覺表現。像 **「漫畫（不拘）」** 本來就是方向而不是死板畫風；它可以依來源與受眾變成漫畫、水墨式敘事、電影感分鏡或其他適合的視覺語言。
+實際生成不是固定模板，因此不同來源、不同次生成仍可能出現不同視覺表現。像 **「漫畫（不拘）」** 本來就是方向而不是死板畫風；它可以依來源與受眾變成漫畫、水墨式敘事、電影感分鏡或其他合適的視覺語言。
 
 ### 🚀 [直接打開 Prompt Lab 試用](https://dennis23100.github.io/gemini-notebook-prompt-lab/)
 
@@ -57,7 +52,7 @@ Gemini Notebook 提示詞工作室會維持來源內容的忠實度，同時依�
 - **📦 JSON / Markdown / CSV**：可匯出目前篩選結果。
 - **📱 PWA / 離線**：不需要專案帳號或後端。
 
-提示詞庫現在會**預設選擇「兒童」**，一開始只顯示 30 組，不再把 90 組全部混在一起。年齡是三選一、不能取消；分類／風格則可以再次點擊目前選項來取消，立刻回到該年齡的全部 30 種主題。
+提示詞庫會**預設選擇「兒童」**，一開始只顯示 30 組，不再把 90 組全部混在一起。年齡是三選一，永遠保留一個選擇；分類／風格則可以再次點擊目前選項來取消，立刻回到該年齡的全部 30 種主題。
 
 ## 使用方式
 
@@ -75,7 +70,7 @@ Gemini Notebook 提示詞工作室會維持來源內容的忠實度，同時依�
 
 ## 真實範例與可重現 Benchmark 分開
 
-README 最上面的成果圖，是為了讓第一次來的人快速理解工具會產生什麼差異。
+README 最上面的成果圖，是為了讓第一次來的人快速理解工具會產生什麼差異。每一列都用代表性的 **漫畫（不拘）／星星／童話動畫電影** 實際輸出做比較。
 
 另外，專案仍保留一套**可重現 Showcase**：使用固定的專案自製測試來源與精確 Prompt manifest，讓貢獻者不用猜來源或 Prompt 就能重做比較。
 
