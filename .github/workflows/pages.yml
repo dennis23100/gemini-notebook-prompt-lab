@@ -40,21 +40,10 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-
-          # GitHub's README image proxy has been inconsistent with the source WebP
-          # gallery. Generate a JPEG copy for README embeds while keeping the WebP
-          # source asset in the repository.
-          sudo apt-get update -qq
-          sudo apt-get install -y --no-install-recommends imagemagick
-          GALLERY_IN="notebooklm/docs/real-output-gallery.webp"
-          GALLERY_OUT="notebooklm/docs/real-output-gallery.jpg"
-          convert "$GALLERY_IN" -quality 88 "$GALLERY_OUT"
-
           rm -rf dist
           mkdir -p dist
 
-          # The repository now focuses on Gemini Notebook Prompt Lab, so the
-          # live app is published at the Pages root. Keep /notebooklm/ as a
+          # Publish the app at the Pages root and keep /notebooklm/ as a
           # compatibility copy for previously shared links.
           cp -R notebooklm/. dist/
           mkdir -p dist/notebooklm
