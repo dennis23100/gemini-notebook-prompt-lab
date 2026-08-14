@@ -1,0 +1,68 @@
+name: Rebuild real preview v4
+
+on:
+  push:
+    branches: [fix/real-previews-v4]
+    paths:
+      - '.preview-b64-v4/**'
+      - '.github/workflows/rebuild-preview-v4.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: fix/real-previews-v4
+          fetch-depth: 0
+
+      - name: Decode individual preview images when complete
+        shell: bash
+        run: |
+          set -euo pipefail
+          names=(
+            comic-children comic-youth comic-mature
+            stars-children stars-youth stars-mature
+            fairy-children fairy-youth fairy-mature
+          )
+          for name in "${names[@]}"; do
+            [[ -f ".preview-b64-v4/${name}.b64" ]] || { echo "Waiting for ${name}.b64"; exit 0; }
+          done
+
+          mkdir -p notebooklm/assets/real-previews/individual
+          for name in "${names[@]}"; do
+            base64 -d ".preview-b64-v4/${name}.b64" > "notebooklm/assets/real-previews/individual/${name}.jpg"
+          done
+
+          python3 -m pip install --disable-pip-version-check --quiet pillow
+          python3 - <<'PY'
+          from pathlib import Path
+          from PIL import Image
+
+          root = Path('notebooklm/assets/real-previews/individual')
+          expected = [
+              'comic-children.jpg','comic-youth.jpg','comic-mature.jpg',
+              'stars-children.jpg','stars-youth.jpg','stars-mature.jpg',
+              'fairy-children.jpg','fairy-youth.jpg','fairy-mature.jpg',
+          ]
+          for name in expected:
+              p = root / name
+              with Image.open(p) as im:
+                  im.verify()
+              with Image.open(p) as im:
+                  if im.size != (600, 335):
+                      raise SystemExit(f'Unexpected size {name}: {im.size}')
+              if p.stat().st_size < 30000:
+                  raise SystemExit(f'Unexpectedly small preview {name}: {p.stat().st_size}')
+              print(f'OK {name}: {p.stat().st_size} bytes')
+          PY
+
+          rm -rf .preview-b64-v4
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add notebooklm/assets/real-previews/individual .preview-b64-v4
+          git commit -m 'fix(previews): add clear individual real-output images'
+          git push origin HEAD:fix/real-previews-v4
