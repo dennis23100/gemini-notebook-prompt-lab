@@ -19,14 +19,9 @@
 
 ## See the difference first
 
-|  | Flexible Comic | Stars | Fairy-tale Animation |
-|---|---|---|---|
-| **Children · ≤15** | <img src="notebooklm/assets/real-previews/comic-flex-children.svg" width="250" /> | <img src="notebooklm/assets/real-previews/stars-children.svg" width="250" /> | <img src="notebooklm/assets/real-previews/fairy-animation-children.svg" width="250" /> |
-| **Youth · 16–34** | <img src="notebooklm/assets/real-previews/comic-flex-youth.svg" width="250" /> | <img src="notebooklm/assets/real-previews/stars-youth.svg" width="250" /> | <img src="notebooklm/assets/real-previews/fairy-animation-youth.svg" width="250" /> |
-| **Mature readers · 35+** | <img src="notebooklm/assets/real-previews/comic-flex-adult.svg" width="250" /> | <img src="notebooklm/assets/real-previews/stars-adult.svg" width="250" /> | <img src="notebooklm/assets/real-previews/fairy-animation-adult.svg" width="250" /> |
+<img src="notebooklm/docs/real-output-gallery.webp" alt="Representative real outputs comparing Flexible Comic, Stars, and Fairy-tale Animation across children, youth, and mature readers" width="100%" />
 
-**Same source idea. Three visual directions. Three audience profiles.**  
-The board above uses representative **real generated outputs**, not an illustrative mockup.
+**Same source idea. Three visual directions. Three audience profiles.** The board above uses representative **real generated outputs**, not an illustrative mockup.
 
 | Audience | Default range | Presentation goal |
 |---|---:|---|
@@ -57,7 +52,7 @@ Gemini Notebook Prompt Lab keeps content grounded in the selected source while a
 - **📦 JSON / Markdown / CSV export** — export the current filtered result set.
 - **📱 PWA / offline support** — no account or project backend required.
 
-The Library now defaults to **Children**, showing 30 prompts instead of mixing all 90 at once. Audience behaves like a radio selector; theme/category filters can be clicked again to clear them and return to all 30 themes for the selected audience.
+The Library defaults to **Children**, showing 30 prompts instead of mixing all 90 at once. Audience behaves like a radio selector and always has one active choice. Category/theme filters can be clicked again to clear them and return to all 30 themes for the selected audience.
 
 ## How it works
 
@@ -75,7 +70,7 @@ The app has no project backend, account system, analytics SDK, database, or embe
 
 ## Real outputs vs. reproducible benchmark
 
-The real-output board near the top is designed to help users understand the product quickly.
+The real-output board near the top is designed to help first-time visitors understand the product quickly. The three examples shown in each row are representative outputs from **Flexible Comic**, **Stars**, and **Fairy-tale Animation**.
 
 Separately, the project keeps a **reproducible Showcase** with a controlled project-authored source and exact prompt manifest, so contributors can compare outputs without guessing the source or prompt:
 
