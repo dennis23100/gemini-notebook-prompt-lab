@@ -23,13 +23,14 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          for i in 00 01 02 03 04 05 06 07 08; do
+          for i in $(seq -w 0 23); do
             [[ -f ".preview-pack/part${i}" ]] || { echo "Waiting for part${i}"; exit 0; }
           done
 
           cat .preview-pack/part* | base64 -d > /tmp/real-previews.tar.gz
           tar -xzf /tmp/real-previews.tar.gz
 
+          python3 -m pip install --disable-pip-version-check --quiet pillow
           python3 - <<'PY'
           from pathlib import Path
           from PIL import Image
@@ -46,9 +47,9 @@ jobs:
               with Image.open(p) as im:
                   im.verify()
               with Image.open(p) as im:
-                  if im.size != (720, 402):
+                  if im.size != (600, 335):
                       raise SystemExit(f'Unexpected size for {name}: {im.size}')
-              if p.stat().st_size < 40000:
+              if p.stat().st_size < 30000:
                   raise SystemExit(f'Unexpectedly small preview {name}: {p.stat().st_size}')
               print(name, p.stat().st_size)
           PY
