@@ -39,18 +39,18 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
+          python3 -m pip install --disable-pip-version-check --quiet pillow
           INPUT="notebooklm/docs/real-output-gallery.webp"
           OUTPUT="${RUNNER_TEMP}/real-output-gallery.jpg"
-          if command -v magick >/dev/null 2>&1; then
-            magick "$INPUT" -quality 88 "$OUTPUT"
-          elif command -v convert >/dev/null 2>&1; then
-            convert "$INPUT" -quality 88 "$OUTPUT"
-          elif command -v ffmpeg >/dev/null 2>&1; then
-            ffmpeg -hide_banner -loglevel error -y -i "$INPUT" -q:v 2 "$OUTPUT"
-          else
-            echo "No WebP-to-JPEG converter is available on the runner." >&2
-            exit 1
-          fi
+          INPUT="$INPUT" OUTPUT="$OUTPUT" python3 - <<'PY'
+          import os
+          from PIL import Image
+
+          src = os.environ['INPUT']
+          dst = os.environ['OUTPUT']
+          with Image.open(src) as image:
+              image.convert('RGB').save(dst, 'JPEG', quality=88, optimize=True, progressive=True)
+          PY
           test -s "$OUTPUT"
           file "$OUTPUT"
 
