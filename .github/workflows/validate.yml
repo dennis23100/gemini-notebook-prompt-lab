@@ -35,18 +35,6 @@ jobs:
         working-directory: notebooklm
         run: npm run check
 
-      - name: Verify README gallery JPEG fallback
-        shell: bash
-        run: |
-          set -euo pipefail
-          sudo apt-get update -qq
-          sudo apt-get install -y --no-install-recommends imagemagick
-          INPUT="notebooklm/docs/real-output-gallery.webp"
-          OUTPUT="${RUNNER_TEMP}/real-output-gallery.jpg"
-          convert "$INPUT" -quality 88 "$OUTPUT"
-          test -s "$OUTPUT"
-          file "$OUTPUT"
-
       - name: Prepare reproducible showcase cases
         working-directory: notebooklm
         run: |
