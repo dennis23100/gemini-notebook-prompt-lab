@@ -1,4 +1,4 @@
-const CACHE='gnpl-v13';
+const CACHE='gnpl-v14';
 const ASSETS=[
   './','./index.html',
   './assets/styles.css','./assets/ui-polish.css','./assets/style-previews.css','./assets/productivity.css','./assets/accessibility.css','./assets/audience-gallery.css',
@@ -24,7 +24,7 @@ self.addEventListener('fetch',event=>{
   if(url.origin!==self.location.origin) return;
 
   // Network-first prevents an old cached JS/CSS bundle from making newly deployed
-  // controls look broken. Cached assets remain the offline fallback.
+  // controls or image sizing look stale. Cached assets remain the offline fallback.
   event.respondWith(
     fetch(event.request)
       .then(response=>{
