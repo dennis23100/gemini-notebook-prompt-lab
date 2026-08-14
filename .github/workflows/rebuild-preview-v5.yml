@@ -19,38 +19,51 @@ jobs:
           ref: fix/real-previews-v5
           fetch-depth: 0
 
-      - name: Decode and verify nine independent preview images
+      - name: Decode source sheet and create nine independent previews
         shell: bash
         run: |
           set -euo pipefail
-          for i in $(seq -w 0 13); do
-            [[ -f ".preview-pack-v5/chunk${i}" ]] || { echo "Waiting for chunk${i}"; exit 0; }
+          for i in 00 01 02 03 04 05 06 07; do
+            [[ -f ".preview-pack-v5/piece${i}" ]] || { echo "Waiting for piece${i}"; exit 0; }
           done
 
-          cat .preview-pack-v5/chunk* | base64 -d > /tmp/real-previews-v5.tar.gz
-          tar -xzf /tmp/real-previews-v5.tar.gz
+          mkdir -p notebooklm/assets/real-previews/individual
+          cat .preview-pack-v5/piece* | base64 -d > notebooklm/assets/real-previews/real-output-sheet-v2.jpg
 
           python3 -m pip install --disable-pip-version-check --quiet pillow
           python3 - <<'PY'
           from pathlib import Path
           from PIL import Image
 
-          root = Path('notebooklm/assets/real-previews/individual')
+          root = Path('notebooklm/assets/real-previews')
+          source = root / 'real-output-sheet-v2.jpg'
+          with Image.open(source) as im:
+              im.verify()
+          with Image.open(source) as im:
+              if im.size != (1200, 669):
+                  raise SystemExit(f'Unexpected source sheet size: {im.size}')
+              im = im.convert('RGB')
+              rows = ['comic', 'stars', 'fairy']
+              cols = ['children', 'youth', 'mature']
+              for r, theme in enumerate(rows):
+                  for c, audience in enumerate(cols):
+                      out = root / 'individual' / f'{theme}-{audience}.jpg'
+                      crop = im.crop((c*400, r*223, (c+1)*400, (r+1)*223))
+                      crop.save(out, 'JPEG', quality=92, optimize=True, progressive=True)
+
           expected = [
               'comic-children.jpg','comic-youth.jpg','comic-mature.jpg',
               'stars-children.jpg','stars-youth.jpg','stars-mature.jpg',
               'fairy-children.jpg','fairy-youth.jpg','fairy-mature.jpg',
           ]
           for name in expected:
-              p = root / name
-              if not p.is_file():
-                  raise SystemExit(f'Missing preview: {p}')
+              p = root / 'individual' / name
               with Image.open(p) as im:
                   im.verify()
               with Image.open(p) as im:
-                  if im.size != (480, 268):
+                  if im.size != (400, 223):
                       raise SystemExit(f'Unexpected size for {name}: {im.size}')
-              if p.stat().st_size < 18000:
+              if p.stat().st_size < 16000:
                   raise SystemExit(f'Unexpectedly small preview {name}: {p.stat().st_size}')
               print(f'OK {name}: {p.stat().st_size} bytes')
           PY
@@ -58,6 +71,6 @@ jobs:
           rm -rf .preview-pack-v5
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add -A notebooklm/assets/real-previews/individual .preview-pack-v5
-          git commit -m 'fix(previews): add nine clear independent real-output images'
+          git add -A notebooklm/assets/real-previews .preview-pack-v5
+          git commit -m 'fix(previews): add clear independent real-output images'
           git push origin HEAD:fix/real-previews-v5
