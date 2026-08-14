@@ -44,18 +44,18 @@ jobs:
           # GitHub's README image proxy has been inconsistent with the source WebP
           # gallery. Generate a JPEG copy for README embeds while keeping the WebP
           # source asset in the repository.
+          python3 -m pip install --disable-pip-version-check --quiet pillow
           GALLERY_IN="notebooklm/docs/real-output-gallery.webp"
           GALLERY_OUT="notebooklm/docs/real-output-gallery.jpg"
-          if command -v magick >/dev/null 2>&1; then
-            magick "$GALLERY_IN" -quality 88 "$GALLERY_OUT"
-          elif command -v convert >/dev/null 2>&1; then
-            convert "$GALLERY_IN" -quality 88 "$GALLERY_OUT"
-          elif command -v ffmpeg >/dev/null 2>&1; then
-            ffmpeg -hide_banner -loglevel error -y -i "$GALLERY_IN" -q:v 2 "$GALLERY_OUT"
-          else
-            echo "No WebP-to-JPEG converter is available on the runner." >&2
-            exit 1
-          fi
+          GALLERY_IN="$GALLERY_IN" GALLERY_OUT="$GALLERY_OUT" python3 - <<'PY'
+          import os
+          from PIL import Image
+
+          src = os.environ['GALLERY_IN']
+          dst = os.environ['GALLERY_OUT']
+          with Image.open(src) as image:
+              image.convert('RGB').save(dst, 'JPEG', quality=88, optimize=True, progressive=True)
+          PY
 
           rm -rf dist
           mkdir -p dist
