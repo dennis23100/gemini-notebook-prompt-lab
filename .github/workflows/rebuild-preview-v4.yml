@@ -23,12 +23,10 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          for i in $(seq -w 0 18); do
-            [[ -f ".preview-sheet-v4/part${i}" ]] || { echo "Waiting for part${i}"; exit 0; }
-          done
+          [[ -f .preview-sheet-v4/all.b64 ]] || { echo 'Waiting for all.b64'; exit 0; }
 
           mkdir -p notebooklm/assets/real-previews/individual
-          cat .preview-sheet-v4/part* | base64 -d > notebooklm/assets/real-previews/real-output-sheet-v1.jpg
+          base64 -d .preview-sheet-v4/all.b64 > notebooklm/assets/real-previews/real-output-sheet-v1.jpg
 
           python3 -m pip install --disable-pip-version-check --quiet pillow
           python3 - <<'PY'
