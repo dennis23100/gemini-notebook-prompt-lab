@@ -32,6 +32,44 @@
   transform: none !important;
 }
 
+/* Visible copy confirmation.
+   The normal page toast can sit behind a modal <dialog> because dialogs render in
+   the browser top layer. Mirror copy success directly on the clicked button so
+   users always get immediate confirmation. */
+#copyDialogBtn,
+#copyLabBtn,
+[data-copy] {
+  position: relative;
+  overflow: hidden;
+}
+
+#copyDialogBtn:focus:not(:focus-visible)::after,
+#copyLabBtn:focus:not(:focus-visible)::after,
+[data-copy]:focus:not(:focus-visible)::after {
+  content: "✓ 已複製";
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  border-radius: inherit;
+  background: var(--primary);
+  color: #fff;
+  font-weight: 800;
+  pointer-events: none;
+  animation: copy-confirmation 1.8s ease both;
+}
+
+html[lang="en"] #copyDialogBtn:focus:not(:focus-visible)::after,
+html[lang="en"] #copyLabBtn:focus:not(:focus-visible)::after,
+html[lang="en"] [data-copy]:focus:not(:focus-visible)::after {
+  content: "✓ Copied";
+}
+
+@keyframes copy-confirmation {
+  0%, 78% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto !important; }
   *, *::before, *::after {
