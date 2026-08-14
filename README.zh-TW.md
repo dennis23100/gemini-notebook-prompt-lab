@@ -19,7 +19,9 @@
 
 ## 先看成果，再決定要不要用
 
-<img src="notebooklm/docs/real-output-gallery.webp" alt="漫畫、星星、童話動畫電影三種視覺主題，分別比較兒童、青年與成熟讀者的實際生成範例" width="100%" />
+<p align="center">
+  <img src="https://dennis23100.github.io/gemini-notebook-prompt-lab/docs/real-output-gallery.jpg" alt="漫畫、星星、童話動畫電影三種視覺主題，分別比較兒童、青年與成熟讀者的實際生成範例" width="100%" />
+</p>
 
 **同一份來源概念 × 三種視覺方向 × 三種受眾。** 上面是代表性的**實際生成範例**，不是手畫 mockup。
 
@@ -30,6 +32,8 @@
 | **成熟讀者** | 35 歲以上 | 穩重、有內容、高可讀性 |
 
 實際生成不是固定模板，因此不同來源、不同次生成仍可能出現不同視覺表現。像 **「漫畫（不拘）」** 本來就是方向而不是死板畫風；它可以依來源與受眾變成漫畫、水墨式敘事、電影感分鏡或其他合適的視覺語言。
+
+提示詞卡片使用的也是**同一批實際生成成果**所製作的最佳化預覽圖，統一放在 [`notebooklm/assets/real-previews/`](notebooklm/assets/real-previews/)；網站會維持原始 16:9 比例，不再把圖片硬壓成其他比例而變糊。
 
 ### 🚀 [直接打開 Prompt Lab 試用](https://dennis23100.github.io/gemini-notebook-prompt-lab/)
 
