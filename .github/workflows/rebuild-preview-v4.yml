@@ -19,22 +19,18 @@ jobs:
           ref: fix/real-previews-v4
           fetch-depth: 0
 
-      - name: Decode individual preview images when complete
+      - name: Decode high-resolution preview rows when complete
         shell: bash
         run: |
           set -euo pipefail
-          names=(
-            comic-children comic-youth comic-mature
-            stars-children stars-youth stars-mature
-            fairy-children fairy-youth fairy-mature
-          )
+          names=(comic-sprite-v3 stars-sprite-v3 fairy-animation-sprite-v3)
           for name in "${names[@]}"; do
             [[ -f ".preview-b64-v4/${name}.b64" ]] || { echo "Waiting for ${name}.b64"; exit 0; }
           done
 
-          mkdir -p notebooklm/assets/real-previews/individual
+          mkdir -p notebooklm/assets/real-previews
           for name in "${names[@]}"; do
-            base64 -d ".preview-b64-v4/${name}.b64" > "notebooklm/assets/real-previews/individual/${name}.jpg"
+            base64 -d ".preview-b64-v4/${name}.b64" > "notebooklm/assets/real-previews/${name}.jpg"
           done
 
           python3 -m pip install --disable-pip-version-check --quiet pillow
@@ -42,20 +38,20 @@ jobs:
           from pathlib import Path
           from PIL import Image
 
-          root = Path('notebooklm/assets/real-previews/individual')
+          root = Path('notebooklm/assets/real-previews')
           expected = [
-              'comic-children.jpg','comic-youth.jpg','comic-mature.jpg',
-              'stars-children.jpg','stars-youth.jpg','stars-mature.jpg',
-              'fairy-children.jpg','fairy-youth.jpg','fairy-mature.jpg',
+              'comic-sprite-v3.jpg',
+              'stars-sprite-v3.jpg',
+              'fairy-animation-sprite-v3.jpg',
           ]
           for name in expected:
               p = root / name
               with Image.open(p) as im:
                   im.verify()
               with Image.open(p) as im:
-                  if im.size != (600, 335):
+                  if im.size != (1800, 335):
                       raise SystemExit(f'Unexpected size {name}: {im.size}')
-              if p.stat().st_size < 30000:
+              if p.stat().st_size < 100000:
                   raise SystemExit(f'Unexpectedly small preview {name}: {p.stat().st_size}')
               print(f'OK {name}: {p.stat().st_size} bytes')
           PY
@@ -63,6 +59,6 @@ jobs:
           rm -rf .preview-b64-v4
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add notebooklm/assets/real-previews/individual .preview-b64-v4
-          git commit -m 'fix(previews): add clear individual real-output images'
+          git add notebooklm/assets/real-previews .preview-b64-v4
+          git commit -m 'fix(previews): add clear high-resolution real-output rows'
           git push origin HEAD:fix/real-previews-v4
