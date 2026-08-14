@@ -1,0 +1,78 @@
+name: Rebuild real preview v4
+
+on:
+  push:
+    branches: [fix/real-previews-v4]
+    paths:
+      - '.preview-sheet-v4/**'
+      - '.github/workflows/rebuild-preview-v4.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: fix/real-previews-v4
+          fetch-depth: 0
+
+      - name: Decode source sheet and crop nine independent previews
+        shell: bash
+        run: |
+          set -euo pipefail
+          for i in 00 01 02 03 04; do
+            [[ -f ".preview-sheet-v4/piece${i}" ]] || { echo "Waiting for piece${i}"; exit 0; }
+          done
+
+          mkdir -p notebooklm/assets/real-previews/individual
+          cat .preview-sheet-v4/piece* | base64 -d > notebooklm/assets/real-previews/real-output-sheet-v2.jpg
+
+          python3 -m pip install --disable-pip-version-check --quiet pillow
+          python3 - <<'PY'
+          from pathlib import Path
+          from PIL import Image
+
+          root = Path('notebooklm/assets/real-previews')
+          source = root / 'real-output-sheet-v2.jpg'
+          with Image.open(source) as im:
+              im.verify()
+          with Image.open(source) as im:
+              if im.size != (1920, 1071):
+                  raise SystemExit(f'Unexpected source-sheet size: {im.size}')
+              im = im.convert('RGB')
+              cols = ['children', 'youth', 'mature']
+              rows = ['comic', 'stars', 'fairy']
+              tile_w, tile_h = 640, 357
+              for r, theme in enumerate(rows):
+                  for c, audience in enumerate(cols):
+                      crop = im.crop((c*tile_w, r*tile_h, (c+1)*tile_w, (r+1)*tile_h))
+                      out = root / 'individual' / f'{theme}-{audience}.jpg'
+                      crop.save(out, 'JPEG', quality=94, optimize=True, progressive=True)
+
+          expected = [
+              'comic-children.jpg','comic-youth.jpg','comic-mature.jpg',
+              'stars-children.jpg','stars-youth.jpg','stars-mature.jpg',
+              'fairy-children.jpg','fairy-youth.jpg','fairy-mature.jpg',
+          ]
+          for name in expected:
+              p = root / 'individual' / name
+              with Image.open(p) as im:
+                  im.verify()
+              with Image.open(p) as im:
+                  if im.size != (640, 357):
+                      raise SystemExit(f'Unexpected crop size {name}: {im.size}')
+              if p.stat().st_size < 35000:
+                  raise SystemExit(f'Unexpectedly small preview {name}: {p.stat().st_size}')
+              print(f'OK {name}: {p.stat().st_size} bytes')
+          PY
+
+          rm -rf .preview-sheet-v4
+          rm -f notebooklm/assets/real-previews/_probe-1803.jpg notebooklm/assets/real-previews/_probe-e5b.jpg
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A notebooklm/assets/real-previews .preview-sheet-v4
+          git commit -m 'fix(previews): add nine clear 640px real-output images'
+          git push origin HEAD:fix/real-previews-v4
