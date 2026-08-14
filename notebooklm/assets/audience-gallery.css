@@ -1,38 +1,56 @@
-html:not([data-audience-ready="1"]) #promptGrid,
-html:not([data-audience-ready="1"]) #resultCount { opacity: 0; }
-
-/* Audience/gallery enhancements: real examples, clearer audience labels, taller previews. */
-.prompt-card::before {
-  flex: 0 0 auto !important;
-  width: 100%;
-  aspect-ratio: 900 / 503;
-}
+/* Audience/gallery enhancements: clearer audience labels and representative real-output previews. */
 
 #ageFilters [data-age="all"] { display: none !important; }
 #ageFilters .chip { white-space: nowrap; }
 
-.prompt-card[data-id="children-comic-flex"]::before { background-image: url("./real-previews/comic-flex-children.svg") !important; }
-.prompt-card[data-id="youth-comic-flex"]::before { background-image: url("./real-previews/comic-flex-youth.svg") !important; }
-.prompt-card[data-id="adult-comic-flex"]::before { background-image: url("./real-previews/comic-flex-adult.svg") !important; }
-.prompt-card[data-id="children-stars"]::before { background-image: url("./real-previews/stars-children.svg") !important; }
-.prompt-card[data-id="youth-stars"]::before { background-image: url("./real-previews/stars-youth.svg") !important; }
-.prompt-card[data-id="adult-stars"]::before { background-image: url("./real-previews/stars-adult.svg") !important; }
-.prompt-card[data-id="children-fairy-animation"]::before { background-image: url("./real-previews/fairy-animation-children.svg") !important; }
-.prompt-card[data-id="youth-fairy-animation"]::before { background-image: url("./real-previews/fairy-animation-youth.svg") !important; }
-.prompt-card[data-id="adult-fairy-animation"]::before { background-image: url("./real-previews/fairy-animation-adult.svg") !important; }
+/* A real slide needs more vertical room than the old decorative strip.
+   Keep the representative image readable without forcing every card to become huge. */
+.prompt-card::before {
+  flex: 0 0 auto !important;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  background-color: var(--panel-2) !important;
+  background-repeat: no-repeat !important;
+}
 
+/* Each file is a compact 3-panel sprite: Children | Youth | Mature readers. */
 .prompt-card[data-id="children-comic-flex"]::before,
 .prompt-card[data-id="youth-comic-flex"]::before,
-.prompt-card[data-id="adult-comic-flex"]::before,
+.prompt-card[data-id="adult-comic-flex"]::before {
+  background-image: url("./real-previews/comic-sprite.webp") !important;
+  background-size: 300% 100% !important;
+}
+
 .prompt-card[data-id="children-stars"]::before,
 .prompt-card[data-id="youth-stars"]::before,
-.prompt-card[data-id="adult-stars"]::before,
+.prompt-card[data-id="adult-stars"]::before {
+  background-image: url("./real-previews/stars-sprite.webp") !important;
+  background-size: 300% 100% !important;
+}
+
 .prompt-card[data-id="children-fairy-animation"]::before,
 .prompt-card[data-id="youth-fairy-animation"]::before,
 .prompt-card[data-id="adult-fairy-animation"]::before {
-  background-size: cover !important;
-  background-position: center !important;
-  background-repeat: no-repeat !important;
+  background-image: url("./real-previews/fairy-animation-sprite.webp") !important;
+  background-size: 300% 100% !important;
+}
+
+.prompt-card[data-id="children-comic-flex"]::before,
+.prompt-card[data-id="children-stars"]::before,
+.prompt-card[data-id="children-fairy-animation"]::before {
+  background-position: 0% 50% !important;
+}
+
+.prompt-card[data-id="youth-comic-flex"]::before,
+.prompt-card[data-id="youth-stars"]::before,
+.prompt-card[data-id="youth-fairy-animation"]::before {
+  background-position: 50% 50% !important;
+}
+
+.prompt-card[data-id="adult-comic-flex"]::before,
+.prompt-card[data-id="adult-stars"]::before,
+.prompt-card[data-id="adult-fairy-animation"]::before {
+  background-position: 100% 50% !important;
 }
 
 .prompt-card[data-id="children-comic-flex"]::after,
@@ -45,6 +63,9 @@ html:not([data-audience-ready="1"]) #resultCount { opacity: 0; }
 .prompt-card[data-id="youth-fairy-animation"]::after,
 .prompt-card[data-id="adult-fairy-animation"]::after {
   content: "實際輸出 · 範例" !important;
+  background: color-mix(in srgb, var(--panel) 92%, transparent) !important;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 
 html[lang="en"] .prompt-card[data-id="children-comic-flex"]::after,
@@ -60,5 +81,5 @@ html[lang="en"] .prompt-card[data-id="adult-fairy-animation"]::after {
 }
 
 @media (max-width: 640px) {
-  .prompt-card::before { aspect-ratio: 900 / 503; }
+  .prompt-card::before { aspect-ratio: 4 / 3; }
 }
