@@ -21,19 +21,19 @@
 
 ### Flexible Comic
 
-<img src="notebooklm/assets/real-previews/comic-sprite.jpg" alt="Flexible Comic real outputs: Children, Youth, Mature readers" width="100%" />
+<img src="https://raw.githubusercontent.com/dennis23100/gemini-notebook-prompt-lab/main/notebooklm/assets/real-previews/comic-sprite.jpg?preview=v2" alt="Flexible Comic real outputs: Children, Youth, Mature readers" width="100%" />
 
 **Children · ≤15**　|　**Youth · 16–34**　|　**Mature readers · 35+**
 
 ### Stars
 
-<img src="notebooklm/assets/real-previews/stars-sprite.jpg" alt="Stars real outputs: Children, Youth, Mature readers" width="100%" />
+<img src="https://raw.githubusercontent.com/dennis23100/gemini-notebook-prompt-lab/main/notebooklm/assets/real-previews/stars-sprite.jpg?preview=v2" alt="Stars real outputs: Children, Youth, Mature readers" width="100%" />
 
 **Children · ≤15**　|　**Youth · 16–34**　|　**Mature readers · 35+**
 
 ### Fairy-tale Animation
 
-<img src="notebooklm/assets/real-previews/fairy-animation-sprite.jpg" alt="Fairy-tale Animation real outputs: Children, Youth, Mature readers" width="100%" />
+<img src="https://raw.githubusercontent.com/dennis23100/gemini-notebook-prompt-lab/main/notebooklm/assets/real-previews/fairy-animation-sprite.jpg?preview=v2" alt="Fairy-tale Animation real outputs: Children, Youth, Mature readers" width="100%" />
 
 **Children · ≤15**　|　**Youth · 16–34**　|　**Mature readers · 35+**
 
@@ -88,7 +88,7 @@ The app has no project backend, account system, analytics SDK, database, or embe
 
 ## Real outputs vs. reproducible benchmark
 
-The real-output examples near the top help first-time visitors understand the product quickly. The three rows are representative outputs from **Flexible Comic**, **Stars**, and **Fairy-tale Animation**.
+The real-output board near the top is designed to help first-time visitors understand the product quickly. The three examples shown in each row are representative outputs from **Flexible Comic**, **Stars**, and **Fairy-tale Animation**.
 
 Separately, the project keeps a **reproducible Showcase** with a controlled project-authored source and exact prompt manifest, so contributors can compare outputs without guessing the source or prompt:
 
