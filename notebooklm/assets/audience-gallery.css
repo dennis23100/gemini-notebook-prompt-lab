@@ -3,36 +3,39 @@
 #ageFilters [data-age="all"] { display: none !important; }
 #ageFilters .chip { white-space: nowrap; }
 
-/* A real slide needs more vertical room than the old decorative strip.
-   Keep the representative image readable without forcing every card to become huge. */
+/* The supplied real outputs are 1376 × 768 (16:9). Preserve that native shape
+   so text and artwork are not vertically stretched or softened in prompt cards. */
 .prompt-card::before {
   flex: 0 0 auto !important;
   width: 100%;
-  aspect-ratio: 16 / 10;
+  aspect-ratio: 1376 / 768;
   background-color: var(--panel-2) !important;
   background-repeat: no-repeat !important;
+  image-rendering: auto;
 }
 
-/* Each file is a compact 3-panel sprite: Children | Youth | Mature readers. */
+/* Each JPEG sprite contains the exact selected outputs in this order:
+   Children | Youth | Mature readers. Each 360 × 201 tile is optimized for the
+   on-page card size while keeping the original 16:9 proportions. */
 .prompt-card[data-id="children-comic-flex"]::before,
 .prompt-card[data-id="youth-comic-flex"]::before,
 .prompt-card[data-id="adult-comic-flex"]::before {
-  background-image: url("./real-previews/comic-sprite.webp") !important;
-  background-size: 300% 100% !important;
+  background-image: url("./real-previews/comic-sprite.jpg") !important;
+  background-size: 300% auto !important;
 }
 
 .prompt-card[data-id="children-stars"]::before,
 .prompt-card[data-id="youth-stars"]::before,
 .prompt-card[data-id="adult-stars"]::before {
-  background-image: url("./real-previews/stars-sprite.webp") !important;
-  background-size: 300% 100% !important;
+  background-image: url("./real-previews/stars-sprite.jpg") !important;
+  background-size: 300% auto !important;
 }
 
 .prompt-card[data-id="children-fairy-animation"]::before,
 .prompt-card[data-id="youth-fairy-animation"]::before,
 .prompt-card[data-id="adult-fairy-animation"]::before {
-  background-image: url("./real-previews/fairy-animation-sprite.webp") !important;
-  background-size: 300% 100% !important;
+  background-image: url("./real-previews/fairy-animation-sprite.jpg") !important;
+  background-size: 300% auto !important;
 }
 
 .prompt-card[data-id="children-comic-flex"]::before,
@@ -64,8 +67,6 @@
 .prompt-card[data-id="adult-fairy-animation"]::after {
   content: "實際輸出 · 範例" !important;
   background: color-mix(in srgb, var(--panel) 92%, transparent) !important;
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
 }
 
 html[lang="en"] .prompt-card[data-id="children-comic-flex"]::after,
@@ -81,5 +82,5 @@ html[lang="en"] .prompt-card[data-id="adult-fairy-animation"]::after {
 }
 
 @media (max-width: 640px) {
-  .prompt-card::before { aspect-ratio: 4 / 3; }
+  .prompt-card::before { aspect-ratio: 1376 / 768; }
 }

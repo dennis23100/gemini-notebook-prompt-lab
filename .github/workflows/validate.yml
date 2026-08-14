@@ -7,11 +7,13 @@ on:
       - 'notebooklm/**'
       - 'docs/showcase/**'
       - '.github/workflows/validate.yml'
+      - '.github/workflows/pages.yml'
   pull_request:
     paths:
       - 'notebooklm/**'
       - 'docs/showcase/**'
       - '.github/workflows/validate.yml'
+      - '.github/workflows/pages.yml'
   workflow_dispatch:
 
 permissions:

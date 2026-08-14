@@ -43,8 +43,7 @@ jobs:
           rm -rf dist
           mkdir -p dist
 
-          # The repository now focuses on Gemini Notebook Prompt Lab, so the
-          # live app is published at the Pages root. Keep /notebooklm/ as a
+          # Publish the app at the Pages root and keep /notebooklm/ as a
           # compatibility copy for previously shared links.
           cp -R notebooklm/. dist/
           mkdir -p dist/notebooklm

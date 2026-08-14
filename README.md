@@ -19,9 +19,25 @@
 
 ## See the difference first
 
-<img src="notebooklm/docs/real-output-gallery.webp" alt="Representative real outputs comparing Flexible Comic, Stars, and Fairy-tale Animation across children, youth, and mature readers" width="100%" />
+### Flexible Comic
 
-**Same source idea. Three visual directions. Three audience profiles.** The board above uses representative **real generated outputs**, not an illustrative mockup.
+<img src="notebooklm/assets/real-previews/comic-sprite.jpg" alt="Flexible Comic real outputs: Children, Youth, Mature readers" width="100%" />
+
+**Children · ≤15**　|　**Youth · 16–34**　|　**Mature readers · 35+**
+
+### Stars
+
+<img src="notebooklm/assets/real-previews/stars-sprite.jpg" alt="Stars real outputs: Children, Youth, Mature readers" width="100%" />
+
+**Children · ≤15**　|　**Youth · 16–34**　|　**Mature readers · 35+**
+
+### Fairy-tale Animation
+
+<img src="notebooklm/assets/real-previews/fairy-animation-sprite.jpg" alt="Fairy-tale Animation real outputs: Children, Youth, Mature readers" width="100%" />
+
+**Children · ≤15**　|　**Youth · 16–34**　|　**Mature readers · 35+**
+
+**Same source idea. Three visual directions. Three audience profiles.** These are representative **real generated outputs**, not illustrative mockups.
 
 | Audience | Default range | Presentation goal |
 |---|---:|---|
@@ -30,6 +46,8 @@
 | **Mature readers** | 35+ | steady, substantive, highly readable |
 
 The exact visual result can vary by source and generation run. Visual themes are directions, not rigid templates — for example, **Flexible Comic** can legitimately become manga-like, watercolor-like, cinematic, or another visual storytelling treatment when that better fits the source and audience.
+
+The prompt cards use these **same selected real outputs** as optimized previews. The assets live under [`notebooklm/assets/real-previews/`](notebooklm/assets/real-previews/) and preserve the original 16:9 slide geometry.
 
 ### 🚀 [Try the live Prompt Lab](https://dennis23100.github.io/gemini-notebook-prompt-lab/)
 
@@ -70,7 +88,7 @@ The app has no project backend, account system, analytics SDK, database, or embe
 
 ## Real outputs vs. reproducible benchmark
 
-The real-output board near the top is designed to help first-time visitors understand the product quickly. The three examples shown in each row are representative outputs from **Flexible Comic**, **Stars**, and **Fairy-tale Animation**.
+The real-output examples near the top help first-time visitors understand the product quickly. The three rows are representative outputs from **Flexible Comic**, **Stars**, and **Fairy-tale Animation**.
 
 Separately, the project keeps a **reproducible Showcase** with a controlled project-authored source and exact prompt manifest, so contributors can compare outputs without guessing the source or prompt:
 
