@@ -1,0 +1,61 @@
+name: Rebuild individual real-output previews
+
+on:
+  push:
+    branches: [fix/real-previews-v3]
+    paths:
+      - '.preview-pack/**'
+      - '.github/workflows/rebuild-individual-previews.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: fix/real-previews-v3
+          fetch-depth: 0
+
+      - name: Rebuild preview package when all chunks exist
+        shell: bash
+        run: |
+          set -euo pipefail
+          for i in 00 01 02 03 04 05 06 07 08; do
+            [[ -f ".preview-pack/part${i}" ]] || { echo "Waiting for part${i}"; exit 0; }
+          done
+
+          cat .preview-pack/part* | base64 -d > /tmp/real-previews.tar.gz
+          tar -xzf /tmp/real-previews.tar.gz
+
+          python3 - <<'PY'
+          from pathlib import Path
+          from PIL import Image
+          root = Path('notebooklm/assets/real-previews/individual')
+          expected = [
+              'comic-children.jpg','comic-youth.jpg','comic-mature.jpg',
+              'stars-children.jpg','stars-youth.jpg','stars-mature.jpg',
+              'fairy-children.jpg','fairy-youth.jpg','fairy-mature.jpg',
+          ]
+          for name in expected:
+              p = root / name
+              if not p.exists():
+                  raise SystemExit(f'Missing {p}')
+              with Image.open(p) as im:
+                  im.verify()
+              with Image.open(p) as im:
+                  if im.size != (720, 402):
+                      raise SystemExit(f'Unexpected size for {name}: {im.size}')
+              if p.stat().st_size < 40000:
+                  raise SystemExit(f'Unexpectedly small preview {name}: {p.stat().st_size}')
+              print(name, p.stat().st_size)
+          PY
+
+          rm -rf .preview-pack
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add notebooklm/assets/real-previews/individual .preview-pack
+          git commit -m 'fix(previews): add full individual real-output images'
+          git push origin HEAD:fix/real-previews-v3
