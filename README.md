@@ -19,7 +19,9 @@
 
 ## See the difference first
 
-<img src="notebooklm/docs/real-output-gallery.webp" alt="Representative real outputs comparing Flexible Comic, Stars, and Fairy-tale Animation across children, youth, and mature readers" width="100%" />
+<p align="center">
+  <img src="https://dennis23100.github.io/gemini-notebook-prompt-lab/docs/real-output-gallery.jpg" alt="Representative real outputs comparing Flexible Comic, Stars, and Fairy-tale Animation across children, youth, and mature readers" width="100%" />
+</p>
 
 **Same source idea. Three visual directions. Three audience profiles.** The board above uses representative **real generated outputs**, not an illustrative mockup.
 
@@ -30,6 +32,8 @@
 | **Mature readers** | 35+ | steady, substantive, highly readable |
 
 The exact visual result can vary by source and generation run. Visual themes are directions, not rigid templates — for example, **Flexible Comic** can legitimately become manga-like, watercolor-like, cinematic, or another visual storytelling treatment when that better fits the source and audience.
+
+The prompt cards use the **same selected real outputs** as optimized previews. Those preview assets are kept under [`notebooklm/assets/real-previews/`](notebooklm/assets/real-previews/) so the website can stay fast without stretching the original 16:9 slides.
 
 ### 🚀 [Try the live Prompt Lab](https://dennis23100.github.io/gemini-notebook-prompt-lab/)
 
