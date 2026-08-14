@@ -7,11 +7,13 @@ on:
       - 'notebooklm/**'
       - 'docs/showcase/**'
       - '.github/workflows/validate.yml'
+      - '.github/workflows/pages.yml'
   pull_request:
     paths:
       - 'notebooklm/**'
       - 'docs/showcase/**'
       - '.github/workflows/validate.yml'
+      - '.github/workflows/pages.yml'
   workflow_dispatch:
 
 permissions:
@@ -32,6 +34,25 @@ jobs:
       - name: Validate and test Prompt Lab
         working-directory: notebooklm
         run: npm run check
+
+      - name: Verify README gallery JPEG fallback
+        shell: bash
+        run: |
+          set -euo pipefail
+          INPUT="notebooklm/docs/real-output-gallery.webp"
+          OUTPUT="${RUNNER_TEMP}/real-output-gallery.jpg"
+          if command -v magick >/dev/null 2>&1; then
+            magick "$INPUT" -quality 88 "$OUTPUT"
+          elif command -v convert >/dev/null 2>&1; then
+            convert "$INPUT" -quality 88 "$OUTPUT"
+          elif command -v ffmpeg >/dev/null 2>&1; then
+            ffmpeg -hide_banner -loglevel error -y -i "$INPUT" -q:v 2 "$OUTPUT"
+          else
+            echo "No WebP-to-JPEG converter is available on the runner." >&2
+            exit 1
+          fi
+          test -s "$OUTPUT"
+          file "$OUTPUT"
 
       - name: Prepare reproducible showcase cases
         working-directory: notebooklm
