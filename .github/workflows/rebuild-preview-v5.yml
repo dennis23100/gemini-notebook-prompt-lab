@@ -1,0 +1,63 @@
+name: Rebuild real previews v5
+
+on:
+  push:
+    branches: [fix/real-previews-v5]
+    paths:
+      - '.preview-pack-v5/**'
+      - '.github/workflows/rebuild-preview-v5.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: fix/real-previews-v5
+          fetch-depth: 0
+
+      - name: Decode and verify nine independent preview images
+        shell: bash
+        run: |
+          set -euo pipefail
+          for i in $(seq -w 0 13); do
+            [[ -f ".preview-pack-v5/chunk${i}" ]] || { echo "Waiting for chunk${i}"; exit 0; }
+          done
+
+          cat .preview-pack-v5/chunk* | base64 -d > /tmp/real-previews-v5.tar.gz
+          tar -xzf /tmp/real-previews-v5.tar.gz
+
+          python3 -m pip install --disable-pip-version-check --quiet pillow
+          python3 - <<'PY'
+          from pathlib import Path
+          from PIL import Image
+
+          root = Path('notebooklm/assets/real-previews/individual')
+          expected = [
+              'comic-children.jpg','comic-youth.jpg','comic-mature.jpg',
+              'stars-children.jpg','stars-youth.jpg','stars-mature.jpg',
+              'fairy-children.jpg','fairy-youth.jpg','fairy-mature.jpg',
+          ]
+          for name in expected:
+              p = root / name
+              if not p.is_file():
+                  raise SystemExit(f'Missing preview: {p}')
+              with Image.open(p) as im:
+                  im.verify()
+              with Image.open(p) as im:
+                  if im.size != (480, 268):
+                      raise SystemExit(f'Unexpected size for {name}: {im.size}')
+              if p.stat().st_size < 18000:
+                  raise SystemExit(f'Unexpectedly small preview {name}: {p.stat().st_size}')
+              print(f'OK {name}: {p.stat().st_size} bytes')
+          PY
+
+          rm -rf .preview-pack-v5
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A notebooklm/assets/real-previews/individual .preview-pack-v5
+          git commit -m 'fix(previews): add nine clear independent real-output images'
+          git push origin HEAD:fix/real-previews-v5
