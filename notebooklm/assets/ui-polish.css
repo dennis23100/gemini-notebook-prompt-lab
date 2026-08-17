@@ -3,8 +3,6 @@
    Dark mode remains available as an explicit user choice.
 */
 
-@import url("./style-previews.css");
-
 html[data-theme="light"] {
   color-scheme: light;
   --bg: #f6f8fc;

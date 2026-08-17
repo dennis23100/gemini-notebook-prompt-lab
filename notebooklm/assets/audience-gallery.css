@@ -2,11 +2,15 @@
 
 #ageFilters [data-age="all"] { display: none !important; }
 #ageFilters .chip { white-space: nowrap; }
+.prompt-grid { align-items: start; }
+
+/* Card art is actual Gemini Notebook output or nothing. The blanket override
+   also neutralizes an older cached style-preview stylesheet during upgrades. */
+.prompt-card::before,
+.prompt-card::after { display: none !important; content: none !important; }
 
 /* Real examples are rendered as native lazy-loaded images by app.js. This keeps
    the original 1376 × 768 canvas sharp without downloading every PNG up front. */
-.prompt-card.has-real-preview::before,
-.prompt-card.has-real-preview::after { display: none !important; }
 
 .card-preview {
   position: relative;

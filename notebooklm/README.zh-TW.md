@@ -1,7 +1,5 @@
 <div align="center">
 
-<img src="docs/hero.svg" alt="Gemini Notebook Prompt Lab" width="100%" />
-
 # Gemini Notebook Prompt Lab
 
 **一套為 Gemini Notebook（原 NotebookLM）設計的「分齡 × 來源限定 × 可組合」開源 Prompt Library 與工作流工具。**
