@@ -60,30 +60,90 @@
   background-size: cover !important;
 }
 
-.prompt-card[data-id="children-comic-flex"]::after,
-.prompt-card[data-id="youth-comic-flex"]::after,
-.prompt-card[data-id="adult-comic-flex"]::after,
-.prompt-card[data-id="children-stars"]::after,
-.prompt-card[data-id="youth-stars"]::after,
-.prompt-card[data-id="adult-stars"]::after,
-.prompt-card[data-id="children-fairy-animation"]::after,
-.prompt-card[data-id="youth-fairy-animation"]::after,
-.prompt-card[data-id="adult-fairy-animation"]::after {
+.prompt-card[data-id="children-comic-panels"]::before {
+  background-image: url("./real-previews/comic-panels-children.png") !important;
+  background-size: cover !important;
+}
+
+.prompt-card[data-id="youth-comic-panels"]::before {
+  background-image: url("./real-previews/comic-panels-youth.png") !important;
+  background-size: cover !important;
+}
+
+.prompt-card[data-id="adult-comic-panels"]::before {
+  background-image: url("./real-previews/comic-panels-mature.png") !important;
+  background-size: cover !important;
+}
+
+.prompt-card[data-id="children-cartoon"]::before {
+  background-image: url("./real-previews/cartoon-children.png") !important;
+  background-size: cover !important;
+}
+
+.prompt-card[data-id="youth-cartoon"]::before {
+  background-image: url("./real-previews/cartoon-youth.png") !important;
+  background-size: cover !important;
+}
+
+.prompt-card[data-id="adult-cartoon"]::before {
+  background-image: url("./real-previews/cartoon-mature.png") !important;
+  background-size: cover !important;
+}
+
+.prompt-card[data-id="children-fairy-tale"]::before {
+  background-image: url("./real-previews/fairy-tale-children.png") !important;
+  background-size: cover !important;
+}
+
+.prompt-card[data-id="youth-fairy-tale"]::before {
+  background-image: url("./real-previews/fairy-tale-youth.png") !important;
+  background-size: cover !important;
+}
+
+.prompt-card[data-id="adult-fairy-tale"]::before {
+  background-image: url("./real-previews/fairy-tale-mature.png") !important;
+  background-size: cover !important;
+}
+
+.prompt-card[data-id="children-animals"]::before {
+  background-image: url("./real-previews/animals-children.png") !important;
+  background-size: cover !important;
+}
+
+.prompt-card[data-id="youth-animals"]::before {
+  background-image: url("./real-previews/animals-youth.png") !important;
+  background-size: cover !important;
+}
+
+.prompt-card[data-id="adult-animals"]::before {
+  background-image: url("./real-previews/animals-mature.png") !important;
+  background-size: cover !important;
+}
+
+.prompt-card:is(
+  [data-id$="-comic-flex"],
+  [data-id$="-comic-panels"],
+  [data-id$="-cartoon"],
+  [data-id$="-fairy-animation"],
+  [data-id$="-fairy-tale"],
+  [data-id$="-animals"],
+  [data-id$="-stars"]
+)::after {
   content: "實際輸出 · 範例" !important;
   color: var(--text) !important;
   background: color-mix(in srgb, var(--panel) 92%, transparent) !important;
   border-color: color-mix(in srgb, var(--text) 16%, transparent) !important;
 }
 
-html[lang="en"] .prompt-card[data-id="children-comic-flex"]::after,
-html[lang="en"] .prompt-card[data-id="youth-comic-flex"]::after,
-html[lang="en"] .prompt-card[data-id="adult-comic-flex"]::after,
-html[lang="en"] .prompt-card[data-id="children-stars"]::after,
-html[lang="en"] .prompt-card[data-id="youth-stars"]::after,
-html[lang="en"] .prompt-card[data-id="adult-stars"]::after,
-html[lang="en"] .prompt-card[data-id="children-fairy-animation"]::after,
-html[lang="en"] .prompt-card[data-id="youth-fairy-animation"]::after,
-html[lang="en"] .prompt-card[data-id="adult-fairy-animation"]::after {
+html[lang="en"] .prompt-card:is(
+  [data-id$="-comic-flex"],
+  [data-id$="-comic-panels"],
+  [data-id$="-cartoon"],
+  [data-id$="-fairy-animation"],
+  [data-id$="-fairy-tale"],
+  [data-id$="-animals"],
+  [data-id$="-stars"]
+)::after {
   content: "REAL OUTPUT · EXAMPLE" !important;
 }
 
