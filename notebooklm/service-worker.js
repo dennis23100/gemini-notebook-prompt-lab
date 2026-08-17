@@ -1,9 +1,12 @@
-const CACHE='gnpl-v15';
+const CACHE='gnpl-v16';
 const ASSETS=[
   './','./index.html',
   './assets/styles.css','./assets/ui-polish.css','./assets/style-previews.css','./assets/productivity.css','./assets/accessibility.css','./assets/audience-gallery.css',
   './assets/app.js','./assets/ui-polish.js','./assets/productivity.js','./assets/accessibility.js','./assets/audience-gallery.js',
   './assets/favicon.svg',
+  './assets/real-previews/comic-children.png','./assets/real-previews/comic-youth.png','./assets/real-previews/comic-mature.png',
+  './assets/real-previews/stars-children.png','./assets/real-previews/stars-youth.png','./assets/real-previews/stars-mature.png',
+  './assets/real-previews/fairy-animation-children.png','./assets/real-previews/fairy-animation-youth.png','./assets/real-previews/fairy-animation-mature.png',
   './data/prompts.json','./data/packs/narrative-characters.json','./data/packs/nature-exploration.json','./data/packs/life-rhythm.json','./data/packs/digital-media.json','./data/packs/humanities-spirituality.json','./data/packs/emotion-life.json','./data/workflows.json','./manifest.webmanifest'
 ];
 

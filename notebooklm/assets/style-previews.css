@@ -1,6 +1,7 @@
 /*
   Toolkit 60 — lightweight style preview thumbnails
-  These are illustrative mock previews, not generated Gemini Notebook output.
+  Most cards use illustrative CSS previews, not generated Gemini Notebook output.
+  Nine cards are overridden with validated real-output PNGs in audience-gallery.css.
   Each built-in theme keeps a stable visual identity across age variants.
 */
 

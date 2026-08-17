@@ -17,13 +17,29 @@
 
 </div>
 
-## 先清楚看懂設計方向
+## 先看成果，再決定要不要用
 
-<img src="notebooklm/docs/showcase-preview.svg" alt="漫畫、科技與水墨三種方向，分別對應兒童、青年與成熟讀者的示意預覽" width="100%" />
+以下是 Gemini Notebook 匯出的原始 `1376 × 768` PNG。每張圖片都獨立顯示，不再經過容易損壞、裁切或被放大的 sprite 拼接圖。
 
-**任何尺寸都保持清楚。** README 使用向量示意圖，網站的 Prompt 卡片則以 CSS 繪製縮圖；兩者都不會因為把低解析截圖放大而在 GitHub 或網站上失焦。
+### 漫畫（不拘）
 
-> **預覽狀態：** 這些是風格方向示意，不是 Gemini Notebook 的實際輸出。只有能獨立通過圖片解碼、並附有生成來源紀錄的真實成果，才會作為實際輸出發布。
+| **兒童 · 15 歲以下** | **青年 · 16–34 歲** | **成熟讀者 · 35 歲以上** |
+|---|---|---|
+| <img src="notebooklm/assets/real-previews/comic-children.png" alt="漫畫（不拘）的兒童實際輸出" width="420" /> | <img src="notebooklm/assets/real-previews/comic-youth.png" alt="漫畫（不拘）的青年實際輸出" width="420" /> | <img src="notebooklm/assets/real-previews/comic-mature.png" alt="漫畫（不拘）的成熟讀者實際輸出" width="420" /> |
+
+### 星星
+
+| **兒童 · 15 歲以下** | **青年 · 16–34 歲** | **成熟讀者 · 35 歲以上** |
+|---|---|---|
+| <img src="notebooklm/assets/real-previews/stars-children.png" alt="星星的兒童實際輸出" width="420" /> | <img src="notebooklm/assets/real-previews/stars-youth.png" alt="星星的青年實際輸出" width="420" /> | <img src="notebooklm/assets/real-previews/stars-mature.png" alt="星星的成熟讀者實際輸出" width="420" /> |
+
+### 童話動畫電影
+
+| **兒童 · 15 歲以下** | **青年 · 16–34 歲** | **成熟讀者 · 35 歲以上** |
+|---|---|---|
+| <img src="notebooklm/assets/real-previews/fairy-animation-children.png" alt="童話動畫電影的兒童實際輸出" width="420" /> | <img src="notebooklm/assets/real-previews/fairy-animation-youth.png" alt="童話動畫電影的青年實際輸出" width="420" /> | <img src="notebooklm/assets/real-previews/fairy-animation-mature.png" alt="童話動畫電影的成熟讀者實際輸出" width="420" /> |
+
+**同一份來源概念 × 三種視覺方向 × 三種受眾。** 上面都是代表性的**實際生成範例**，不是手畫 mockup。
 
 | 受眾 | 預設年齡區間 | 呈現方向 |
 |---|---:|---|
@@ -33,7 +49,7 @@
 
 實際生成不是固定模板，因此不同來源、不同次生成仍可能出現不同視覺表現。像 **「漫畫（不拘）」** 本來就是方向而不是死板畫風；它可以依來源與受眾變成漫畫、水墨式敘事、電影感分鏡或其他合適的視覺語言。
 
-卡片預覽只用來傳達風格方向，並維持 16:9 簡報比例；它不會假裝能預測實際生成結果。
+網站中對應的 Prompt 卡片會直接使用同一批原始 PNG，並維持原生 16:9 比例；其他卡片則繼續使用輕量的 CSS 風格預覽。
 
 ### 🚀 [直接打開 Prompt Lab 試用](https://dennis23100.github.io/gemini-notebook-prompt-lab/)
 
@@ -72,15 +88,15 @@ Gemini Notebook 提示詞工作室會維持來源內容的忠實度，同時依�
 
 網站本身沒有專案後端、登入系統、分析 SDK、資料庫或內嵌 API key。
 
-## 風格預覽與可重現 Benchmark 分開
+## 真實範例、風格預覽與可重現 Benchmark
 
-README 最上面的向量圖與網站的 CSS 卡片縮圖，是快速、清楚的風格導覽，並且明確標示為示意。這樣就不會再依賴格式損壞或解析度不足、可能在不同瀏覽器顯示成模糊色帶或空白區塊的圖片。
+上面的 9 張範例與網站中對應的 Prompt 卡片，使用的是逐張驗證過的原始 PNG；其他卡片仍採用快速的 CSS 風格預覽，並明確標示為示意。如此能清楚區分真實輸出與風格方向，也不會再依賴格式損壞、解析度不足或被拉伸的圖片。
 
 另外，專案仍保留一套**可重現 Showcase**：使用固定的專案自製測試來源與精確 Prompt manifest，讓貢獻者不用猜來源或 Prompt 就能重做真實成果比較。
 
 ### 🖼️ [打開可重現 Showcase](https://dennis23100.github.io/gemini-notebook-prompt-lab/showcase.html)
 
-Mockup 不會冒充真實生成結果；真實成果必須附有來源紀錄，並通過圖片解碼與尺寸檢查後，才會放進 README 或 Prompt Library。
+Mockup 不會冒充真實生成結果；真實成果必須附有來源紀錄，並通過 PNG 簽章、解碼、尺寸與引用檢查後，才會放進 README 或 Prompt Library。
 
 ## 來自真實教學情境
 
