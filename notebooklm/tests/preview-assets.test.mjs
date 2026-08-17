@@ -39,9 +39,14 @@ const previews = [
   ['youth-ocean', 'ocean-youth.png'],
   ['youth-jungle', 'jungle-youth.png'],
   ['children-jungle', 'jungle-children.png'],
+  ['children-nature', 'nature-children.png'],
+  ['children-ocean', 'ocean-children.png'],
+  ['children-seasons', 'seasons-children.png'],
+  ['youth-seasons', 'seasons-youth.png'],
   ['adult-nature', 'nature-mature.png'],
   ['adult-ocean', 'ocean-mature.png'],
-  ['adult-jungle', 'jungle-mature.png']
+  ['adult-jungle', 'jungle-mature.png'],
+  ['adult-seasons', 'seasons-mature.png']
 ];
 
 const [readme, readmeZh, appReadme, appReadmeZh, previewSvg, galleryCss, uiPolishCss, serviceWorker, appJs, promptManifest] = await Promise.all([
@@ -114,7 +119,7 @@ function inspectPng(buffer, name) {
   return { width, height, bitDepth, colorType };
 }
 
-test('all thirty-one original PNG previews are complete, sharp, and unique', async () => {
+test('all thirty-six original PNG previews are complete, sharp, and unique', async () => {
   const hashes = new Set();
 
   for (const [, file] of previews) {
