@@ -43,6 +43,34 @@ test('audience ranges are non-overlapping and every theme has distinct age art d
   assert.equal(promptManifest.ageGroups.find(item => item.id === 'youth')?.rangeEn, '16–34');
 });
 
+test('age art direction stays distinctive without flattening every theme into one template', () => {
+  for (const p of prompts) {
+    if (p.ageGroup === 'children') {
+      assert.match(p.prompt, /cute, dreamy, playful/i, p.id);
+      assert.match(p.prompt, /cartoon-forward/i, p.id);
+      assert.match(p.prompt, /age-level visual language rather than a fixed template/i, p.id);
+      assert.match(p.prompt, /selected theme determine the story world, motifs, palette, subjects, and layout/i, p.id);
+    }
+    if (p.ageGroup === 'youth') {
+      assert.match(p.prompt, /premium original stylized-animation language/i, p.id);
+      assert.match(p.prompt, /cinematic cel animation, refined anime-inspired illustration, manga or graphic-novel sequencing, luminous fantasy animation, or polished painterly animation/i, p.id);
+      assert.match(p.prompt, /broad gender-inclusive appeal/i, p.id);
+      assert.match(p.prompt, /anime influence is a quality and visual-energy reference, not a command to make every deck use the same drawing style or character scene/i, p.id);
+      assert.match(p.prompt, /selected theme must determine the visual mode, setting, motifs, palette, era, subjects, and layout/i, p.id);
+      assert.match(p.prompt, /preserve the theme-specific visual identity instead of applying one universal anime template/i, p.id);
+      assert.match(p.prompt, /do not default to a lone young character, city rooftop, sunset, glowing eyes, manga panels, fantasy scenery, or hero-poster composition/i, p.id);
+      assert.match(p.prompt, /avoid stock-photo realism/i, p.id);
+    }
+    if (p.ageGroup === 'adult') {
+      assert.match(p.prompt, /mature, tasteful/i, p.id);
+      assert.match(p.prompt, /semi-realistic illustration, cinematic painterly scenes, or refined 2D\/3D hybrid art/i, p.id);
+      assert.match(p.prompt, /slightly idealized environments rather than ordinary real-world photography/i, p.id);
+      assert.match(p.prompt, /maturity and rendering standard rather than one luxury template/i, p.id);
+      assert.match(p.prompt, /let the selected theme determine the setting, palette, cultural texture, subjects, and composition/i, p.id);
+    }
+  }
+});
+
 test('theme discovery metadata is complete and named franchises stay out of built-in prompts', () => {
   const banned = /\b(?:Pikmin|One Piece|Pok[eé]mon|Disney|Pixar|Ghibli)\b|皮克敏|航海王|寶可夢|迪士尼|吉卜力/i;
   for (const p of prompts) {
