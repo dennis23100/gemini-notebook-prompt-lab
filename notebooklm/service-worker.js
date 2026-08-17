@@ -1,9 +1,8 @@
-const CACHE='gnpl-v14';
+const CACHE='gnpl-v15';
 const ASSETS=[
   './','./index.html',
   './assets/styles.css','./assets/ui-polish.css','./assets/style-previews.css','./assets/productivity.css','./assets/accessibility.css','./assets/audience-gallery.css',
   './assets/app.js','./assets/ui-polish.js','./assets/productivity.js','./assets/accessibility.js','./assets/audience-gallery.js',
-  './assets/real-previews/comic-sprite.jpg','./assets/real-previews/stars-sprite.jpg','./assets/real-previews/fairy-animation-sprite.jpg',
   './assets/favicon.svg',
   './data/prompts.json','./data/packs/narrative-characters.json','./data/packs/nature-exploration.json','./data/packs/life-rhythm.json','./data/packs/digital-media.json','./data/packs/humanities-spirituality.json','./data/packs/emotion-life.json','./data/workflows.json','./manifest.webmanifest'
 ];

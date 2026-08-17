@@ -17,27 +17,13 @@
 
 </div>
 
-## See the difference first
+## See the design directions clearly
 
-### Flexible Comic
+<img src="notebooklm/docs/showcase-preview.svg" alt="Illustrative audience-adaptation preview for Flexible Comic, Technology, and Ink Wash across Children, Youth, and Mature readers" width="100%" />
 
-<img src="notebooklm/assets/real-previews/comic-sprite.jpg" alt="Flexible Comic real outputs: Children, Youth, Mature readers" width="100%" />
+**Clear at every size.** The README uses a vector illustration and the live Prompt Library draws its card thumbnails with CSS. Both remain sharp on GitHub and in the website without stretching compressed screenshots.
 
-**Children · ≤15**　|　**Youth · 16–34**　|　**Mature readers · 35+**
-
-### Stars
-
-<img src="notebooklm/assets/real-previews/stars-sprite.jpg" alt="Stars real outputs: Children, Youth, Mature readers" width="100%" />
-
-**Children · ≤15**　|　**Youth · 16–34**　|　**Mature readers · 35+**
-
-### Fairy-tale Animation
-
-<img src="notebooklm/assets/real-previews/fairy-animation-sprite.jpg" alt="Fairy-tale Animation real outputs: Children, Youth, Mature readers" width="100%" />
-
-**Children · ≤15**　|　**Youth · 16–34**　|　**Mature readers · 35+**
-
-**Same source idea. Three visual directions. Three audience profiles.** These are representative **real generated outputs**, not illustrative mockups.
+> **Preview status:** These are illustrative style previews, not Gemini Notebook outputs. A real generated example is published only when the original image decodes independently and includes its generation provenance.
 
 | Audience | Default range | Presentation goal |
 |---|---:|---|
@@ -47,7 +33,7 @@
 
 The exact visual result can vary by source and generation run. Visual themes are directions, not rigid templates — for example, **Flexible Comic** can legitimately become manga-like, watercolor-like, cinematic, or another visual storytelling treatment when that better fits the source and audience.
 
-The prompt cards use these **same selected real outputs** as optimized previews. The assets live under [`notebooklm/assets/real-previews/`](notebooklm/assets/real-previews/) and preserve the original 16:9 slide geometry.
+The card previews communicate the intended style and preserve a 16:9 slide geometry. They deliberately do not claim to predict a generated result.
 
 ### 🚀 [Try the live Prompt Lab](https://dennis23100.github.io/gemini-notebook-prompt-lab/)
 
@@ -86,15 +72,15 @@ The Library defaults to **Children**, showing 30 prompts instead of mixing all 9
 
 The app has no project backend, account system, analytics SDK, database, or embedded API key.
 
-## Real outputs vs. reproducible benchmark
+## Style previews vs. reproducible benchmark
 
-The real-output examples near the top help first-time visitors understand the product quickly. The three rows are representative outputs from **Flexible Comic**, **Stars**, and **Fairy-tale Animation**.
+The vector board near the top and the CSS card thumbnails are fast, crisp discovery aids. They are explicitly illustrative. This avoids relying on malformed or undersized image files that different browsers may render as blurred bands or blank areas.
 
-Separately, the project keeps a **reproducible Showcase** with a controlled project-authored source and exact prompt manifest, so contributors can compare outputs without guessing the source or prompt:
+Separately, the project keeps a **reproducible Showcase** with a controlled project-authored source and exact prompt manifest, so contributors can compare genuine outputs without guessing the source or prompt:
 
 ### 🖼️ [Open the reproducible Showcase](https://dennis23100.github.io/gemini-notebook-prompt-lab/showcase.html)
 
-Mockups are never presented as generated output. Real examples are explicitly labeled as examples, because generation is not deterministic.
+Mockups are never presented as generated output. A contributed real example must include provenance and pass image decoding and dimension checks before it is used in the README or Prompt Library.
 
 ## Real-world teaching origin
 

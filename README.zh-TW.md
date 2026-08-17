@@ -17,27 +17,13 @@
 
 </div>
 
-## 先看成果，再決定要不要用
+## 先清楚看懂設計方向
 
-### 漫畫（不拘）
+<img src="notebooklm/docs/showcase-preview.svg" alt="漫畫、科技與水墨三種方向，分別對應兒童、青年與成熟讀者的示意預覽" width="100%" />
 
-<img src="notebooklm/assets/real-previews/comic-sprite.jpg" alt="漫畫（不拘）實際輸出：兒童、青年、成熟讀者" width="100%" />
+**任何尺寸都保持清楚。** README 使用向量示意圖，網站的 Prompt 卡片則以 CSS 繪製縮圖；兩者都不會因為把低解析截圖放大而在 GitHub 或網站上失焦。
 
-**兒童 · 15歲以下**　|　**青年 · 16–34歲**　|　**成熟讀者 · 35歲以上**
-
-### 星星
-
-<img src="notebooklm/assets/real-previews/stars-sprite.jpg" alt="星星實際輸出：兒童、青年、成熟讀者" width="100%" />
-
-**兒童 · 15歲以下**　|　**青年 · 16–34歲**　|　**成熟讀者 · 35歲以上**
-
-### 童話動畫電影
-
-<img src="notebooklm/assets/real-previews/fairy-animation-sprite.jpg" alt="童話動畫電影實際輸出：兒童、青年、成熟讀者" width="100%" />
-
-**兒童 · 15歲以下**　|　**青年 · 16–34歲**　|　**成熟讀者 · 35歲以上**
-
-**同一份來源概念 × 三種視覺方向 × 三種受眾。** 上面都是代表性的**實際生成範例**，不是手畫 mockup。
+> **預覽狀態：** 這些是風格方向示意，不是 Gemini Notebook 的實際輸出。只有能獨立通過圖片解碼、並附有生成來源紀錄的真實成果，才會作為實際輸出發布。
 
 | 受眾 | 預設年齡區間 | 呈現方向 |
 |---|---:|---|
@@ -47,7 +33,7 @@
 
 實際生成不是固定模板，因此不同來源、不同次生成仍可能出現不同視覺表現。像 **「漫畫（不拘）」** 本來就是方向而不是死板畫風；它可以依來源與受眾變成漫畫、水墨式敘事、電影感分鏡或其他合適的視覺語言。
 
-提示詞卡片使用的也是**同一批實際生成成果**做成的最佳化預覽圖；檔案統一放在 [`notebooklm/assets/real-previews/`](notebooklm/assets/real-previews/)，並維持原始 16:9 簡報比例，不再硬拉伸而變糊。
+卡片預覽只用來傳達風格方向，並維持 16:9 簡報比例；它不會假裝能預測實際生成結果。
 
 ### 🚀 [直接打開 Prompt Lab 試用](https://dennis23100.github.io/gemini-notebook-prompt-lab/)
 
@@ -86,15 +72,15 @@ Gemini Notebook 提示詞工作室會維持來源內容的忠實度，同時依�
 
 網站本身沒有專案後端、登入系統、分析 SDK、資料庫或內嵌 API key。
 
-## 真實範例與可重現 Benchmark 分開
+## 風格預覽與可重現 Benchmark 分開
 
-README 最上面的實際成果，是讓第一次來的人快速理解工具會產生什麼差異；三列分別是 **漫畫（不拘）／星星／童話動畫電影** 的代表性真實輸出。
+README 最上面的向量圖與網站的 CSS 卡片縮圖，是快速、清楚的風格導覽，並且明確標示為示意。這樣就不會再依賴格式損壞或解析度不足、可能在不同瀏覽器顯示成模糊色帶或空白區塊的圖片。
 
-另外，專案仍保留一套**可重現 Showcase**：使用固定的專案自製測試來源與精確 Prompt manifest，讓貢獻者不用猜來源或 Prompt 就能重做比較。
+另外，專案仍保留一套**可重現 Showcase**：使用固定的專案自製測試來源與精確 Prompt manifest，讓貢獻者不用猜來源或 Prompt 就能重做真實成果比較。
 
 ### 🖼️ [打開可重現 Showcase](https://dennis23100.github.io/gemini-notebook-prompt-lab/showcase.html)
 
-Mockup 不會冒充真實生成結果；實際輸出也會明確標示為「範例」，因為生成本來就不是完全 deterministic。
+Mockup 不會冒充真實生成結果；真實成果必須附有來源紀錄，並通過圖片解碼與尺寸檢查後，才會放進 README 或 Prompt Library。
 
 ## 來自真實教學情境
 

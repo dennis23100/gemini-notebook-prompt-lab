@@ -1,86 +1,16 @@
-/* Audience/gallery enhancements: clearer audience labels and representative real-output previews. */
+/* Audience/gallery enhancements: clearer audience labels and crisp vector previews. */
 
 #ageFilters [data-age="all"] { display: none !important; }
 #ageFilters .chip { white-space: nowrap; }
 
-/* The supplied real outputs are 1376 × 768 (16:9). Preserve that native shape
-   so text and artwork are not vertically stretched or softened in prompt cards. */
+/* Card art is drawn with CSS gradients in style-previews.css. Keep a 16:9
+   canvas so every theme stays sharp at any card size without raster upscaling. */
 .prompt-card::before {
   flex: 0 0 auto !important;
   width: 100%;
-  aspect-ratio: 1376 / 768;
-  background-color: var(--panel-2) !important;
-  background-repeat: no-repeat !important;
-  image-rendering: auto;
-}
-
-/* Each JPEG sprite contains the exact selected outputs in this order:
-   Children | Youth | Mature readers. Each 360 × 201 tile is optimized for the
-   on-page card size while keeping the original 16:9 proportions. */
-.prompt-card[data-id="children-comic-flex"]::before,
-.prompt-card[data-id="youth-comic-flex"]::before,
-.prompt-card[data-id="adult-comic-flex"]::before {
-  background-image: url("./real-previews/comic-sprite.jpg") !important;
-  background-size: 300% auto !important;
-}
-
-.prompt-card[data-id="children-stars"]::before,
-.prompt-card[data-id="youth-stars"]::before,
-.prompt-card[data-id="adult-stars"]::before {
-  background-image: url("./real-previews/stars-sprite.jpg") !important;
-  background-size: 300% auto !important;
-}
-
-.prompt-card[data-id="children-fairy-animation"]::before,
-.prompt-card[data-id="youth-fairy-animation"]::before,
-.prompt-card[data-id="adult-fairy-animation"]::before {
-  background-image: url("./real-previews/fairy-animation-sprite.jpg") !important;
-  background-size: 300% auto !important;
-}
-
-.prompt-card[data-id="children-comic-flex"]::before,
-.prompt-card[data-id="children-stars"]::before,
-.prompt-card[data-id="children-fairy-animation"]::before {
-  background-position: 0% 50% !important;
-}
-
-.prompt-card[data-id="youth-comic-flex"]::before,
-.prompt-card[data-id="youth-stars"]::before,
-.prompt-card[data-id="youth-fairy-animation"]::before {
-  background-position: 50% 50% !important;
-}
-
-.prompt-card[data-id="adult-comic-flex"]::before,
-.prompt-card[data-id="adult-stars"]::before,
-.prompt-card[data-id="adult-fairy-animation"]::before {
-  background-position: 100% 50% !important;
-}
-
-.prompt-card[data-id="children-comic-flex"]::after,
-.prompt-card[data-id="youth-comic-flex"]::after,
-.prompt-card[data-id="adult-comic-flex"]::after,
-.prompt-card[data-id="children-stars"]::after,
-.prompt-card[data-id="youth-stars"]::after,
-.prompt-card[data-id="adult-stars"]::after,
-.prompt-card[data-id="children-fairy-animation"]::after,
-.prompt-card[data-id="youth-fairy-animation"]::after,
-.prompt-card[data-id="adult-fairy-animation"]::after {
-  content: "實際輸出 · 範例" !important;
-  background: color-mix(in srgb, var(--panel) 92%, transparent) !important;
-}
-
-html[lang="en"] .prompt-card[data-id="children-comic-flex"]::after,
-html[lang="en"] .prompt-card[data-id="youth-comic-flex"]::after,
-html[lang="en"] .prompt-card[data-id="adult-comic-flex"]::after,
-html[lang="en"] .prompt-card[data-id="children-stars"]::after,
-html[lang="en"] .prompt-card[data-id="youth-stars"]::after,
-html[lang="en"] .prompt-card[data-id="adult-stars"]::after,
-html[lang="en"] .prompt-card[data-id="children-fairy-animation"]::after,
-html[lang="en"] .prompt-card[data-id="youth-fairy-animation"]::after,
-html[lang="en"] .prompt-card[data-id="adult-fairy-animation"]::after {
-  content: "REAL OUTPUT · EXAMPLE" !important;
+  aspect-ratio: 16 / 9;
 }
 
 @media (max-width: 640px) {
-  .prompt-card::before { aspect-ratio: 1376 / 768; }
+  .prompt-card::before { aspect-ratio: 16 / 9; }
 }
