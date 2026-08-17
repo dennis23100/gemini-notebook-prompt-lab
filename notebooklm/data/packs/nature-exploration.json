@@ -87,7 +87,13 @@
       "licenseNote": "Project-authored adaptation; upstream inspiration links preserved.",
       "vibe": "calm",
       "energy": "balanced",
-      "collections": []
+      "collections": [
+        "real-output"
+      ],
+      "preview": {
+        "kind": "real-output",
+        "src": "./assets/real-previews/nature-children.png"
+      }
     },
     {
       "id": "children-ocean",
@@ -126,8 +132,13 @@
       "vibe": "adventure",
       "energy": "cinematic",
       "collections": [
-        "adventure"
-      ]
+        "adventure",
+        "real-output"
+      ],
+      "preview": {
+        "kind": "real-output",
+        "src": "./assets/real-previews/ocean-children.png"
+      }
     },
     {
       "id": "children-jungle",
@@ -300,7 +311,13 @@
       "licenseNote": "Project-authored adaptation; upstream inspiration links preserved.",
       "vibe": "calm",
       "energy": "balanced",
-      "collections": []
+      "collections": [
+        "real-output"
+      ],
+      "preview": {
+        "kind": "real-output",
+        "src": "./assets/real-previews/seasons-children.png"
+      }
     },
     {
       "id": "youth-animals",
@@ -606,7 +623,13 @@
       "licenseNote": "Project-authored adaptation; upstream inspiration links preserved.",
       "vibe": "calm",
       "energy": "balanced",
-      "collections": []
+      "collections": [
+        "real-output"
+      ],
+      "preview": {
+        "kind": "real-output",
+        "src": "./assets/real-previews/seasons-youth.png"
+      }
     },
     {
       "id": "adult-animals",
@@ -913,7 +936,13 @@
       "licenseNote": "Project-authored adaptation; upstream inspiration links preserved.",
       "vibe": "calm",
       "energy": "balanced",
-      "collections": []
+      "collections": [
+        "real-output"
+      ],
+      "preview": {
+        "kind": "real-output",
+        "src": "./assets/real-previews/seasons-mature.png"
+      }
     }
   ]
 }
