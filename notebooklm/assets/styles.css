@@ -93,6 +93,11 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .tabs { display: flex; gap: 8px; overflow-x: auto; padding: 6px; background: var(--panel); border: 1px solid var(--line); border-radius: 16px; position: sticky; top: 76px; z-index: 20; box-shadow: 0 8px 24px rgba(0,0,0,.05); }
 .tab { flex: 0 0 auto; border: 0; background: transparent; color: var(--muted); padding: 10px 15px; border-radius: 11px; font-weight: 800; cursor: pointer; }
 .tab.active { color: #fff; background: var(--text); }
+.output-language-bar { margin-top: 12px; display: flex; align-items: center; justify-content: space-between; gap: 18px; padding: 13px 16px; background: color-mix(in srgb, var(--primary) 7%, var(--panel)); border: 1px solid color-mix(in srgb, var(--primary) 25%, var(--line)); border-radius: 15px; }
+.output-language-copy { min-width: 0; }
+.output-language-copy strong { display: block; }
+.output-language-copy small { display: block; color: var(--muted); margin-top: 2px; }
+.output-language-bar select { min-width: 228px; padding: 9px 34px 9px 11px; }
 .tab-panel { padding-top: 24px; }
 
 .library-toolbar { display: flex; justify-content: space-between; gap: 12px; align-items: center; }
@@ -201,6 +206,8 @@ input, select, textarea { color: var(--text); background: var(--panel-2); border
   .top-actions { gap: 6px; }
   .top-actions .button.primary { font-size: 0; width: 42px; height: 38px; padding: 0; }
   .top-actions .button.primary::after { content: "↗"; font-size: 17px; }
+  .output-language-bar { align-items: stretch; flex-direction: column; gap: 10px; }
+  .output-language-bar select { min-width: 0; width: 100%; }
   .hero { padding-top: 38px; gap: 24px; }
   .hero-copy h1 { font-size: clamp(40px, 13vw, 58px); }
   .hero-copy p { font-size: 16px; }

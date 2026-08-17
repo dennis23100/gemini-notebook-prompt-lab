@@ -43,6 +43,9 @@ for (const [index, item] of prompts.entries()) {
   assert(Array.isArray(item.sources) && item.sources.length > 0, `${where}: provenance sources required`);
   assert(/use only|selected sources|uploaded source/i.test(item.prompt), `${where}: source-grounding instruction not detected`);
   assert(/do not invent|don't invent|not supported by the source|source does not/i.test(item.prompt), `${where}: anti-invention behavior not detected`);
+  assert(item.prompt.includes(`using the ${item.title.en} visual direction.`), `${where}: canonical English theme name is missing from prompt`);
+  assert(!/output language should match the user's prompt and source language/i.test(item.prompt), `${where}: ambiguous source-language output rule detected`);
+  assert(!/[\u3400-\u9fff]/u.test(item.prompt), `${where}: built-in prompt must remain canonical English`);
   for (const token of unsafeTokens) {
     assert(!String(item.prompt).includes(token), `${where}: contains private/deployment token ${token}`);
     assert(!JSON.stringify(item).includes(token), `${where}: metadata contains private/deployment token ${token}`);

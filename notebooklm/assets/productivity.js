@@ -1,3 +1,5 @@
+import { applyOutputLanguage, normalizeOutputLanguage, OUTPUT_LANGUAGE_STORAGE_KEY } from './prompt-language.js';
+
 const RECENT_KEY = 'gnpl.recentPrompts';
 const MAX_RECENT = 8;
 let builtinPromptsCache = null;
@@ -12,6 +14,8 @@ const localizedProductivity = (obj) => {
   return obj?.[lang] ?? obj?.en ?? obj?.['zh-TW'] ?? '';
 };
 const escapeHtmlProductivity = (value = '') => String(value).replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
+const outputLanguageProductivity = () => normalizeOutputLanguage(localStorage.getItem(OUTPUT_LANGUAGE_STORAGE_KEY));
+const exportedPromptTextProductivity = (prompt) => applyOutputLanguage(prompt?.prompt, outputLanguageProductivity());
 
 function localToastProductivity(message) {
   const toast = document.querySelector('#toast');
@@ -219,13 +223,13 @@ async function filteredPromptDataProductivity() {
 function markdownExportProductivity(prompts) {
   const heading = isZhProductivity() ? '# Gemini Notebook 提示詞匯出' : '# Gemini Notebook Prompt Export';
   const metadata = `${isZhProductivity() ? '匯出時間' : 'Exported'}: ${new Date().toISOString()}\n\n${isZhProductivity() ? '數量' : 'Count'}: ${prompts.length}`;
-  const sections = prompts.map(prompt => `## ${localizedProductivity(prompt.title)}\n\n- ID: \`${prompt.id}\`\n- ${isZhProductivity() ? '受眾' : 'Audience'}: ${localizedProductivity(prompt.ageLabel) || prompt.ageGroup}\n- ${isZhProductivity() ? '分類' : 'Category'}: ${localizedProductivity(prompt.category)}\n\n${localizedProductivity(prompt.summary)}\n\n\`\`\`text\n${prompt.prompt}\n\`\`\``).join('\n\n---\n\n');
+  const sections = prompts.map(prompt => `## ${localizedProductivity(prompt.title)}\n\n- ID: \`${prompt.id}\`\n- ${isZhProductivity() ? '受眾' : 'Audience'}: ${localizedProductivity(prompt.ageLabel) || prompt.ageGroup}\n- ${isZhProductivity() ? '分類' : 'Category'}: ${localizedProductivity(prompt.category)}\n\n${localizedProductivity(prompt.summary)}\n\n\`\`\`text\n${exportedPromptTextProductivity(prompt)}\n\`\`\``).join('\n\n---\n\n');
   return `${heading}\n\n${metadata}\n\n${sections}\n`;
 }
 
 function csvExportProductivity(prompts) {
   const headers = ['id', 'title', 'audience', 'category', 'summary', 'prompt'];
-  const rows = prompts.map(prompt => [prompt.id, localizedProductivity(prompt.title), localizedProductivity(prompt.ageLabel) || prompt.ageGroup, localizedProductivity(prompt.category), localizedProductivity(prompt.summary), prompt.prompt].map(csvCellProductivity).join(','));
+  const rows = prompts.map(prompt => [prompt.id, localizedProductivity(prompt.title), localizedProductivity(prompt.ageLabel) || prompt.ageGroup, localizedProductivity(prompt.category), localizedProductivity(prompt.summary), exportedPromptTextProductivity(prompt)].map(csvCellProductivity).join(','));
   return [headers.join(','), ...rows].join('\r\n');
 }
 
@@ -237,7 +241,7 @@ async function exportProductivity(format) {
   } else if (format === 'csv') {
     downloadTextProductivity('\ufeff' + csvExportProductivity(prompts), `gemini-notebook-prompts-${stamp}.csv`, 'text/csv;charset=utf-8');
   } else {
-    const payload = {schemaVersion: '1.0.0', exportedAt: new Date().toISOString(), prompts};
+    const payload = {schemaVersion: '1.0.0', exportedAt: new Date().toISOString(), prompts: prompts.map(prompt => ({...prompt, prompt: exportedPromptTextProductivity(prompt)}))};
     downloadTextProductivity(JSON.stringify(payload, null, 2), `gemini-notebook-prompts-${stamp}.json`, 'application/json;charset=utf-8');
   }
   localToastProductivity(isZhProductivity() ? `已匯出 ${prompts.length} 組提示詞` : `Exported ${prompts.length} prompts`);
