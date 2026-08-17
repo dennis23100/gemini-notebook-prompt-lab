@@ -28,6 +28,14 @@ test('all built-in prompts are source-grounded and contain a missing-information
   }
 });
 
+test('built-in prompt instructions stay canonical English and do not infer output language from sources', () => {
+  for (const p of prompts) {
+    assert.ok(p.prompt.includes(`using the ${p.title.en} visual direction.`), p.id);
+    assert.doesNotMatch(p.prompt, /output language should match the user's prompt and source language/i, p.id);
+    assert.doesNotMatch(p.prompt, /[\u3400-\u9fff]/u, p.id);
+  }
+});
+
 test('workflow ids are unique and include current core Studio/companion tasks', () => {
   const ids = workflows.map((w) => w.id);
   assert.equal(new Set(ids).size, ids.length);

@@ -52,6 +52,7 @@ Gemini Notebook Prompt Lab keeps content grounded in the selected source while a
 - **⭐ Favorites / recent history / import / export** — stored locally in the browser.
 - **🔗 Shareable filters** — library state can be represented in the URL.
 - **📦 JSON / Markdown / CSV export** — export the current filtered result set.
+- **🌐 Independent output language** — prompts stay canonical English while the generated artifact can follow Gemini Notebook or explicitly use Traditional Chinese or English.
 - **📱 PWA / offline support** — no account or project backend required.
 
 The Library defaults to **Children**, showing 30 prompts instead of mixing all 90 at once. Audience behaves like a radio selector and always has one active choice. Category/theme filters can be clicked again to clear them and return to all 30 themes for the selected audience.

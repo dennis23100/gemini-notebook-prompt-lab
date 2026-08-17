@@ -86,6 +86,14 @@
         <button class="tab" id="tab-lint" data-tab="lint" role="tab" aria-selected="false" data-i18n="tabLint">✅ 品質檢查</button>
       </div>
 
+      <div class="output-language-bar">
+        <div class="output-language-copy">
+          <strong id="outputLanguageLabel" data-i18n="outputLanguage">成品輸出語言</strong>
+          <small id="outputLanguageHint" data-i18n="outputLanguageHint">提示詞固定使用最佳化英文；此選項只控制 Gemini Notebook 成品語言。</small>
+        </div>
+        <select id="outputLanguageSelect" aria-labelledby="outputLanguageLabel" aria-describedby="outputLanguageHint"></select>
+      </div>
+
       <section id="panel-library" class="tab-panel active" role="tabpanel" aria-labelledby="tab-library">
         <div class="library-toolbar">
           <label class="search-box">

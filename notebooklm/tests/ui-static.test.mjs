@@ -19,6 +19,14 @@ test('static asset paths are project-subdirectory friendly', () => {
   assert.match(app, /fetch\('\.\/data\/prompts\.json'\)/);
 });
 
+test('output language is independent from the interface language', () => {
+  assert.match(html, /id="outputLanguageSelect"/);
+  assert.match(html, /data-i18n="outputLanguageHint"/);
+  assert.match(app, /OUTPUT_LANGUAGE_STORAGE_KEY/);
+  assert.match(app, /promptForOutput/);
+  assert.match(app, /#outputLanguageSelect/);
+});
+
 test('all static element ids referenced with $(#id) exist in index.html', () => {
   const htmlIds = new Set([...html.matchAll(/id=["']([^"']+)/g)].map((m) => m[1]));
   const usedIds = new Set([...app.matchAll(/\$\('#([^']+)'\)/g)].map((m) => m[1]));

@@ -1,3 +1,5 @@
+import { applyOutputLanguage, normalizeOutputLanguage, OUTPUT_LANGUAGE_STORAGE_KEY } from './prompt-language.js';
+
 const NOTEBOOK_URL = 'https://notebook.google.com/';
 const REPO_URL = 'https://github.com/dennis23100/gemini-notebook-prompt-lab';
 const $ = (sel, root = document) => root.querySelector(sel);
@@ -11,6 +13,7 @@ const i18n = {
     browsePrompts: '瀏覽 Prompt', buildPrompt: '建立 Prompt', statPrompts: '分齡 Prompt', statThemes: '視覺主題', statAges: '年齡層', statWorkflows: '工作流', privacyNote: '不需登入、不上傳你的 Prompt、不使用追蹤器。',
     quickEyebrow: '30 秒上手', quickTitle: 'Copy → Open → Generate', step1Title: '選受眾', step1Body: '幼兒、青年或壯年，讓語氣、閱讀密度與視覺節奏跟著調整。', step2Title: '複製 Prompt', step2Body: '使用既有模板，或在 Prompt Lab 依任務快速組合。', step3Title: '開新分頁', step3Body: '按一下直接開啟 Gemini Notebook，不會覆蓋目前頁面。',
     tabLibrary: 'Prompt Library', tabLab: 'Prompt Lab', tabChain: 'Chain Builder', tabLint: 'Quality Check', search: '搜尋', favorites: '☆ 收藏', export: '匯出', import: '匯入', age: '年齡', category: '分類', clearFilters: '清除篩選', emptyTitle: '找不到符合條件的 Prompt', emptyBody: '換一個關鍵字，或清除篩選條件。',
+    outputLanguage: '成品輸出語言', outputLanguageHint: 'Prompt 固定使用最佳化英文；此選項只控制 Gemini Notebook 成品語言。', outputFollowNotebook: '跟隨 Gemini Notebook', outputTraditionalChinese: '繁體中文', outputEnglish: 'English', outputLanguageChanged: '成品輸出語言已更新',
     composerEyebrow: 'Prompt Composer', composerTitle: '用任務組合，而不是從空白開始', workflow: '工作流', audience: '受眾', focus: '聚焦主題', visualTheme: '視覺主題', difficulty: '深度 / 難度', role: '角色', extra: '額外要求', strictGrounding: '嚴格來源限定：來源沒有寫，就不要補。', generatePrompt: '產生 Prompt', addToChain: '加入 Chain', preview: 'Preview', generatedPrompt: '產生的 Prompt', copy: '複製', copyOpen: '複製並開啟 Gemini Notebook ↗', checkQuality: '檢查品質',
     chainTitle: '把多個 Prompt 串成可重複流程', chainBody: '適合「先萃取 → 再產出 → 最後檢查」這類任務。所有步驟都可以編輯與重新排序。', loadExample: '載入範例 Chain', copyChain: '複製整個 Chain', clear: '清空', chainEmptyTitle: 'Chain 還是空的', chainEmptyBody: '從 Library 或 Prompt Lab 加入 Prompt，或載入範例流程。',
     lintTitle: '在送進 Gemini Notebook 前先做品質檢查', lintBody: '這不是 AI 評審，而是一套透明的本機規則：來源限定、受眾、任務、輸出格式、約束與防杜撰。', runCheck: '執行檢查', useSelected: '使用目前選取 Prompt', qualityScore: 'Prompt Quality Score', lintIdle: '貼上 Prompt 後執行檢查。',
@@ -24,6 +27,7 @@ const i18n = {
     browsePrompts: 'Browse prompts', buildPrompt: 'Build a prompt', statPrompts: 'age prompts', statThemes: 'visual themes', statAges: 'audiences', statWorkflows: 'workflows', privacyNote: 'No sign-in, no prompt uploads, no trackers.',
     quickEyebrow: '30-second start', quickTitle: 'Copy → Open → Generate', step1Title: 'Pick an audience', step1Body: 'Children, youth, or adults — adjust tone, density, and visual pacing.', step2Title: 'Copy a prompt', step2Body: 'Use a curated template or compose one in Prompt Lab.', step3Title: 'Open a new tab', step3Body: 'Jump to Gemini Notebook without replacing this page.',
     tabLibrary: 'Prompt Library', tabLab: 'Prompt Lab', tabChain: 'Chain Builder', tabLint: 'Quality Check', search: 'Search', favorites: '☆ Favorites', export: 'Export', import: 'Import', age: 'Age', category: 'Category', clearFilters: 'Clear filters', emptyTitle: 'No matching prompts', emptyBody: 'Try another keyword or clear your filters.',
+    outputLanguage: 'Output language', outputLanguageHint: 'Prompts stay in optimized English; this setting controls the Gemini Notebook output only.', outputFollowNotebook: 'Follow Gemini Notebook', outputTraditionalChinese: 'Traditional Chinese', outputEnglish: 'English', outputLanguageChanged: 'Output language updated',
     composerEyebrow: 'Prompt Composer', composerTitle: 'Compose from a task instead of a blank page', workflow: 'Workflow', audience: 'Audience', focus: 'Focus topic', visualTheme: 'Visual theme', difficulty: 'Depth / difficulty', role: 'Role', extra: 'Extra instructions', strictGrounding: 'Strict source grounding: do not fill gaps with outside knowledge.', generatePrompt: 'Generate prompt', addToChain: 'Add to chain', preview: 'Preview', generatedPrompt: 'Generated prompt', copy: 'Copy', copyOpen: 'Copy & open Gemini Notebook ↗', checkQuality: 'Check quality',
     chainTitle: 'Turn prompts into a repeatable multi-step workflow', chainBody: 'Great for extract → create → verify flows. Every step is editable and reorderable.', loadExample: 'Load example chain', copyChain: 'Copy full chain', clear: 'Clear', chainEmptyTitle: 'Your chain is empty', chainEmptyBody: 'Add a prompt from Library or Prompt Lab, or load the example flow.',
     lintTitle: 'Check prompt quality before sending it to Gemini Notebook', lintBody: 'This is not an AI judge. It is a transparent local rubric for source grounding, audience, task, format, constraints, and anti-hallucination language.', runCheck: 'Run check', useSelected: 'Use selected prompt', qualityScore: 'Prompt Quality Score', lintIdle: 'Paste a prompt and run the check.',
@@ -34,6 +38,7 @@ const i18n = {
 
 const state = {
   lang: localStorage.getItem('gnpl.lang') || 'zh-TW',
+  outputLanguage: normalizeOutputLanguage(localStorage.getItem(OUTPUT_LANGUAGE_STORAGE_KEY)),
   age: 'all', category: 'all', search: '', favoritesOnly: false,
   favorites: new Set(JSON.parse(localStorage.getItem('gnpl.favorites') || '[]')),
   prompts: [], workflows: [], customPrompts: JSON.parse(localStorage.getItem('gnpl.customPrompts') || '[]'),
@@ -43,6 +48,7 @@ const state = {
 
 function t(key) { return i18n[state.lang]?.[key] ?? i18n.en[key] ?? key; }
 function localized(obj) { return typeof obj === 'string' ? obj : (obj?.[state.lang] ?? obj?.en ?? obj?.['zh-TW'] ?? ''); }
+function promptForOutput(prompt) { return applyOutputLanguage(typeof prompt === 'string' ? prompt : prompt?.prompt, state.outputLanguage); }
 function escapeHtml(str = '') { return String(str).replace(/[&<>'\"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','\"':'&quot;'}[c])); }
 function safeHttpUrl(value) {
   try { const url = new URL(String(value)); return ['http:', 'https:'].includes(url.protocol) ? url.href : null; }
@@ -72,8 +78,33 @@ function updateI18n() {
 
 function applyLanguage() {
   localStorage.setItem('gnpl.lang', state.lang);
-  updateI18n(); renderFilters(); renderLibrary(); renderWorkflowOptions(); renderThemeOptions(); renderChain();
+  updateI18n(); renderOutputLanguageOptions(); renderFilters(); renderLibrary(); renderWorkflowOptions(); renderThemeOptions(); renderChain();
   if (state.selectedPromptId) openPrompt(state.selectedPromptId, false);
+}
+
+function renderOutputLanguageOptions() {
+  const options = [
+    ['notebook', t('outputFollowNotebook')],
+    ['zh-TW', t('outputTraditionalChinese')],
+    ['en', t('outputEnglish')]
+  ];
+  $('#outputLanguageSelect').innerHTML = options.map(([value, label]) => `<option value="${value}">${escapeHtml(label)}</option>`).join('');
+  $('#outputLanguageSelect').value = state.outputLanguage;
+}
+
+function setOutputLanguage(value) {
+  state.outputLanguage = normalizeOutputLanguage(value);
+  localStorage.setItem(OUTPUT_LANGUAGE_STORAGE_KEY, state.outputLanguage);
+  renderOutputLanguageOptions();
+  if (state.selectedPromptId) openPrompt(state.selectedPromptId, false);
+  const labOutput = $('#labOutput');
+  if (labOutput.value) {
+    labOutput.value = applyOutputLanguage(labOutput.value, state.outputLanguage);
+    const lint = scorePrompt(labOutput.value, $('#audienceSelect').value);
+    $('#labScore').textContent = lint.score;
+    renderMiniLint(lint);
+  }
+  toast(t('outputLanguageChanged'));
 }
 
 function allPrompts() { return [...state.prompts, ...state.customPrompts]; }
@@ -150,11 +181,12 @@ function getPrompt(id) { return allPrompts().find(p => p.id === id); }
 
 function openPrompt(id, show = true) {
   const p = getPrompt(id); if (!p) return;
+  const outputPrompt = promptForOutput(p);
   state.selectedPromptId = id;
   $('#dialogTitle').textContent = localized(p.title);
   $('#dialogSummary').textContent = localized(p.summary);
-  $('#dialogPrompt').value = p.prompt;
-  const lint = scorePrompt(p.prompt, p.ageGroup);
+  $('#dialogPrompt').value = outputPrompt;
+  const lint = scorePrompt(outputPrompt, p.ageGroup);
   $('#dialogBadges').innerHTML = `<span class="badge age">${escapeHtml(localized(p.ageLabel) || p.ageGroup)}</span><span class="badge">${escapeHtml(localized(p.category))}</span><span class="badge score-good">${lint.score}/100</span>`;
   $('#favoriteDialogBtn').textContent = state.favorites.has(id) ? '★' : '☆';
   const variants = allPrompts().filter(x => x.themeId === p.themeId).sort((a,b)=>['children','youth','adult'].indexOf(a.ageGroup)-['children','youth','adult'].indexOf(b.ageGroup));
@@ -209,6 +241,7 @@ function composePrompt() {
   }
   if (strict && !/do not invent|outside knowledge|unsupported/i.test(body)) body += '\n\nStrict grounding rule: Use only the selected sources. Do not add outside facts or invent examples. If the sources do not support a claim, say so explicitly.';
   if (extra) body += `\n\nAdditional requirements:\n${extra}`;
+  body = applyOutputLanguage(body, state.outputLanguage);
   $('#labOutput').value = body;
   const lint = scorePrompt(body, audience); $('#labScore').textContent = lint.score; renderMiniLint(lint);
   return body;
@@ -256,7 +289,8 @@ function switchTab(id) {
 }
 
 function exportResults() {
-  const data = {schemaVersion:'1.0.0', exportedAt:new Date().toISOString(), prompts:filteredPrompts()};
+  const prompts = filteredPrompts().map(prompt => ({...prompt, prompt: promptForOutput(prompt)}));
+  const data = {schemaVersion:'1.0.0', exportedAt:new Date().toISOString(), prompts};
   const blob = new Blob([JSON.stringify(data,null,2)],{type:'application/json'}); const a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download='gemini-notebook-prompts-export.json'; a.click(); URL.revokeObjectURL(a.href); toast(t('exported'));
 }
 
@@ -272,6 +306,7 @@ async function importFile(file) {
 
 function bindEvents() {
   $('#langBtn').addEventListener('click',()=>{state.lang=state.lang==='zh-TW'?'en':'zh-TW';applyLanguage();});
+  $('#outputLanguageSelect').addEventListener('change',event=>setOutputLanguage(event.target.value));
   $$('.tab').forEach(b=>b.addEventListener('click',()=>switchTab(b.dataset.tab)));
   $$('[data-tab-target]').forEach(b=>b.addEventListener('click',()=>switchTab(b.dataset.tabTarget)));
   $('#searchInput').addEventListener('input',e=>{state.search=e.target.value;renderLibrary();});
@@ -279,7 +314,7 @@ function bindEvents() {
   $('#categoryFilters').addEventListener('click',e=>{const b=e.target.closest('[data-category]');if(!b)return;state.category=b.dataset.category;renderFilters();renderLibrary();});
   $('#favoritesOnlyBtn').addEventListener('click',()=>{state.favoritesOnly=!state.favoritesOnly;$('#favoritesOnlyBtn').setAttribute('aria-pressed',String(state.favoritesOnly));renderLibrary();});
   $('#clearFiltersBtn').addEventListener('click',()=>{state.age='all';state.category='all';state.search='';state.favoritesOnly=false;$('#searchInput').value='';$('#favoritesOnlyBtn').setAttribute('aria-pressed','false');renderFilters();renderLibrary();});
-  $('#promptGrid').addEventListener('click',async e=>{const f=e.target.closest('[data-favorite]');if(f){toggleFavorite(f.dataset.favorite);return;} const v=e.target.closest('[data-view]');if(v){openPrompt(v.dataset.view);return;} const c=e.target.closest('[data-copy]');if(c){const p=getPrompt(c.dataset.copy);if(p){await copyText(p.prompt);toast(t('copied'));}}});
+  $('#promptGrid').addEventListener('click',async e=>{const f=e.target.closest('[data-favorite]');if(f){toggleFavorite(f.dataset.favorite);return;} const v=e.target.closest('[data-view]');if(v){openPrompt(v.dataset.view);return;} const c=e.target.closest('[data-copy]');if(c){const p=getPrompt(c.dataset.copy);if(p){await copyText(promptForOutput(p));toast(t('copied'));}}});
   $('#exportBtn').addEventListener('click',exportResults); $('#importInput').addEventListener('change',e=>{if(e.target.files[0]) importFile(e.target.files[0]);e.target.value='';});
   $('#promptDialog').addEventListener('close',closePromptUrl); $('#compareBar').addEventListener('click',e=>{const b=e.target.closest('[data-variant]');if(b)openPrompt(b.dataset.variant,false);});
   $('#favoriteDialogBtn').addEventListener('click',()=>state.selectedPromptId&&toggleFavorite(state.selectedPromptId));
@@ -292,13 +327,13 @@ function bindEvents() {
   $('#addLabToChainBtn').addEventListener('click',()=>{const text=$('#labOutput').value||composePrompt();if(text)addToChain(text,localized(state.workflows.find(w=>w.id===$('#workflowSelect').value)?.name)||'Prompt Lab');});
   $('#defaultChainBtn').addEventListener('click',loadDefaultChain); $('#copyChainBtn').addEventListener('click',async()=>{const text=chainText();if(text){await copyText(text);toast(t('chainCopied'));}}); $('#clearChainBtn').addEventListener('click',()=>{state.chain=[];saveChain();renderChain();});
   $('#chainList').addEventListener('input',syncChainEdits); $('#chainList').addEventListener('click',e=>{const up=e.target.closest('[data-move-up]'),down=e.target.closest('[data-move-down]'),rm=e.target.closest('[data-remove-chain]');let id=up?.dataset.moveUp||down?.dataset.moveDown||rm?.dataset.removeChain;if(!id)return;syncChainEdits();let i=state.chain.findIndex(x=>x.id===id);if(rm){state.chain.splice(i,1);}else if(up&&i>0){[state.chain[i-1],state.chain[i]]=[state.chain[i],state.chain[i-1]];}else if(down&&i<state.chain.length-1){[state.chain[i+1],state.chain[i]]=[state.chain[i],state.chain[i+1]];}saveChain();renderChain();});
-  $('#runLintBtn').addEventListener('click',()=>renderLint(scorePrompt($('#lintInput').value))); $('#useSelectedLintBtn').addEventListener('click',()=>{const p=getPrompt(state.selectedPromptId)||filteredPrompts()[0];if(p){$('#lintInput').value=p.prompt;renderLint(scorePrompt(p.prompt,p.ageGroup));}});
+  $('#runLintBtn').addEventListener('click',()=>renderLint(scorePrompt($('#lintInput').value))); $('#useSelectedLintBtn').addEventListener('click',()=>{const p=getPrompt(state.selectedPromptId)||filteredPrompts()[0];if(p){const outputPrompt=promptForOutput(p);$('#lintInput').value=outputPrompt;renderLint(scorePrompt(outputPrompt,p.ageGroup));}});
   document.addEventListener('keydown',e=>{if(e.key==='/'&&!['INPUT','TEXTAREA','SELECT'].includes(document.activeElement.tagName)){e.preventDefault();switchTab('library');$('#searchInput').focus();} if(e.key==='Escape'&&$('#promptDialog').open)$('#promptDialog').close();});
   window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();state.deferredInstallPrompt=e;$('#installBtn').classList.remove('hidden');}); $('#installBtn').addEventListener('click',async()=>{if(!state.deferredInstallPrompt)return;state.deferredInstallPrompt.prompt();await state.deferredInstallPrompt.userChoice;state.deferredInstallPrompt=null;$('#installBtn').classList.add('hidden');});
 }
 
 async function init() {
-  updateI18n();
+  updateI18n(); renderOutputLanguageOptions();
   const [pManifest,wData] = await Promise.all([fetch('./data/prompts.json').then(r=>r.json()),fetch('./data/workflows.json').then(r=>r.json())]);
   const packData = await Promise.all((pManifest.packs || []).map(pack => fetch(pack.path).then(r => r.json())));
   const pData = {...pManifest, prompts: packData.flatMap(pack => pack.prompts || [])};

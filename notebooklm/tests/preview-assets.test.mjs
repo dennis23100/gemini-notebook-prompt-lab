@@ -126,7 +126,7 @@ test('README stays text-first while card CSS and offline cache reference every i
   }
 
   assert.match(galleryCss, /aspect-ratio:\s*1376\s*\/\s*768/);
-  assert.match(serviceWorker, /const CACHE='gnpl-v17'/);
+  assert.match(serviceWorker, /const CACHE='gnpl-v18'/);
   assert.doesNotMatch(`${readme}\n${readmeZh}\n${galleryCss}`, /real-previews\/[\w-]*sprite\.(?:png|jpe?g|webp)/i);
 });
 

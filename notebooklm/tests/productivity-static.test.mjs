@@ -13,6 +13,7 @@ test('productivity layer is loaded by the app shell', () => {
   assert.match(html, /src="\.\/assets\/productivity\.js"/);
   assert.match(sw, /\.\/assets\/productivity\.css/);
   assert.match(sw, /\.\/assets\/productivity\.js/);
+  assert.match(sw, /\.\/assets\/prompt-language\.js/);
 });
 
 test('shareable filter state uses URL query parameters', () => {
@@ -27,6 +28,7 @@ test('enhanced export supports JSON, Markdown, and CSV', () => {
   assert.match(productivity, /data-export-format="csv"/);
   assert.match(productivity, /markdownExportProductivity/);
   assert.match(productivity, /csvExportProductivity/);
+  assert.match(productivity, /exportedPromptTextProductivity/);
 });
 
 test('recent prompt history stays local to the browser', () => {

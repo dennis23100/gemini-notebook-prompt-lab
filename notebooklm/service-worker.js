@@ -1,8 +1,8 @@
-const CACHE='gnpl-v17';
+const CACHE='gnpl-v18';
 const ASSETS=[
   './','./index.html',
   './assets/styles.css','./assets/ui-polish.css','./assets/style-previews.css','./assets/productivity.css','./assets/accessibility.css','./assets/audience-gallery.css',
-  './assets/app.js','./assets/ui-polish.js','./assets/productivity.js','./assets/accessibility.js','./assets/audience-gallery.js',
+  './assets/app.js','./assets/prompt-language.js','./assets/ui-polish.js','./assets/productivity.js','./assets/accessibility.js','./assets/audience-gallery.js',
   './assets/favicon.svg',
   './assets/real-previews/comic-children.png','./assets/real-previews/comic-youth.png','./assets/real-previews/comic-mature.png',
   './assets/real-previews/comic-panels-children.png','./assets/real-previews/comic-panels-youth.png','./assets/real-previews/comic-panels-mature.png',
