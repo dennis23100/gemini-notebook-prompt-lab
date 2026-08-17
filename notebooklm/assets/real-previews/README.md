@@ -14,11 +14,11 @@ These files are the original PNG exports supplied by the project maintainer on 2
 | Stars / 星星 | `stars-children.png` | `stars-youth.png` | `stars-mature.png` |
 | Fairy-tale Animation / 童話動畫電影風格 | `fairy-animation-children.png` | `fairy-animation-youth.png` | `fairy-animation-mature.png` |
 | Mountain Journey / 登山風格 | `mountain-children.png` | `mountain-youth.png` | `mountain-mature.png` |
-| Nature / 大自然 | — | `nature-youth.png` | — |
-| Ocean / 海洋 | — | `ocean-youth.png` | — |
-| Jungle / 叢林 | — | `jungle-youth.png` | — |
+| Nature / 大自然 | — | `nature-youth.png` | `nature-mature.png` |
+| Ocean / 海洋 | — | `ocean-youth.png` | `ocean-mature.png` |
+| Jungle / 叢林 | `jungle-children.png` | `jungle-youth.png` | `jungle-mature.png` |
 
-All 27 images are independent 1376 × 768, 24-bit RGB PNGs. The site loads one file per matching card and preserves the original aspect ratio. Cards without a supplied, verified output remain text-only. The README deliberately stays text-first and does not embed preview images. No CSS mock thumbnail, sprite sheet, JPEG conversion, cropping, or raster upscaling is used.
+All 31 images are independent 1376 × 768, 24-bit RGB PNGs. The site loads one file per matching card and preserves the original aspect ratio. Cards without a supplied, verified output remain text-only. The README deliberately stays text-first and does not embed preview images. No CSS mock thumbnail, sprite sheet, JPEG conversion, cropping, or raster upscaling is used.
 
 The automated preview-asset test validates the PNG signature and structure, decompresses the image data, checks the dimensions, confirms that the README does not embed preview imagery, and verifies every CSS and service-worker reference.
 

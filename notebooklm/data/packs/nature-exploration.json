@@ -166,8 +166,13 @@
       "vibe": "adventure",
       "energy": "lively",
       "collections": [
-        "adventure"
-      ]
+        "adventure",
+        "real-output"
+      ],
+      "preview": {
+        "kind": "real-output",
+        "src": "./assets/real-previews/jungle-children.png"
+      }
     },
     {
       "id": "children-mountain",
@@ -683,7 +688,13 @@
       "licenseNote": "Project-authored adaptation; upstream inspiration links preserved.",
       "vibe": "calm",
       "energy": "balanced",
-      "collections": []
+      "collections": [
+        "real-output"
+      ],
+      "preview": {
+        "kind": "real-output",
+        "src": "./assets/real-previews/nature-mature.png"
+      }
     },
     {
       "id": "adult-ocean",
@@ -722,8 +733,13 @@
       "vibe": "adventure",
       "energy": "cinematic",
       "collections": [
-        "adventure"
-      ]
+        "adventure",
+        "real-output"
+      ],
+      "preview": {
+        "kind": "real-output",
+        "src": "./assets/real-previews/ocean-mature.png"
+      }
     },
     {
       "id": "adult-jungle",
@@ -762,8 +778,13 @@
       "vibe": "adventure",
       "energy": "lively",
       "collections": [
-        "adventure"
-      ]
+        "adventure",
+        "real-output"
+      ],
+      "preview": {
+        "kind": "real-output",
+        "src": "./assets/real-previews/jungle-mature.png"
+      }
     },
     {
       "id": "adult-mountain",
