@@ -1,59 +1,63 @@
-/* Audience/gallery enhancements: clearer audience labels and representative real-output previews. */
+/* Audience/gallery enhancements: clear labels and original real-output PNGs. */
 
 #ageFilters [data-age="all"] { display: none !important; }
 #ageFilters .chip { white-space: nowrap; }
 
-/* The supplied real outputs are 1376 × 768 (16:9). Preserve that native shape
-   so text and artwork are not vertically stretched or softened in prompt cards. */
+/* The supplied real outputs are 1376 × 768. Preserve their native canvas so
+   text and artwork are never stretched. Other cards keep the CSS previews. */
 .prompt-card::before {
   flex: 0 0 auto !important;
   width: 100%;
   aspect-ratio: 1376 / 768;
   background-color: var(--panel-2) !important;
   background-repeat: no-repeat !important;
+  background-position: center !important;
   image-rendering: auto;
 }
 
-/* Each JPEG sprite contains the exact selected outputs in this order:
-   Children | Youth | Mature readers. Each 360 × 201 tile is optimized for the
-   on-page card size while keeping the original 16:9 proportions. */
-.prompt-card[data-id="children-comic-flex"]::before,
-.prompt-card[data-id="youth-comic-flex"]::before,
+.prompt-card[data-id="children-comic-flex"]::before {
+  background-image: url("./real-previews/comic-children.png") !important;
+  background-size: cover !important;
+}
+
+.prompt-card[data-id="youth-comic-flex"]::before {
+  background-image: url("./real-previews/comic-youth.png") !important;
+  background-size: cover !important;
+}
+
 .prompt-card[data-id="adult-comic-flex"]::before {
-  background-image: url("./real-previews/comic-sprite.jpg") !important;
-  background-size: 300% auto !important;
+  background-image: url("./real-previews/comic-mature.png") !important;
+  background-size: cover !important;
 }
 
-.prompt-card[data-id="children-stars"]::before,
-.prompt-card[data-id="youth-stars"]::before,
+.prompt-card[data-id="children-stars"]::before {
+  background-image: url("./real-previews/stars-children.png") !important;
+  background-size: cover !important;
+}
+
+.prompt-card[data-id="youth-stars"]::before {
+  background-image: url("./real-previews/stars-youth.png") !important;
+  background-size: cover !important;
+}
+
 .prompt-card[data-id="adult-stars"]::before {
-  background-image: url("./real-previews/stars-sprite.jpg") !important;
-  background-size: 300% auto !important;
+  background-image: url("./real-previews/stars-mature.png") !important;
+  background-size: cover !important;
 }
 
-.prompt-card[data-id="children-fairy-animation"]::before,
-.prompt-card[data-id="youth-fairy-animation"]::before,
-.prompt-card[data-id="adult-fairy-animation"]::before {
-  background-image: url("./real-previews/fairy-animation-sprite.jpg") !important;
-  background-size: 300% auto !important;
-}
-
-.prompt-card[data-id="children-comic-flex"]::before,
-.prompt-card[data-id="children-stars"]::before,
 .prompt-card[data-id="children-fairy-animation"]::before {
-  background-position: 0% 50% !important;
+  background-image: url("./real-previews/fairy-animation-children.png") !important;
+  background-size: cover !important;
 }
 
-.prompt-card[data-id="youth-comic-flex"]::before,
-.prompt-card[data-id="youth-stars"]::before,
 .prompt-card[data-id="youth-fairy-animation"]::before {
-  background-position: 50% 50% !important;
+  background-image: url("./real-previews/fairy-animation-youth.png") !important;
+  background-size: cover !important;
 }
 
-.prompt-card[data-id="adult-comic-flex"]::before,
-.prompt-card[data-id="adult-stars"]::before,
 .prompt-card[data-id="adult-fairy-animation"]::before {
-  background-position: 100% 50% !important;
+  background-image: url("./real-previews/fairy-animation-mature.png") !important;
+  background-size: cover !important;
 }
 
 .prompt-card[data-id="children-comic-flex"]::after,
@@ -66,7 +70,9 @@
 .prompt-card[data-id="youth-fairy-animation"]::after,
 .prompt-card[data-id="adult-fairy-animation"]::after {
   content: "實際輸出 · 範例" !important;
+  color: var(--text) !important;
   background: color-mix(in srgb, var(--panel) 92%, transparent) !important;
+  border-color: color-mix(in srgb, var(--text) 16%, transparent) !important;
 }
 
 html[lang="en"] .prompt-card[data-id="children-comic-flex"]::after,

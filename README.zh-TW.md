@@ -19,23 +19,25 @@
 
 ## 先看成果，再決定要不要用
 
+以下是 Gemini Notebook 匯出的原始 `1376 × 768` PNG。每張圖片都獨立顯示，不再經過容易損壞、裁切或被放大的 sprite 拼接圖。
+
 ### 漫畫（不拘）
 
-<img src="notebooklm/assets/real-previews/comic-sprite.jpg" alt="漫畫（不拘）實際輸出：兒童、青年、成熟讀者" width="100%" />
-
-**兒童 · 15歲以下**　|　**青年 · 16–34歲**　|　**成熟讀者 · 35歲以上**
+| **兒童 · 15 歲以下** | **青年 · 16–34 歲** | **成熟讀者 · 35 歲以上** |
+|---|---|---|
+| <img src="notebooklm/assets/real-previews/comic-children.png" alt="漫畫（不拘）的兒童實際輸出" width="420" /> | <img src="notebooklm/assets/real-previews/comic-youth.png" alt="漫畫（不拘）的青年實際輸出" width="420" /> | <img src="notebooklm/assets/real-previews/comic-mature.png" alt="漫畫（不拘）的成熟讀者實際輸出" width="420" /> |
 
 ### 星星
 
-<img src="notebooklm/assets/real-previews/stars-sprite.jpg" alt="星星實際輸出：兒童、青年、成熟讀者" width="100%" />
-
-**兒童 · 15歲以下**　|　**青年 · 16–34歲**　|　**成熟讀者 · 35歲以上**
+| **兒童 · 15 歲以下** | **青年 · 16–34 歲** | **成熟讀者 · 35 歲以上** |
+|---|---|---|
+| <img src="notebooklm/assets/real-previews/stars-children.png" alt="星星的兒童實際輸出" width="420" /> | <img src="notebooklm/assets/real-previews/stars-youth.png" alt="星星的青年實際輸出" width="420" /> | <img src="notebooklm/assets/real-previews/stars-mature.png" alt="星星的成熟讀者實際輸出" width="420" /> |
 
 ### 童話動畫電影
 
-<img src="notebooklm/assets/real-previews/fairy-animation-sprite.jpg" alt="童話動畫電影實際輸出：兒童、青年、成熟讀者" width="100%" />
-
-**兒童 · 15歲以下**　|　**青年 · 16–34歲**　|　**成熟讀者 · 35歲以上**
+| **兒童 · 15 歲以下** | **青年 · 16–34 歲** | **成熟讀者 · 35 歲以上** |
+|---|---|---|
+| <img src="notebooklm/assets/real-previews/fairy-animation-children.png" alt="童話動畫電影的兒童實際輸出" width="420" /> | <img src="notebooklm/assets/real-previews/fairy-animation-youth.png" alt="童話動畫電影的青年實際輸出" width="420" /> | <img src="notebooklm/assets/real-previews/fairy-animation-mature.png" alt="童話動畫電影的成熟讀者實際輸出" width="420" /> |
 
 **同一份來源概念 × 三種視覺方向 × 三種受眾。** 上面都是代表性的**實際生成範例**，不是手畫 mockup。
 
@@ -47,7 +49,7 @@
 
 實際生成不是固定模板，因此不同來源、不同次生成仍可能出現不同視覺表現。像 **「漫畫（不拘）」** 本來就是方向而不是死板畫風；它可以依來源與受眾變成漫畫、水墨式敘事、電影感分鏡或其他合適的視覺語言。
 
-提示詞卡片使用的也是**同一批實際生成成果**做成的最佳化預覽圖；檔案統一放在 [`notebooklm/assets/real-previews/`](notebooklm/assets/real-previews/)，並維持原始 16:9 簡報比例，不再硬拉伸而變糊。
+網站中對應的 Prompt 卡片會直接使用同一批原始 PNG，並維持原生 16:9 比例；其他卡片則繼續使用輕量的 CSS 風格預覽。
 
 ### 🚀 [直接打開 Prompt Lab 試用](https://dennis23100.github.io/gemini-notebook-prompt-lab/)
 
@@ -86,15 +88,15 @@ Gemini Notebook 提示詞工作室會維持來源內容的忠實度，同時依�
 
 網站本身沒有專案後端、登入系統、分析 SDK、資料庫或內嵌 API key。
 
-## 真實範例與可重現 Benchmark 分開
+## 真實範例、風格預覽與可重現 Benchmark
 
-README 最上面的實際成果，是讓第一次來的人快速理解工具會產生什麼差異；三列分別是 **漫畫（不拘）／星星／童話動畫電影** 的代表性真實輸出。
+上面的 9 張範例與網站中對應的 Prompt 卡片，使用的是逐張驗證過的原始 PNG；其他卡片仍採用快速的 CSS 風格預覽，並明確標示為示意。如此能清楚區分真實輸出與風格方向，也不會再依賴格式損壞、解析度不足或被拉伸的圖片。
 
-另外，專案仍保留一套**可重現 Showcase**：使用固定的專案自製測試來源與精確 Prompt manifest，讓貢獻者不用猜來源或 Prompt 就能重做比較。
+另外，專案仍保留一套**可重現 Showcase**：使用固定的專案自製測試來源與精確 Prompt manifest，讓貢獻者不用猜來源或 Prompt 就能重做真實成果比較。
 
 ### 🖼️ [打開可重現 Showcase](https://dennis23100.github.io/gemini-notebook-prompt-lab/showcase.html)
 
-Mockup 不會冒充真實生成結果；實際輸出也會明確標示為「範例」，因為生成本來就不是完全 deterministic。
+Mockup 不會冒充真實生成結果；真實成果必須附有來源紀錄，並通過 PNG 簽章、解碼、尺寸與引用檢查後，才會放進 README 或 Prompt Library。
 
 ## 來自真實教學情境
 

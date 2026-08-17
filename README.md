@@ -19,23 +19,25 @@
 
 ## See the difference first
 
+These are the original `1376 × 768` PNG exports from Gemini Notebook. Each file is displayed independently—there are no compressed sprite sheets to corrupt, crop, or upscale.
+
 ### Flexible Comic
 
-<img src="notebooklm/assets/real-previews/comic-sprite.jpg" alt="Flexible Comic real outputs: Children, Youth, Mature readers" width="100%" />
-
-**Children · ≤15**　|　**Youth · 16–34**　|　**Mature readers · 35+**
+| **Children · ≤15** | **Youth · 16–34** | **Mature readers · 35+** |
+|---|---|---|
+| <img src="notebooklm/assets/real-previews/comic-children.png" alt="Flexible Comic real output for children" width="420" /> | <img src="notebooklm/assets/real-previews/comic-youth.png" alt="Flexible Comic real output for youth" width="420" /> | <img src="notebooklm/assets/real-previews/comic-mature.png" alt="Flexible Comic real output for mature readers" width="420" /> |
 
 ### Stars
 
-<img src="notebooklm/assets/real-previews/stars-sprite.jpg" alt="Stars real outputs: Children, Youth, Mature readers" width="100%" />
-
-**Children · ≤15**　|　**Youth · 16–34**　|　**Mature readers · 35+**
+| **Children · ≤15** | **Youth · 16–34** | **Mature readers · 35+** |
+|---|---|---|
+| <img src="notebooklm/assets/real-previews/stars-children.png" alt="Stars real output for children" width="420" /> | <img src="notebooklm/assets/real-previews/stars-youth.png" alt="Stars real output for youth" width="420" /> | <img src="notebooklm/assets/real-previews/stars-mature.png" alt="Stars real output for mature readers" width="420" /> |
 
 ### Fairy-tale Animation
 
-<img src="notebooklm/assets/real-previews/fairy-animation-sprite.jpg" alt="Fairy-tale Animation real outputs: Children, Youth, Mature readers" width="100%" />
-
-**Children · ≤15**　|　**Youth · 16–34**　|　**Mature readers · 35+**
+| **Children · ≤15** | **Youth · 16–34** | **Mature readers · 35+** |
+|---|---|---|
+| <img src="notebooklm/assets/real-previews/fairy-animation-children.png" alt="Fairy-tale Animation real output for children" width="420" /> | <img src="notebooklm/assets/real-previews/fairy-animation-youth.png" alt="Fairy-tale Animation real output for youth" width="420" /> | <img src="notebooklm/assets/real-previews/fairy-animation-mature.png" alt="Fairy-tale Animation real output for mature readers" width="420" /> |
 
 **Same source idea. Three visual directions. Three audience profiles.** These are representative **real generated outputs**, not illustrative mockups.
 
@@ -47,7 +49,7 @@
 
 The exact visual result can vary by source and generation run. Visual themes are directions, not rigid templates — for example, **Flexible Comic** can legitimately become manga-like, watercolor-like, cinematic, or another visual storytelling treatment when that better fits the source and audience.
 
-The prompt cards use these **same selected real outputs** as optimized previews. The assets live under [`notebooklm/assets/real-previews/`](notebooklm/assets/real-previews/) and preserve the original 16:9 slide geometry.
+The matching Prompt Library cards use these same full-resolution PNGs and preserve their native 16:9 geometry. The other cards use lightweight CSS style previews.
 
 ### 🚀 [Try the live Prompt Lab](https://dennis23100.github.io/gemini-notebook-prompt-lab/)
 
@@ -86,15 +88,15 @@ The Library defaults to **Children**, showing 30 prompts instead of mixing all 9
 
 The app has no project backend, account system, analytics SDK, database, or embedded API key.
 
-## Real outputs vs. reproducible benchmark
+## Real examples, style previews, and reproducible benchmark
 
-The real-output examples near the top help first-time visitors understand the product quickly. The three rows are representative outputs from **Flexible Comic**, **Stars**, and **Fairy-tale Animation**.
+The nine examples above and their matching Prompt Library cards use independently validated original PNG exports. The other card thumbnails remain fast CSS-rendered discovery aids and are explicitly labeled as style previews. This keeps real output distinct from illustrative direction while avoiding malformed, undersized, or stretched assets.
 
-Separately, the project keeps a **reproducible Showcase** with a controlled project-authored source and exact prompt manifest, so contributors can compare outputs without guessing the source or prompt:
+Separately, the project keeps a **reproducible Showcase** with a controlled project-authored source and exact prompt manifest, so contributors can compare genuine outputs without guessing the source or prompt:
 
 ### 🖼️ [Open the reproducible Showcase](https://dennis23100.github.io/gemini-notebook-prompt-lab/showcase.html)
 
-Mockups are never presented as generated output. Real examples are explicitly labeled as examples, because generation is not deterministic.
+Mockups are never presented as generated output. A contributed real example must include provenance and pass PNG signature, decoding, dimension, and reference checks before it is used in the README or Prompt Library.
 
 ## Real-world teaching origin
 
