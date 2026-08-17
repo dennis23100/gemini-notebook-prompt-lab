@@ -31,14 +31,23 @@ const previews = [
   ['adult-stars', 'stars-mature.png'],
   ['children-fairy-animation', 'fairy-animation-children.png'],
   ['youth-fairy-animation', 'fairy-animation-youth.png'],
-  ['adult-fairy-animation', 'fairy-animation-mature.png']
+  ['adult-fairy-animation', 'fairy-animation-mature.png'],
+  ['children-mountain', 'mountain-children.png'],
+  ['youth-mountain', 'mountain-youth.png'],
+  ['adult-mountain', 'mountain-mature.png'],
+  ['youth-nature', 'nature-youth.png'],
+  ['youth-ocean', 'ocean-youth.png'],
+  ['youth-jungle', 'jungle-youth.png']
 ];
 
-const [readme, readmeZh, previewSvg, galleryCss, serviceWorker, appJs, promptManifest] = await Promise.all([
+const [readme, readmeZh, appReadme, appReadmeZh, previewSvg, galleryCss, uiPolishCss, serviceWorker, appJs, promptManifest] = await Promise.all([
   read('README.md'),
   read('README.zh-TW.md'),
+  read('notebooklm/README.md'),
+  read('notebooklm/README.zh-TW.md'),
   read('notebooklm/docs/showcase-preview.svg'),
   read('notebooklm/assets/audience-gallery.css'),
+  read('notebooklm/assets/ui-polish.css'),
   read('notebooklm/service-worker.js'),
   read('notebooklm/assets/app.js'),
   read('notebooklm/data/prompts.json').then(JSON.parse)
@@ -101,7 +110,7 @@ function inspectPng(buffer, name) {
   return { width, height, bitDepth, colorType };
 }
 
-test('all twenty-one original PNG previews are complete, sharp, and unique', async () => {
+test('all twenty-seven original PNG previews are complete, sharp, and unique', async () => {
   const hashes = new Set();
 
   for (const [, file] of previews) {
@@ -122,6 +131,7 @@ test('all twenty-one original PNG previews are complete, sharp, and unique', asy
 test('README stays text-first while prompt metadata lazy-loads every independent PNG', () => {
   assert.doesNotMatch(readme, /notebooklm\/assets\/real-previews\//);
   assert.doesNotMatch(readmeZh, /notebooklm\/assets\/real-previews\//);
+  assert.doesNotMatch(`${readme}\n${readmeZh}\n${appReadme}\n${appReadmeZh}`, /<img\s+src="[^\"]+\.(?:svg|png|jpe?g|webp)"/i);
 
   for (const [id, file] of previews) {
     const prompt = builtInPrompts.find(item => item.id === id);
@@ -131,11 +141,14 @@ test('README stays text-first while prompt metadata lazy-loads every independent
   }
 
   assert.match(galleryCss, /aspect-ratio:\s*1376\s*\/\s*768/);
-  assert.match(galleryCss, /\.prompt-card\.has-real-preview::before/);
+  assert.match(galleryCss, /\.prompt-card::before/);
+  assert.match(galleryCss, /\.prompt-card::after/);
+  assert.doesNotMatch(uiPolishCss, /style-previews\.css/);
+  assert.doesNotMatch(serviceWorker, /style-previews\.css/);
   assert.match(appJs, /loading="lazy"/);
   assert.match(appJs, /decoding="async"/);
   assert.match(appJs, /fetchpriority="low"/);
-  assert.match(serviceWorker, /const CACHE='gnpl-v19'/);
+  assert.match(serviceWorker, /const CACHE='gnpl-v20'/);
   assert.doesNotMatch(`${readme}\n${readmeZh}\n${galleryCss}`, /real-previews\/[\w-]*sprite\.(?:png|jpe?g|webp)/i);
 });
 

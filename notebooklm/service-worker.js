@@ -1,7 +1,7 @@
-const CACHE='gnpl-v19';
+const CACHE='gnpl-v20';
 const ASSETS=[
   './','./index.html',
-  './assets/styles.css','./assets/ui-polish.css','./assets/style-previews.css','./assets/productivity.css','./assets/accessibility.css','./assets/audience-gallery.css',
+  './assets/styles.css','./assets/ui-polish.css','./assets/productivity.css','./assets/accessibility.css','./assets/audience-gallery.css',
   './assets/app.js','./assets/prompt-language.js','./assets/ui-polish.js','./assets/productivity.js','./assets/accessibility.js','./assets/audience-gallery.js',
   './assets/favicon.svg',
   './data/prompts.json','./data/packs/narrative-characters.json','./data/packs/nature-exploration.json','./data/packs/life-rhythm.json','./data/packs/digital-media.json','./data/packs/humanities-spirituality.json','./data/packs/emotion-life.json','./data/packs/wonder-adventure.json','./data/packs/performance-culture.json','./data/workflows.json','./manifest.webmanifest'

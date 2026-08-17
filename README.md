@@ -1,7 +1,5 @@
 <div align="center">
 
-<img src="notebooklm/docs/hero.svg" alt="Gemini Notebook Prompt Lab" width="100%" />
-
 # 🧠 Gemini Notebook Prompt Lab
 
 **A local-first, source-grounded prompt library and workflow toolkit for Gemini Notebook (formerly NotebookLM).**
@@ -19,9 +17,9 @@
 
 ## See the difference in the live app
 
-The live Prompt Library displays independently validated Gemini Notebook output examples for seven themes across Children, Youth, and Mature readers. The repository README intentionally stays text-first; open the app to browse the real previews at card size.
+The live Prompt Library displays 27 independently validated Gemini Notebook output examples across 11 themes. Seven themes include Children, Youth, and Mature examples; six additional supplied outputs extend Mountain Journey and selected Youth nature themes. The repository README intentionally stays text-first; open the app to browse the real previews at card size.
 
-**Preview status:** real-output cards use original `1376 × 768` PNG exports, not sprite sheets, JPEG conversions, or enlarged thumbnails. Remaining cards are explicitly labeled CSS style previews.
+**Preview status:** cards display original `1376 × 768` PNG exports only. A prompt without a verified generated image remains text-only—there are no CSS mock thumbnails, sprite sheets, JPEG conversions, or enlarged placeholders.
 
 | Audience | Default range | Presentation goal |
 |---|---:|---|
@@ -31,7 +29,7 @@ The live Prompt Library displays independently validated Gemini Notebook output 
 
 The exact visual result can vary by source and generation run. Visual themes are directions, not rigid templates — for example, **Flexible Comic** can legitimately become manga-like, watercolor-like, cinematic, or another visual storytelling treatment when that better fits the source and audience.
 
-The matching Prompt Library cards preserve the PNGs' native 16:9 geometry. The other cards use lightweight CSS style previews.
+The matching Prompt Library cards preserve the PNGs' native 16:9 geometry. Cards without a supplied real output do not display thumbnail artwork.
 
 ### 🚀 [Try the live Prompt Lab](https://dennis23100.github.io/gemini-notebook-prompt-lab/)
 
@@ -75,23 +73,21 @@ The Library defaults to **Children**, showing the first 12 of 44 prompts instead
 
 The app has no project backend, account system, analytics SDK, database, or embedded API key.
 
-## Real examples, style previews, and reproducible benchmark
+## Real examples and reproducible benchmark
 
-The live Prompt Library contains 21 independently validated original PNG examples. The other card thumbnails remain fast CSS-rendered discovery aids and are explicitly labeled as style previews. This keeps real output distinct from illustrative direction while avoiding malformed, undersized, or stretched assets.
+The live Prompt Library contains 27 independently validated original PNG examples. Only verified generated outputs appear as card images; every other card stays text-only. This prevents illustrative stand-ins from being mistaken for actual Gemini Notebook results.
 
 Separately, the project keeps a **reproducible Showcase** with a controlled project-authored source and exact prompt manifest, so contributors can compare genuine outputs without guessing the source or prompt:
 
 ### 🖼️ [Open the reproducible Showcase](https://dennis23100.github.io/gemini-notebook-prompt-lab/showcase.html)
 
-Mockups are never presented as generated output. A contributed real example must include provenance and pass PNG signature, decoding, dimension, and reference checks before it is used in the README or Prompt Library.
+Mockups are never presented as generated output. A contributed real example must include provenance and pass PNG signature, decoding, dimension, and reference checks before it is used in the Prompt Library.
 
 ## Real-world teaching origin
 
 The project is informed by real teaching experience, including an in-person teaching session with **100+ attendees**. That experience reinforced a simple idea: correct information matters, but presentation, pacing, and audience fit matter too.
 
-<img src="notebooklm/docs/teaching-origin.svg" alt="Illustrated real-world teaching origin card" width="100%" />
-
-The card above is a project-created illustration of the origin story, not a photograph. See [Project Story](docs/PROJECT_STORY.md).
+See [Project Story](docs/PROJECT_STORY.md) for the written background.
 
 ## Open-source maintenance
 

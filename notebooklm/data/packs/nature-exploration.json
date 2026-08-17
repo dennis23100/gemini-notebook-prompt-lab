@@ -206,8 +206,13 @@
       "vibe": "adventure",
       "energy": "cinematic",
       "collections": [
-        "adventure"
-      ]
+        "adventure",
+        "real-output"
+      ],
+      "preview": {
+        "kind": "real-output",
+        "src": "./assets/real-previews/mountain-children.png"
+      }
     },
     {
       "id": "children-stars",
@@ -372,7 +377,13 @@
       "licenseNote": "Project-authored adaptation; upstream inspiration links preserved.",
       "vibe": "calm",
       "energy": "balanced",
-      "collections": []
+      "collections": [
+        "real-output"
+      ],
+      "preview": {
+        "kind": "real-output",
+        "src": "./assets/real-previews/nature-youth.png"
+      }
     },
     {
       "id": "youth-ocean",
@@ -411,8 +422,13 @@
       "vibe": "adventure",
       "energy": "cinematic",
       "collections": [
-        "adventure"
-      ]
+        "adventure",
+        "real-output"
+      ],
+      "preview": {
+        "kind": "real-output",
+        "src": "./assets/real-previews/ocean-youth.png"
+      }
     },
     {
       "id": "youth-jungle",
@@ -451,8 +467,13 @@
       "vibe": "adventure",
       "energy": "lively",
       "collections": [
-        "adventure"
-      ]
+        "adventure",
+        "real-output"
+      ],
+      "preview": {
+        "kind": "real-output",
+        "src": "./assets/real-previews/jungle-youth.png"
+      }
     },
     {
       "id": "youth-mountain",
@@ -491,8 +512,13 @@
       "vibe": "adventure",
       "energy": "cinematic",
       "collections": [
-        "adventure"
-      ]
+        "adventure",
+        "real-output"
+      ],
+      "preview": {
+        "kind": "real-output",
+        "src": "./assets/real-previews/mountain-youth.png"
+      }
     },
     {
       "id": "youth-stars",
@@ -776,8 +802,13 @@
       "vibe": "adventure",
       "energy": "cinematic",
       "collections": [
-        "adventure"
-      ]
+        "adventure",
+        "real-output"
+      ],
+      "preview": {
+        "kind": "real-output",
+        "src": "./assets/real-previews/mountain-mature.png"
+      }
     },
     {
       "id": "adult-stars",

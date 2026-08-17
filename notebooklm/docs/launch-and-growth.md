@@ -131,7 +131,7 @@ Keep that chain visible through Issues, Pull Requests, commits, CI, changelog en
 Prioritize improvements that reduce friction for existing users:
 
 1. fill the first nine real Showcase outputs;
-2. add privacy-reviewed teaching-origin media;
+2. keep the teaching origin text-first; only add real classroom media if every visible person has consented and the maintainer explicitly opts in;
 3. accessibility improvements;
 4. additional localization;
 5. prompt/version comparison and contribution tooling;
