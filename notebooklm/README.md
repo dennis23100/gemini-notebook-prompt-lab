@@ -12,8 +12,8 @@
 
 **Open the project itself first. From inside Prompt Lab, use the prominent 📓 Gemini Notebook button when you are ready to paste and generate.**
 
-![Prompts](https://img.shields.io/badge/prompts-90-5357e8)
-![Themes](https://img.shields.io/badge/themes-30-13a37f)
+![Prompts](https://img.shields.io/badge/prompts-132-5357e8)
+![Themes](https://img.shields.io/badge/themes-44-13a37f)
 ![Workflows](https://img.shields.io/badge/workflows-10-7c82ff)
 ![Dependencies](https://img.shields.io/badge/runtime_dependencies-0-success)
 ![License](https://img.shields.io/badge/code-MIT-blue)
@@ -27,7 +27,8 @@
 
 Most prompt repositories stop at a long Markdown list. This project turns prompts into a small, forkable product:
 
-- **90 age-adapted slide prompts** across 30 visual themes and 3 audience profiles.
+- **132 age-adapted slide prompts** across 44 visual themes and 3 audience profiles.
+- **Fourteen new original theme families** spanning dreamy animation, miniature adventure, sky exploration, stage performance, cultural geometry, and vivid mature editorial design.
 - **Same-theme comparison** so educators can see how one concept changes for children, youth, and adults.
 - **Prompt Lab** for Slide Deck, Audio Overview, Video Overview, Infographic, Quiz, Flashcards, Report, Data Table, source-grounded Chat, and Mind Map companion workflows.
 - **Prompt Chain Builder** for repeatable multi-step workflows such as extract → create → verify.
@@ -76,13 +77,13 @@ All app paths are relative, so the site works correctly under a GitHub Pages pro
 
 ### 1. Age-adaptive Prompt Library
 
-Each of the 30 themes has three variants:
+Each of the 44 themes has three variants:
 
 | Audience | Default profile | Design goal |
 |---|---|---|
 | Children | 15 and below | Warm, playful, clear, emotionally safe |
-| Youth | 16–35 | Stylish, engaging, shareable, moderately deep |
-| Adults | 35 and above | Mature, steady, readable, substantive |
+| Youth | 16–34 | Stylish, engaging, shareable, moderately deep |
+| Adults | 35 and above | Readable, substantive, and calm or vivid according to the chosen theme |
 
 The age ranges follow the original teaching pack and are intentionally configurable rather than treated as universal pedagogical rules.
 

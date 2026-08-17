@@ -1,6 +1,6 @@
-# Community Prompt Packs — proposed v1.3.0 contribution model
+# Community Prompt Packs — contribution model
 
-The v1.3.0 community milestone should make it possible to contribute useful Prompt collections without editing application JavaScript.
+The pack model makes it possible to contribute useful Prompt collections without editing application JavaScript.
 
 ## Proposed structure
 

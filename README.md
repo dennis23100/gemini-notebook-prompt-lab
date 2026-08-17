@@ -8,8 +8,8 @@
 
 [繁體中文](README.zh-TW.md) · [🚀 Open the live app](https://dennis23100.github.io/gemini-notebook-prompt-lab/) · [🖼️ Reproducible Showcase](https://dennis23100.github.io/gemini-notebook-prompt-lab/showcase.html) · [Latest release](https://github.com/dennis23100/gemini-notebook-prompt-lab/releases/latest) · [Issues](https://github.com/dennis23100/gemini-notebook-prompt-lab/issues)
 
-![Prompts](https://img.shields.io/badge/prompts-90-665fe8)
-![Themes](https://img.shields.io/badge/themes-30-15977f)
+![Prompts](https://img.shields.io/badge/prompts-132-665fe8)
+![Themes](https://img.shields.io/badge/themes-44-15977f)
 ![Audiences](https://img.shields.io/badge/audiences-3-7a74f0)
 ![Workflows](https://img.shields.io/badge/workflows-10-5357e8)
 ![Tests](https://img.shields.io/badge/tests-automated-success)
@@ -45,17 +45,21 @@ Gemini Notebook Prompt Lab keeps content grounded in the selected source while a
 
 ## What you can do
 
-- **📚 Prompt Library** — 90 prompts = 30 visual themes × 3 audience profiles.
+- **📚 Prompt Library** — 132 prompts = 44 visual themes × 3 audience profiles.
 - **🧪 Prompt Lab** — compose prompts from workflow, audience, focus topic, visual theme, difficulty, role, and extra constraints.
 - **🔗 Prompt Chains** — build repeatable extract → create → verify workflows.
-- **✅ Quality Check** — deterministic local checks for source grounding, anti-invention language, audience, task, output format, and constraints.
+- **✅ Structure Check** — deterministic local checks for source grounding, anti-invention language, audience, task, output format, and constraints; it does not claim to score generated-output quality.
 - **⭐ Favorites / recent history / import / export** — stored locally in the browser.
 - **🔗 Shareable filters** — library state can be represented in the URL.
 - **📦 JSON / Markdown / CSV export** — export the current filtered result set.
 - **🌐 Independent output language** — prompts stay canonical English while the generated artifact can follow Gemini Notebook or explicitly use Traditional Chinese or English.
 - **📱 PWA / offline support** — no account or project backend required.
 
-The Library defaults to **Children**, showing 30 prompts instead of mixing all 90 at once. Audience behaves like a radio selector and always has one active choice. Category/theme filters can be clicked again to clear them and return to all 30 themes for the selected audience.
+### New original theme families
+
+The library now includes fourteen distinctive, IP-safe directions: Starlit Cel-Animation Dreamscape, Miniature Garden Expedition, Sky Islands & Airships, High-Seas Adventure Comic, Original Magic Academy Notes, Friendly Creature Team, Paper-Craft Diorama, Wonder Science Sketch Lab, Stage Musical, Ballroom Waltz, Mahjong Social Geometry, Midnight Jazz & Vinyl, Vintage Wonder Circus, and Kinetic Editorial Lab. Each has separate Children, Youth, and Adult art direction rather than one shared style paragraph.
+
+The Library defaults to **Children**, showing the first 12 of 44 prompts instead of rendering all 132 at once. Audience behaves like a radio selector and always has one active choice. Category/theme filters can be clicked again to clear them and return to all 44 themes for the selected audience.
 
 ## How it works
 

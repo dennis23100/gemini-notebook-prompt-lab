@@ -1,7 +1,7 @@
 /*
   Toolkit 60 — lightweight style preview thumbnails
   Most cards use illustrative CSS previews, not generated Gemini Notebook output.
-  Nine cards are overridden with validated real-output PNGs in audience-gallery.css.
+  Seven themes × three audiences can be replaced by validated, lazy-loaded real-output PNGs.
   Each built-in theme keeps a stable visual identity across age variants.
 */
 
@@ -364,3 +364,147 @@ html[lang="en"] .prompt-card::after { content: "STYLE PREVIEW · MOCK"; }
   .prompt-card::before { flex-basis: 78px; border-radius: 12px; margin-bottom: 12px; }
   .prompt-card::after { top: 27px; left: 27px; font-size: 8px; }
 }
+
+/* 31 — Starlit Cel-Animation Dreamscape */
+.prompt-card[data-id$="-cel-dreamscape"] {
+  --pv-a: #302a78; --pv-b: #9b6be4; --pv-c: #fff0a6;
+  --pv-art:
+    radial-gradient(circle at 77% 24%, #fff3a9 0 8%, transparent 9%),
+    radial-gradient(circle at 20% 30%, #fff 0 1.5%, transparent 2.5%),
+    radial-gradient(circle at 46% 18%, #ffd7ff 0 2%, transparent 3%),
+    linear-gradient(155deg, transparent 0 44%, rgba(255,255,255,.24) 45% 48%, transparent 49%),
+    radial-gradient(ellipse at 50% 110%, rgba(140,222,255,.38) 0 44%, transparent 45%);
+}
+
+/* 32 — Miniature Garden Expedition */
+.prompt-card[data-id$="-miniature-garden"] {
+  --pv-a: #437e55; --pv-b: #90c96e; --pv-c: #f8db75; --pv-ink: #173a24;
+  --pv-art:
+    radial-gradient(circle at 74% 26%, rgba(255,255,255,.85) 0 7%, transparent 8%),
+    radial-gradient(ellipse at 20% 88%, #2d6846 0 22%, transparent 23%),
+    radial-gradient(ellipse at 48% 98%, #70ad5c 0 30%, transparent 31%),
+    radial-gradient(ellipse at 84% 84%, #a7d57b 0 21%, transparent 22%),
+    linear-gradient(118deg, transparent 0 48%, rgba(255,236,143,.65) 49% 53%, transparent 54%);
+}
+.prompt-card[data-id$="-miniature-garden"]::after { background: rgba(255,255,255,.70); border-color: rgba(23,58,36,.12); }
+
+/* 33 — Sky Islands & Airships */
+.prompt-card[data-id$="-sky-islands"] {
+  --pv-a: #67b9e8; --pv-b: #7271db; --pv-c: #ffd98a;
+  --pv-art:
+    radial-gradient(ellipse at 24% 70%, #fff 0 12%, transparent 13%),
+    radial-gradient(ellipse at 70% 42%, #f8fbff 0 15%, transparent 16%),
+    conic-gradient(from 310deg at 48% 58%, transparent 0 27%, #6c785b 28% 45%, transparent 46%),
+    linear-gradient(12deg, transparent 0 54%, rgba(255,255,255,.34) 55% 58%, transparent 59%);
+}
+
+/* 34 — High-Seas Adventure Comic */
+.prompt-card[data-id$="-high-seas-adventure"] {
+  --pv-a: #236fa5; --pv-b: #39a9b5; --pv-c: #ffc85f;
+  --pv-art:
+    repeating-radial-gradient(ellipse at 0% 105%, rgba(255,255,255,.36) 0 3px, transparent 4px 14px),
+    conic-gradient(from 315deg at 67% 67%, transparent 0 25%, #693f2d 26% 47%, transparent 48%),
+    linear-gradient(90deg, transparent 0 48%, rgba(255,255,255,.55) 49% 51%, transparent 52%),
+    radial-gradient(circle at 82% 21%, #ffc85f 0 7%, transparent 8%);
+}
+
+/* 35 — Original Magic Academy Notes */
+.prompt-card[data-id$="-original-magic-academy"] {
+  --pv-a: #31275f; --pv-b: #7651a8; --pv-c: #ffd977;
+  --pv-art:
+    repeating-linear-gradient(0deg, transparent 0 13px, rgba(255,255,255,.10) 14px 15px),
+    radial-gradient(circle at 72% 36%, transparent 0 8%, #ffd977 9% 10%, transparent 11% 18%, rgba(255,217,119,.55) 19% 20%, transparent 21%),
+    linear-gradient(120deg, transparent 0 45%, rgba(184,229,255,.30) 46% 49%, transparent 50%);
+}
+
+/* 36 — Friendly Creature Team */
+.prompt-card[data-id$="-friendly-creature-team"] {
+  --pv-a: #78c8b0; --pv-b: #7884df; --pv-c: #ffcc6e; --pv-ink: #24354f;
+  --pv-art:
+    radial-gradient(circle at 22% 58%, #ffd36f 0 10%, transparent 11%),
+    radial-gradient(circle at 50% 40%, #ff8ca4 0 11%, transparent 12%),
+    radial-gradient(circle at 77% 62%, #a9e4ff 0 10%, transparent 11%),
+    radial-gradient(circle at 19% 54%, #26324a 0 1.4%, transparent 2%),
+    radial-gradient(circle at 47% 36%, #26324a 0 1.4%, transparent 2%);
+}
+.prompt-card[data-id$="-friendly-creature-team"]::after { background: rgba(255,255,255,.70); border-color: rgba(36,53,79,.10); }
+
+/* 37 — Paper-Craft Diorama */
+.prompt-card[data-id$="-paper-craft-diorama"] {
+  --pv-a: #f5b4c7; --pv-b: #83bad8; --pv-c: #ffe2a0; --pv-ink: #423853;
+  --pv-art:
+    conic-gradient(from 315deg at 25% 88%, transparent 0 25%, #fff2c6 26% 49%, transparent 50%),
+    conic-gradient(from 45deg at 75% 86%, transparent 0 25%, #d9edff 26% 49%, transparent 50%),
+    linear-gradient(152deg, transparent 0 45%, rgba(255,255,255,.70) 46% 53%, transparent 54%);
+}
+.prompt-card[data-id$="-paper-craft-diorama"]::after { background: rgba(255,255,255,.68); border-color: rgba(66,56,83,.10); }
+
+/* 38 — Wonder Science Sketch Lab */
+.prompt-card[data-id$="-wonder-science-sketch"] {
+  --pv-a: #edf0df; --pv-b: #7ab7a3; --pv-c: #f3a45d; --pv-ink: #213d37;
+  --pv-art:
+    repeating-linear-gradient(0deg, transparent 0 12px, rgba(33,61,55,.13) 13px 14px),
+    repeating-linear-gradient(90deg, transparent 0 12px, rgba(33,61,55,.10) 13px 14px),
+    radial-gradient(circle at 68% 45%, transparent 0 12%, #f3a45d 13% 15%, transparent 16%),
+    linear-gradient(125deg, transparent 0 38%, #213d37 39% 41%, transparent 42%);
+}
+.prompt-card[data-id$="-wonder-science-sketch"]::after { background: rgba(255,255,255,.78); border-color: rgba(33,61,55,.12); }
+
+/* 39 — Stage Musical */
+.prompt-card[data-id$="-stage-musical"] {
+  --pv-a: #4d204f; --pv-b: #ba3e6d; --pv-c: #ffd067;
+  --pv-art:
+    radial-gradient(ellipse at 25% 0%, rgba(255,238,174,.55) 0 10%, transparent 40%),
+    radial-gradient(ellipse at 75% 0%, rgba(255,238,174,.45) 0 10%, transparent 40%),
+    linear-gradient(78deg, transparent 0 46%, rgba(255,255,255,.35) 47% 50%, transparent 51%),
+    linear-gradient(102deg, transparent 0 46%, rgba(255,255,255,.28) 47% 50%, transparent 51%),
+    linear-gradient(0deg, #25142d 0 18%, transparent 19%);
+}
+
+/* 40 — Ballroom Waltz */
+.prompt-card[data-id$="-ballroom-waltz"] {
+  --pv-a: #70415f; --pv-b: #b8758f; --pv-c: #f3d7a4;
+  --pv-art:
+    repeating-conic-gradient(from 0deg at 50% 105%, rgba(255,255,255,.20) 0 8deg, transparent 9deg 22deg),
+    radial-gradient(ellipse at 50% 84%, #f3d7a4 0 13%, transparent 14%),
+    linear-gradient(128deg, transparent 0 42%, rgba(255,255,255,.34) 43% 46%, transparent 47%);
+}
+
+/* 41 — Mahjong Social Geometry */
+.prompt-card[data-id$="-mahjong-geometry"] {
+  --pv-a: #155f52; --pv-b: #318977; --pv-c: #f0d9aa; --pv-ink: #173b35;
+  --pv-art:
+    linear-gradient(90deg, transparent 0 10%, #f2e6c8 11% 27%, transparent 28% 41%, #f2e6c8 42% 58%, transparent 59% 72%, #f2e6c8 73% 89%, transparent 90%),
+    linear-gradient(0deg, transparent 0 24%, rgba(209,69,61,.78) 25% 31%, transparent 32% 67%, rgba(23,86,75,.50) 68% 74%, transparent 75%),
+    repeating-linear-gradient(45deg, transparent 0 10px, rgba(255,255,255,.08) 11px 12px);
+}
+.prompt-card[data-id$="-mahjong-geometry"]::after { background: rgba(255,251,240,.78); border-color: rgba(23,59,53,.12); }
+
+/* 42 — Midnight Jazz & Vinyl */
+.prompt-card[data-id$="-midnight-jazz-vinyl"] {
+  --pv-a: #17172c; --pv-b: #57395f; --pv-c: #efb85c;
+  --pv-art:
+    radial-gradient(circle at 68% 54%, #191827 0 15%, #efb85c 16% 18%, #191827 19% 28%, rgba(255,255,255,.15) 29% 30%, transparent 31%),
+    radial-gradient(ellipse at 24% 0%, rgba(239,184,92,.45) 0 12%, transparent 43%),
+    repeating-linear-gradient(0deg, transparent 0 9px, rgba(255,255,255,.08) 10px 11px);
+}
+
+/* 43 — Vintage Wonder Circus */
+.prompt-card[data-id$="-vintage-circus-poster"] {
+  --pv-a: #b83d4f; --pv-b: #e68a45; --pv-c: #ffdf7d; --pv-ink: #4d1f25;
+  --pv-art:
+    repeating-conic-gradient(from 0deg at 50% 105%, rgba(255,246,204,.34) 0 8deg, transparent 9deg 18deg),
+    radial-gradient(ellipse at 50% 78%, #ffdf7d 0 14%, transparent 15%),
+    linear-gradient(90deg, transparent 0 15%, rgba(255,255,255,.30) 16% 18%, transparent 19% 81%, rgba(255,255,255,.30) 82% 84%, transparent 85%);
+}
+.prompt-card[data-id$="-vintage-circus-poster"]::after { background: rgba(255,246,218,.77); border-color: rgba(77,31,37,.12); }
+
+/* 44 — Kinetic Editorial Lab */
+.prompt-card[data-id$="-kinetic-editorial"] {
+  --pv-a: #f2eee4; --pv-b: #1f2732; --pv-c: #ef5f52; --pv-ink: #1f2732;
+  --pv-art:
+    linear-gradient(112deg, transparent 0 18%, #1f2732 19% 37%, transparent 38%),
+    linear-gradient(167deg, transparent 0 55%, #ef5f52 56% 68%, transparent 69%),
+    repeating-linear-gradient(0deg, transparent 0 8px, rgba(31,39,50,.16) 9px 10px);
+}
+.prompt-card[data-id$="-kinetic-editorial"]::after { background: rgba(255,255,255,.82); border-color: rgba(31,39,50,.12); }

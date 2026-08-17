@@ -8,7 +8,7 @@
       "name": {"zh-TW": "簡報", "en": "Slide Deck"},
       "icon": "▤",
       "promptable": true,
-      "description": {"zh-TW": "把來源轉成有結構、可展示的簡報。可搭配 30 種視覺主題與 3 種年齡層。", "en": "Turn sources into structured presentation decks with 30 visual themes and 3 audience profiles."},
+      "description": {"zh-TW": "把來源轉成有結構、可展示的簡報。可搭配 44 種視覺主題與 3 種年齡層。", "en": "Turn sources into structured presentation decks with 44 visual themes and 3 audience profiles."},
       "starter": "Use only the selected sources. Create a clear slide deck for {{audience}} about {{focus}}. Keep every claim grounded in the sources. Use one main idea per slide, strong hierarchy, and concise wording."
     },
     {

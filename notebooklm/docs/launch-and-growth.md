@@ -15,7 +15,7 @@ dennis23100/gemini-notebook-prompt-lab
 Recommended About description:
 
 ```text
-Local-first, source-grounded prompt library & workflow toolkit for Gemini Notebook (NotebookLM). 90 prompts · 30 themes · 3 audiences · 10 workflows.
+Local-first, source-grounded prompt library & workflow toolkit for Gemini Notebook (NotebookLM). 132 prompts · 44 themes · 3 audiences · 10 workflows.
 ```
 
 Recommended topics:
@@ -64,7 +64,7 @@ A visitor should immediately see:
 
 - the problem: one trusted source often needs different presentation for different audiences;
 - a live demo;
-- 90 prompts / 30 themes / 3 audiences / 10 workflows;
+- 132 prompts / 44 themes / 3 audiences / 10 workflows;
 - the primary workflow: Choose → Copy → Open Gemini Notebook;
 - real-world teaching origin;
 - a clear path to Issues, Release, and contribution docs;

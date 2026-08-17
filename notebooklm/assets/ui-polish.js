@@ -3,7 +3,7 @@ const ZH_TEXT = {
   openNotebook: '📓 開啟 Gemini Notebook ↗',
   eyebrow: '來源限定 · 分齡適配 · 可分享 · 隱私優先',
   heroTitle: '把「找提示詞」變成一套可重複的 Gemini Notebook 工作流。',
-  heroBody: '從 90 組分齡簡報提示詞出發，再加上多格式工作流、流程串接、品質檢查與一鍵開啟 Gemini Notebook。所有資料都在瀏覽器本機執行。',
+  heroBody: '從 132 組分齡簡報 Prompt 與 44 種視覺主題出發，快速找到夢幻、動畫、冒險、文化與成熟生動的方向。所有資料都在瀏覽器本機執行。',
   browsePrompts: '瀏覽提示詞',
   buildPrompt: '建立提示詞',
   statPrompts: '分齡提示詞',

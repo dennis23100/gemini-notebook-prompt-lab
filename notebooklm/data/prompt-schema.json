@@ -3,15 +3,116 @@
   "$id": "https://dennis23100.github.io/gemini-notebook-prompt-lab/data/prompt-schema.json",
   "title": "Gemini Notebook Prompt Entry",
   "type": "object",
-  "required": ["id", "themeId", "ageGroup", "title", "summary", "category", "prompt", "sources"],
+  "required": [
+    "id",
+    "themeId",
+    "ageGroup",
+    "title",
+    "summary",
+    "category",
+    "prompt",
+    "sources",
+    "vibe",
+    "energy",
+    "collections"
+  ],
   "properties": {
-    "id": {"type": "string", "pattern": "^[a-z0-9-]+$"},
-    "themeId": {"type": "string", "pattern": "^[a-z0-9-]+$"},
-    "ageGroup": {"enum": ["children", "youth", "adult"]},
-    "title": {"type": "object", "required": ["zh-TW", "en"]},
-    "summary": {"type": "object", "required": ["zh-TW", "en"]},
-    "category": {"type": "object", "required": ["zh-TW", "en"]},
-    "prompt": {"type": "string", "minLength": 80},
-    "sources": {"type": "array", "items": {"type": "string"}}
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9-]+$"
+    },
+    "themeId": {
+      "type": "string",
+      "pattern": "^[a-z0-9-]+$"
+    },
+    "ageGroup": {
+      "enum": [
+        "children",
+        "youth",
+        "adult"
+      ]
+    },
+    "title": {
+      "type": "object",
+      "required": [
+        "zh-TW",
+        "en"
+      ]
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "zh-TW",
+        "en"
+      ]
+    },
+    "category": {
+      "type": "object",
+      "required": [
+        "zh-TW",
+        "en"
+      ]
+    },
+    "prompt": {
+      "type": "string",
+      "minLength": 80
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "vibe": {
+      "type": "string",
+      "enum": [
+        "dreamy",
+        "animated",
+        "adventure",
+        "playful",
+        "cinematic",
+        "elegant",
+        "editorial",
+        "calm",
+        "performance",
+        "cultural"
+      ]
+    },
+    "energy": {
+      "type": "string",
+      "enum": [
+        "gentle",
+        "balanced",
+        "lively",
+        "cinematic"
+      ]
+    },
+    "collections": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9-]+$"
+      },
+      "uniqueItems": true
+    },
+    "preview": {
+      "type": "object",
+      "required": [
+        "kind",
+        "src"
+      ],
+      "properties": {
+        "kind": {
+          "enum": [
+            "real-output"
+          ]
+        },
+        "src": {
+          "type": "string",
+          "pattern": "^\\./assets/real-previews/[a-z0-9-]+\\.png$"
+        }
+      },
+      "additionalProperties": false
+    }
   }
 }

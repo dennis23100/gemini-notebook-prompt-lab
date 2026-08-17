@@ -1,33 +1,33 @@
 {
-  "schemaVersion": "1.0.0",
+  "schemaVersion": "1.1.0",
   "project": "Gemini Notebook Prompt Lab",
   "formerly": "NotebookLM",
-  "updated": "2026-08-13",
+  "updated": "2026-08-17",
   "counts": {
-    "prompts": 90,
-    "themes": 30,
+    "prompts": 132,
+    "themes": 44,
     "ageGroups": 3
   },
   "ageGroups": [
     {
       "id": "children",
-      "zh-TW": "幼兒",
+      "zh-TW": "兒童",
       "en": "Children",
-      "rangeZh": "15歲以下",
+      "rangeZh": "15 歲以下",
       "rangeEn": "15 and below"
     },
     {
       "id": "youth",
-      "zh-TW": "青年",
+      "zh-TW": "青少年",
       "en": "Youth",
-      "rangeZh": "16–35歲",
-      "rangeEn": "16–35"
+      "rangeZh": "16–34 歲",
+      "rangeEn": "16–34"
     },
     {
       "id": "adult",
-      "zh-TW": "壯年",
+      "zh-TW": "成人",
       "en": "Adults",
-      "rangeZh": "35歲以上",
+      "rangeZh": "35 歲以上",
       "rangeEn": "35 and above"
     }
   ],
@@ -85,6 +85,24 @@
         "zh-TW": "情感與人生"
       },
       "promptCount": 15
+    },
+    {
+      "id": "wonder-adventure",
+      "path": "./data/packs/wonder-adventure.json",
+      "category": {
+        "zh-TW": "夢幻與冒險",
+        "en": "Wonder & Adventure"
+      },
+      "promptCount": 24
+    },
+    {
+      "id": "performance-culture",
+      "path": "./data/packs/performance-culture.json",
+      "category": {
+        "zh-TW": "表演與文化",
+        "en": "Performance & Culture"
+      },
+      "promptCount": 18
     }
   ]
 }

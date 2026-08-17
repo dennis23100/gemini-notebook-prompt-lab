@@ -13,11 +13,11 @@
       "order": 6,
       "ageGroup": "children",
       "ageLabel": {
-        "zh-TW": "幼兒",
+        "zh-TW": "兒童",
         "en": "Children"
       },
       "ageRange": {
-        "zh-TW": "15歲以下",
+        "zh-TW": "15 歲以下",
         "en": "15 and below"
       },
       "title": {
@@ -32,7 +32,7 @@
         "zh-TW": "自然與探索",
         "en": "Nature & Exploration"
       },
-      "prompt": "Please transform the uploaded source material into a NotebookLM presentation using the Animals visual direction.\n\nUse only the uploaded source material. Keep the original meaning, key terms, quotations, and teaching points accurate. Do not invent facts, doctrines, scenes, or examples that are not supported by the source. If the source is spiritual or moral teaching, keep the tone respectful, but do not force religious iconography unless the user explicitly asks for it.\n\nMake it appropriate for learners aged 15 and below: warm, playful, visually clear, emotionally safe, and easy to follow. Use short sentences, familiar words, one main idea per slide, gentle brightness, and friendly imagery.\n\nTheme Direction: Use animal-centered visuals, habitats, and behavior metaphors to organize the source material. The animals should support understanding rather than distract from the lesson.\n\nOutput Goal: Create a slide flow with clear titles, strong visual hierarchy, memorable scenes, and accurate content transfer from the source. Let the theme shape the presentation style, but keep the topic itself faithful to the source material.\n\nAvoid dense text, heavy abstraction, dark or scary visuals, sarcasm, and layouts that feel too busy.",
+      "prompt": "Please transform the uploaded source material into a NotebookLM presentation using the Animals visual direction.\n\nUse only the uploaded source material. Keep the original meaning, key terms, quotations, and teaching points accurate. Do not invent facts, doctrines, scenes, or examples that are not supported by the source. If the source is spiritual or moral teaching, keep the tone respectful, but do not force religious iconography unless the user explicitly asks for it.\n\nMake it appropriate for learners aged 15 and below: warm, playful, visually clear, emotionally safe, and easy to follow. Use short sentences, familiar words, one main idea per slide, gentle brightness, and friendly imagery.\n\nTheme Direction: Use animal-centered visuals, habitats, and behavior metaphors to organize the source material. The animals should support understanding rather than distract from the lesson.\n\nAudience Art Direction: Use bold shapes, friendly symbols, tactile details, and joyful color while keeping one dominant idea on every slide.\n\nOutput Goal: Create a slide flow with clear titles, strong visual hierarchy, memorable scenes, and accurate content transfer from the source. Let the theme shape the presentation style, but keep the topic itself faithful to the source material.\n\nAvoid dense text, heavy abstraction, dark or scary visuals, sarcasm, and layouts that feel too busy.",
       "status": "完整",
       "notes": "適用年齡：15歲以下；同主題對應青年版、壯年版；可直接貼入 NotebookLM",
       "sources": [
@@ -40,7 +40,16 @@
         "https://github.com/arlinamid/notebooklm-browser-plugin"
       ],
       "sourceName": "ChatGPT整理（綜合公開開源 prompt 邏輯 + 佛堂教學需求改寫）",
-      "licenseNote": "Project-authored adaptation; upstream inspiration links preserved."
+      "licenseNote": "Project-authored adaptation; upstream inspiration links preserved.",
+      "vibe": "playful",
+      "energy": "balanced",
+      "collections": [
+        "real-output"
+      ],
+      "preview": {
+        "kind": "real-output",
+        "src": "./assets/real-previews/animals-children.png"
+      }
     },
     {
       "id": "children-nature",
@@ -48,11 +57,11 @@
       "order": 7,
       "ageGroup": "children",
       "ageLabel": {
-        "zh-TW": "幼兒",
+        "zh-TW": "兒童",
         "en": "Children"
       },
       "ageRange": {
-        "zh-TW": "15歲以下",
+        "zh-TW": "15 歲以下",
         "en": "15 and below"
       },
       "title": {
@@ -67,7 +76,7 @@
         "zh-TW": "自然與探索",
         "en": "Nature & Exploration"
       },
-      "prompt": "Please transform the uploaded source material into a NotebookLM presentation using the Nature visual direction.\n\nUse only the uploaded source material. Keep the original meaning, key terms, quotations, and teaching points accurate. Do not invent facts, doctrines, scenes, or examples that are not supported by the source. If the source is spiritual or moral teaching, keep the tone respectful, but do not force religious iconography unless the user explicitly asks for it.\n\nMake it appropriate for learners aged 15 and below: warm, playful, visually clear, emotionally safe, and easy to follow. Use short sentences, familiar words, one main idea per slide, gentle brightness, and friendly imagery.\n\nTheme Direction: Use a nature-based visual direction with sky, trees, rivers, leaves, light, and open space. The result should feel fresh, grounded, and easy to breathe in.\n\nOutput Goal: Create a slide flow with clear titles, strong visual hierarchy, memorable scenes, and accurate content transfer from the source. Let the theme shape the presentation style, but keep the topic itself faithful to the source material.\n\nAvoid dense text, heavy abstraction, dark or scary visuals, sarcasm, and layouts that feel too busy.",
+      "prompt": "Please transform the uploaded source material into a NotebookLM presentation using the Nature visual direction.\n\nUse only the uploaded source material. Keep the original meaning, key terms, quotations, and teaching points accurate. Do not invent facts, doctrines, scenes, or examples that are not supported by the source. If the source is spiritual or moral teaching, keep the tone respectful, but do not force religious iconography unless the user explicitly asks for it.\n\nMake it appropriate for learners aged 15 and below: warm, playful, visually clear, emotionally safe, and easy to follow. Use short sentences, familiar words, one main idea per slide, gentle brightness, and friendly imagery.\n\nTheme Direction: Use a nature-based visual direction with sky, trees, rivers, leaves, light, and open space. The result should feel fresh, grounded, and easy to breathe in.\n\nAudience Art Direction: Use gentle open space, friendly natural forms, clear icons, and soft contrast while keeping the result curious rather than sleepy.\n\nOutput Goal: Create a slide flow with clear titles, strong visual hierarchy, memorable scenes, and accurate content transfer from the source. Let the theme shape the presentation style, but keep the topic itself faithful to the source material.\n\nAvoid dense text, heavy abstraction, dark or scary visuals, sarcasm, and layouts that feel too busy.",
       "status": "完整",
       "notes": "適用年齡：15歲以下；同主題對應青年版、壯年版；可直接貼入 NotebookLM",
       "sources": [
@@ -75,7 +84,10 @@
         "https://github.com/arlinamid/notebooklm-browser-plugin"
       ],
       "sourceName": "ChatGPT整理（綜合公開開源 prompt 邏輯 + 佛堂教學需求改寫）",
-      "licenseNote": "Project-authored adaptation; upstream inspiration links preserved."
+      "licenseNote": "Project-authored adaptation; upstream inspiration links preserved.",
+      "vibe": "calm",
+      "energy": "balanced",
+      "collections": []
     },
     {
       "id": "children-ocean",
@@ -83,11 +95,11 @@
       "order": 8,
       "ageGroup": "children",
       "ageLabel": {
-        "zh-TW": "幼兒",
+        "zh-TW": "兒童",
         "en": "Children"
       },
       "ageRange": {
-        "zh-TW": "15歲以下",
+        "zh-TW": "15 歲以下",
         "en": "15 and below"
       },
       "title": {
@@ -102,7 +114,7 @@
         "zh-TW": "自然與探索",
         "en": "Nature & Exploration"
       },
-      "prompt": "Please transform the uploaded source material into a NotebookLM presentation using the Ocean visual direction.\n\nUse only the uploaded source material. Keep the original meaning, key terms, quotations, and teaching points accurate. Do not invent facts, doctrines, scenes, or examples that are not supported by the source. If the source is spiritual or moral teaching, keep the tone respectful, but do not force religious iconography unless the user explicitly asks for it.\n\nMake it appropriate for learners aged 15 and below: warm, playful, visually clear, emotionally safe, and easy to follow. Use short sentences, familiar words, one main idea per slide, gentle brightness, and friendly imagery.\n\nTheme Direction: Use an ocean-inspired direction with waves, islands, tides, underwater depth, and marine life. The layout can suggest flow, discovery, and layered understanding.\n\nOutput Goal: Create a slide flow with clear titles, strong visual hierarchy, memorable scenes, and accurate content transfer from the source. Let the theme shape the presentation style, but keep the topic itself faithful to the source material.\n\nAvoid dense text, heavy abstraction, dark or scary visuals, sarcasm, and layouts that feel too busy.",
+      "prompt": "Please transform the uploaded source material into a NotebookLM presentation using the Ocean visual direction.\n\nUse only the uploaded source material. Keep the original meaning, key terms, quotations, and teaching points accurate. Do not invent facts, doctrines, scenes, or examples that are not supported by the source. If the source is spiritual or moral teaching, keep the tone respectful, but do not force religious iconography unless the user explicitly asks for it.\n\nMake it appropriate for learners aged 15 and below: warm, playful, visually clear, emotionally safe, and easy to follow. Use short sentences, familiar words, one main idea per slide, gentle brightness, and friendly imagery.\n\nTheme Direction: Use an ocean-inspired direction with waves, islands, tides, underwater depth, and marine life. The layout can suggest flow, discovery, and layered understanding.\n\nAudience Art Direction: Turn the sequence into a safe guided quest with a friendly map, visible checkpoints, one challenge at a time, and a rewarding destination.\n\nOutput Goal: Create a slide flow with clear titles, strong visual hierarchy, memorable scenes, and accurate content transfer from the source. Let the theme shape the presentation style, but keep the topic itself faithful to the source material.\n\nAvoid dense text, heavy abstraction, dark or scary visuals, sarcasm, and layouts that feel too busy.",
       "status": "完整",
       "notes": "適用年齡：15歲以下；同主題對應青年版、壯年版；可直接貼入 NotebookLM",
       "sources": [
@@ -110,7 +122,12 @@
         "https://github.com/arlinamid/notebooklm-browser-plugin"
       ],
       "sourceName": "ChatGPT整理（綜合公開開源 prompt 邏輯 + 佛堂教學需求改寫）",
-      "licenseNote": "Project-authored adaptation; upstream inspiration links preserved."
+      "licenseNote": "Project-authored adaptation; upstream inspiration links preserved.",
+      "vibe": "adventure",
+      "energy": "cinematic",
+      "collections": [
+        "adventure"
+      ]
     },
     {
       "id": "children-jungle",
@@ -118,11 +135,11 @@
       "order": 9,
       "ageGroup": "children",
       "ageLabel": {
-        "zh-TW": "幼兒",
+        "zh-TW": "兒童",
         "en": "Children"
       },
       "ageRange": {
-        "zh-TW": "15歲以下",
+        "zh-TW": "15 歲以下",
         "en": "15 and below"
       },
       "title": {
@@ -137,7 +154,7 @@
         "zh-TW": "自然與探索",
         "en": "Nature & Exploration"
       },
-      "prompt": "Please transform the uploaded source material into a NotebookLM presentation using the Jungle visual direction.\n\nUse only the uploaded source material. Keep the original meaning, key terms, quotations, and teaching points accurate. Do not invent facts, doctrines, scenes, or examples that are not supported by the source. If the source is spiritual or moral teaching, keep the tone respectful, but do not force religious iconography unless the user explicitly asks for it.\n\nMake it appropriate for learners aged 15 and below: warm, playful, visually clear, emotionally safe, and easy to follow. Use short sentences, familiar words, one main idea per slide, gentle brightness, and friendly imagery.\n\nTheme Direction: Use a lush jungle exploration direction with dense greenery, trails, discovery, and hidden highlights. The source material should feel like a guided journey through important ideas.\n\nOutput Goal: Create a slide flow with clear titles, strong visual hierarchy, memorable scenes, and accurate content transfer from the source. Let the theme shape the presentation style, but keep the topic itself faithful to the source material.\n\nAvoid dense text, heavy abstraction, dark or scary visuals, sarcasm, and layouts that feel too busy.",
+      "prompt": "Please transform the uploaded source material into a NotebookLM presentation using the Jungle visual direction.\n\nUse only the uploaded source material. Keep the original meaning, key terms, quotations, and teaching points accurate. Do not invent facts, doctrines, scenes, or examples that are not supported by the source. If the source is spiritual or moral teaching, keep the tone respectful, but do not force religious iconography unless the user explicitly asks for it.\n\nMake it appropriate for learners aged 15 and below: warm, playful, visually clear, emotionally safe, and easy to follow. Use short sentences, familiar words, one main idea per slide, gentle brightness, and friendly imagery.\n\nTheme Direction: Use a lush jungle exploration direction with dense greenery, trails, discovery, and hidden highlights. The source material should feel like a guided journey through important ideas.\n\nAudience Art Direction: Turn the sequence into a safe guided quest with a friendly map, visible checkpoints, one challenge at a time, and a rewarding destination.\n\nOutput Goal: Create a slide flow with clear titles, strong visual hierarchy, memorable scenes, and accurate content transfer from the source. Let the theme shape the presentation style, but keep the topic itself faithful to the source material.\n\nAvoid dense text, heavy abstraction, dark or scary visuals, sarcasm, and layouts that feel too busy.",
       "status": "完整",
       "notes": "適用年齡：15歲以下；同主題對應青年版、壯年版；可直接貼入 NotebookLM",
       "sources": [
@@ -145,7 +162,12 @@
         "https://github.com/arlinamid/notebooklm-browser-plugin"
       ],
       "sourceName": "ChatGPT整理（綜合公開開源 prompt 邏輯 + 佛堂教學需求改寫）",
-      "licenseNote": "Project-authored adaptation; upstream inspiration links preserved."
+      "licenseNote": "Project-authored adaptation; upstream inspiration links preserved.",
+      "vibe": "adventure",
+      "energy": "lively",
+      "collections": [
+        "adventure"
+      ]
     },
     {
       "id": "children-mountain",
@@ -153,11 +175,11 @@
       "order": 10,
       "ageGroup": "children",
       "ageLabel": {
-        "zh-TW": "幼兒",
+        "zh-TW": "兒童",
         "en": "Children"
       },
       "ageRange": {
-        "zh-TW": "15歲以下",
+        "zh-TW": "15 歲以下",
         "en": "15 and below"
       },
       "title": {
@@ -172,7 +194,7 @@
         "zh-TW": "自然與探索",
         "en": "Nature & Exploration"
       },
-      "prompt": "Please transform the uploaded source material into a NotebookLM presentation using the Mountain Journey visual direction.\n\nUse only the uploaded source material. Keep the original meaning, key terms, quotations, and teaching points accurate. Do not invent facts, doctrines, scenes, or examples that are not supported by the source. If the source is spiritual or moral teaching, keep the tone respectful, but do not force religious iconography unless the user explicitly asks for it.\n\nMake it appropriate for learners aged 15 and below: warm, playful, visually clear, emotionally safe, and easy to follow. Use short sentences, familiar words, one main idea per slide, gentle brightness, and friendly imagery.\n\nTheme Direction: Use a mountain and trail direction with ascent, checkpoints, scenic viewpoints, maps, and perseverance. The structure should suggest progress, effort, and meaningful milestones.\n\nOutput Goal: Create a slide flow with clear titles, strong visual hierarchy, memorable scenes, and accurate content transfer from the source. Let the theme shape the presentation style, but keep the topic itself faithful to the source material.\n\nAvoid dense text, heavy abstraction, dark or scary visuals, sarcasm, and layouts that feel too busy.",
+      "prompt": "Please transform the uploaded source material into a NotebookLM presentation using the Mountain Journey visual direction.\n\nUse only the uploaded source material. Keep the original meaning, key terms, quotations, and teaching points accurate. Do not invent facts, doctrines, scenes, or examples that are not supported by the source. If the source is spiritual or moral teaching, keep the tone respectful, but do not force religious iconography unless the user explicitly asks for it.\n\nMake it appropriate for learners aged 15 and below: warm, playful, visually clear, emotionally safe, and easy to follow. Use short sentences, familiar words, one main idea per slide, gentle brightness, and friendly imagery.\n\nTheme Direction: Use a mountain and trail direction with ascent, checkpoints, scenic viewpoints, maps, and perseverance. The structure should suggest progress, effort, and meaningful milestones.\n\nAudience Art Direction: Turn the sequence into a safe guided quest with a friendly map, visible checkpoints, one challenge at a time, and a rewarding destination.\n\nOutput Goal: Create a slide flow with clear titles, strong visual hierarchy, memorable scenes, and accurate content transfer from the source. Let the theme shape the presentation style, but keep the topic itself faithful to the source material.\n\nAvoid dense text, heavy abstraction, dark or scary visuals, sarcasm, and layouts that feel too busy.",
       "status": "完整",
       "notes": "適用年齡：15歲以下；同主題對應青年版、壯年版；可直接貼入 NotebookLM",
       "sources": [
@@ -180,7 +202,12 @@
         "https://github.com/arlinamid/notebooklm-browser-plugin"
       ],
       "sourceName": "ChatGPT整理（綜合公開開源 prompt 邏輯 + 佛堂教學需求改寫）",
-      "licenseNote": "Project-authored adaptation; upstream inspiration links preserved."
+      "licenseNote": "Project-authored adaptation; upstream inspiration links preserved.",
+      "vibe": "adventure",
+      "energy": "cinematic",
+      "collections": [
+        "adventure"
+      ]
     },
     {
       "id": "children-stars",
@@ -188,11 +215,11 @@
       "order": 11,
       "ageGroup": "children",
       "ageLabel": {
-        "zh-TW": "幼兒",
+        "zh-TW": "兒童",
         "en": "Children"
       },
       "ageRange": {
-        "zh-TW": "15歲以下",
+        "zh-TW": "15 歲以下",
         "en": "15 and below"
       },
       "title": {
@@ -207,7 +234,7 @@
         "zh-TW": "自然與探索",
         "en": "Nature & Exploration"
       },
-      "prompt": "Please transform the uploaded source material into a NotebookLM presentation using the Stars & Space visual direction.\n\nUse only the uploaded source material. Keep the original meaning, key terms, quotations, and teaching points accurate. Do not invent facts, doctrines, scenes, or examples that are not supported by the source. If the source is spiritual or moral teaching, keep the tone respectful, but do not force religious iconography unless the user explicitly asks for it.\n\nMake it appropriate for learners aged 15 and below: warm, playful, visually clear, emotionally safe, and easy to follow. Use short sentences, familiar words, one main idea per slide, gentle brightness, and friendly imagery.\n\nTheme Direction: Use a stars-and-space direction with moonlight, constellations, planets, wonder, and gentle cosmic scale. It can feel dreamy, curious, and full of possibility.\n\nOutput Goal: Create a slide flow with clear titles, strong visual hierarchy, memorable scenes, and accurate content transfer from the source. Let the theme shape the presentation style, but keep the topic itself faithful to the source material.\n\nAvoid dense text, heavy abstraction, dark or scary visuals, sarcasm, and layouts that feel too busy.",
+      "prompt": "Please transform the uploaded source material into a NotebookLM presentation using the Stars & Space visual direction.\n\nUse only the uploaded source material. Keep the original meaning, key terms, quotations, and teaching points accurate. Do not invent facts, doctrines, scenes, or examples that are not supported by the source. If the source is spiritual or moral teaching, keep the tone respectful, but do not force religious iconography unless the user explicitly asks for it.\n\nMake it appropriate for learners aged 15 and below: warm, playful, visually clear, emotionally safe, and easy to follow. Use short sentences, familiar words, one main idea per slide, gentle brightness, and friendly imagery.\n\nTheme Direction: Use a stars-and-space direction with moonlight, constellations, planets, wonder, and gentle cosmic scale. It can feel dreamy, curious, and full of possibility.\n\nAudience Art Direction: Build each slide around one luminous focal scene, soft layered depth, friendly wonder, and a clear visual path that a child can follow immediately.\n\nOutput Goal: Create a slide flow with clear titles, strong visual hierarchy, memorable scenes, and accurate content transfer from the source. Let the theme shape the presentation style, but keep the topic itself faithful to the source material.\n\nAvoid dense text, heavy abstraction, dark or scary visuals, sarcasm, and layouts that feel too busy.",
       "status": "完整",
       "notes": "適用年齡：15歲以下；同主題對應青年版、壯年版；可直接貼入 NotebookLM",
       "sources": [
@@ -215,7 +242,17 @@
         "https://github.com/arlinamid/notebooklm-browser-plugin"
       ],
       "sourceName": "ChatGPT整理（綜合公開開源 prompt 邏輯 + 佛堂教學需求改寫）",
-      "licenseNote": "Project-authored adaptation; upstream inspiration links preserved."
+      "licenseNote": "Project-authored adaptation; upstream inspiration links preserved.",
+      "vibe": "dreamy",
+      "energy": "cinematic",
+      "collections": [
+        "dreamy",
+        "real-output"
+      ],
+      "preview": {
+        "kind": "real-output",
+        "src": "./assets/real-previews/stars-children.png"
+      }
     },
     {
       "id": "children-seasons",
@@ -223,11 +260,11 @@
       "order": 12,
       "ageGroup": "children",
       "ageLabel": {
-        "zh-TW": "幼兒",
+        "zh-TW": "兒童",
         "en": "Children"
       },
       "ageRange": {
-        "zh-TW": "15歲以下",
+        "zh-TW": "15 歲以下",
         "en": "15 and below"
       },
       "title": {
@@ -242,7 +279,7 @@
         "zh-TW": "自然與探索",
         "en": "Nature & Exploration"
       },
-      "prompt": "Please transform the uploaded source material into a NotebookLM presentation using the Four Seasons visual direction.\n\nUse only the uploaded source material. Keep the original meaning, key terms, quotations, and teaching points accurate. Do not invent facts, doctrines, scenes, or examples that are not supported by the source. If the source is spiritual or moral teaching, keep the tone respectful, but do not force religious iconography unless the user explicitly asks for it.\n\nMake it appropriate for learners aged 15 and below: warm, playful, visually clear, emotionally safe, and easy to follow. Use short sentences, familiar words, one main idea per slide, gentle brightness, and friendly imagery.\n\nTheme Direction: Use the rhythm of four seasons and weather changes to organize the source material. Show progression, contrast, and mood through spring, summer, autumn, winter, and natural transitions.\n\nOutput Goal: Create a slide flow with clear titles, strong visual hierarchy, memorable scenes, and accurate content transfer from the source. Let the theme shape the presentation style, but keep the topic itself faithful to the source material.\n\nAvoid dense text, heavy abstraction, dark or scary visuals, sarcasm, and layouts that feel too busy.",
+      "prompt": "Please transform the uploaded source material into a NotebookLM presentation using the Four Seasons visual direction.\n\nUse only the uploaded source material. Keep the original meaning, key terms, quotations, and teaching points accurate. Do not invent facts, doctrines, scenes, or examples that are not supported by the source. If the source is spiritual or moral teaching, keep the tone respectful, but do not force religious iconography unless the user explicitly asks for it.\n\nMake it appropriate for learners aged 15 and below: warm, playful, visually clear, emotionally safe, and easy to follow. Use short sentences, familiar words, one main idea per slide, gentle brightness, and friendly imagery.\n\nTheme Direction: Use the rhythm of four seasons and weather changes to organize the source material. Show progression, contrast, and mood through spring, summer, autumn, winter, and natural transitions.\n\nAudience Art Direction: Use gentle open space, friendly natural forms, clear icons, and soft contrast while keeping the result curious rather than sleepy.\n\nOutput Goal: Create a slide flow with clear titles, strong visual hierarchy, memorable scenes, and accurate content transfer from the source. Let the theme shape the presentation style, but keep the topic itself faithful to the source material.\n\nAvoid dense text, heavy abstraction, dark or scary visuals, sarcasm, and layouts that feel too busy.",
       "status": "完整",
       "notes": "適用年齡：15歲以下；同主題對應青年版、壯年版；可直接貼入 NotebookLM",
       "sources": [
@@ -250,7 +287,10 @@
         "https://github.com/arlinamid/notebooklm-browser-plugin"
       ],
       "sourceName": "ChatGPT整理（綜合公開開源 prompt 邏輯 + 佛堂教學需求改寫）",
-      "licenseNote": "Project-authored adaptation; upstream inspiration links preserved."
+      "licenseNote": "Project-authored adaptation; upstream inspiration links preserved.",
+      "vibe": "calm",
+      "energy": "balanced",
+      "collections": []
     },
     {
       "id": "youth-animals",
@@ -258,12 +298,12 @@
       "order": 6,
       "ageGroup": "youth",
       "ageLabel": {
-        "zh-TW": "青年",
+        "zh-TW": "青少年",
         "en": "Youth"
       },
       "ageRange": {
-        "zh-TW": "16–35歲",
-        "en": "16–35"
+        "zh-TW": "16–34 歲",
+        "en": "16–34"
       },
       "title": {
         "zh-TW": "動物",
@@ -277,15 +317,24 @@
         "zh-TW": "自然與探索",
         "en": "Nature & Exploration"
       },
-      "prompt": "Please transform the uploaded source material into a NotebookLM presentation using the Animals visual direction.\n\nUse only the uploaded source material. Keep the original meaning, key terms, quotations, and teaching points accurate. Do not invent facts, doctrines, scenes, or examples that are not supported by the source. If the source is spiritual or moral teaching, keep the tone respectful, but do not force religious iconography unless the user explicitly asks for it.\n\nMake it appropriate for ages 16 to 35: stylish, engaging, emotionally resonant, and easy to share. Use clear structure, stronger visual rhythm, relatable situations, and moderate depth without becoming too childish or too corporate.\n\nTheme Direction: Use animal-centered visuals, habitats, and behavior metaphors to organize the source material. The animals should support understanding rather than distract from the lesson.\n\nOutput Goal: Create a slide flow with clear titles, strong visual hierarchy, memorable scenes, and accurate content transfer from the source. Let the theme shape the presentation style, but keep the topic itself faithful to the source material.\n\nAvoid over-explaining, stiff business styling, low-energy visuals, or childish treatment that weakens credibility.",
+      "prompt": "Please transform the uploaded source material into a NotebookLM presentation using the Animals visual direction.\n\nUse only the uploaded source material. Keep the original meaning, key terms, quotations, and teaching points accurate. Do not invent facts, doctrines, scenes, or examples that are not supported by the source. If the source is spiritual or moral teaching, keep the tone respectful, but do not force religious iconography unless the user explicitly asks for it.\n\nMake it appropriate for ages 16 to 34: stylish, engaging, emotionally resonant, and easy to share. Use clear structure, stronger visual rhythm, relatable situations, and moderate depth without becoming too childish or too corporate.\n\nTheme Direction: Use animal-centered visuals, habitats, and behavior metaphors to organize the source material. The animals should support understanding rather than distract from the lesson.\n\nAudience Art Direction: Use witty composition, energetic color blocking, contemporary iconography, and surprising but legible visual relationships.\n\nOutput Goal: Create a slide flow with clear titles, strong visual hierarchy, memorable scenes, and accurate content transfer from the source. Let the theme shape the presentation style, but keep the topic itself faithful to the source material.\n\nAvoid over-explaining, stiff business styling, low-energy visuals, or childish treatment that weakens credibility.",
       "status": "完整",
-      "notes": "適用年齡：16–35歲；同主題對應幼兒版、壯年版；可直接貼入 NotebookLM",
+      "notes": "適用年齡：16–34 歲；同主題對應幼兒版、壯年版；可直接貼入 NotebookLM",
       "sources": [
         "https://github.com/serenakeyitan/awesome-notebookLM-prompts",
         "https://github.com/arlinamid/notebooklm-browser-plugin"
       ],
       "sourceName": "ChatGPT整理（綜合公開開源 prompt 邏輯 + 佛堂教學需求改寫）",
-      "licenseNote": "Project-authored adaptation; upstream inspiration links preserved."
+      "licenseNote": "Project-authored adaptation; upstream inspiration links preserved.",
+      "vibe": "playful",
+      "energy": "balanced",
+      "collections": [
+        "real-output"
+      ],
+      "preview": {
+        "kind": "real-output",
+        "src": "./assets/real-previews/animals-youth.png"
+      }
     },
     {
       "id": "youth-nature",
@@ -293,12 +342,12 @@
       "order": 7,
       "ageGroup": "youth",
       "ageLabel": {
-        "zh-TW": "青年",
+        "zh-TW": "青少年",
         "en": "Youth"
       },
       "ageRange": {
-        "zh-TW": "16–35歲",
-        "en": "16–35"
+        "zh-TW": "16–34 歲",
+        "en": "16–34"
       },
       "title": {
         "zh-TW": "大自然",
@@ -312,15 +361,18 @@
         "zh-TW": "自然與探索",
         "en": "Nature & Exploration"
       },
-      "prompt": "Please transform the uploaded source material into a NotebookLM presentation using the Nature visual direction.\n\nUse only the uploaded source material. Keep the original meaning, key terms, quotations, and teaching points accurate. Do not invent facts, doctrines, scenes, or examples that are not supported by the source. If the source is spiritual or moral teaching, keep the tone respectful, but do not force religious iconography unless the user explicitly asks for it.\n\nMake it appropriate for ages 16 to 35: stylish, engaging, emotionally resonant, and easy to share. Use clear structure, stronger visual rhythm, relatable situations, and moderate depth without becoming too childish or too corporate.\n\nTheme Direction: Use a nature-based visual direction with sky, trees, rivers, leaves, light, and open space. The result should feel fresh, grounded, and easy to breathe in.\n\nOutput Goal: Create a slide flow with clear titles, strong visual hierarchy, memorable scenes, and accurate content transfer from the source. Let the theme shape the presentation style, but keep the topic itself faithful to the source material.\n\nAvoid over-explaining, stiff business styling, low-energy visuals, or childish treatment that weakens credibility.",
+      "prompt": "Please transform the uploaded source material into a NotebookLM presentation using the Nature visual direction.\n\nUse only the uploaded source material. Keep the original meaning, key terms, quotations, and teaching points accurate. Do not invent facts, doctrines, scenes, or examples that are not supported by the source. If the source is spiritual or moral teaching, keep the tone respectful, but do not force religious iconography unless the user explicitly asks for it.\n\nMake it appropriate for ages 16 to 34: stylish, engaging, emotionally resonant, and easy to share. Use clear structure, stronger visual rhythm, relatable situations, and moderate depth without becoming too childish or too corporate.\n\nTheme Direction: Use a nature-based visual direction with sky, trees, rivers, leaves, light, and open space. The result should feel fresh, grounded, and easy to breathe in.\n\nAudience Art Direction: Use clean space, tactile texture, contemporary type, and a few vivid accents to balance calm with visual interest.\n\nOutput Goal: Create a slide flow with clear titles, strong visual hierarchy, memorable scenes, and accurate content transfer from the source. Let the theme shape the presentation style, but keep the topic itself faithful to the source material.\n\nAvoid over-explaining, stiff business styling, low-energy visuals, or childish treatment that weakens credibility.",
       "status": "完整",
-      "notes": "適用年齡：16–35歲；同主題對應幼兒版、壯年版；可直接貼入 NotebookLM",
+      "notes": "適用年齡：16–34 歲；同主題對應幼兒版、壯年版；可直接貼入 NotebookLM",
       "sources": [
         "https://github.com/serenakeyitan/awesome-notebookLM-prompts",
         "https://github.com/arlinamid/notebooklm-browser-plugin"
       ],
       "sourceName": "ChatGPT整理（綜合公開開源 prompt 邏輯 + 佛堂教學需求改寫）",
-      "licenseNote": "Project-authored adaptation; upstream inspiration links preserved."
+      "licenseNote": "Project-authored adaptation; upstream inspiration links preserved.",
+      "vibe": "calm",
+      "energy": "balanced",
+      "collections": []
     },
     {
       "id": "youth-ocean",
@@ -328,12 +380,12 @@
       "order": 8,
       "ageGroup": "youth",
       "ageLabel": {
-        "zh-TW": "青年",
+        "zh-TW": "青少年",
         "en": "Youth"
       },
       "ageRange": {
-        "zh-TW": "16–35歲",
-        "en": "16–35"
+        "zh-TW": "16–34 歲",
+        "en": "16–34"
       },
       "title": {
         "zh-TW": "海洋",
@@ -347,15 +399,20 @@
         "zh-TW": "自然與探索",
         "en": "Nature & Exploration"
       },
-      "prompt": "Please transform the uploaded source material into a NotebookLM presentation using the Ocean visual direction.\n\nUse only the uploaded source material. Keep the original meaning, key terms, quotations, and teaching points accurate. Do not invent facts, doctrines, scenes, or examples that are not supported by the source. If the source is spiritual or moral teaching, keep the tone respectful, but do not force religious iconography unless the user explicitly asks for it.\n\nMake it appropriate for ages 16 to 35: stylish, engaging, emotionally resonant, and easy to share. Use clear structure, stronger visual rhythm, relatable situations, and moderate depth without becoming too childish or too corporate.\n\nTheme Direction: Use an ocean-inspired direction with waves, islands, tides, underwater depth, and marine life. The layout can suggest flow, discovery, and layered understanding.\n\nOutput Goal: Create a slide flow with clear titles, strong visual hierarchy, memorable scenes, and accurate content transfer from the source. Let the theme shape the presentation style, but keep the topic itself faithful to the source material.\n\nAvoid over-explaining, stiff business styling, low-energy visuals, or childish treatment that weakens credibility.",
+      "prompt": "Please transform the uploaded source material into a NotebookLM presentation using the Ocean visual direction.\n\nUse only the uploaded source material. Keep the original meaning, key terms, quotations, and teaching points accurate. Do not invent facts, doctrines, scenes, or examples that are not supported by the source. If the source is spiritual or moral teaching, keep the tone respectful, but do not force religious iconography unless the user explicitly asks for it.\n\nMake it appropriate for ages 16 to 34: stylish, engaging, emotionally resonant, and easy to share. Use clear structure, stronger visual rhythm, relatable situations, and moderate depth without becoming too childish or too corporate.\n\nTheme Direction: Use an ocean-inspired direction with waves, islands, tides, underwater depth, and marine life. The layout can suggest flow, discovery, and layered understanding.\n\nAudience Art Direction: Use map fragments, dramatic scale changes, energetic diagonals, checkpoints, and discovery reveals to create forward momentum.\n\nOutput Goal: Create a slide flow with clear titles, strong visual hierarchy, memorable scenes, and accurate content transfer from the source. Let the theme shape the presentation style, but keep the topic itself faithful to the source material.\n\nAvoid over-explaining, stiff business styling, low-energy visuals, or childish treatment that weakens credibility.",
       "status": "完整",
-      "notes": "適用年齡：16–35歲；同主題對應幼兒版、壯年版；可直接貼入 NotebookLM",
+      "notes": "適用年齡：16–34 歲；同主題對應幼兒版、壯年版；可直接貼入 NotebookLM",
       "sources": [
         "https://github.com/serenakeyitan/awesome-notebookLM-prompts",
         "https://github.com/arlinamid/notebooklm-browser-plugin"
       ],
       "sourceName": "ChatGPT整理（綜合公開開源 prompt 邏輯 + 佛堂教學需求改寫）",
-      "licenseNote": "Project-authored adaptation; upstream inspiration links preserved."
+      "licenseNote": "Project-authored adaptation; upstream inspiration links preserved.",
+      "vibe": "adventure",
+      "energy": "cinematic",
+      "collections": [
+        "adventure"
+      ]
     },
     {
       "id": "youth-jungle",
@@ -363,12 +420,12 @@
       "order": 9,
       "ageGroup": "youth",
       "ageLabel": {
-        "zh-TW": "青年",
+        "zh-TW": "青少年",
         "en": "Youth"
       },
       "ageRange": {
-        "zh-TW": "16–35歲",
-        "en": "16–35"
+        "zh-TW": "16–34 歲",
+        "en": "16–34"
       },
       "title": {
         "zh-TW": "叢林",
@@ -382,15 +439,20 @@
         "zh-TW": "自然與探索",
         "en": "Nature & Exploration"
       },
-      "prompt": "Please transform the uploaded source material into a NotebookLM presentation using the Jungle visual direction.\n\nUse only the uploaded source material. Keep the original meaning, key terms, quotations, and teaching points accurate. Do not invent facts, doctrines, scenes, or examples that are not supported by the source. If the source is spiritual or moral teaching, keep the tone respectful, but do not force religious iconography unless the user explicitly asks for it.\n\nMake it appropriate for ages 16 to 35: stylish, engaging, emotionally resonant, and easy to share. Use clear structure, stronger visual rhythm, relatable situations, and moderate depth without becoming too childish or too corporate.\n\nTheme Direction: Use a lush jungle exploration direction with dense greenery, trails, discovery, and hidden highlights. The source material should feel like a guided journey through important ideas.\n\nOutput Goal: Create a slide flow with clear titles, strong visual hierarchy, memorable scenes, and accurate content transfer from the source. Let the theme shape the presentation style, but keep the topic itself faithful to the source material.\n\nAvoid over-explaining, stiff business styling, low-energy visuals, or childish treatment that weakens credibility.",
+      "prompt": "Please transform the uploaded source material into a NotebookLM presentation using the Jungle visual direction.\n\nUse only the uploaded source material. Keep the original meaning, key terms, quotations, and teaching points accurate. Do not invent facts, doctrines, scenes, or examples that are not supported by the source. If the source is spiritual or moral teaching, keep the tone respectful, but do not force religious iconography unless the user explicitly asks for it.\n\nMake it appropriate for ages 16 to 34: stylish, engaging, emotionally resonant, and easy to share. Use clear structure, stronger visual rhythm, relatable situations, and moderate depth without becoming too childish or too corporate.\n\nTheme Direction: Use a lush jungle exploration direction with dense greenery, trails, discovery, and hidden highlights. The source material should feel like a guided journey through important ideas.\n\nAudience Art Direction: Use map fragments, dramatic scale changes, energetic diagonals, checkpoints, and discovery reveals to create forward momentum.\n\nOutput Goal: Create a slide flow with clear titles, strong visual hierarchy, memorable scenes, and accurate content transfer from the source. Let the theme shape the presentation style, but keep the topic itself faithful to the source material.\n\nAvoid over-explaining, stiff business styling, low-energy visuals, or childish treatment that weakens credibility.",
       "status": "完整",
-      "notes": "適用年齡：16–35歲；同主題對應幼兒版、壯年版；可直接貼入 NotebookLM",
+      "notes": "適用年齡：16–34 歲；同主題對應幼兒版、壯年版；可直接貼入 NotebookLM",
       "sources": [
         "https://github.com/serenakeyitan/awesome-notebookLM-prompts",
         "https://github.com/arlinamid/notebooklm-browser-plugin"
       ],
       "sourceName": "ChatGPT整理（綜合公開開源 prompt 邏輯 + 佛堂教學需求改寫）",
-      "licenseNote": "Project-authored adaptation; upstream inspiration links preserved."
+      "licenseNote": "Project-authored adaptation; upstream inspiration links preserved.",
+      "vibe": "adventure",
+      "energy": "lively",
+      "collections": [
+        "adventure"
+      ]
     },
     {
       "id": "youth-mountain",
@@ -398,12 +460,12 @@
       "order": 10,
       "ageGroup": "youth",
       "ageLabel": {
-        "zh-TW": "青年",
+        "zh-TW": "青少年",
         "en": "Youth"
       },
       "ageRange": {
-        "zh-TW": "16–35歲",
-        "en": "16–35"
+        "zh-TW": "16–34 歲",
+        "en": "16–34"
       },
       "title": {
         "zh-TW": "登山風格",
@@ -417,15 +479,20 @@
         "zh-TW": "自然與探索",
         "en": "Nature & Exploration"
       },
-      "prompt": "Please transform the uploaded source material into a NotebookLM presentation using the Mountain Journey visual direction.\n\nUse only the uploaded source material. Keep the original meaning, key terms, quotations, and teaching points accurate. Do not invent facts, doctrines, scenes, or examples that are not supported by the source. If the source is spiritual or moral teaching, keep the tone respectful, but do not force religious iconography unless the user explicitly asks for it.\n\nMake it appropriate for ages 16 to 35: stylish, engaging, emotionally resonant, and easy to share. Use clear structure, stronger visual rhythm, relatable situations, and moderate depth without becoming too childish or too corporate.\n\nTheme Direction: Use a mountain and trail direction with ascent, checkpoints, scenic viewpoints, maps, and perseverance. The structure should suggest progress, effort, and meaningful milestones.\n\nOutput Goal: Create a slide flow with clear titles, strong visual hierarchy, memorable scenes, and accurate content transfer from the source. Let the theme shape the presentation style, but keep the topic itself faithful to the source material.\n\nAvoid over-explaining, stiff business styling, low-energy visuals, or childish treatment that weakens credibility.",
+      "prompt": "Please transform the uploaded source material into a NotebookLM presentation using the Mountain Journey visual direction.\n\nUse only the uploaded source material. Keep the original meaning, key terms, quotations, and teaching points accurate. Do not invent facts, doctrines, scenes, or examples that are not supported by the source. If the source is spiritual or moral teaching, keep the tone respectful, but do not force religious iconography unless the user explicitly asks for it.\n\nMake it appropriate for ages 16 to 34: stylish, engaging, emotionally resonant, and easy to share. Use clear structure, stronger visual rhythm, relatable situations, and moderate depth without becoming too childish or too corporate.\n\nTheme Direction: Use a mountain and trail direction with ascent, checkpoints, scenic viewpoints, maps, and perseverance. The structure should suggest progress, effort, and meaningful milestones.\n\nAudience Art Direction: Use map fragments, dramatic scale changes, energetic diagonals, checkpoints, and discovery reveals to create forward momentum.\n\nOutput Goal: Create a slide flow with clear titles, strong visual hierarchy, memorable scenes, and accurate content transfer from the source. Let the theme shape the presentation style, but keep the topic itself faithful to the source material.\n\nAvoid over-explaining, stiff business styling, low-energy visuals, or childish treatment that weakens credibility.",
       "status": "完整",
-      "notes": "適用年齡：16–35歲；同主題對應幼兒版、壯年版；可直接貼入 NotebookLM",
+      "notes": "適用年齡：16–34 歲；同主題對應幼兒版、壯年版；可直接貼入 NotebookLM",
       "sources": [
         "https://github.com/serenakeyitan/awesome-notebookLM-prompts",
         "https://github.com/arlinamid/notebooklm-browser-plugin"
       ],
       "sourceName": "ChatGPT整理（綜合公開開源 prompt 邏輯 + 佛堂教學需求改寫）",
-      "licenseNote": "Project-authored adaptation; upstream inspiration links preserved."
+      "licenseNote": "Project-authored adaptation; upstream inspiration links preserved.",
+      "vibe": "adventure",
+      "energy": "cinematic",
+      "collections": [
+        "adventure"
+      ]
     },
     {
       "id": "youth-stars",
@@ -433,12 +500,12 @@
       "order": 11,
       "ageGroup": "youth",
       "ageLabel": {
-        "zh-TW": "青年",
+        "zh-TW": "青少年",
         "en": "Youth"
       },
       "ageRange": {
-        "zh-TW": "16–35歲",
-        "en": "16–35"
+        "zh-TW": "16–34 歲",
+        "en": "16–34"
       },
       "title": {
         "zh-TW": "星星",
@@ -452,15 +519,25 @@
         "zh-TW": "自然與探索",
         "en": "Nature & Exploration"
       },
-      "prompt": "Please transform the uploaded source material into a NotebookLM presentation using the Stars & Space visual direction.\n\nUse only the uploaded source material. Keep the original meaning, key terms, quotations, and teaching points accurate. Do not invent facts, doctrines, scenes, or examples that are not supported by the source. If the source is spiritual or moral teaching, keep the tone respectful, but do not force religious iconography unless the user explicitly asks for it.\n\nMake it appropriate for ages 16 to 35: stylish, engaging, emotionally resonant, and easy to share. Use clear structure, stronger visual rhythm, relatable situations, and moderate depth without becoming too childish or too corporate.\n\nTheme Direction: Use a stars-and-space direction with moonlight, constellations, planets, wonder, and gentle cosmic scale. It can feel dreamy, curious, and full of possibility.\n\nOutput Goal: Create a slide flow with clear titles, strong visual hierarchy, memorable scenes, and accurate content transfer from the source. Let the theme shape the presentation style, but keep the topic itself faithful to the source material.\n\nAvoid over-explaining, stiff business styling, low-energy visuals, or childish treatment that weakens credibility.",
+      "prompt": "Please transform the uploaded source material into a NotebookLM presentation using the Stars & Space visual direction.\n\nUse only the uploaded source material. Keep the original meaning, key terms, quotations, and teaching points accurate. Do not invent facts, doctrines, scenes, or examples that are not supported by the source. If the source is spiritual or moral teaching, keep the tone respectful, but do not force religious iconography unless the user explicitly asks for it.\n\nMake it appropriate for ages 16 to 34: stylish, engaging, emotionally resonant, and easy to share. Use clear structure, stronger visual rhythm, relatable situations, and moderate depth without becoming too childish or too corporate.\n\nTheme Direction: Use a stars-and-space direction with moonlight, constellations, planets, wonder, and gentle cosmic scale. It can feel dreamy, curious, and full of possibility.\n\nAudience Art Direction: Use atmospheric gradients, cinematic crops, luminous accents, and confident type so the dreamlike mood feels current rather than childish.\n\nOutput Goal: Create a slide flow with clear titles, strong visual hierarchy, memorable scenes, and accurate content transfer from the source. Let the theme shape the presentation style, but keep the topic itself faithful to the source material.\n\nAvoid over-explaining, stiff business styling, low-energy visuals, or childish treatment that weakens credibility.",
       "status": "完整",
-      "notes": "適用年齡：16–35歲；同主題對應幼兒版、壯年版；可直接貼入 NotebookLM",
+      "notes": "適用年齡：16–34 歲；同主題對應幼兒版、壯年版；可直接貼入 NotebookLM",
       "sources": [
         "https://github.com/serenakeyitan/awesome-notebookLM-prompts",
         "https://github.com/arlinamid/notebooklm-browser-plugin"
       ],
       "sourceName": "ChatGPT整理（綜合公開開源 prompt 邏輯 + 佛堂教學需求改寫）",
-      "licenseNote": "Project-authored adaptation; upstream inspiration links preserved."
+      "licenseNote": "Project-authored adaptation; upstream inspiration links preserved.",
+      "vibe": "dreamy",
+      "energy": "cinematic",
+      "collections": [
+        "dreamy",
+        "real-output"
+      ],
+      "preview": {
+        "kind": "real-output",
+        "src": "./assets/real-previews/stars-youth.png"
+      }
     },
     {
       "id": "youth-seasons",
@@ -468,12 +545,12 @@
       "order": 12,
       "ageGroup": "youth",
       "ageLabel": {
-        "zh-TW": "青年",
+        "zh-TW": "青少年",
         "en": "Youth"
       },
       "ageRange": {
-        "zh-TW": "16–35歲",
-        "en": "16–35"
+        "zh-TW": "16–34 歲",
+        "en": "16–34"
       },
       "title": {
         "zh-TW": "四季",
@@ -487,15 +564,18 @@
         "zh-TW": "自然與探索",
         "en": "Nature & Exploration"
       },
-      "prompt": "Please transform the uploaded source material into a NotebookLM presentation using the Four Seasons visual direction.\n\nUse only the uploaded source material. Keep the original meaning, key terms, quotations, and teaching points accurate. Do not invent facts, doctrines, scenes, or examples that are not supported by the source. If the source is spiritual or moral teaching, keep the tone respectful, but do not force religious iconography unless the user explicitly asks for it.\n\nMake it appropriate for ages 16 to 35: stylish, engaging, emotionally resonant, and easy to share. Use clear structure, stronger visual rhythm, relatable situations, and moderate depth without becoming too childish or too corporate.\n\nTheme Direction: Use the rhythm of four seasons and weather changes to organize the source material. Show progression, contrast, and mood through spring, summer, autumn, winter, and natural transitions.\n\nOutput Goal: Create a slide flow with clear titles, strong visual hierarchy, memorable scenes, and accurate content transfer from the source. Let the theme shape the presentation style, but keep the topic itself faithful to the source material.\n\nAvoid over-explaining, stiff business styling, low-energy visuals, or childish treatment that weakens credibility.",
+      "prompt": "Please transform the uploaded source material into a NotebookLM presentation using the Four Seasons visual direction.\n\nUse only the uploaded source material. Keep the original meaning, key terms, quotations, and teaching points accurate. Do not invent facts, doctrines, scenes, or examples that are not supported by the source. If the source is spiritual or moral teaching, keep the tone respectful, but do not force religious iconography unless the user explicitly asks for it.\n\nMake it appropriate for ages 16 to 34: stylish, engaging, emotionally resonant, and easy to share. Use clear structure, stronger visual rhythm, relatable situations, and moderate depth without becoming too childish or too corporate.\n\nTheme Direction: Use the rhythm of four seasons and weather changes to organize the source material. Show progression, contrast, and mood through spring, summer, autumn, winter, and natural transitions.\n\nAudience Art Direction: Use clean space, tactile texture, contemporary type, and a few vivid accents to balance calm with visual interest.\n\nOutput Goal: Create a slide flow with clear titles, strong visual hierarchy, memorable scenes, and accurate content transfer from the source. Let the theme shape the presentation style, but keep the topic itself faithful to the source material.\n\nAvoid over-explaining, stiff business styling, low-energy visuals, or childish treatment that weakens credibility.",
       "status": "完整",
-      "notes": "適用年齡：16–35歲；同主題對應幼兒版、壯年版；可直接貼入 NotebookLM",
+      "notes": "適用年齡：16–34 歲；同主題對應幼兒版、壯年版；可直接貼入 NotebookLM",
       "sources": [
         "https://github.com/serenakeyitan/awesome-notebookLM-prompts",
         "https://github.com/arlinamid/notebooklm-browser-plugin"
       ],
       "sourceName": "ChatGPT整理（綜合公開開源 prompt 邏輯 + 佛堂教學需求改寫）",
-      "licenseNote": "Project-authored adaptation; upstream inspiration links preserved."
+      "licenseNote": "Project-authored adaptation; upstream inspiration links preserved.",
+      "vibe": "calm",
+      "energy": "balanced",
+      "collections": []
     },
     {
       "id": "adult-animals",
@@ -503,11 +583,11 @@
       "order": 6,
       "ageGroup": "adult",
       "ageLabel": {
-        "zh-TW": "壯年",
+        "zh-TW": "成人",
         "en": "Adults"
       },
       "ageRange": {
-        "zh-TW": "35歲以上",
+        "zh-TW": "35 歲以上",
         "en": "35 and above"
       },
       "title": {
@@ -522,7 +602,7 @@
         "zh-TW": "自然與探索",
         "en": "Nature & Exploration"
       },
-      "prompt": "Please transform the uploaded source material into a NotebookLM presentation using the Animals visual direction.\n\nUse only the uploaded source material. Keep the original meaning, key terms, quotations, and teaching points accurate. Do not invent facts, doctrines, scenes, or examples that are not supported by the source. If the source is spiritual or moral teaching, keep the tone respectful, but do not force religious iconography unless the user explicitly asks for it.\n\nMake it appropriate for ages 35 and above: mature, steady, warm, dignified, and highly readable. Use calm pacing, meaningful emphasis, clear hierarchy, and concise but substantive wording.\n\nTheme Direction: Use animal-centered visuals, habitats, and behavior metaphors to organize the source material. The animals should support understanding rather than distract from the lesson.\n\nOutput Goal: Create a slide flow with clear titles, strong visual hierarchy, memorable scenes, and accurate content transfer from the source. Let the theme shape the presentation style, but keep the topic itself faithful to the source material.\n\nAvoid gimmicky effects, excessive flash, tiny text, noisy clutter, or overly juvenile visual language.",
+      "prompt": "Please transform the uploaded source material into a NotebookLM presentation using the Animals visual direction.\n\nUse only the uploaded source material. Keep the original meaning, key terms, quotations, and teaching points accurate. Do not invent facts, doctrines, scenes, or examples that are not supported by the source. If the source is spiritual or moral teaching, keep the tone respectful, but do not force religious iconography unless the user explicitly asks for it.\n\nMake it appropriate for adults aged 35 and above: highly readable, substantive, emotionally intelligent, and visually confident. Preserve mature clarity without assuming that mature means quiet or low-energy. Match pacing, color intensity, and movement to the theme: calm for reflection, lively for momentum, and cinematic for drama.\n\nTheme Direction: Use animal-centered visuals, habitats, and behavior metaphors to organize the source material. The animals should support understanding rather than distract from the lesson.\n\nAudience Art Direction: Use natural-history editorial imagery, behavior-based metaphors, vivid habitat color, and documentary pacing rather than cute mascots alone.\n\nOutput Goal: Create a slide flow with clear titles, strong visual hierarchy, memorable scenes, and accurate content transfer from the source. Let the theme shape the presentation style, but keep the topic itself faithful to the source material.\n\nAvoid tiny text, noisy clutter, empty decoration, patronizing simplification, or defaulting every mature deck to dark navy, sepia, muted gold, and static compositions.",
       "status": "完整",
       "notes": "適用年齡：35歲以上；同主題對應幼兒版、青年版；可直接貼入 NotebookLM",
       "sources": [
@@ -530,7 +610,16 @@
         "https://github.com/arlinamid/notebooklm-browser-plugin"
       ],
       "sourceName": "ChatGPT整理（綜合公開開源 prompt 邏輯 + 佛堂教學需求改寫）",
-      "licenseNote": "Project-authored adaptation; upstream inspiration links preserved."
+      "licenseNote": "Project-authored adaptation; upstream inspiration links preserved.",
+      "vibe": "playful",
+      "energy": "balanced",
+      "collections": [
+        "real-output"
+      ],
+      "preview": {
+        "kind": "real-output",
+        "src": "./assets/real-previews/animals-mature.png"
+      }
     },
     {
       "id": "adult-nature",
@@ -538,11 +627,11 @@
       "order": 7,
       "ageGroup": "adult",
       "ageLabel": {
-        "zh-TW": "壯年",
+        "zh-TW": "成人",
         "en": "Adults"
       },
       "ageRange": {
-        "zh-TW": "35歲以上",
+        "zh-TW": "35 歲以上",
         "en": "35 and above"
       },
       "title": {
@@ -557,7 +646,7 @@
         "zh-TW": "自然與探索",
         "en": "Nature & Exploration"
       },
-      "prompt": "Please transform the uploaded source material into a NotebookLM presentation using the Nature visual direction.\n\nUse only the uploaded source material. Keep the original meaning, key terms, quotations, and teaching points accurate. Do not invent facts, doctrines, scenes, or examples that are not supported by the source. If the source is spiritual or moral teaching, keep the tone respectful, but do not force religious iconography unless the user explicitly asks for it.\n\nMake it appropriate for ages 35 and above: mature, steady, warm, dignified, and highly readable. Use calm pacing, meaningful emphasis, clear hierarchy, and concise but substantive wording.\n\nTheme Direction: Use a nature-based visual direction with sky, trees, rivers, leaves, light, and open space. The result should feel fresh, grounded, and easy to breathe in.\n\nOutput Goal: Create a slide flow with clear titles, strong visual hierarchy, memorable scenes, and accurate content transfer from the source. Let the theme shape the presentation style, but keep the topic itself faithful to the source material.\n\nAvoid gimmicky effects, excessive flash, tiny text, noisy clutter, or overly juvenile visual language.",
+      "prompt": "Please transform the uploaded source material into a NotebookLM presentation using the Nature visual direction.\n\nUse only the uploaded source material. Keep the original meaning, key terms, quotations, and teaching points accurate. Do not invent facts, doctrines, scenes, or examples that are not supported by the source. If the source is spiritual or moral teaching, keep the tone respectful, but do not force religious iconography unless the user explicitly asks for it.\n\nMake it appropriate for adults aged 35 and above: highly readable, substantive, emotionally intelligent, and visually confident. Preserve mature clarity without assuming that mature means quiet or low-energy. Match pacing, color intensity, and movement to the theme: calm for reflection, lively for momentum, and cinematic for drama.\n\nTheme Direction: Use a nature-based visual direction with sky, trees, rivers, leaves, light, and open space. The result should feel fresh, grounded, and easy to breathe in.\n\nAudience Art Direction: Use vivid botanical detail, expansive photography-inspired framing, seasonal color, and active visual journeys; nature may feel energizing as well as serene.\n\nOutput Goal: Create a slide flow with clear titles, strong visual hierarchy, memorable scenes, and accurate content transfer from the source. Let the theme shape the presentation style, but keep the topic itself faithful to the source material.\n\nAvoid tiny text, noisy clutter, empty decoration, patronizing simplification, or defaulting every mature deck to dark navy, sepia, muted gold, and static compositions.",
       "status": "完整",
       "notes": "適用年齡：35歲以上；同主題對應幼兒版、青年版；可直接貼入 NotebookLM",
       "sources": [
@@ -565,7 +654,10 @@
         "https://github.com/arlinamid/notebooklm-browser-plugin"
       ],
       "sourceName": "ChatGPT整理（綜合公開開源 prompt 邏輯 + 佛堂教學需求改寫）",
-      "licenseNote": "Project-authored adaptation; upstream inspiration links preserved."
+      "licenseNote": "Project-authored adaptation; upstream inspiration links preserved.",
+      "vibe": "calm",
+      "energy": "balanced",
+      "collections": []
     },
     {
       "id": "adult-ocean",
@@ -573,11 +665,11 @@
       "order": 8,
       "ageGroup": "adult",
       "ageLabel": {
-        "zh-TW": "壯年",
+        "zh-TW": "成人",
         "en": "Adults"
       },
       "ageRange": {
-        "zh-TW": "35歲以上",
+        "zh-TW": "35 歲以上",
         "en": "35 and above"
       },
       "title": {
@@ -592,7 +684,7 @@
         "zh-TW": "自然與探索",
         "en": "Nature & Exploration"
       },
-      "prompt": "Please transform the uploaded source material into a NotebookLM presentation using the Ocean visual direction.\n\nUse only the uploaded source material. Keep the original meaning, key terms, quotations, and teaching points accurate. Do not invent facts, doctrines, scenes, or examples that are not supported by the source. If the source is spiritual or moral teaching, keep the tone respectful, but do not force religious iconography unless the user explicitly asks for it.\n\nMake it appropriate for ages 35 and above: mature, steady, warm, dignified, and highly readable. Use calm pacing, meaningful emphasis, clear hierarchy, and concise but substantive wording.\n\nTheme Direction: Use an ocean-inspired direction with waves, islands, tides, underwater depth, and marine life. The layout can suggest flow, discovery, and layered understanding.\n\nOutput Goal: Create a slide flow with clear titles, strong visual hierarchy, memorable scenes, and accurate content transfer from the source. Let the theme shape the presentation style, but keep the topic itself faithful to the source material.\n\nAvoid gimmicky effects, excessive flash, tiny text, noisy clutter, or overly juvenile visual language.",
+      "prompt": "Please transform the uploaded source material into a NotebookLM presentation using the Ocean visual direction.\n\nUse only the uploaded source material. Keep the original meaning, key terms, quotations, and teaching points accurate. Do not invent facts, doctrines, scenes, or examples that are not supported by the source. If the source is spiritual or moral teaching, keep the tone respectful, but do not force religious iconography unless the user explicitly asks for it.\n\nMake it appropriate for adults aged 35 and above: highly readable, substantive, emotionally intelligent, and visually confident. Preserve mature clarity without assuming that mature means quiet or low-energy. Match pacing, color intensity, and movement to the theme: calm for reflection, lively for momentum, and cinematic for drama.\n\nTheme Direction: Use an ocean-inspired direction with waves, islands, tides, underwater depth, and marine life. The layout can suggest flow, discovery, and layered understanding.\n\nAudience Art Direction: Use sweeping marine scale, layered blue-green depth, tide-like pacing, map elements, and luminous highlights for a cinematic rather than static ocean story.\n\nOutput Goal: Create a slide flow with clear titles, strong visual hierarchy, memorable scenes, and accurate content transfer from the source. Let the theme shape the presentation style, but keep the topic itself faithful to the source material.\n\nAvoid tiny text, noisy clutter, empty decoration, patronizing simplification, or defaulting every mature deck to dark navy, sepia, muted gold, and static compositions.",
       "status": "完整",
       "notes": "適用年齡：35歲以上；同主題對應幼兒版、青年版；可直接貼入 NotebookLM",
       "sources": [
@@ -600,7 +692,12 @@
         "https://github.com/arlinamid/notebooklm-browser-plugin"
       ],
       "sourceName": "ChatGPT整理（綜合公開開源 prompt 邏輯 + 佛堂教學需求改寫）",
-      "licenseNote": "Project-authored adaptation; upstream inspiration links preserved."
+      "licenseNote": "Project-authored adaptation; upstream inspiration links preserved.",
+      "vibe": "adventure",
+      "energy": "cinematic",
+      "collections": [
+        "adventure"
+      ]
     },
     {
       "id": "adult-jungle",
@@ -608,11 +705,11 @@
       "order": 9,
       "ageGroup": "adult",
       "ageLabel": {
-        "zh-TW": "壯年",
+        "zh-TW": "成人",
         "en": "Adults"
       },
       "ageRange": {
-        "zh-TW": "35歲以上",
+        "zh-TW": "35 歲以上",
         "en": "35 and above"
       },
       "title": {
@@ -627,7 +724,7 @@
         "zh-TW": "自然與探索",
         "en": "Nature & Exploration"
       },
-      "prompt": "Please transform the uploaded source material into a NotebookLM presentation using the Jungle visual direction.\n\nUse only the uploaded source material. Keep the original meaning, key terms, quotations, and teaching points accurate. Do not invent facts, doctrines, scenes, or examples that are not supported by the source. If the source is spiritual or moral teaching, keep the tone respectful, but do not force religious iconography unless the user explicitly asks for it.\n\nMake it appropriate for ages 35 and above: mature, steady, warm, dignified, and highly readable. Use calm pacing, meaningful emphasis, clear hierarchy, and concise but substantive wording.\n\nTheme Direction: Use a lush jungle exploration direction with dense greenery, trails, discovery, and hidden highlights. The source material should feel like a guided journey through important ideas.\n\nOutput Goal: Create a slide flow with clear titles, strong visual hierarchy, memorable scenes, and accurate content transfer from the source. Let the theme shape the presentation style, but keep the topic itself faithful to the source material.\n\nAvoid gimmicky effects, excessive flash, tiny text, noisy clutter, or overly juvenile visual language.",
+      "prompt": "Please transform the uploaded source material into a NotebookLM presentation using the Jungle visual direction.\n\nUse only the uploaded source material. Keep the original meaning, key terms, quotations, and teaching points accurate. Do not invent facts, doctrines, scenes, or examples that are not supported by the source. If the source is spiritual or moral teaching, keep the tone respectful, but do not force religious iconography unless the user explicitly asks for it.\n\nMake it appropriate for adults aged 35 and above: highly readable, substantive, emotionally intelligent, and visually confident. Preserve mature clarity without assuming that mature means quiet or low-energy. Match pacing, color intensity, and movement to the theme: calm for reflection, lively for momentum, and cinematic for drama.\n\nTheme Direction: Use a lush jungle exploration direction with dense greenery, trails, discovery, and hidden highlights. The source material should feel like a guided journey through important ideas.\n\nAudience Art Direction: Use expedition-editorial pacing, dense-to-open reveals, vivid biodiversity, trail markers, and dramatic light to sustain discovery and momentum.\n\nOutput Goal: Create a slide flow with clear titles, strong visual hierarchy, memorable scenes, and accurate content transfer from the source. Let the theme shape the presentation style, but keep the topic itself faithful to the source material.\n\nAvoid tiny text, noisy clutter, empty decoration, patronizing simplification, or defaulting every mature deck to dark navy, sepia, muted gold, and static compositions.",
       "status": "完整",
       "notes": "適用年齡：35歲以上；同主題對應幼兒版、青年版；可直接貼入 NotebookLM",
       "sources": [
@@ -635,7 +732,12 @@
         "https://github.com/arlinamid/notebooklm-browser-plugin"
       ],
       "sourceName": "ChatGPT整理（綜合公開開源 prompt 邏輯 + 佛堂教學需求改寫）",
-      "licenseNote": "Project-authored adaptation; upstream inspiration links preserved."
+      "licenseNote": "Project-authored adaptation; upstream inspiration links preserved.",
+      "vibe": "adventure",
+      "energy": "lively",
+      "collections": [
+        "adventure"
+      ]
     },
     {
       "id": "adult-mountain",
@@ -643,11 +745,11 @@
       "order": 10,
       "ageGroup": "adult",
       "ageLabel": {
-        "zh-TW": "壯年",
+        "zh-TW": "成人",
         "en": "Adults"
       },
       "ageRange": {
-        "zh-TW": "35歲以上",
+        "zh-TW": "35 歲以上",
         "en": "35 and above"
       },
       "title": {
@@ -662,7 +764,7 @@
         "zh-TW": "自然與探索",
         "en": "Nature & Exploration"
       },
-      "prompt": "Please transform the uploaded source material into a NotebookLM presentation using the Mountain Journey visual direction.\n\nUse only the uploaded source material. Keep the original meaning, key terms, quotations, and teaching points accurate. Do not invent facts, doctrines, scenes, or examples that are not supported by the source. If the source is spiritual or moral teaching, keep the tone respectful, but do not force religious iconography unless the user explicitly asks for it.\n\nMake it appropriate for ages 35 and above: mature, steady, warm, dignified, and highly readable. Use calm pacing, meaningful emphasis, clear hierarchy, and concise but substantive wording.\n\nTheme Direction: Use a mountain and trail direction with ascent, checkpoints, scenic viewpoints, maps, and perseverance. The structure should suggest progress, effort, and meaningful milestones.\n\nOutput Goal: Create a slide flow with clear titles, strong visual hierarchy, memorable scenes, and accurate content transfer from the source. Let the theme shape the presentation style, but keep the topic itself faithful to the source material.\n\nAvoid gimmicky effects, excessive flash, tiny text, noisy clutter, or overly juvenile visual language.",
+      "prompt": "Please transform the uploaded source material into a NotebookLM presentation using the Mountain Journey visual direction.\n\nUse only the uploaded source material. Keep the original meaning, key terms, quotations, and teaching points accurate. Do not invent facts, doctrines, scenes, or examples that are not supported by the source. If the source is spiritual or moral teaching, keep the tone respectful, but do not force religious iconography unless the user explicitly asks for it.\n\nMake it appropriate for adults aged 35 and above: highly readable, substantive, emotionally intelligent, and visually confident. Preserve mature clarity without assuming that mature means quiet or low-energy. Match pacing, color intensity, and movement to the theme: calm for reflection, lively for momentum, and cinematic for drama.\n\nTheme Direction: Use a mountain and trail direction with ascent, checkpoints, scenic viewpoints, maps, and perseverance. The structure should suggest progress, effort, and meaningful milestones.\n\nAudience Art Direction: Use strong altitude shifts, route diagrams, panoramic milestones, decisive diagonals, and changing weather to make progress physically felt.\n\nOutput Goal: Create a slide flow with clear titles, strong visual hierarchy, memorable scenes, and accurate content transfer from the source. Let the theme shape the presentation style, but keep the topic itself faithful to the source material.\n\nAvoid tiny text, noisy clutter, empty decoration, patronizing simplification, or defaulting every mature deck to dark navy, sepia, muted gold, and static compositions.",
       "status": "完整",
       "notes": "適用年齡：35歲以上；同主題對應幼兒版、青年版；可直接貼入 NotebookLM",
       "sources": [
@@ -670,7 +772,12 @@
         "https://github.com/arlinamid/notebooklm-browser-plugin"
       ],
       "sourceName": "ChatGPT整理（綜合公開開源 prompt 邏輯 + 佛堂教學需求改寫）",
-      "licenseNote": "Project-authored adaptation; upstream inspiration links preserved."
+      "licenseNote": "Project-authored adaptation; upstream inspiration links preserved.",
+      "vibe": "adventure",
+      "energy": "cinematic",
+      "collections": [
+        "adventure"
+      ]
     },
     {
       "id": "adult-stars",
@@ -678,11 +785,11 @@
       "order": 11,
       "ageGroup": "adult",
       "ageLabel": {
-        "zh-TW": "壯年",
+        "zh-TW": "成人",
         "en": "Adults"
       },
       "ageRange": {
-        "zh-TW": "35歲以上",
+        "zh-TW": "35 歲以上",
         "en": "35 and above"
       },
       "title": {
@@ -697,7 +804,7 @@
         "zh-TW": "自然與探索",
         "en": "Nature & Exploration"
       },
-      "prompt": "Please transform the uploaded source material into a NotebookLM presentation using the Stars & Space visual direction.\n\nUse only the uploaded source material. Keep the original meaning, key terms, quotations, and teaching points accurate. Do not invent facts, doctrines, scenes, or examples that are not supported by the source. If the source is spiritual or moral teaching, keep the tone respectful, but do not force religious iconography unless the user explicitly asks for it.\n\nMake it appropriate for ages 35 and above: mature, steady, warm, dignified, and highly readable. Use calm pacing, meaningful emphasis, clear hierarchy, and concise but substantive wording.\n\nTheme Direction: Use a stars-and-space direction with moonlight, constellations, planets, wonder, and gentle cosmic scale. It can feel dreamy, curious, and full of possibility.\n\nOutput Goal: Create a slide flow with clear titles, strong visual hierarchy, memorable scenes, and accurate content transfer from the source. Let the theme shape the presentation style, but keep the topic itself faithful to the source material.\n\nAvoid gimmicky effects, excessive flash, tiny text, noisy clutter, or overly juvenile visual language.",
+      "prompt": "Please transform the uploaded source material into a NotebookLM presentation using the Stars & Space visual direction.\n\nUse only the uploaded source material. Keep the original meaning, key terms, quotations, and teaching points accurate. Do not invent facts, doctrines, scenes, or examples that are not supported by the source. If the source is spiritual or moral teaching, keep the tone respectful, but do not force religious iconography unless the user explicitly asks for it.\n\nMake it appropriate for adults aged 35 and above: highly readable, substantive, emotionally intelligent, and visually confident. Preserve mature clarity without assuming that mature means quiet or low-energy. Match pacing, color intensity, and movement to the theme: calm for reflection, lively for momentum, and cinematic for drama.\n\nTheme Direction: Use a stars-and-space direction with moonlight, constellations, planets, wonder, and gentle cosmic scale. It can feel dreamy, curious, and full of possibility.\n\nAudience Art Direction: Use dramatic cosmic scale, constellation pathways, luminous contrast, restrained but vivid color, and cinematic reveals instead of default dark-background minimalism.\n\nOutput Goal: Create a slide flow with clear titles, strong visual hierarchy, memorable scenes, and accurate content transfer from the source. Let the theme shape the presentation style, but keep the topic itself faithful to the source material.\n\nAvoid tiny text, noisy clutter, empty decoration, patronizing simplification, or defaulting every mature deck to dark navy, sepia, muted gold, and static compositions.",
       "status": "完整",
       "notes": "適用年齡：35歲以上；同主題對應幼兒版、青年版；可直接貼入 NotebookLM",
       "sources": [
@@ -705,7 +812,18 @@
         "https://github.com/arlinamid/notebooklm-browser-plugin"
       ],
       "sourceName": "ChatGPT整理（綜合公開開源 prompt 邏輯 + 佛堂教學需求改寫）",
-      "licenseNote": "Project-authored adaptation; upstream inspiration links preserved."
+      "licenseNote": "Project-authored adaptation; upstream inspiration links preserved.",
+      "vibe": "dreamy",
+      "energy": "cinematic",
+      "collections": [
+        "dreamy",
+        "adult-vivid",
+        "real-output"
+      ],
+      "preview": {
+        "kind": "real-output",
+        "src": "./assets/real-previews/stars-mature.png"
+      }
     },
     {
       "id": "adult-seasons",
@@ -713,11 +831,11 @@
       "order": 12,
       "ageGroup": "adult",
       "ageLabel": {
-        "zh-TW": "壯年",
+        "zh-TW": "成人",
         "en": "Adults"
       },
       "ageRange": {
-        "zh-TW": "35歲以上",
+        "zh-TW": "35 歲以上",
         "en": "35 and above"
       },
       "title": {
@@ -732,7 +850,7 @@
         "zh-TW": "自然與探索",
         "en": "Nature & Exploration"
       },
-      "prompt": "Please transform the uploaded source material into a NotebookLM presentation using the Four Seasons visual direction.\n\nUse only the uploaded source material. Keep the original meaning, key terms, quotations, and teaching points accurate. Do not invent facts, doctrines, scenes, or examples that are not supported by the source. If the source is spiritual or moral teaching, keep the tone respectful, but do not force religious iconography unless the user explicitly asks for it.\n\nMake it appropriate for ages 35 and above: mature, steady, warm, dignified, and highly readable. Use calm pacing, meaningful emphasis, clear hierarchy, and concise but substantive wording.\n\nTheme Direction: Use the rhythm of four seasons and weather changes to organize the source material. Show progression, contrast, and mood through spring, summer, autumn, winter, and natural transitions.\n\nOutput Goal: Create a slide flow with clear titles, strong visual hierarchy, memorable scenes, and accurate content transfer from the source. Let the theme shape the presentation style, but keep the topic itself faithful to the source material.\n\nAvoid gimmicky effects, excessive flash, tiny text, noisy clutter, or overly juvenile visual language.",
+      "prompt": "Please transform the uploaded source material into a NotebookLM presentation using the Four Seasons visual direction.\n\nUse only the uploaded source material. Keep the original meaning, key terms, quotations, and teaching points accurate. Do not invent facts, doctrines, scenes, or examples that are not supported by the source. If the source is spiritual or moral teaching, keep the tone respectful, but do not force religious iconography unless the user explicitly asks for it.\n\nMake it appropriate for adults aged 35 and above: highly readable, substantive, emotionally intelligent, and visually confident. Preserve mature clarity without assuming that mature means quiet or low-energy. Match pacing, color intensity, and movement to the theme: calm for reflection, lively for momentum, and cinematic for drama.\n\nTheme Direction: Use the rhythm of four seasons and weather changes to organize the source material. Show progression, contrast, and mood through spring, summer, autumn, winter, and natural transitions.\n\nAudience Art Direction: Use confident seasonal color transitions, changing light, tactile materials, and rhythmic contrast to create movement across time.\n\nOutput Goal: Create a slide flow with clear titles, strong visual hierarchy, memorable scenes, and accurate content transfer from the source. Let the theme shape the presentation style, but keep the topic itself faithful to the source material.\n\nAvoid tiny text, noisy clutter, empty decoration, patronizing simplification, or defaulting every mature deck to dark navy, sepia, muted gold, and static compositions.",
       "status": "完整",
       "notes": "適用年齡：35歲以上；同主題對應幼兒版、青年版；可直接貼入 NotebookLM",
       "sources": [
@@ -740,7 +858,10 @@
         "https://github.com/arlinamid/notebooklm-browser-plugin"
       ],
       "sourceName": "ChatGPT整理（綜合公開開源 prompt 邏輯 + 佛堂教學需求改寫）",
-      "licenseNote": "Project-authored adaptation; upstream inspiration links preserved."
+      "licenseNote": "Project-authored adaptation; upstream inspiration links preserved.",
+      "vibe": "calm",
+      "energy": "balanced",
+      "collections": []
     }
   ]
 }

@@ -12,8 +12,8 @@
 
 **先打開我們自己的 Prompt Lab。準備把 Prompt 交給 Gemini Notebook 時，再按網站裡醒目的 📓 Gemini Notebook 按鈕；它會用新分頁開啟，不會蓋掉目前頁面。**
 
-![Prompts](https://img.shields.io/badge/prompts-90-5357e8)
-![Themes](https://img.shields.io/badge/themes-30-13a37f)
+![Prompts](https://img.shields.io/badge/prompts-132-5357e8)
+![Themes](https://img.shields.io/badge/themes-44-13a37f)
 ![Workflows](https://img.shields.io/badge/workflows-10-7c82ff)
 ![Dependencies](https://img.shields.io/badge/runtime_dependencies-0-success)
 ![License](https://img.shields.io/badge/code-MIT-blue)
@@ -27,7 +27,8 @@
 
 很多 Prompt repository 最後只會變成一大篇 Markdown。這個專案的目標是把 Prompt 做成一個真的可以使用、Fork、修改、驗證與共同維護的小產品：
 
-- **90 組分齡簡報 Prompt**：30 個視覺主題 × 3 種受眾。
+- **132 組分齡簡報 Prompt**：44 個視覺主題 × 3 種受眾。
+- **14 種全新原創特色主題**：涵蓋夢幻動畫、迷你冒險、天空探索、舞台表演、文化幾何與更生動的成人編輯設計。
 - **同主題跨年齡比較**：直接比較幼兒、青年、壯年版如何調整語氣、密度與視覺節奏。
 - **Prompt Lab**：支援 Slide Deck、Audio Overview、Video Overview、Infographic、Quiz、Flashcards、Report、Data Table、來源問答與 Mind Map 輔助工作流。
 - **Prompt Chain Builder**：把「萃取 → 產出 → 驗證」做成可重複流程。
@@ -35,11 +36,11 @@
 - **收藏、自訂、匯入、匯出**：全部存在瀏覽器本機。
 - **一鍵「複製並開啟 Gemini Notebook」**：以新分頁開啟 `https://notebook.google.com/`，不會覆蓋目前頁面。
 - **PWA / 離線支援**：不需要帳號、後端、API key、分析追蹤或 runtime dependency。
-- **可維護 Prompt Packs**：90 筆 Prompt 拆成 6 個可獨立 review 的資料包，讓 GitHub diff、PR 與社群貢獻更清楚。
+- **可維護 Prompt Packs**：132 筆 Prompt 拆成 8 個可獨立 review 的資料包，讓 GitHub diff、PR 與社群貢獻更清楚。
 
 ## 專案起源
 
-最初的需求來自**佛堂／社群教學的分齡簡報**：同一份來源內容，給 15 歲以下、16–35 歲與較成熟的學習者時，不應該使用完全相同的字量、情緒節奏與視覺語言。
+最初的需求來自**佛堂／社群教學的分齡簡報**：同一份來源內容，給 15 歲以下、16–34 歲與較成熟的學習者時，不應該使用完全相同的字量、情緒節奏與視覺語言。
 
 因此這套工具不是把宗教內容硬塞給所有人，而是把「**同一份可信來源，依不同受眾重新設計呈現方式**」這個方法抽象化，讓教育者、講師、社群教學者、研究者與知識工作者都可以 Fork 使用。
 
@@ -86,22 +87,22 @@ python -m http.server 4173
 | 受眾 | 原始預設 | 設計重點 |
 |---|---|---|
 | 幼兒 | 15 歲以下 | 溫暖、活潑、清楚、情緒安全 |
-| 青年 | 16–35 歲 | 有風格、好理解、可分享、保留適度深度 |
-| 壯年 | 35 歲以上 | 穩重、成熟、可讀性高、內容有份量 |
+| 青年 | 16–34 歲 | 有風格、好理解、可分享、保留適度深度 |
+| 壯年 | 35 歲以上 | 可讀性高、內容有份量，依主題選擇沉靜或生動節奏 |
 
 年齡範圍沿用原始教學資料，網站不把它當作普遍教育學定律；如果你 Fork 專案，可以直接改成自己的受眾定義。
 
 ### 2. Prompt Lab
 
-使用者可以選：工作流／產出類型、受眾、聚焦主題、簡報視覺主題、深度／難度、角色、額外限制與是否啟用嚴格來源限定。完成後可以直接複製、開啟 Gemini Notebook、加入 Chain 或丟到 Quality Check。
+使用者可以選：工作流／產出類型、受眾、聚焦主題、簡報視覺主題、深度／難度、角色、額外限制與是否啟用嚴格來源限定。完成後可以直接複製、開啟 Gemini Notebook、加入 Chain 或丟到結構檢查。
 
 ### 3. Prompt Chain
 
 Chain 是一組可編輯、可排序的 Prompt。預設範例：萃取來源中的核心概念 → 轉換成教學產出 → 驗證前一步是否加入來源沒有支持的內容。Chain 會儲存在 `localStorage`，不會上傳到任何伺服器。
 
-### 4. Prompt Quality Check
+### 4. Prompt 結構檢查
 
-品質分數不是「AI 幫 AI 打分」，而是完全透明的 deterministic rules：來源限定、防杜撰、受眾、任務、輸出格式、約束、具體性與兒少版本安全提示。
+結構完整度不是「AI 幫 AI 打分」，更不是成品品質保證；它只是完全透明的 deterministic rules：來源限定、防杜撰、受眾、任務、輸出格式、約束、具體性與兒少版本安全提示。
 
 ## 現在的 Gemini Notebook 相容性
 

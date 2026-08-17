@@ -1,152 +1,47 @@
-/* Audience/gallery enhancements: clear labels and original real-output PNGs. */
+/* Audience labels and real-output preview presentation. */
 
 #ageFilters [data-age="all"] { display: none !important; }
 #ageFilters .chip { white-space: nowrap; }
 
-/* The supplied real outputs are 1376 × 768. Preserve their native canvas so
-   text and artwork are never stretched. Other cards keep the CSS previews. */
-.prompt-card::before {
-  flex: 0 0 auto !important;
-  width: 100%;
+/* Real examples are rendered as native lazy-loaded images by app.js. This keeps
+   the original 1376 × 768 canvas sharp without downloading every PNG up front. */
+.prompt-card.has-real-preview::before,
+.prompt-card.has-real-preview::after { display: none !important; }
+
+.card-preview {
+  position: relative;
+  margin: 0 0 15px;
   aspect-ratio: 1376 / 768;
-  background-color: var(--panel-2) !important;
-  background-repeat: no-repeat !important;
-  background-position: center !important;
-  image-rendering: auto;
+  overflow: hidden;
+  border: 1px solid color-mix(in srgb, var(--line) 86%, transparent);
+  border-radius: 14px;
+  background: var(--panel-2);
 }
 
-.prompt-card[data-id="children-comic-flex"]::before {
-  background-image: url("./real-previews/comic-children.png") !important;
-  background-size: cover !important;
+.card-preview img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.prompt-card[data-id="youth-comic-flex"]::before {
-  background-image: url("./real-previews/comic-youth.png") !important;
-  background-size: cover !important;
-}
-
-.prompt-card[data-id="adult-comic-flex"]::before {
-  background-image: url("./real-previews/comic-mature.png") !important;
-  background-size: cover !important;
-}
-
-.prompt-card[data-id="children-stars"]::before {
-  background-image: url("./real-previews/stars-children.png") !important;
-  background-size: cover !important;
-}
-
-.prompt-card[data-id="youth-stars"]::before {
-  background-image: url("./real-previews/stars-youth.png") !important;
-  background-size: cover !important;
-}
-
-.prompt-card[data-id="adult-stars"]::before {
-  background-image: url("./real-previews/stars-mature.png") !important;
-  background-size: cover !important;
-}
-
-.prompt-card[data-id="children-fairy-animation"]::before {
-  background-image: url("./real-previews/fairy-animation-children.png") !important;
-  background-size: cover !important;
-}
-
-.prompt-card[data-id="youth-fairy-animation"]::before {
-  background-image: url("./real-previews/fairy-animation-youth.png") !important;
-  background-size: cover !important;
-}
-
-.prompt-card[data-id="adult-fairy-animation"]::before {
-  background-image: url("./real-previews/fairy-animation-mature.png") !important;
-  background-size: cover !important;
-}
-
-.prompt-card[data-id="children-comic-panels"]::before {
-  background-image: url("./real-previews/comic-panels-children.png") !important;
-  background-size: cover !important;
-}
-
-.prompt-card[data-id="youth-comic-panels"]::before {
-  background-image: url("./real-previews/comic-panels-youth.png") !important;
-  background-size: cover !important;
-}
-
-.prompt-card[data-id="adult-comic-panels"]::before {
-  background-image: url("./real-previews/comic-panels-mature.png") !important;
-  background-size: cover !important;
-}
-
-.prompt-card[data-id="children-cartoon"]::before {
-  background-image: url("./real-previews/cartoon-children.png") !important;
-  background-size: cover !important;
-}
-
-.prompt-card[data-id="youth-cartoon"]::before {
-  background-image: url("./real-previews/cartoon-youth.png") !important;
-  background-size: cover !important;
-}
-
-.prompt-card[data-id="adult-cartoon"]::before {
-  background-image: url("./real-previews/cartoon-mature.png") !important;
-  background-size: cover !important;
-}
-
-.prompt-card[data-id="children-fairy-tale"]::before {
-  background-image: url("./real-previews/fairy-tale-children.png") !important;
-  background-size: cover !important;
-}
-
-.prompt-card[data-id="youth-fairy-tale"]::before {
-  background-image: url("./real-previews/fairy-tale-youth.png") !important;
-  background-size: cover !important;
-}
-
-.prompt-card[data-id="adult-fairy-tale"]::before {
-  background-image: url("./real-previews/fairy-tale-mature.png") !important;
-  background-size: cover !important;
-}
-
-.prompt-card[data-id="children-animals"]::before {
-  background-image: url("./real-previews/animals-children.png") !important;
-  background-size: cover !important;
-}
-
-.prompt-card[data-id="youth-animals"]::before {
-  background-image: url("./real-previews/animals-youth.png") !important;
-  background-size: cover !important;
-}
-
-.prompt-card[data-id="adult-animals"]::before {
-  background-image: url("./real-previews/animals-mature.png") !important;
-  background-size: cover !important;
-}
-
-.prompt-card:is(
-  [data-id$="-comic-flex"],
-  [data-id$="-comic-panels"],
-  [data-id$="-cartoon"],
-  [data-id$="-fairy-animation"],
-  [data-id$="-fairy-tale"],
-  [data-id$="-animals"],
-  [data-id$="-stars"]
-)::after {
-  content: "實際輸出 · 範例" !important;
-  color: var(--text) !important;
-  background: color-mix(in srgb, var(--panel) 92%, transparent) !important;
-  border-color: color-mix(in srgb, var(--text) 16%, transparent) !important;
-}
-
-html[lang="en"] .prompt-card:is(
-  [data-id$="-comic-flex"],
-  [data-id$="-comic-panels"],
-  [data-id$="-cartoon"],
-  [data-id$="-fairy-animation"],
-  [data-id$="-fairy-tale"],
-  [data-id$="-animals"],
-  [data-id$="-stars"]
-)::after {
-  content: "REAL OUTPUT · EXAMPLE" !important;
+.card-preview figcaption {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 5px 8px;
+  border: 1px solid color-mix(in srgb, var(--text) 14%, transparent);
+  border-radius: 999px;
+  color: var(--text);
+  background: color-mix(in srgb, var(--panel) 92%, transparent);
+  backdrop-filter: blur(8px);
+  font-size: 9px;
+  line-height: 1;
+  font-weight: 900;
+  letter-spacing: .08em;
+  text-transform: uppercase;
 }
 
 @media (max-width: 640px) {
-  .prompt-card::before { aspect-ratio: 1376 / 768; }
+  .card-preview { border-radius: 12px; margin-bottom: 12px; }
 }

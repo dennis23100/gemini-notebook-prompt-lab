@@ -232,3 +232,83 @@ input, select, textarea { color: var(--text); background: var(--panel-2); border
 
 /* Original project handoff affordance — intentionally not a Google trademark/logo. */
 .notebook-launch { gap: .45rem; }
+
+/* v1.3 discovery-first layout: put the working area before the tutorial. */
+main { display: flex; flex-direction: column; }
+.hero { order: 1; padding: 42px 0 28px; gap: 32px; }
+.hero-copy h1 { font-size: clamp(40px, 5.2vw, 64px); max-width: 820px; }
+.hero-copy p { max-width: 720px; }
+.hero-panel { padding: 18px; border-radius: 24px; }
+.workspace { order: 2; padding: 10px 0 48px; }
+.quickstart { order: 3; padding: 34px 0 64px; }
+.why { order: 4; }
+
+.collection-strip {
+  display: grid;
+  grid-template-columns: minmax(180px, .32fr) minmax(0, 1fr);
+  gap: 18px;
+  align-items: center;
+  margin-bottom: 18px;
+  padding: 17px 18px;
+  border: 1px solid color-mix(in srgb, var(--primary) 28%, var(--line));
+  border-radius: 18px;
+  background:
+    radial-gradient(circle at 8% 0%, color-mix(in srgb, #bca7ff 22%, transparent), transparent 42%),
+    radial-gradient(circle at 92% 100%, color-mix(in srgb, #70dbc5 18%, transparent), transparent 38%),
+    var(--panel);
+}
+.collection-copy p { margin: 5px 0 0; color: var(--muted); font-size: 13px; }
+.collection-chips { justify-content: flex-end; }
+.collection-chip { border-color: color-mix(in srgb, var(--primary) 20%, var(--line)); }
+.collection-chip.active { box-shadow: 0 7px 20px color-mix(in srgb, var(--primary) 22%, transparent); }
+
+.prompt-card {
+  overflow: hidden;
+  isolation: isolate;
+  background:
+    radial-gradient(circle at 100% 0%, color-mix(in srgb, var(--card-accent, var(--primary)) 8%, transparent), transparent 38%),
+    var(--panel);
+  border-top-color: color-mix(in srgb, var(--card-accent, var(--primary)) 42%, var(--line));
+}
+.prompt-card[data-vibe="dreamy"] { --card-accent: #9b7bea; }
+.prompt-card[data-vibe="animated"] { --card-accent: #ff6f91; }
+.prompt-card[data-vibe="adventure"] { --card-accent: #27a78c; }
+.prompt-card[data-vibe="playful"] { --card-accent: #e8a328; }
+.prompt-card[data-vibe="cinematic"] { --card-accent: #4d6fd7; }
+.prompt-card[data-vibe="elegant"] { --card-accent: #b4677d; }
+.prompt-card[data-vibe="editorial"] { --card-accent: #e45d4e; }
+.prompt-card[data-vibe="calm"] { --card-accent: #63a687; }
+.prompt-card[data-vibe="performance"] { --card-accent: #d64f83; }
+.prompt-card[data-vibe="cultural"] { --card-accent: #148c76; }
+.badge.vibe { color: var(--card-accent, var(--primary)); background: color-mix(in srgb, var(--card-accent, var(--primary)) 11%, var(--panel)); }
+.badge-new { color: #fff; background: linear-gradient(135deg, #7a5df0, #d85c9b); letter-spacing: .06em; }
+.badge.score-good { color: #087d68; background: color-mix(in srgb, #1bb89b 10%, var(--panel)); }
+
+.load-more-row { display: flex; justify-content: center; margin: 22px 0 4px; }
+.load-more-row .button { min-width: 180px; }
+.reference-tip {
+  margin: 12px 0 0;
+  padding: 11px 13px;
+  border: 1px solid color-mix(in srgb, var(--accent) 28%, var(--line));
+  border-radius: 12px;
+  color: var(--muted);
+  background: color-mix(in srgb, var(--accent) 6%, var(--panel));
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+@media (max-width: 960px) {
+  .hero { padding-top: 34px; }
+  .collection-strip { grid-template-columns: 1fr; }
+  .collection-chips { justify-content: flex-start; }
+}
+
+@media (max-width: 640px) {
+  .hero { padding-top: 26px; padding-bottom: 18px; }
+  .hero-copy h1 { font-size: clamp(38px, 12vw, 52px); }
+  .hero-panel { display: none; }
+  .collection-strip { padding: 14px; margin-bottom: 14px; }
+  .collection-chips { flex-wrap: nowrap; overflow-x: auto; padding-bottom: 4px; }
+  .collection-chip { flex: 0 0 auto; }
+  .quickstart { padding-top: 24px; }
+}

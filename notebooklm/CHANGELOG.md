@@ -2,6 +2,33 @@
 
 All notable changes to this project will be documented here.
 
+## [1.3.0] - 2026-08-17
+
+### Added
+
+- 14 original visual themes across dreamy animation, miniature adventure, sky and sea exploration, magic-school notes, creature teams, paper craft, science sketching, musical theatre, waltz, mahjong geometry, jazz, circus, and kinetic editorial directions.
+- 42 new age-adaptive prompts, bringing the library to 132 prompts across 44 themes and 3 audiences.
+- Inspiration shortcuts for new, dreamy, animated, adventurous, child-friendly, vivid 35+, and real-output collections.
+- Theme vibe, energy, collection, and optional real-output preview metadata with schema validation.
+- Progressive card loading and URL-shareable collection filters.
+
+### Changed
+
+- Reworked every audience variant with an explicit audience art direction; youth now consistently covers ages 16–34.
+- Mature-reader prompts keep substance and readability without defaulting every deck to calm, static, navy, sepia, or gold styling.
+- Prompt Lab now applies role and depth controls to slide-deck generation and makes output-language priority explicit.
+- Real-output previews use native lazy-loaded PNG images; illustrative previews are clearly labelled as such.
+- The homepage is more compact and discovery-first, with the working area visible sooner.
+- Structure scores are described as deterministic rule completeness, not a guarantee of generated-output quality.
+
+### Safety
+
+- New themes require original visual systems and explicitly prohibit copying or naming franchises, characters, studios, artists, or copyrighted universes.
+
+### Validation
+
+- Expanded automated validation and regression coverage to 30 checks.
+
 ## [1.2.1] - 2026-08-13
 
 ### Added

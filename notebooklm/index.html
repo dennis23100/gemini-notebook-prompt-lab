@@ -4,9 +4,9 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#f4f6fb" />
-  <meta name="description" content="Age-adaptive prompt library and workflow lab for Gemini Notebook (formerly NotebookLM)." />
+  <meta name="description" content="132 age-adaptive prompts across 44 visual themes, plus a local-first workflow lab for Gemini Notebook." />
   <meta property="og:title" content="Gemini Notebook Prompt Lab" />
-  <meta property="og:description" content="90 age-adaptive prompts, workflow recipes, prompt chains, and local quality checks." />
+  <meta property="og:description" content="132 age-adaptive prompts across 44 visual themes, including dreamy animation, adventure, culture, and vivid mature directions." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://dennis23100.github.io/gemini-notebook-prompt-lab/" />
   <meta property="og:image" content="https://dennis23100.github.io/gemini-notebook-prompt-lab/docs/social-preview.png" />
@@ -49,15 +49,15 @@
       <div class="hero-copy">
         <span class="eyebrow" data-i18n="eyebrow">來源限定 · 分齡適配 · 可分享 · 隱私優先</span>
         <h1 data-i18n="heroTitle">把「找提示詞」變成一套可重複的 Gemini Notebook 工作流。</h1>
-        <p data-i18n="heroBody">從 90 組分齡簡報提示詞出發，再加上多格式工作流、流程串接、品質檢查與一鍵開啟 Gemini Notebook。所有資料都在瀏覽器本機執行。</p>
+        <p data-i18n="heroBody">從 132 組分齡簡報提示詞與 44 種視覺主題出發，快速找到夢幻、動畫、冒險、文化與成熟生動的方向。所有資料都在瀏覽器本機執行。</p>
         <div class="hero-actions">
           <button class="button primary" type="button" data-tab-target="library" data-i18n="browsePrompts">瀏覽提示詞</button>
           <button class="button secondary" type="button" data-tab-target="lab" data-i18n="buildPrompt">建立提示詞</button>
         </div>
       </div>
       <div class="hero-panel" aria-label="專案統計">
-        <div class="stat"><strong id="statPrompts">90</strong><span data-i18n="statPrompts">分齡提示詞</span></div>
-        <div class="stat"><strong>30</strong><span data-i18n="statThemes">視覺主題</span></div>
+        <div class="stat"><strong id="statPrompts">132</strong><span data-i18n="statPrompts">分齡提示詞</span></div>
+        <div class="stat"><strong id="statThemes">44</strong><span data-i18n="statThemes">視覺主題</span></div>
         <div class="stat"><strong>3</strong><span data-i18n="statAges">年齡層</span></div>
         <div class="stat"><strong>10</strong><span data-i18n="statWorkflows">工作流</span></div>
         <div class="privacy-note"><span aria-hidden="true">◌</span><span data-i18n="privacyNote">不需登入、不上傳你的提示詞、不使用追蹤器。</span></div>
@@ -95,6 +95,14 @@
       </div>
 
       <section id="panel-library" class="tab-panel active" role="tabpanel" aria-labelledby="tab-library">
+        <section class="collection-strip" aria-labelledby="collections-title">
+          <div class="collection-copy">
+            <span class="eyebrow" id="collections-title" data-i18n="collectionsTitle">靈感捷徑</span>
+            <p data-i18n="collectionsHint">先選一種感覺，再用年齡與分類縮小範圍。</p>
+          </div>
+          <div id="collectionFilters" class="chips collection-chips" aria-label="Inspiration collections"></div>
+        </section>
+
         <div class="library-toolbar">
           <label class="search-box">
             <span class="sr-only" data-i18n="search">搜尋</span>
@@ -125,6 +133,7 @@
           <button id="clearFiltersBtn" class="link-button" type="button" data-i18n="clearFilters">清除篩選</button>
         </div>
         <div id="promptGrid" class="prompt-grid" aria-live="polite"></div>
+        <div class="load-more-row"><button id="loadMoreBtn" class="button secondary" type="button" data-i18n="loadMore">載入更多</button></div>
         <div id="emptyState" class="empty-state hidden"><strong data-i18n="emptyTitle">找不到符合條件的提示詞</strong><p data-i18n="emptyBody">換一個關鍵字，或清除篩選條件。</p></div>
       </section>
 
@@ -132,6 +141,7 @@
         <div class="split-layout">
           <div class="builder-card">
             <div class="section-heading compact-heading"><span class="eyebrow" data-i18n="composerEyebrow">提示詞組合器</span><h2 data-i18n="composerTitle">用任務組合，而不是從空白開始</h2></div>
+            <p class="reference-tip" data-i18n="referenceTip">小技巧：若你有品牌手冊、既有簡報或喜歡的版面，可先把它加入 Notebook 作為風格參考來源。</p>
             <div class="form-grid">
               <label><span data-i18n="workflow">工作流</span><select id="workflowSelect"></select></label>
               <label><span data-i18n="audience">受眾</span><select id="audienceSelect"></select></label>
@@ -171,7 +181,7 @@
             <div class="button-row"><button id="runLintBtn" class="button primary" type="button" data-i18n="runCheck">執行檢查</button><button id="useSelectedLintBtn" class="button ghost" type="button" data-i18n="useSelected">使用目前選取的提示詞</button></div>
           </div>
           <div class="preview-card">
-            <div class="score-panel"><div id="lintScore" class="big-score">—</div><div><strong data-i18n="qualityScore">提示詞品質分數</strong><p id="lintSummary" data-i18n="lintIdle">貼上英文 Prompt 後執行檢查。</p></div></div>
+            <div class="score-panel"><div id="lintScore" class="big-score">—</div><div><strong data-i18n="qualityScore">Prompt 結構完整度</strong><p id="lintSummary" data-i18n="lintIdle">貼上 Prompt 後執行檢查。</p></div></div>
             <div id="lintResults" class="lint-results"></div>
           </div>
         </div>

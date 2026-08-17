@@ -34,13 +34,17 @@ const previews = [
   ['adult-fairy-animation', 'fairy-animation-mature.png']
 ];
 
-const [readme, readmeZh, previewSvg, galleryCss, serviceWorker] = await Promise.all([
+const [readme, readmeZh, previewSvg, galleryCss, serviceWorker, appJs, promptManifest] = await Promise.all([
   read('README.md'),
   read('README.zh-TW.md'),
   read('notebooklm/docs/showcase-preview.svg'),
   read('notebooklm/assets/audience-gallery.css'),
-  read('notebooklm/service-worker.js')
+  read('notebooklm/service-worker.js'),
+  read('notebooklm/assets/app.js'),
+  read('notebooklm/data/prompts.json').then(JSON.parse)
 ]);
+const promptPacks = await Promise.all(promptManifest.packs.map(pack => read(`notebooklm/${pack.path.replace(/^\.\//, '')}`).then(JSON.parse)));
+const builtInPrompts = promptPacks.flatMap(pack => pack.prompts || []);
 
 function inspectPng(buffer, name) {
   const signature = [137, 80, 78, 71, 13, 10, 26, 10];
@@ -115,18 +119,23 @@ test('all twenty-one original PNG previews are complete, sharp, and unique', asy
   assert.equal(hashes.size, previews.length, 'every audience/theme preview is distinct');
 });
 
-test('README stays text-first while card CSS and offline cache reference every independent PNG', () => {
+test('README stays text-first while prompt metadata lazy-loads every independent PNG', () => {
   assert.doesNotMatch(readme, /notebooklm\/assets\/real-previews\//);
   assert.doesNotMatch(readmeZh, /notebooklm\/assets\/real-previews\//);
 
   for (const [id, file] of previews) {
-    assert.ok(galleryCss.includes(`data-id="${id}"`), `audience-gallery.css: ${id}`);
-    assert.ok(galleryCss.includes(`./real-previews/${file}`), `audience-gallery.css: ${file}`);
-    assert.ok(serviceWorker.includes(`./assets/real-previews/${file}`), `service-worker.js: ${file}`);
+    const prompt = builtInPrompts.find(item => item.id === id);
+    assert.equal(prompt?.preview?.kind, 'real-output', `${id}: preview kind`);
+    assert.equal(prompt?.preview?.src, `./assets/real-previews/${file}`, `${id}: preview source`);
+    assert.ok(!serviceWorker.includes(`./assets/real-previews/${file}`), `${file}: not install-preloaded`);
   }
 
   assert.match(galleryCss, /aspect-ratio:\s*1376\s*\/\s*768/);
-  assert.match(serviceWorker, /const CACHE='gnpl-v18'/);
+  assert.match(galleryCss, /\.prompt-card\.has-real-preview::before/);
+  assert.match(appJs, /loading="lazy"/);
+  assert.match(appJs, /decoding="async"/);
+  assert.match(appJs, /fetchpriority="low"/);
+  assert.match(serviceWorker, /const CACHE='gnpl-v19'/);
   assert.doesNotMatch(`${readme}\n${readmeZh}\n${galleryCss}`, /real-previews\/[\w-]*sprite\.(?:png|jpe?g|webp)/i);
 });
 

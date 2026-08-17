@@ -70,6 +70,7 @@ function filterSnapshotProductivity() {
   return {
     age: document.querySelector('#ageFilters .chip.active')?.dataset.age || 'all',
     categoryLabel: document.querySelector('#categoryFilters .chip.active')?.dataset.category || 'all',
+    collection: document.querySelector('#collectionFilters .chip.active')?.dataset.collection || 'all',
     search: document.querySelector('#searchInput')?.value?.trim() || '',
     favoritesOnly: document.querySelector('#favoritesOnlyBtn')?.getAttribute('aria-pressed') === 'true'
   };
@@ -82,6 +83,7 @@ async function syncFilterUrlProductivity() {
   if (snapshot.age !== 'all') url.searchParams.set('age', snapshot.age); else url.searchParams.delete('age');
   const categoryKey = await categoryKeyFromLabelProductivity(snapshot.categoryLabel);
   if (categoryKey !== 'all') url.searchParams.set('category', categoryKey); else url.searchParams.delete('category');
+  if (snapshot.collection !== 'all') url.searchParams.set('collection', snapshot.collection); else url.searchParams.delete('collection');
   if (snapshot.search) url.searchParams.set('q', snapshot.search); else url.searchParams.delete('q');
   if (snapshot.favoritesOnly) url.searchParams.set('favorites', '1'); else url.searchParams.delete('favorites');
   history.replaceState({}, '', url);
@@ -89,7 +91,7 @@ async function syncFilterUrlProductivity() {
 
 async function restoreFilterUrlProductivity() {
   const params = new URL(location.href).searchParams;
-  if (![...params.keys()].some(key => ['age', 'category', 'q', 'favorites'].includes(key))) return;
+  if (![...params.keys()].some(key => ['age', 'category', 'collection', 'q', 'favorites'].includes(key))) return;
   restoringUrlState = true;
   try {
     const search = document.querySelector('#searchInput');
@@ -110,6 +112,9 @@ async function restoreFilterUrlProductivity() {
         .find(button => button.dataset.category === label);
       categoryButton?.click();
     }
+
+    const collection = params.get('collection');
+    if (collection) document.querySelector(`#collectionFilters [data-collection="${CSS.escape(collection)}"]`)?.click();
 
     if (params.get('favorites') === '1') {
       const favorites = document.querySelector('#favoritesOnlyBtn');
@@ -213,9 +218,10 @@ async function filteredPromptDataProductivity() {
   return prompts.filter(prompt => {
     if (snapshot.age !== 'all' && prompt.ageGroup !== snapshot.age) return false;
     if (snapshot.categoryLabel !== 'all' && localizedProductivity(prompt.category) !== snapshot.categoryLabel) return false;
+    if (snapshot.collection !== 'all' && !(prompt.collections || []).includes(snapshot.collection)) return false;
     if (snapshot.favoritesOnly && !favorites.has(prompt.id)) return false;
     if (!query) return true;
-    const haystack = [localizedProductivity(prompt.title), localizedProductivity(prompt.summary), localizedProductivity(prompt.category), prompt.prompt, prompt.themeId, prompt.ageGroup].join(' ').toLocaleLowerCase();
+    const haystack = [localizedProductivity(prompt.title), localizedProductivity(prompt.summary), localizedProductivity(prompt.category), prompt.prompt, prompt.themeId, prompt.ageGroup, prompt.vibe, prompt.energy, ...(prompt.collections || [])].join(' ').toLocaleLowerCase();
     return haystack.includes(query);
   });
 }
@@ -301,7 +307,7 @@ function bindProductivityEvents() {
   });
 
   document.addEventListener('click', event => {
-    const filterTarget = event.target.closest('[data-age], [data-category], #favoritesOnlyBtn, #clearFiltersBtn');
+    const filterTarget = event.target.closest('[data-age], [data-category], [data-collection], #favoritesOnlyBtn, #clearFiltersBtn');
     if (filterTarget) setTimeout(syncFilterUrlProductivity, 0);
 
     const recentTarget = event.target.closest('[data-view], [data-copy], [data-variant]');
