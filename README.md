@@ -17,7 +17,7 @@
 
 ## See the difference in the live app
 
-The live Prompt Library displays 27 independently validated Gemini Notebook output examples across 11 themes. Seven themes include Children, Youth, and Mature examples; six additional supplied outputs extend Mountain Journey and selected Youth nature themes. The repository README intentionally stays text-first; open the app to browse the real previews at card size.
+The live Prompt Library displays 31 independently validated Gemini Notebook output examples across 11 themes. Eight themes include Children, Youth, and Mature examples; Nature and Ocean include Youth and Mature outputs, while Jungle includes all three audience variants. The repository README intentionally stays text-first; open the app to browse the real previews at card size.
 
 **Preview status:** cards display original `1376 × 768` PNG exports only. A prompt without a verified generated image remains text-only—there are no CSS mock thumbnails, sprite sheets, JPEG conversions, or enlarged placeholders.
 
@@ -75,7 +75,7 @@ The app has no project backend, account system, analytics SDK, database, or embe
 
 ## Real examples and reproducible benchmark
 
-The live Prompt Library contains 27 independently validated original PNG examples. Only verified generated outputs appear as card images; every other card stays text-only. This prevents illustrative stand-ins from being mistaken for actual Gemini Notebook results.
+The live Prompt Library contains 31 independently validated original PNG examples. Only verified generated outputs appear as card images; every other card stays text-only. This prevents illustrative stand-ins from being mistaken for actual Gemini Notebook results.
 
 Separately, the project keeps a **reproducible Showcase** with a controlled project-authored source and exact prompt manifest, so contributors can compare genuine outputs without guessing the source or prompt:
 
