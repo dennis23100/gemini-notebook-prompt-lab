@@ -19,4 +19,4 @@ cd notebooklm
 npm run check
 ```
 
-This validates the 90 built-in prompts, workflow metadata, private-identifier guards, static paths, UI references, and social-preview metadata before the site is published.
+This validates the 132 built-in prompts, workflow metadata, private-identifier guards, static paths, UI references, and social-preview metadata before the site is published.

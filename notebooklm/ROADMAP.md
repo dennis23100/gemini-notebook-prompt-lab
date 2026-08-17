@@ -2,6 +2,14 @@
 
 The roadmap prioritizes **usefulness and contribution surface area** over raw prompt count.
 
+## Shipped in v1.3 — Theme discovery and prompt quality
+
+- [x] Expand to 132 prompts across 44 visual themes and 3 audience profiles.
+- [x] Add original dreamy, animated, adventure, performance, and vivid mature directions.
+- [x] Add inspiration collections, progressive card loading, and shareable collection filters.
+- [x] Strengthen audience-specific art direction and output-language controls.
+- [x] Improve real-output preview sharpness and loading behavior.
+
 ## v1.1 — Community-ready
 
 - [ ] Add screenshots/GIF demo to README after the public Pages URL is live.
@@ -17,7 +25,7 @@ The roadmap prioritizes **usefulness and contribution surface area** over raw pr
 - [ ] Add a local “grounding coverage” explainer that highlights which instruction clauses triggered each linter rule.
 - [ ] Add export formats for Markdown and CSV in addition to JSON.
 
-## v1.3 — Integrations
+## Next — Integrations
 
 - [ ] Prototype an optional browser extension that can place selected prompts into the active Gemini Notebook panel.
 - [ ] Keep the website fully usable without the extension.

@@ -17,7 +17,7 @@ test('productivity layer is loaded by the app shell', () => {
 });
 
 test('shareable filter state uses URL query parameters', () => {
-  for (const key of ['age', 'category', 'q', 'favorites']) {
+  for (const key of ['age', 'category', 'collection', 'q', 'favorites']) {
     assert.match(productivity, new RegExp(`searchParams\\.(?:set|get)\\('${key}'`));
   }
 });

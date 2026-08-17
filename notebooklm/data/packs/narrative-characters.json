@@ -13,11 +13,11 @@
       "order": 1,
       "ageGroup": "children",
       "ageLabel": {
-        "zh-TW": "幼兒",
+        "zh-TW": "兒童",
         "en": "Children"
       },
       "ageRange": {
-        "zh-TW": "15歲以下",
+        "zh-TW": "15 歲以下",
         "en": "15 and below"
       },
       "title": {
@@ -32,7 +32,7 @@
         "zh-TW": "敘事與角色",
         "en": "Narrative & Characters"
       },
-      "prompt": "Please transform the uploaded source material into a NotebookLM presentation using the Flexible Comic visual direction.\n\nUse only the uploaded source material. Keep the original meaning, key terms, quotations, and teaching points accurate. Do not invent facts, doctrines, scenes, or examples that are not supported by the source. If the source is spiritual or moral teaching, keep the tone respectful, but do not force religious iconography unless the user explicitly asks for it.\n\nMake it appropriate for learners aged 15 and below: warm, playful, visually clear, emotionally safe, and easy to follow. Use short sentences, familiar words, one main idea per slide, gentle brightness, and friendly imagery.\n\nTheme Direction: Use a flexible comic direction rather than one fixed subtype. The slides may borrow from humorous, slice-of-life, adventure, inspirational, or educational comic language as long as the result matches the age group and the source material.\n\nOutput Goal: Create a slide flow with clear titles, strong visual hierarchy, memorable scenes, and accurate content transfer from the source. Let the theme shape the presentation style, but keep the topic itself faithful to the source material.\n\nAvoid dense text, heavy abstraction, dark or scary visuals, sarcasm, and layouts that feel too busy.",
+      "prompt": "Please transform the uploaded source material into a NotebookLM presentation using the Flexible Comic visual direction.\n\nUse only the uploaded source material. Keep the original meaning, key terms, quotations, and teaching points accurate. Do not invent facts, doctrines, scenes, or examples that are not supported by the source. If the source is spiritual or moral teaching, keep the tone respectful, but do not force religious iconography unless the user explicitly asks for it.\n\nMake it appropriate for learners aged 15 and below: warm, playful, visually clear, emotionally safe, and easy to follow. Use short sentences, familiar words, one main idea per slide, gentle brightness, and friendly imagery.\n\nTheme Direction: Use a flexible comic direction rather than one fixed subtype. The slides may borrow from humorous, slice-of-life, adventure, inspirational, or educational comic language as long as the result matches the age group and the source material.\n\nAudience Art Direction: Use an original expressive cast, readable poses, clear emotions, playful motion cues, and simple scene-to-scene continuity.\n\nOutput Goal: Create a slide flow with clear titles, strong visual hierarchy, memorable scenes, and accurate content transfer from the source. Let the theme shape the presentation style, but keep the topic itself faithful to the source material.\n\nAvoid dense text, heavy abstraction, dark or scary visuals, sarcasm, and layouts that feel too busy.",
       "status": "完整",
       "notes": "適用年齡：15歲以下；同主題對應青年版、壯年版；可直接貼入 NotebookLM",
       "sources": [
@@ -40,7 +40,17 @@
         "https://github.com/arlinamid/notebooklm-browser-plugin"
       ],
       "sourceName": "ChatGPT整理（綜合公開開源 prompt 邏輯 + 佛堂教學需求改寫）",
-      "licenseNote": "Project-authored adaptation; upstream inspiration links preserved."
+      "licenseNote": "Project-authored adaptation; upstream inspiration links preserved.",
+      "vibe": "animated",
+      "energy": "lively",
+      "collections": [
+        "animated",
+        "real-output"
+      ],
+      "preview": {
+        "kind": "real-output",
+        "src": "./assets/real-previews/comic-children.png"
+      }
     },
     {
       "id": "children-comic-panels",
@@ -48,11 +58,11 @@
       "order": 2,
       "ageGroup": "children",
       "ageLabel": {
-        "zh-TW": "幼兒",
+        "zh-TW": "兒童",
         "en": "Children"
       },
       "ageRange": {
-        "zh-TW": "15歲以下",
+        "zh-TW": "15 歲以下",
         "en": "15 and below"
       },
       "title": {
@@ -67,7 +77,7 @@
         "zh-TW": "敘事與角色",
         "en": "Narrative & Characters"
       },
-      "prompt": "Please transform the uploaded source material into a NotebookLM presentation using the 3–4 Panel Comic visual direction.\n\nUse only the uploaded source material. Keep the original meaning, key terms, quotations, and teaching points accurate. Do not invent facts, doctrines, scenes, or examples that are not supported by the source. If the source is spiritual or moral teaching, keep the tone respectful, but do not force religious iconography unless the user explicitly asks for it.\n\nMake it appropriate for learners aged 15 and below: warm, playful, visually clear, emotionally safe, and easy to follow. Use short sentences, familiar words, one main idea per slide, gentle brightness, and friendly imagery.\n\nTheme Direction: Present the content as clear 3-panel or 4-panel mini-comics. Each slide should show a simple sequence: setup, development, key point, and takeaway. Keep the panel flow obvious and easy to scan.\n\nOutput Goal: Create a slide flow with clear titles, strong visual hierarchy, memorable scenes, and accurate content transfer from the source. Let the theme shape the presentation style, but keep the topic itself faithful to the source material.\n\nAvoid dense text, heavy abstraction, dark or scary visuals, sarcasm, and layouts that feel too busy.",
+      "prompt": "Please transform the uploaded source material into a NotebookLM presentation using the 3–4 Panel Comic visual direction.\n\nUse only the uploaded source material. Keep the original meaning, key terms, quotations, and teaching points accurate. Do not invent facts, doctrines, scenes, or examples that are not supported by the source. If the source is spiritual or moral teaching, keep the tone respectful, but do not force religious iconography unless the user explicitly asks for it.\n\nMake it appropriate for learners aged 15 and below: warm, playful, visually clear, emotionally safe, and easy to follow. Use short sentences, familiar words, one main idea per slide, gentle brightness, and friendly imagery.\n\nTheme Direction: Present the content as clear 3-panel or 4-panel mini-comics. Each slide should show a simple sequence: setup, development, key point, and takeaway. Keep the panel flow obvious and easy to scan.\n\nAudience Art Direction: Use an original expressive cast, readable poses, clear emotions, playful motion cues, and simple scene-to-scene continuity.\n\nOutput Goal: Create a slide flow with clear titles, strong visual hierarchy, memorable scenes, and accurate content transfer from the source. Let the theme shape the presentation style, but keep the topic itself faithful to the source material.\n\nAvoid dense text, heavy abstraction, dark or scary visuals, sarcasm, and layouts that feel too busy.",
       "status": "完整",
       "notes": "適用年齡：15歲以下；同主題對應青年版、壯年版；可直接貼入 NotebookLM",
       "sources": [
@@ -75,7 +85,17 @@
         "https://github.com/arlinamid/notebooklm-browser-plugin"
       ],
       "sourceName": "ChatGPT整理（綜合公開開源 prompt 邏輯 + 佛堂教學需求改寫）",
-      "licenseNote": "Project-authored adaptation; upstream inspiration links preserved."
+      "licenseNote": "Project-authored adaptation; upstream inspiration links preserved.",
+      "vibe": "animated",
+      "energy": "lively",
+      "collections": [
+        "animated",
+        "real-output"
+      ],
+      "preview": {
+        "kind": "real-output",
+        "src": "./assets/real-previews/comic-panels-children.png"
+      }
     },
     {
       "id": "children-cartoon",
@@ -83,11 +103,11 @@
       "order": 3,
       "ageGroup": "children",
       "ageLabel": {
-        "zh-TW": "幼兒",
+        "zh-TW": "兒童",
         "en": "Children"
       },
       "ageRange": {
-        "zh-TW": "15歲以下",
+        "zh-TW": "15 歲以下",
         "en": "15 and below"
       },
       "title": {
@@ -102,7 +122,7 @@
         "zh-TW": "敘事與角色",
         "en": "Narrative & Characters"
       },
-      "prompt": "Please transform the uploaded source material into a NotebookLM presentation using the Cartoon visual direction.\n\nUse only the uploaded source material. Keep the original meaning, key terms, quotations, and teaching points accurate. Do not invent facts, doctrines, scenes, or examples that are not supported by the source. If the source is spiritual or moral teaching, keep the tone respectful, but do not force religious iconography unless the user explicitly asks for it.\n\nMake it appropriate for learners aged 15 and below: warm, playful, visually clear, emotionally safe, and easy to follow. Use short sentences, familiar words, one main idea per slide, gentle brightness, and friendly imagery.\n\nTheme Direction: Use a broad cartoon direction with friendly shapes, expressive characters or icons, and simple visual storytelling. Keep it flexible rather than tied to one exact cartoon sub-style.\n\nOutput Goal: Create a slide flow with clear titles, strong visual hierarchy, memorable scenes, and accurate content transfer from the source. Let the theme shape the presentation style, but keep the topic itself faithful to the source material.\n\nAvoid dense text, heavy abstraction, dark or scary visuals, sarcasm, and layouts that feel too busy.",
+      "prompt": "Please transform the uploaded source material into a NotebookLM presentation using the Cartoon visual direction.\n\nUse only the uploaded source material. Keep the original meaning, key terms, quotations, and teaching points accurate. Do not invent facts, doctrines, scenes, or examples that are not supported by the source. If the source is spiritual or moral teaching, keep the tone respectful, but do not force religious iconography unless the user explicitly asks for it.\n\nMake it appropriate for learners aged 15 and below: warm, playful, visually clear, emotionally safe, and easy to follow. Use short sentences, familiar words, one main idea per slide, gentle brightness, and friendly imagery.\n\nTheme Direction: Use a broad cartoon direction with friendly shapes, expressive characters or icons, and simple visual storytelling. Keep it flexible rather than tied to one exact cartoon sub-style.\n\nAudience Art Direction: Use an original expressive cast, readable poses, clear emotions, playful motion cues, and simple scene-to-scene continuity.\n\nOutput Goal: Create a slide flow with clear titles, strong visual hierarchy, memorable scenes, and accurate content transfer from the source. Let the theme shape the presentation style, but keep the topic itself faithful to the source material.\n\nAvoid dense text, heavy abstraction, dark or scary visuals, sarcasm, and layouts that feel too busy.",
       "status": "完整",
       "notes": "適用年齡：15歲以下；同主題對應青年版、壯年版；可直接貼入 NotebookLM",
       "sources": [
@@ -110,7 +130,17 @@
         "https://github.com/arlinamid/notebooklm-browser-plugin"
       ],
       "sourceName": "ChatGPT整理（綜合公開開源 prompt 邏輯 + 佛堂教學需求改寫）",
-      "licenseNote": "Project-authored adaptation; upstream inspiration links preserved."
+      "licenseNote": "Project-authored adaptation; upstream inspiration links preserved.",
+      "vibe": "animated",
+      "energy": "lively",
+      "collections": [
+        "animated",
+        "real-output"
+      ],
+      "preview": {
+        "kind": "real-output",
+        "src": "./assets/real-previews/cartoon-children.png"
+      }
     },
     {
       "id": "children-fairy-animation",
@@ -118,11 +148,11 @@
       "order": 4,
       "ageGroup": "children",
       "ageLabel": {
-        "zh-TW": "幼兒",
+        "zh-TW": "兒童",
         "en": "Children"
       },
       "ageRange": {
-        "zh-TW": "15歲以下",
+        "zh-TW": "15 歲以下",
         "en": "15 and below"
       },
       "title": {
@@ -137,7 +167,7 @@
         "zh-TW": "敘事與角色",
         "en": "Narrative & Characters"
       },
-      "prompt": "Please transform the uploaded source material into a NotebookLM presentation using the Fairy-tale Animation visual direction.\n\nUse only the uploaded source material. Keep the original meaning, key terms, quotations, and teaching points accurate. Do not invent facts, doctrines, scenes, or examples that are not supported by the source. If the source is spiritual or moral teaching, keep the tone respectful, but do not force religious iconography unless the user explicitly asks for it.\n\nMake it appropriate for learners aged 15 and below: warm, playful, visually clear, emotionally safe, and easy to follow. Use short sentences, familiar words, one main idea per slide, gentle brightness, and friendly imagery.\n\nTheme Direction: Use a magical fairytale animated-film feeling with warmth, wonder, emotional clarity, and cinematic storytelling. Keep it original and avoid referencing any specific existing characters or franchises.\n\nOutput Goal: Create a slide flow with clear titles, strong visual hierarchy, memorable scenes, and accurate content transfer from the source. Let the theme shape the presentation style, but keep the topic itself faithful to the source material.\n\nAvoid dense text, heavy abstraction, dark or scary visuals, sarcasm, and layouts that feel too busy.",
+      "prompt": "Please transform the uploaded source material into a NotebookLM presentation using the Fairy-tale Animation visual direction.\n\nUse only the uploaded source material. Keep the original meaning, key terms, quotations, and teaching points accurate. Do not invent facts, doctrines, scenes, or examples that are not supported by the source. If the source is spiritual or moral teaching, keep the tone respectful, but do not force religious iconography unless the user explicitly asks for it.\n\nMake it appropriate for learners aged 15 and below: warm, playful, visually clear, emotionally safe, and easy to follow. Use short sentences, familiar words, one main idea per slide, gentle brightness, and friendly imagery.\n\nTheme Direction: Use a magical fairytale animated-film feeling with warmth, wonder, emotional clarity, and cinematic storytelling. Keep it original and avoid referencing any specific existing characters or franchises.\n\nAudience Art Direction: Build each slide around one luminous focal scene, soft layered depth, friendly wonder, and a clear visual path that a child can follow immediately.\n\nOutput Goal: Create a slide flow with clear titles, strong visual hierarchy, memorable scenes, and accurate content transfer from the source. Let the theme shape the presentation style, but keep the topic itself faithful to the source material.\n\nAvoid dense text, heavy abstraction, dark or scary visuals, sarcasm, and layouts that feel too busy.",
       "status": "完整",
       "notes": "適用年齡：15歲以下；同主題對應青年版、壯年版；可直接貼入 NotebookLM",
       "sources": [
@@ -145,7 +175,18 @@
         "https://github.com/arlinamid/notebooklm-browser-plugin"
       ],
       "sourceName": "ChatGPT整理（綜合公開開源 prompt 邏輯 + 佛堂教學需求改寫）",
-      "licenseNote": "Project-authored adaptation; upstream inspiration links preserved."
+      "licenseNote": "Project-authored adaptation; upstream inspiration links preserved.",
+      "vibe": "dreamy",
+      "energy": "cinematic",
+      "collections": [
+        "dreamy",
+        "animated",
+        "real-output"
+      ],
+      "preview": {
+        "kind": "real-output",
+        "src": "./assets/real-previews/fairy-animation-children.png"
+      }
     },
     {
       "id": "children-fairy-tale",
@@ -153,11 +194,11 @@
       "order": 5,
       "ageGroup": "children",
       "ageLabel": {
-        "zh-TW": "幼兒",
+        "zh-TW": "兒童",
         "en": "Children"
       },
       "ageRange": {
-        "zh-TW": "15歲以下",
+        "zh-TW": "15 歲以下",
         "en": "15 and below"
       },
       "title": {
@@ -172,7 +213,7 @@
         "zh-TW": "敘事與角色",
         "en": "Narrative & Characters"
       },
-      "prompt": "Please transform the uploaded source material into a NotebookLM presentation using the Fairy Tale visual direction.\n\nUse only the uploaded source material. Keep the original meaning, key terms, quotations, and teaching points accurate. Do not invent facts, doctrines, scenes, or examples that are not supported by the source. If the source is spiritual or moral teaching, keep the tone respectful, but do not force religious iconography unless the user explicitly asks for it.\n\nMake it appropriate for learners aged 15 and below: warm, playful, visually clear, emotionally safe, and easy to follow. Use short sentences, familiar words, one main idea per slide, gentle brightness, and friendly imagery.\n\nTheme Direction: Use a storybook and fairytale direction with narrative flow, inviting scenes, and a gentle sense of wonder. The presentation should feel like a meaningful tale rather than a dry report.\n\nOutput Goal: Create a slide flow with clear titles, strong visual hierarchy, memorable scenes, and accurate content transfer from the source. Let the theme shape the presentation style, but keep the topic itself faithful to the source material.\n\nAvoid dense text, heavy abstraction, dark or scary visuals, sarcasm, and layouts that feel too busy.",
+      "prompt": "Please transform the uploaded source material into a NotebookLM presentation using the Fairy Tale visual direction.\n\nUse only the uploaded source material. Keep the original meaning, key terms, quotations, and teaching points accurate. Do not invent facts, doctrines, scenes, or examples that are not supported by the source. If the source is spiritual or moral teaching, keep the tone respectful, but do not force religious iconography unless the user explicitly asks for it.\n\nMake it appropriate for learners aged 15 and below: warm, playful, visually clear, emotionally safe, and easy to follow. Use short sentences, familiar words, one main idea per slide, gentle brightness, and friendly imagery.\n\nTheme Direction: Use a storybook and fairytale direction with narrative flow, inviting scenes, and a gentle sense of wonder. The presentation should feel like a meaningful tale rather than a dry report.\n\nAudience Art Direction: Build each slide around one luminous focal scene, soft layered depth, friendly wonder, and a clear visual path that a child can follow immediately.\n\nOutput Goal: Create a slide flow with clear titles, strong visual hierarchy, memorable scenes, and accurate content transfer from the source. Let the theme shape the presentation style, but keep the topic itself faithful to the source material.\n\nAvoid dense text, heavy abstraction, dark or scary visuals, sarcasm, and layouts that feel too busy.",
       "status": "完整",
       "notes": "適用年齡：15歲以下；同主題對應青年版、壯年版；可直接貼入 NotebookLM",
       "sources": [
@@ -180,7 +221,17 @@
         "https://github.com/arlinamid/notebooklm-browser-plugin"
       ],
       "sourceName": "ChatGPT整理（綜合公開開源 prompt 邏輯 + 佛堂教學需求改寫）",
-      "licenseNote": "Project-authored adaptation; upstream inspiration links preserved."
+      "licenseNote": "Project-authored adaptation; upstream inspiration links preserved.",
+      "vibe": "dreamy",
+      "energy": "balanced",
+      "collections": [
+        "dreamy",
+        "real-output"
+      ],
+      "preview": {
+        "kind": "real-output",
+        "src": "./assets/real-previews/fairy-tale-children.png"
+      }
     },
     {
       "id": "youth-comic-flex",
@@ -188,12 +239,12 @@
       "order": 1,
       "ageGroup": "youth",
       "ageLabel": {
-        "zh-TW": "青年",
+        "zh-TW": "青少年",
         "en": "Youth"
       },
       "ageRange": {
-        "zh-TW": "16–35歲",
-        "en": "16–35"
+        "zh-TW": "16–34 歲",
+        "en": "16–34"
       },
       "title": {
         "zh-TW": "漫畫（不拘）",
@@ -207,15 +258,25 @@
         "zh-TW": "敘事與角色",
         "en": "Narrative & Characters"
       },
-      "prompt": "Please transform the uploaded source material into a NotebookLM presentation using the Flexible Comic visual direction.\n\nUse only the uploaded source material. Keep the original meaning, key terms, quotations, and teaching points accurate. Do not invent facts, doctrines, scenes, or examples that are not supported by the source. If the source is spiritual or moral teaching, keep the tone respectful, but do not force religious iconography unless the user explicitly asks for it.\n\nMake it appropriate for ages 16 to 35: stylish, engaging, emotionally resonant, and easy to share. Use clear structure, stronger visual rhythm, relatable situations, and moderate depth without becoming too childish or too corporate.\n\nTheme Direction: Use a flexible comic direction rather than one fixed subtype. The slides may borrow from humorous, slice-of-life, adventure, inspirational, or educational comic language as long as the result matches the age group and the source material.\n\nOutput Goal: Create a slide flow with clear titles, strong visual hierarchy, memorable scenes, and accurate content transfer from the source. Let the theme shape the presentation style, but keep the topic itself faithful to the source material.\n\nAvoid over-explaining, stiff business styling, low-energy visuals, or childish treatment that weakens credibility.",
+      "prompt": "Please transform the uploaded source material into a NotebookLM presentation using the Flexible Comic visual direction.\n\nUse only the uploaded source material. Keep the original meaning, key terms, quotations, and teaching points accurate. Do not invent facts, doctrines, scenes, or examples that are not supported by the source. If the source is spiritual or moral teaching, keep the tone respectful, but do not force religious iconography unless the user explicitly asks for it.\n\nMake it appropriate for ages 16 to 34: stylish, engaging, emotionally resonant, and easy to share. Use clear structure, stronger visual rhythm, relatable situations, and moderate depth without becoming too childish or too corporate.\n\nTheme Direction: Use a flexible comic direction rather than one fixed subtype. The slides may borrow from humorous, slice-of-life, adventure, inspirational, or educational comic language as long as the result matches the age group and the source material.\n\nAudience Art Direction: Use original cel-animation language, dynamic framing, expressive acting, bold silhouettes, speed cues, and cinematic transitions.\n\nOutput Goal: Create a slide flow with clear titles, strong visual hierarchy, memorable scenes, and accurate content transfer from the source. Let the theme shape the presentation style, but keep the topic itself faithful to the source material.\n\nAvoid over-explaining, stiff business styling, low-energy visuals, or childish treatment that weakens credibility.",
       "status": "完整",
-      "notes": "適用年齡：16–35歲；同主題對應幼兒版、壯年版；可直接貼入 NotebookLM",
+      "notes": "適用年齡：16–34 歲；同主題對應幼兒版、壯年版；可直接貼入 NotebookLM",
       "sources": [
         "https://github.com/serenakeyitan/awesome-notebookLM-prompts",
         "https://github.com/arlinamid/notebooklm-browser-plugin"
       ],
       "sourceName": "ChatGPT整理（綜合公開開源 prompt 邏輯 + 佛堂教學需求改寫）",
-      "licenseNote": "Project-authored adaptation; upstream inspiration links preserved."
+      "licenseNote": "Project-authored adaptation; upstream inspiration links preserved.",
+      "vibe": "animated",
+      "energy": "lively",
+      "collections": [
+        "animated",
+        "real-output"
+      ],
+      "preview": {
+        "kind": "real-output",
+        "src": "./assets/real-previews/comic-youth.png"
+      }
     },
     {
       "id": "youth-comic-panels",
@@ -223,12 +284,12 @@
       "order": 2,
       "ageGroup": "youth",
       "ageLabel": {
-        "zh-TW": "青年",
+        "zh-TW": "青少年",
         "en": "Youth"
       },
       "ageRange": {
-        "zh-TW": "16–35歲",
-        "en": "16–35"
+        "zh-TW": "16–34 歲",
+        "en": "16–34"
       },
       "title": {
         "zh-TW": "3或4格漫畫",
@@ -242,15 +303,25 @@
         "zh-TW": "敘事與角色",
         "en": "Narrative & Characters"
       },
-      "prompt": "Please transform the uploaded source material into a NotebookLM presentation using the 3–4 Panel Comic visual direction.\n\nUse only the uploaded source material. Keep the original meaning, key terms, quotations, and teaching points accurate. Do not invent facts, doctrines, scenes, or examples that are not supported by the source. If the source is spiritual or moral teaching, keep the tone respectful, but do not force religious iconography unless the user explicitly asks for it.\n\nMake it appropriate for ages 16 to 35: stylish, engaging, emotionally resonant, and easy to share. Use clear structure, stronger visual rhythm, relatable situations, and moderate depth without becoming too childish or too corporate.\n\nTheme Direction: Present the content as clear 3-panel or 4-panel mini-comics. Each slide should show a simple sequence: setup, development, key point, and takeaway. Keep the panel flow obvious and easy to scan.\n\nOutput Goal: Create a slide flow with clear titles, strong visual hierarchy, memorable scenes, and accurate content transfer from the source. Let the theme shape the presentation style, but keep the topic itself faithful to the source material.\n\nAvoid over-explaining, stiff business styling, low-energy visuals, or childish treatment that weakens credibility.",
+      "prompt": "Please transform the uploaded source material into a NotebookLM presentation using the 3–4 Panel Comic visual direction.\n\nUse only the uploaded source material. Keep the original meaning, key terms, quotations, and teaching points accurate. Do not invent facts, doctrines, scenes, or examples that are not supported by the source. If the source is spiritual or moral teaching, keep the tone respectful, but do not force religious iconography unless the user explicitly asks for it.\n\nMake it appropriate for ages 16 to 34: stylish, engaging, emotionally resonant, and easy to share. Use clear structure, stronger visual rhythm, relatable situations, and moderate depth without becoming too childish or too corporate.\n\nTheme Direction: Present the content as clear 3-panel or 4-panel mini-comics. Each slide should show a simple sequence: setup, development, key point, and takeaway. Keep the panel flow obvious and easy to scan.\n\nAudience Art Direction: Use original cel-animation language, dynamic framing, expressive acting, bold silhouettes, speed cues, and cinematic transitions.\n\nOutput Goal: Create a slide flow with clear titles, strong visual hierarchy, memorable scenes, and accurate content transfer from the source. Let the theme shape the presentation style, but keep the topic itself faithful to the source material.\n\nAvoid over-explaining, stiff business styling, low-energy visuals, or childish treatment that weakens credibility.",
       "status": "完整",
-      "notes": "適用年齡：16–35歲；同主題對應幼兒版、壯年版；可直接貼入 NotebookLM",
+      "notes": "適用年齡：16–34 歲；同主題對應幼兒版、壯年版；可直接貼入 NotebookLM",
       "sources": [
         "https://github.com/serenakeyitan/awesome-notebookLM-prompts",
         "https://github.com/arlinamid/notebooklm-browser-plugin"
       ],
       "sourceName": "ChatGPT整理（綜合公開開源 prompt 邏輯 + 佛堂教學需求改寫）",
-      "licenseNote": "Project-authored adaptation; upstream inspiration links preserved."
+      "licenseNote": "Project-authored adaptation; upstream inspiration links preserved.",
+      "vibe": "animated",
+      "energy": "lively",
+      "collections": [
+        "animated",
+        "real-output"
+      ],
+      "preview": {
+        "kind": "real-output",
+        "src": "./assets/real-previews/comic-panels-youth.png"
+      }
     },
     {
       "id": "youth-cartoon",
@@ -258,12 +329,12 @@
       "order": 3,
       "ageGroup": "youth",
       "ageLabel": {
-        "zh-TW": "青年",
+        "zh-TW": "青少年",
         "en": "Youth"
       },
       "ageRange": {
-        "zh-TW": "16–35歲",
-        "en": "16–35"
+        "zh-TW": "16–34 歲",
+        "en": "16–34"
       },
       "title": {
         "zh-TW": "卡通風格",
@@ -277,15 +348,25 @@
         "zh-TW": "敘事與角色",
         "en": "Narrative & Characters"
       },
-      "prompt": "Please transform the uploaded source material into a NotebookLM presentation using the Cartoon visual direction.\n\nUse only the uploaded source material. Keep the original meaning, key terms, quotations, and teaching points accurate. Do not invent facts, doctrines, scenes, or examples that are not supported by the source. If the source is spiritual or moral teaching, keep the tone respectful, but do not force religious iconography unless the user explicitly asks for it.\n\nMake it appropriate for ages 16 to 35: stylish, engaging, emotionally resonant, and easy to share. Use clear structure, stronger visual rhythm, relatable situations, and moderate depth without becoming too childish or too corporate.\n\nTheme Direction: Use a broad cartoon direction with friendly shapes, expressive characters or icons, and simple visual storytelling. Keep it flexible rather than tied to one exact cartoon sub-style.\n\nOutput Goal: Create a slide flow with clear titles, strong visual hierarchy, memorable scenes, and accurate content transfer from the source. Let the theme shape the presentation style, but keep the topic itself faithful to the source material.\n\nAvoid over-explaining, stiff business styling, low-energy visuals, or childish treatment that weakens credibility.",
+      "prompt": "Please transform the uploaded source material into a NotebookLM presentation using the Cartoon visual direction.\n\nUse only the uploaded source material. Keep the original meaning, key terms, quotations, and teaching points accurate. Do not invent facts, doctrines, scenes, or examples that are not supported by the source. If the source is spiritual or moral teaching, keep the tone respectful, but do not force religious iconography unless the user explicitly asks for it.\n\nMake it appropriate for ages 16 to 34: stylish, engaging, emotionally resonant, and easy to share. Use clear structure, stronger visual rhythm, relatable situations, and moderate depth without becoming too childish or too corporate.\n\nTheme Direction: Use a broad cartoon direction with friendly shapes, expressive characters or icons, and simple visual storytelling. Keep it flexible rather than tied to one exact cartoon sub-style.\n\nAudience Art Direction: Use original cel-animation language, dynamic framing, expressive acting, bold silhouettes, speed cues, and cinematic transitions.\n\nOutput Goal: Create a slide flow with clear titles, strong visual hierarchy, memorable scenes, and accurate content transfer from the source. Let the theme shape the presentation style, but keep the topic itself faithful to the source material.\n\nAvoid over-explaining, stiff business styling, low-energy visuals, or childish treatment that weakens credibility.",
       "status": "完整",
-      "notes": "適用年齡：16–35歲；同主題對應幼兒版、壯年版；可直接貼入 NotebookLM",
+      "notes": "適用年齡：16–34 歲；同主題對應幼兒版、壯年版；可直接貼入 NotebookLM",
       "sources": [
         "https://github.com/serenakeyitan/awesome-notebookLM-prompts",
         "https://github.com/arlinamid/notebooklm-browser-plugin"
       ],
       "sourceName": "ChatGPT整理（綜合公開開源 prompt 邏輯 + 佛堂教學需求改寫）",
-      "licenseNote": "Project-authored adaptation; upstream inspiration links preserved."
+      "licenseNote": "Project-authored adaptation; upstream inspiration links preserved.",
+      "vibe": "animated",
+      "energy": "lively",
+      "collections": [
+        "animated",
+        "real-output"
+      ],
+      "preview": {
+        "kind": "real-output",
+        "src": "./assets/real-previews/cartoon-youth.png"
+      }
     },
     {
       "id": "youth-fairy-animation",
@@ -293,12 +374,12 @@
       "order": 4,
       "ageGroup": "youth",
       "ageLabel": {
-        "zh-TW": "青年",
+        "zh-TW": "青少年",
         "en": "Youth"
       },
       "ageRange": {
-        "zh-TW": "16–35歲",
-        "en": "16–35"
+        "zh-TW": "16–34 歲",
+        "en": "16–34"
       },
       "title": {
         "zh-TW": "童話動畫電影風格",
@@ -312,15 +393,26 @@
         "zh-TW": "敘事與角色",
         "en": "Narrative & Characters"
       },
-      "prompt": "Please transform the uploaded source material into a NotebookLM presentation using the Fairy-tale Animation visual direction.\n\nUse only the uploaded source material. Keep the original meaning, key terms, quotations, and teaching points accurate. Do not invent facts, doctrines, scenes, or examples that are not supported by the source. If the source is spiritual or moral teaching, keep the tone respectful, but do not force religious iconography unless the user explicitly asks for it.\n\nMake it appropriate for ages 16 to 35: stylish, engaging, emotionally resonant, and easy to share. Use clear structure, stronger visual rhythm, relatable situations, and moderate depth without becoming too childish or too corporate.\n\nTheme Direction: Use a magical fairytale animated-film feeling with warmth, wonder, emotional clarity, and cinematic storytelling. Keep it original and avoid referencing any specific existing characters or franchises.\n\nOutput Goal: Create a slide flow with clear titles, strong visual hierarchy, memorable scenes, and accurate content transfer from the source. Let the theme shape the presentation style, but keep the topic itself faithful to the source material.\n\nAvoid over-explaining, stiff business styling, low-energy visuals, or childish treatment that weakens credibility.",
+      "prompt": "Please transform the uploaded source material into a NotebookLM presentation using the Fairy-tale Animation visual direction.\n\nUse only the uploaded source material. Keep the original meaning, key terms, quotations, and teaching points accurate. Do not invent facts, doctrines, scenes, or examples that are not supported by the source. If the source is spiritual or moral teaching, keep the tone respectful, but do not force religious iconography unless the user explicitly asks for it.\n\nMake it appropriate for ages 16 to 34: stylish, engaging, emotionally resonant, and easy to share. Use clear structure, stronger visual rhythm, relatable situations, and moderate depth without becoming too childish or too corporate.\n\nTheme Direction: Use a magical fairytale animated-film feeling with warmth, wonder, emotional clarity, and cinematic storytelling. Keep it original and avoid referencing any specific existing characters or franchises.\n\nAudience Art Direction: Use atmospheric gradients, cinematic crops, luminous accents, and confident type so the dreamlike mood feels current rather than childish.\n\nOutput Goal: Create a slide flow with clear titles, strong visual hierarchy, memorable scenes, and accurate content transfer from the source. Let the theme shape the presentation style, but keep the topic itself faithful to the source material.\n\nAvoid over-explaining, stiff business styling, low-energy visuals, or childish treatment that weakens credibility.",
       "status": "完整",
-      "notes": "適用年齡：16–35歲；同主題對應幼兒版、壯年版；可直接貼入 NotebookLM",
+      "notes": "適用年齡：16–34 歲；同主題對應幼兒版、壯年版；可直接貼入 NotebookLM",
       "sources": [
         "https://github.com/serenakeyitan/awesome-notebookLM-prompts",
         "https://github.com/arlinamid/notebooklm-browser-plugin"
       ],
       "sourceName": "ChatGPT整理（綜合公開開源 prompt 邏輯 + 佛堂教學需求改寫）",
-      "licenseNote": "Project-authored adaptation; upstream inspiration links preserved."
+      "licenseNote": "Project-authored adaptation; upstream inspiration links preserved.",
+      "vibe": "dreamy",
+      "energy": "cinematic",
+      "collections": [
+        "dreamy",
+        "animated",
+        "real-output"
+      ],
+      "preview": {
+        "kind": "real-output",
+        "src": "./assets/real-previews/fairy-animation-youth.png"
+      }
     },
     {
       "id": "youth-fairy-tale",
@@ -328,12 +420,12 @@
       "order": 5,
       "ageGroup": "youth",
       "ageLabel": {
-        "zh-TW": "青年",
+        "zh-TW": "青少年",
         "en": "Youth"
       },
       "ageRange": {
-        "zh-TW": "16–35歲",
-        "en": "16–35"
+        "zh-TW": "16–34 歲",
+        "en": "16–34"
       },
       "title": {
         "zh-TW": "童話風格",
@@ -347,15 +439,25 @@
         "zh-TW": "敘事與角色",
         "en": "Narrative & Characters"
       },
-      "prompt": "Please transform the uploaded source material into a NotebookLM presentation using the Fairy Tale visual direction.\n\nUse only the uploaded source material. Keep the original meaning, key terms, quotations, and teaching points accurate. Do not invent facts, doctrines, scenes, or examples that are not supported by the source. If the source is spiritual or moral teaching, keep the tone respectful, but do not force religious iconography unless the user explicitly asks for it.\n\nMake it appropriate for ages 16 to 35: stylish, engaging, emotionally resonant, and easy to share. Use clear structure, stronger visual rhythm, relatable situations, and moderate depth without becoming too childish or too corporate.\n\nTheme Direction: Use a storybook and fairytale direction with narrative flow, inviting scenes, and a gentle sense of wonder. The presentation should feel like a meaningful tale rather than a dry report.\n\nOutput Goal: Create a slide flow with clear titles, strong visual hierarchy, memorable scenes, and accurate content transfer from the source. Let the theme shape the presentation style, but keep the topic itself faithful to the source material.\n\nAvoid over-explaining, stiff business styling, low-energy visuals, or childish treatment that weakens credibility.",
+      "prompt": "Please transform the uploaded source material into a NotebookLM presentation using the Fairy Tale visual direction.\n\nUse only the uploaded source material. Keep the original meaning, key terms, quotations, and teaching points accurate. Do not invent facts, doctrines, scenes, or examples that are not supported by the source. If the source is spiritual or moral teaching, keep the tone respectful, but do not force religious iconography unless the user explicitly asks for it.\n\nMake it appropriate for ages 16 to 34: stylish, engaging, emotionally resonant, and easy to share. Use clear structure, stronger visual rhythm, relatable situations, and moderate depth without becoming too childish or too corporate.\n\nTheme Direction: Use a storybook and fairytale direction with narrative flow, inviting scenes, and a gentle sense of wonder. The presentation should feel like a meaningful tale rather than a dry report.\n\nAudience Art Direction: Use atmospheric gradients, cinematic crops, luminous accents, and confident type so the dreamlike mood feels current rather than childish.\n\nOutput Goal: Create a slide flow with clear titles, strong visual hierarchy, memorable scenes, and accurate content transfer from the source. Let the theme shape the presentation style, but keep the topic itself faithful to the source material.\n\nAvoid over-explaining, stiff business styling, low-energy visuals, or childish treatment that weakens credibility.",
       "status": "完整",
-      "notes": "適用年齡：16–35歲；同主題對應幼兒版、壯年版；可直接貼入 NotebookLM",
+      "notes": "適用年齡：16–34 歲；同主題對應幼兒版、壯年版；可直接貼入 NotebookLM",
       "sources": [
         "https://github.com/serenakeyitan/awesome-notebookLM-prompts",
         "https://github.com/arlinamid/notebooklm-browser-plugin"
       ],
       "sourceName": "ChatGPT整理（綜合公開開源 prompt 邏輯 + 佛堂教學需求改寫）",
-      "licenseNote": "Project-authored adaptation; upstream inspiration links preserved."
+      "licenseNote": "Project-authored adaptation; upstream inspiration links preserved.",
+      "vibe": "dreamy",
+      "energy": "balanced",
+      "collections": [
+        "dreamy",
+        "real-output"
+      ],
+      "preview": {
+        "kind": "real-output",
+        "src": "./assets/real-previews/fairy-tale-youth.png"
+      }
     },
     {
       "id": "adult-comic-flex",
@@ -363,11 +465,11 @@
       "order": 1,
       "ageGroup": "adult",
       "ageLabel": {
-        "zh-TW": "壯年",
+        "zh-TW": "成人",
         "en": "Adults"
       },
       "ageRange": {
-        "zh-TW": "35歲以上",
+        "zh-TW": "35 歲以上",
         "en": "35 and above"
       },
       "title": {
@@ -382,7 +484,7 @@
         "zh-TW": "敘事與角色",
         "en": "Narrative & Characters"
       },
-      "prompt": "Please transform the uploaded source material into a NotebookLM presentation using the Flexible Comic visual direction.\n\nUse only the uploaded source material. Keep the original meaning, key terms, quotations, and teaching points accurate. Do not invent facts, doctrines, scenes, or examples that are not supported by the source. If the source is spiritual or moral teaching, keep the tone respectful, but do not force religious iconography unless the user explicitly asks for it.\n\nMake it appropriate for ages 35 and above: mature, steady, warm, dignified, and highly readable. Use calm pacing, meaningful emphasis, clear hierarchy, and concise but substantive wording.\n\nTheme Direction: Use a flexible comic direction rather than one fixed subtype. The slides may borrow from humorous, slice-of-life, adventure, inspirational, or educational comic language as long as the result matches the age group and the source material.\n\nOutput Goal: Create a slide flow with clear titles, strong visual hierarchy, memorable scenes, and accurate content transfer from the source. Let the theme shape the presentation style, but keep the topic itself faithful to the source material.\n\nAvoid gimmicky effects, excessive flash, tiny text, noisy clutter, or overly juvenile visual language.",
+      "prompt": "Please transform the uploaded source material into a NotebookLM presentation using the Flexible Comic visual direction.\n\nUse only the uploaded source material. Keep the original meaning, key terms, quotations, and teaching points accurate. Do not invent facts, doctrines, scenes, or examples that are not supported by the source. If the source is spiritual or moral teaching, keep the tone respectful, but do not force religious iconography unless the user explicitly asks for it.\n\nMake it appropriate for adults aged 35 and above: highly readable, substantive, emotionally intelligent, and visually confident. Preserve mature clarity without assuming that mature means quiet or low-energy. Match pacing, color intensity, and movement to the theme: calm for reflection, lively for momentum, and cinematic for drama.\n\nTheme Direction: Use a flexible comic direction rather than one fixed subtype. The slides may borrow from humorous, slice-of-life, adventure, inspirational, or educational comic language as long as the result matches the age group and the source material.\n\nAudience Art Direction: Use graphic-novel pacing, intelligent visual wit, expressive but original characters, and bold panel crops; preserve adult nuance without turning the deck into a solemn report.\n\nOutput Goal: Create a slide flow with clear titles, strong visual hierarchy, memorable scenes, and accurate content transfer from the source. Let the theme shape the presentation style, but keep the topic itself faithful to the source material.\n\nAvoid tiny text, noisy clutter, empty decoration, patronizing simplification, or defaulting every mature deck to dark navy, sepia, muted gold, and static compositions.",
       "status": "完整",
       "notes": "適用年齡：35歲以上；同主題對應幼兒版、青年版；可直接貼入 NotebookLM",
       "sources": [
@@ -390,7 +492,17 @@
         "https://github.com/arlinamid/notebooklm-browser-plugin"
       ],
       "sourceName": "ChatGPT整理（綜合公開開源 prompt 邏輯 + 佛堂教學需求改寫）",
-      "licenseNote": "Project-authored adaptation; upstream inspiration links preserved."
+      "licenseNote": "Project-authored adaptation; upstream inspiration links preserved.",
+      "vibe": "animated",
+      "energy": "lively",
+      "collections": [
+        "animated",
+        "real-output"
+      ],
+      "preview": {
+        "kind": "real-output",
+        "src": "./assets/real-previews/comic-mature.png"
+      }
     },
     {
       "id": "adult-comic-panels",
@@ -398,11 +510,11 @@
       "order": 2,
       "ageGroup": "adult",
       "ageLabel": {
-        "zh-TW": "壯年",
+        "zh-TW": "成人",
         "en": "Adults"
       },
       "ageRange": {
-        "zh-TW": "35歲以上",
+        "zh-TW": "35 歲以上",
         "en": "35 and above"
       },
       "title": {
@@ -417,7 +529,7 @@
         "zh-TW": "敘事與角色",
         "en": "Narrative & Characters"
       },
-      "prompt": "Please transform the uploaded source material into a NotebookLM presentation using the 3–4 Panel Comic visual direction.\n\nUse only the uploaded source material. Keep the original meaning, key terms, quotations, and teaching points accurate. Do not invent facts, doctrines, scenes, or examples that are not supported by the source. If the source is spiritual or moral teaching, keep the tone respectful, but do not force religious iconography unless the user explicitly asks for it.\n\nMake it appropriate for ages 35 and above: mature, steady, warm, dignified, and highly readable. Use calm pacing, meaningful emphasis, clear hierarchy, and concise but substantive wording.\n\nTheme Direction: Present the content as clear 3-panel or 4-panel mini-comics. Each slide should show a simple sequence: setup, development, key point, and takeaway. Keep the panel flow obvious and easy to scan.\n\nOutput Goal: Create a slide flow with clear titles, strong visual hierarchy, memorable scenes, and accurate content transfer from the source. Let the theme shape the presentation style, but keep the topic itself faithful to the source material.\n\nAvoid gimmicky effects, excessive flash, tiny text, noisy clutter, or overly juvenile visual language.",
+      "prompt": "Please transform the uploaded source material into a NotebookLM presentation using the 3–4 Panel Comic visual direction.\n\nUse only the uploaded source material. Keep the original meaning, key terms, quotations, and teaching points accurate. Do not invent facts, doctrines, scenes, or examples that are not supported by the source. If the source is spiritual or moral teaching, keep the tone respectful, but do not force religious iconography unless the user explicitly asks for it.\n\nMake it appropriate for adults aged 35 and above: highly readable, substantive, emotionally intelligent, and visually confident. Preserve mature clarity without assuming that mature means quiet or low-energy. Match pacing, color intensity, and movement to the theme: calm for reflection, lively for momentum, and cinematic for drama.\n\nTheme Direction: Present the content as clear 3-panel or 4-panel mini-comics. Each slide should show a simple sequence: setup, development, key point, and takeaway. Keep the panel flow obvious and easy to scan.\n\nAudience Art Direction: Use sophisticated sequential art, decisive panel rhythm, editorial captions, and visual cause-and-effect; let the panels move quickly while keeping evidence legible.\n\nOutput Goal: Create a slide flow with clear titles, strong visual hierarchy, memorable scenes, and accurate content transfer from the source. Let the theme shape the presentation style, but keep the topic itself faithful to the source material.\n\nAvoid tiny text, noisy clutter, empty decoration, patronizing simplification, or defaulting every mature deck to dark navy, sepia, muted gold, and static compositions.",
       "status": "完整",
       "notes": "適用年齡：35歲以上；同主題對應幼兒版、青年版；可直接貼入 NotebookLM",
       "sources": [
@@ -425,7 +537,17 @@
         "https://github.com/arlinamid/notebooklm-browser-plugin"
       ],
       "sourceName": "ChatGPT整理（綜合公開開源 prompt 邏輯 + 佛堂教學需求改寫）",
-      "licenseNote": "Project-authored adaptation; upstream inspiration links preserved."
+      "licenseNote": "Project-authored adaptation; upstream inspiration links preserved.",
+      "vibe": "animated",
+      "energy": "lively",
+      "collections": [
+        "animated",
+        "real-output"
+      ],
+      "preview": {
+        "kind": "real-output",
+        "src": "./assets/real-previews/comic-panels-mature.png"
+      }
     },
     {
       "id": "adult-cartoon",
@@ -433,11 +555,11 @@
       "order": 3,
       "ageGroup": "adult",
       "ageLabel": {
-        "zh-TW": "壯年",
+        "zh-TW": "成人",
         "en": "Adults"
       },
       "ageRange": {
-        "zh-TW": "35歲以上",
+        "zh-TW": "35 歲以上",
         "en": "35 and above"
       },
       "title": {
@@ -452,7 +574,7 @@
         "zh-TW": "敘事與角色",
         "en": "Narrative & Characters"
       },
-      "prompt": "Please transform the uploaded source material into a NotebookLM presentation using the Cartoon visual direction.\n\nUse only the uploaded source material. Keep the original meaning, key terms, quotations, and teaching points accurate. Do not invent facts, doctrines, scenes, or examples that are not supported by the source. If the source is spiritual or moral teaching, keep the tone respectful, but do not force religious iconography unless the user explicitly asks for it.\n\nMake it appropriate for ages 35 and above: mature, steady, warm, dignified, and highly readable. Use calm pacing, meaningful emphasis, clear hierarchy, and concise but substantive wording.\n\nTheme Direction: Use a broad cartoon direction with friendly shapes, expressive characters or icons, and simple visual storytelling. Keep it flexible rather than tied to one exact cartoon sub-style.\n\nOutput Goal: Create a slide flow with clear titles, strong visual hierarchy, memorable scenes, and accurate content transfer from the source. Let the theme shape the presentation style, but keep the topic itself faithful to the source material.\n\nAvoid gimmicky effects, excessive flash, tiny text, noisy clutter, or overly juvenile visual language.",
+      "prompt": "Please transform the uploaded source material into a NotebookLM presentation using the Cartoon visual direction.\n\nUse only the uploaded source material. Keep the original meaning, key terms, quotations, and teaching points accurate. Do not invent facts, doctrines, scenes, or examples that are not supported by the source. If the source is spiritual or moral teaching, keep the tone respectful, but do not force religious iconography unless the user explicitly asks for it.\n\nMake it appropriate for adults aged 35 and above: highly readable, substantive, emotionally intelligent, and visually confident. Preserve mature clarity without assuming that mature means quiet or low-energy. Match pacing, color intensity, and movement to the theme: calm for reflection, lively for momentum, and cinematic for drama.\n\nTheme Direction: Use a broad cartoon direction with friendly shapes, expressive characters or icons, and simple visual storytelling. Keep it flexible rather than tied to one exact cartoon sub-style.\n\nAudience Art Direction: Use witty editorial illustration, clean vector shapes, confident color, and expressive visual metaphors instead of treating cartoons as child-only decoration.\n\nOutput Goal: Create a slide flow with clear titles, strong visual hierarchy, memorable scenes, and accurate content transfer from the source. Let the theme shape the presentation style, but keep the topic itself faithful to the source material.\n\nAvoid tiny text, noisy clutter, empty decoration, patronizing simplification, or defaulting every mature deck to dark navy, sepia, muted gold, and static compositions.",
       "status": "完整",
       "notes": "適用年齡：35歲以上；同主題對應幼兒版、青年版；可直接貼入 NotebookLM",
       "sources": [
@@ -460,7 +582,17 @@
         "https://github.com/arlinamid/notebooklm-browser-plugin"
       ],
       "sourceName": "ChatGPT整理（綜合公開開源 prompt 邏輯 + 佛堂教學需求改寫）",
-      "licenseNote": "Project-authored adaptation; upstream inspiration links preserved."
+      "licenseNote": "Project-authored adaptation; upstream inspiration links preserved.",
+      "vibe": "animated",
+      "energy": "lively",
+      "collections": [
+        "animated",
+        "real-output"
+      ],
+      "preview": {
+        "kind": "real-output",
+        "src": "./assets/real-previews/cartoon-mature.png"
+      }
     },
     {
       "id": "adult-fairy-animation",
@@ -468,11 +600,11 @@
       "order": 4,
       "ageGroup": "adult",
       "ageLabel": {
-        "zh-TW": "壯年",
+        "zh-TW": "成人",
         "en": "Adults"
       },
       "ageRange": {
-        "zh-TW": "35歲以上",
+        "zh-TW": "35 歲以上",
         "en": "35 and above"
       },
       "title": {
@@ -487,7 +619,7 @@
         "zh-TW": "敘事與角色",
         "en": "Narrative & Characters"
       },
-      "prompt": "Please transform the uploaded source material into a NotebookLM presentation using the Fairy-tale Animation visual direction.\n\nUse only the uploaded source material. Keep the original meaning, key terms, quotations, and teaching points accurate. Do not invent facts, doctrines, scenes, or examples that are not supported by the source. If the source is spiritual or moral teaching, keep the tone respectful, but do not force religious iconography unless the user explicitly asks for it.\n\nMake it appropriate for ages 35 and above: mature, steady, warm, dignified, and highly readable. Use calm pacing, meaningful emphasis, clear hierarchy, and concise but substantive wording.\n\nTheme Direction: Use a magical fairytale animated-film feeling with warmth, wonder, emotional clarity, and cinematic storytelling. Keep it original and avoid referencing any specific existing characters or franchises.\n\nOutput Goal: Create a slide flow with clear titles, strong visual hierarchy, memorable scenes, and accurate content transfer from the source. Let the theme shape the presentation style, but keep the topic itself faithful to the source material.\n\nAvoid gimmicky effects, excessive flash, tiny text, noisy clutter, or overly juvenile visual language.",
+      "prompt": "Please transform the uploaded source material into a NotebookLM presentation using the Fairy-tale Animation visual direction.\n\nUse only the uploaded source material. Keep the original meaning, key terms, quotations, and teaching points accurate. Do not invent facts, doctrines, scenes, or examples that are not supported by the source. If the source is spiritual or moral teaching, keep the tone respectful, but do not force religious iconography unless the user explicitly asks for it.\n\nMake it appropriate for adults aged 35 and above: highly readable, substantive, emotionally intelligent, and visually confident. Preserve mature clarity without assuming that mature means quiet or low-energy. Match pacing, color intensity, and movement to the theme: calm for reflection, lively for momentum, and cinematic for drama.\n\nTheme Direction: Use a magical fairytale animated-film feeling with warmth, wonder, emotional clarity, and cinematic storytelling. Keep it original and avoid referencing any specific existing characters or franchises.\n\nAudience Art Direction: Use luminous cinematic fantasy, emotionally intelligent character moments, dramatic depth, and sophisticated color; retain wonder without imitating any studio or franchise.\n\nOutput Goal: Create a slide flow with clear titles, strong visual hierarchy, memorable scenes, and accurate content transfer from the source. Let the theme shape the presentation style, but keep the topic itself faithful to the source material.\n\nAvoid tiny text, noisy clutter, empty decoration, patronizing simplification, or defaulting every mature deck to dark navy, sepia, muted gold, and static compositions.",
       "status": "完整",
       "notes": "適用年齡：35歲以上；同主題對應幼兒版、青年版；可直接貼入 NotebookLM",
       "sources": [
@@ -495,7 +627,18 @@
         "https://github.com/arlinamid/notebooklm-browser-plugin"
       ],
       "sourceName": "ChatGPT整理（綜合公開開源 prompt 邏輯 + 佛堂教學需求改寫）",
-      "licenseNote": "Project-authored adaptation; upstream inspiration links preserved."
+      "licenseNote": "Project-authored adaptation; upstream inspiration links preserved.",
+      "vibe": "dreamy",
+      "energy": "cinematic",
+      "collections": [
+        "dreamy",
+        "animated",
+        "real-output"
+      ],
+      "preview": {
+        "kind": "real-output",
+        "src": "./assets/real-previews/fairy-animation-mature.png"
+      }
     },
     {
       "id": "adult-fairy-tale",
@@ -503,11 +646,11 @@
       "order": 5,
       "ageGroup": "adult",
       "ageLabel": {
-        "zh-TW": "壯年",
+        "zh-TW": "成人",
         "en": "Adults"
       },
       "ageRange": {
-        "zh-TW": "35歲以上",
+        "zh-TW": "35 歲以上",
         "en": "35 and above"
       },
       "title": {
@@ -522,7 +665,7 @@
         "zh-TW": "敘事與角色",
         "en": "Narrative & Characters"
       },
-      "prompt": "Please transform the uploaded source material into a NotebookLM presentation using the Fairy Tale visual direction.\n\nUse only the uploaded source material. Keep the original meaning, key terms, quotations, and teaching points accurate. Do not invent facts, doctrines, scenes, or examples that are not supported by the source. If the source is spiritual or moral teaching, keep the tone respectful, but do not force religious iconography unless the user explicitly asks for it.\n\nMake it appropriate for ages 35 and above: mature, steady, warm, dignified, and highly readable. Use calm pacing, meaningful emphasis, clear hierarchy, and concise but substantive wording.\n\nTheme Direction: Use a storybook and fairytale direction with narrative flow, inviting scenes, and a gentle sense of wonder. The presentation should feel like a meaningful tale rather than a dry report.\n\nOutput Goal: Create a slide flow with clear titles, strong visual hierarchy, memorable scenes, and accurate content transfer from the source. Let the theme shape the presentation style, but keep the topic itself faithful to the source material.\n\nAvoid gimmicky effects, excessive flash, tiny text, noisy clutter, or overly juvenile visual language.",
+      "prompt": "Please transform the uploaded source material into a NotebookLM presentation using the Fairy Tale visual direction.\n\nUse only the uploaded source material. Keep the original meaning, key terms, quotations, and teaching points accurate. Do not invent facts, doctrines, scenes, or examples that are not supported by the source. If the source is spiritual or moral teaching, keep the tone respectful, but do not force religious iconography unless the user explicitly asks for it.\n\nMake it appropriate for adults aged 35 and above: highly readable, substantive, emotionally intelligent, and visually confident. Preserve mature clarity without assuming that mature means quiet or low-energy. Match pacing, color intensity, and movement to the theme: calm for reflection, lively for momentum, and cinematic for drama.\n\nTheme Direction: Use a storybook and fairytale direction with narrative flow, inviting scenes, and a gentle sense of wonder. The presentation should feel like a meaningful tale rather than a dry report.\n\nAudience Art Direction: Use literary storybook composition, symbolic landscapes, rich texture, and a purposeful narrative arc; allow mystery and wonder without becoming juvenile.\n\nOutput Goal: Create a slide flow with clear titles, strong visual hierarchy, memorable scenes, and accurate content transfer from the source. Let the theme shape the presentation style, but keep the topic itself faithful to the source material.\n\nAvoid tiny text, noisy clutter, empty decoration, patronizing simplification, or defaulting every mature deck to dark navy, sepia, muted gold, and static compositions.",
       "status": "完整",
       "notes": "適用年齡：35歲以上；同主題對應幼兒版、青年版；可直接貼入 NotebookLM",
       "sources": [
@@ -530,7 +673,17 @@
         "https://github.com/arlinamid/notebooklm-browser-plugin"
       ],
       "sourceName": "ChatGPT整理（綜合公開開源 prompt 邏輯 + 佛堂教學需求改寫）",
-      "licenseNote": "Project-authored adaptation; upstream inspiration links preserved."
+      "licenseNote": "Project-authored adaptation; upstream inspiration links preserved.",
+      "vibe": "dreamy",
+      "energy": "balanced",
+      "collections": [
+        "dreamy",
+        "real-output"
+      ],
+      "preview": {
+        "kind": "real-output",
+        "src": "./assets/real-previews/fairy-tale-mature.png"
+      }
     }
   ]
 }

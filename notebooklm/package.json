@@ -1,6 +1,6 @@
 {
   "name": "gemini-notebook-prompt-lab",
-  "version": "1.2.1",
+  "version": "1.3.0",
   "private": true,
   "description": "Age-adaptive, source-grounded prompt library and workflow lab for Gemini Notebook (formerly NotebookLM).",
   "type": "module",

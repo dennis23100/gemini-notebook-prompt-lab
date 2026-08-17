@@ -1,40 +1,39 @@
-# Gemini Notebook Prompt Lab v1.2.1
+# Gemini Notebook Prompt Lab v1.3.0
 
-This patch release hardens keyboard and focus accessibility without changing the project’s local-first architecture.
+This release expands the project from 90 prompts and 30 themes to **132 age-adaptive prompts across 44 visual themes**, while tightening prompt quality, discovery, preview performance, and honest quality messaging.
 
-## Accessibility improvements
+## New visual directions
 
-- Added standard keyboard navigation for the main tab interface:
-  - Arrow Left / Right / Up / Down
-  - Home / End
-  - roving `tabIndex`
-- Added explicit `aria-controls` relationships for tabs and panels.
-- Added Prompt dialog `aria-modal`, `aria-labelledby`, and `aria-describedby` relationships.
-- Prompt cards now remember the element that opened the dialog and restore keyboard focus after the dialog closes when possible.
-- Dynamic favorite buttons expose `aria-pressed` and bilingual accessible labels.
-- Added stronger `:focus-visible` styling for keyboard users.
-- Added `prefers-reduced-motion: reduce` handling.
-- Added `prefers-contrast: more` visual hardening.
-- Added a documented manual accessibility checklist.
-- Added automated static regression tests for the accessibility layer.
+- 14 original themes covering dreamy cel-animation, miniature gardens, sky islands, high-seas adventure, magic-academy notes, friendly creature teams, paper-craft worlds, science sketchbooks, stage musicals, waltz, mahjong geometry, midnight jazz, wonder circus, and kinetic editorial design.
+- Every theme includes children, youth, and mature-reader variants.
+- New inspiration shortcuts make dreamy, animated, adventurous, child-friendly, vivid 35+, new, and real-output prompts easy to find.
+- New themes prohibit copying or naming franchises, characters, studios, artists, and copyrighted universes.
 
-## Important scope note
+## Stronger age adaptation
 
-This release does **not** claim full accessibility conformance. Cross-browser keyboard testing, screen-reader smoke tests, 200% zoom checks, and browser-tool contrast review remain tracked in Issue #4.
+- Youth ranges are now consistently **16–34** throughout data, UI, documentation, and composed prompts.
+- Every prompt has an explicit audience art direction instead of relying only on a generic age paragraph.
+- Mature-reader prompts preserve legibility and substance without forcing every result into a calm, static, navy, sepia, or gold visual treatment.
 
-## Also included from v1.2.0
+## Better Prompt Lab behavior
 
-- shareable Prompt Library filter URLs;
-- recent prompt history stored locally;
-- JSON / Markdown / CSV export;
-- reproducible 3 × 3 Showcase scaffold using one controlled source.
+- Role and depth controls now affect slide-deck prompts.
+- Output-language instructions remain high priority even when the source material and prompt are in another language.
+- The local checker is described accurately as deterministic structure completeness, not a guarantee of model-output quality.
+
+## Faster, clearer website
+
+- Real-output PNG previews render as native lazy-loaded images, avoiding the previous blurred background treatment.
+- Illustrative previews are clearly labelled and no longer confused with generated results.
+- Cards load progressively, and collection filters are shareable in the URL.
+- The homepage is more compact and puts the working area closer to the first screen.
+
+## Validation
+
+- Prompt schema, pack counts, audience coverage, copyright-safety language, preview paths, URL filters, and UI behavior are covered by **30 automated checks**.
 
 ## Live app
 
 https://dennis23100.github.io/gemini-notebook-prompt-lab/
-
-## Showcase
-
-https://dennis23100.github.io/gemini-notebook-prompt-lab/showcase.html
 
 The project remains unaffiliated with Google. “Gemini Notebook” and “NotebookLM” are used only to describe compatibility.

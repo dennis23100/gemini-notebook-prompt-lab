@@ -1,0 +1,757 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "performance-culture",
+  "category": {
+    "zh-TW": "表演與文化",
+    "en": "Performance & Culture"
+  },
+  "promptCount": 18,
+  "prompts": [
+    {
+      "id": "children-stage-musical",
+      "themeId": "stage-musical",
+      "order": 39,
+      "ageGroup": "children",
+      "ageLabel": {
+        "zh-TW": "兒童",
+        "en": "Children"
+      },
+      "ageRange": {
+        "zh-TW": "15 歲以下",
+        "en": "15 and below"
+      },
+      "title": {
+        "zh-TW": "舞台音樂劇",
+        "en": "Stage Musical"
+      },
+      "summary": {
+        "zh-TW": "用序曲、場次、聚光燈與群像調度，建立有節奏的簡報演出。",
+        "en": "Structure the deck as an overture, acts, spotlights, and ensemble moments with theatrical rhythm."
+      },
+      "category": {
+        "zh-TW": "表演與文化",
+        "en": "Performance & Culture"
+      },
+      "vibe": "performance",
+      "energy": "lively",
+      "collections": [
+        "new",
+        "animated",
+        "adult-vivid"
+      ],
+      "prompt": "Please transform the uploaded source material into a NotebookLM presentation using the Stage Musical visual direction.\n\nUse only the uploaded source material. Keep the original meaning, key terms, quotations, data, and teaching points accurate. Do not invent facts, doctrines, scenes, characters, examples, or claims that are not supported by the source. If the source does not support a specific visual example, use a neutral symbolic visual rather than presenting it as fact.\n\nUse original visual language. Do not imitate or name any existing franchise, copyrighted character, logo, entertainment studio, living artist, or recognizable fictional universe.\n\nMake it appropriate for learners aged 15 and below: warm, lively, visually clear, emotionally safe, and easy to follow. Use short sentences, familiar words, one main idea per slide, bright but comfortable contrast, and friendly original imagery.\n\nTheme Direction: Use a colorful welcoming stage, friendly ensemble characters, clear acts, simple songs-as-metaphors, and joyful curtain-call recaps without sensory overload.\n\nAudience Art Direction: Use a welcoming stage, expressive gestures, colorful spotlights, clear acts, and joyful ensemble moments without sensory overload.\n\nOutput Goal: Create a source-faithful slide flow with a compelling opening, purposeful progression, one clear visual job per slide, legible text, and a memorable conclusion. Use visual metaphors only when they do not add unsupported factual meaning.\n\nAvoid dense text, heavy abstraction, frightening imagery, sarcasm, unsafe situations, imitation of existing characters, and layouts that feel too busy.",
+      "status": "complete",
+      "notes": "專案原創分齡視覺方向；保留來源限定，並避免仿作特定角色、作品或品牌。",
+      "sources": [
+        "https://support.google.com/notebooklm/answer/16757456?hl=en",
+        "https://blog.google/innovation-and-ai/models-and-research/google-labs/8-ways-to-make-the-most-out-of-slide-decks-in-notebooklm/"
+      ],
+      "sourceName": "Project-authored original visual direction informed by current Gemini Notebook slide-deck guidance.",
+      "licenseNote": "Project-authored prompt data licensed under CC BY 4.0; linked product guidance is cited for workflow context only."
+    },
+    {
+      "id": "children-ballroom-waltz",
+      "themeId": "ballroom-waltz",
+      "order": 40,
+      "ageGroup": "children",
+      "ageLabel": {
+        "zh-TW": "兒童",
+        "en": "Children"
+      },
+      "ageRange": {
+        "zh-TW": "15 歲以下",
+        "en": "15 and below"
+      },
+      "title": {
+        "zh-TW": "華爾滋舞會",
+        "en": "Ballroom Waltz"
+      },
+      "summary": {
+        "zh-TW": "用三拍節奏、旋轉動線與優雅光影，呈現關係、步驟與轉折。",
+        "en": "Use three-beat rhythm, sweeping movement, and elegant light to explain relationships, steps, and transitions."
+      },
+      "category": {
+        "zh-TW": "表演與文化",
+        "en": "Performance & Culture"
+      },
+      "vibe": "elegant",
+      "energy": "lively",
+      "collections": [
+        "new",
+        "adult-vivid"
+      ],
+      "prompt": "Please transform the uploaded source material into a NotebookLM presentation using the Ballroom Waltz visual direction.\n\nUse only the uploaded source material. Keep the original meaning, key terms, quotations, data, and teaching points accurate. Do not invent facts, doctrines, scenes, characters, examples, or claims that are not supported by the source. If the source does not support a specific visual example, use a neutral symbolic visual rather than presenting it as fact.\n\nUse original visual language. Do not imitate or name any existing franchise, copyrighted character, logo, entertainment studio, living artist, or recognizable fictional universe.\n\nMake it appropriate for learners aged 15 and below: warm, lively, visually clear, emotionally safe, and easy to follow. Use short sentences, familiar words, one main idea per slide, bright but comfortable contrast, and friendly original imagery.\n\nTheme Direction: Translate waltz into friendly three-step patterns, ribbons, rotating shapes, warm ballroom light, and easy follow-the-path movement.\n\nAudience Art Direction: Translate elegance into graceful movement, warm color, large readable forms, and welcoming decorative details rather than formality.\n\nOutput Goal: Create a source-faithful slide flow with a compelling opening, purposeful progression, one clear visual job per slide, legible text, and a memorable conclusion. Use visual metaphors only when they do not add unsupported factual meaning.\n\nAvoid dense text, heavy abstraction, frightening imagery, sarcasm, unsafe situations, imitation of existing characters, and layouts that feel too busy.",
+      "status": "complete",
+      "notes": "專案原創分齡視覺方向；保留來源限定，並避免仿作特定角色、作品或品牌。",
+      "sources": [
+        "https://support.google.com/notebooklm/answer/16757456?hl=en",
+        "https://blog.google/innovation-and-ai/models-and-research/google-labs/8-ways-to-make-the-most-out-of-slide-decks-in-notebooklm/"
+      ],
+      "sourceName": "Project-authored original visual direction informed by current Gemini Notebook slide-deck guidance.",
+      "licenseNote": "Project-authored prompt data licensed under CC BY 4.0; linked product guidance is cited for workflow context only."
+    },
+    {
+      "id": "children-mahjong-geometry",
+      "themeId": "mahjong-geometry",
+      "order": 41,
+      "ageGroup": "children",
+      "ageLabel": {
+        "zh-TW": "兒童",
+        "en": "Children"
+      },
+      "ageRange": {
+        "zh-TW": "15 歲以下",
+        "en": "15 and below"
+      },
+      "title": {
+        "zh-TW": "麻將幾何美學",
+        "en": "Mahjong Social Geometry"
+      },
+      "summary": {
+        "zh-TW": "從牌面幾何、排列、配對與社交桌面發展出清楚又有文化質感的版面。",
+        "en": "Use tile geometry, matching, sequencing, and social-table composition as a culturally respectful design system."
+      },
+      "category": {
+        "zh-TW": "表演與文化",
+        "en": "Performance & Culture"
+      },
+      "vibe": "cultural",
+      "energy": "balanced",
+      "collections": [
+        "new",
+        "adult-vivid"
+      ],
+      "prompt": "Please transform the uploaded source material into a NotebookLM presentation using the Mahjong Social Geometry visual direction.\n\nUse only the uploaded source material. Keep the original meaning, key terms, quotations, data, and teaching points accurate. Do not invent facts, doctrines, scenes, characters, examples, or claims that are not supported by the source. If the source does not support a specific visual example, use a neutral symbolic visual rather than presenting it as fact.\n\nUse original visual language. Do not imitate or name any existing franchise, copyrighted character, logo, entertainment studio, living artist, or recognizable fictional universe.\n\nMake it appropriate for learners aged 15 and below: warm, lively, visually clear, emotionally safe, and easy to follow. Use short sentences, familiar words, one main idea per slide, bright but comfortable contrast, and friendly original imagery.\n\nTheme Direction: Use generic tile-like shapes only for matching, counting, patterns, and sequencing; use friendly colors and explicitly avoid gambling, betting, or adult play scenes.\n\nAudience Art Direction: Use cultural motifs as friendly patterns, matching games, and visual sequences; keep context respectful and avoid adult-only activities.\n\nOutput Goal: Create a source-faithful slide flow with a compelling opening, purposeful progression, one clear visual job per slide, legible text, and a memorable conclusion. Use visual metaphors only when they do not add unsupported factual meaning.\n\nAvoid dense text, heavy abstraction, frightening imagery, sarcasm, unsafe situations, imitation of existing characters, and layouts that feel too busy.",
+      "status": "complete",
+      "notes": "專案原創分齡視覺方向；保留來源限定，並避免仿作特定角色、作品或品牌。",
+      "sources": [
+        "https://support.google.com/notebooklm/answer/16757456?hl=en",
+        "https://blog.google/innovation-and-ai/models-and-research/google-labs/8-ways-to-make-the-most-out-of-slide-decks-in-notebooklm/"
+      ],
+      "sourceName": "Project-authored original visual direction informed by current Gemini Notebook slide-deck guidance.",
+      "licenseNote": "Project-authored prompt data licensed under CC BY 4.0; linked product guidance is cited for workflow context only."
+    },
+    {
+      "id": "children-midnight-jazz-vinyl",
+      "themeId": "midnight-jazz-vinyl",
+      "order": 42,
+      "ageGroup": "children",
+      "ageLabel": {
+        "zh-TW": "兒童",
+        "en": "Children"
+      },
+      "ageRange": {
+        "zh-TW": "15 歲以下",
+        "en": "15 and below"
+      },
+      "title": {
+        "zh-TW": "午夜爵士唱片",
+        "en": "Midnight Jazz & Vinyl"
+      },
+      "summary": {
+        "zh-TW": "用唱片封套、爵士節奏、舞台燈與即興版面，讓成人簡報更有生命力。",
+        "en": "Use vinyl sleeves, jazz rhythm, stage light, and visual improvisation to give mature decks more life."
+      },
+      "category": {
+        "zh-TW": "表演與文化",
+        "en": "Performance & Culture"
+      },
+      "vibe": "elegant",
+      "energy": "lively",
+      "collections": [
+        "new",
+        "adult-vivid"
+      ],
+      "prompt": "Please transform the uploaded source material into a NotebookLM presentation using the Midnight Jazz & Vinyl visual direction.\n\nUse only the uploaded source material. Keep the original meaning, key terms, quotations, data, and teaching points accurate. Do not invent facts, doctrines, scenes, characters, examples, or claims that are not supported by the source. If the source does not support a specific visual example, use a neutral symbolic visual rather than presenting it as fact.\n\nUse original visual language. Do not imitate or name any existing franchise, copyrighted character, logo, entertainment studio, living artist, or recognizable fictional universe.\n\nMake it appropriate for learners aged 15 and below: warm, lively, visually clear, emotionally safe, and easy to follow. Use short sentences, familiar words, one main idea per slide, bright but comfortable contrast, and friendly original imagery.\n\nTheme Direction: Use friendly instruments, colorful rhythm shapes, large beat patterns, and a safe daytime music-club atmosphere rather than a nightlife setting.\n\nAudience Art Direction: Translate elegance into graceful movement, warm color, large readable forms, and welcoming decorative details rather than formality.\n\nOutput Goal: Create a source-faithful slide flow with a compelling opening, purposeful progression, one clear visual job per slide, legible text, and a memorable conclusion. Use visual metaphors only when they do not add unsupported factual meaning.\n\nAvoid dense text, heavy abstraction, frightening imagery, sarcasm, unsafe situations, imitation of existing characters, and layouts that feel too busy.",
+      "status": "complete",
+      "notes": "專案原創分齡視覺方向；保留來源限定，並避免仿作特定角色、作品或品牌。",
+      "sources": [
+        "https://support.google.com/notebooklm/answer/16757456?hl=en",
+        "https://blog.google/innovation-and-ai/models-and-research/google-labs/8-ways-to-make-the-most-out-of-slide-decks-in-notebooklm/"
+      ],
+      "sourceName": "Project-authored original visual direction informed by current Gemini Notebook slide-deck guidance.",
+      "licenseNote": "Project-authored prompt data licensed under CC BY 4.0; linked product guidance is cited for workflow context only."
+    },
+    {
+      "id": "children-vintage-circus-poster",
+      "themeId": "vintage-circus-poster",
+      "order": 43,
+      "ageGroup": "children",
+      "ageLabel": {
+        "zh-TW": "兒童",
+        "en": "Children"
+      },
+      "ageRange": {
+        "zh-TW": "15 歲以下",
+        "en": "15 and below"
+      },
+      "title": {
+        "zh-TW": "復古奇想馬戲",
+        "en": "Vintage Wonder Circus"
+      },
+      "summary": {
+        "zh-TW": "用原創馬戲海報、帳篷、表演場次與大膽字體，做出歡樂又安全的視覺節奏。",
+        "en": "Use original circus-poster language, acts, tents, and bold type for a joyful, safe, high-energy visual rhythm."
+      },
+      "category": {
+        "zh-TW": "表演與文化",
+        "en": "Performance & Culture"
+      },
+      "vibe": "performance",
+      "energy": "lively",
+      "collections": [
+        "new",
+        "animated",
+        "adult-vivid",
+        "kids-favorite"
+      ],
+      "prompt": "Please transform the uploaded source material into a NotebookLM presentation using the Vintage Wonder Circus visual direction.\n\nUse only the uploaded source material. Keep the original meaning, key terms, quotations, data, and teaching points accurate. Do not invent facts, doctrines, scenes, characters, examples, or claims that are not supported by the source. If the source does not support a specific visual example, use a neutral symbolic visual rather than presenting it as fact.\n\nUse original visual language. Do not imitate or name any existing franchise, copyrighted character, logo, entertainment studio, living artist, or recognizable fictional universe.\n\nMake it appropriate for learners aged 15 and below: warm, lively, visually clear, emotionally safe, and easy to follow. Use short sentences, familiar words, one main idea per slide, bright but comfortable contrast, and friendly original imagery.\n\nTheme Direction: Create a friendly, non-scary daytime circus with original performers, colorful tents, safe skill acts, clear show order, and no dangerous stunts.\n\nAudience Art Direction: Use a welcoming stage, expressive gestures, colorful spotlights, clear acts, and joyful ensemble moments without sensory overload.\n\nOutput Goal: Create a source-faithful slide flow with a compelling opening, purposeful progression, one clear visual job per slide, legible text, and a memorable conclusion. Use visual metaphors only when they do not add unsupported factual meaning.\n\nAvoid dense text, heavy abstraction, frightening imagery, sarcasm, unsafe situations, imitation of existing characters, and layouts that feel too busy.",
+      "status": "complete",
+      "notes": "專案原創分齡視覺方向；保留來源限定，並避免仿作特定角色、作品或品牌。",
+      "sources": [
+        "https://support.google.com/notebooklm/answer/16757456?hl=en",
+        "https://blog.google/innovation-and-ai/models-and-research/google-labs/8-ways-to-make-the-most-out-of-slide-decks-in-notebooklm/"
+      ],
+      "sourceName": "Project-authored original visual direction informed by current Gemini Notebook slide-deck guidance.",
+      "licenseNote": "Project-authored prompt data licensed under CC BY 4.0; linked product guidance is cited for workflow context only."
+    },
+    {
+      "id": "children-kinetic-editorial",
+      "themeId": "kinetic-editorial",
+      "order": 44,
+      "ageGroup": "children",
+      "ageLabel": {
+        "zh-TW": "兒童",
+        "en": "Children"
+      },
+      "ageRange": {
+        "zh-TW": "15 歲以下",
+        "en": "15 and below"
+      },
+      "title": {
+        "zh-TW": "動態編輯實驗室",
+        "en": "Kinetic Editorial Lab"
+      },
+      "summary": {
+        "zh-TW": "用大字、斜向網格、拼貼與節奏變化，做出成熟但不沉悶的現代簡報。",
+        "en": "Use oversized type, diagonal grids, collage, and rhythm changes for mature presentations that never feel dull."
+      },
+      "category": {
+        "zh-TW": "表演與文化",
+        "en": "Performance & Culture"
+      },
+      "vibe": "editorial",
+      "energy": "lively",
+      "collections": [
+        "new",
+        "adult-vivid"
+      ],
+      "prompt": "Please transform the uploaded source material into a NotebookLM presentation using the Kinetic Editorial Lab visual direction.\n\nUse only the uploaded source material. Keep the original meaning, key terms, quotations, data, and teaching points accurate. Do not invent facts, doctrines, scenes, characters, examples, or claims that are not supported by the source. If the source does not support a specific visual example, use a neutral symbolic visual rather than presenting it as fact.\n\nUse original visual language. Do not imitate or name any existing franchise, copyrighted character, logo, entertainment studio, living artist, or recognizable fictional universe.\n\nMake it appropriate for learners aged 15 and below: warm, lively, visually clear, emotionally safe, and easy to follow. Use short sentences, familiar words, one main idea per slide, bright but comfortable contrast, and friendly original imagery.\n\nTheme Direction: Use oversized friendly words, colorful cutout shapes, simple diagonal movement, sticker-like callouts, and a very clear reading order.\n\nAudience Art Direction: Use poster-like headings, simple picture-led sections, bright callouts, and clear reading order.\n\nOutput Goal: Create a source-faithful slide flow with a compelling opening, purposeful progression, one clear visual job per slide, legible text, and a memorable conclusion. Use visual metaphors only when they do not add unsupported factual meaning.\n\nAvoid dense text, heavy abstraction, frightening imagery, sarcasm, unsafe situations, imitation of existing characters, and layouts that feel too busy.",
+      "status": "complete",
+      "notes": "專案原創分齡視覺方向；保留來源限定，並避免仿作特定角色、作品或品牌。",
+      "sources": [
+        "https://support.google.com/notebooklm/answer/16757456?hl=en",
+        "https://blog.google/innovation-and-ai/models-and-research/google-labs/8-ways-to-make-the-most-out-of-slide-decks-in-notebooklm/"
+      ],
+      "sourceName": "Project-authored original visual direction informed by current Gemini Notebook slide-deck guidance.",
+      "licenseNote": "Project-authored prompt data licensed under CC BY 4.0; linked product guidance is cited for workflow context only."
+    },
+    {
+      "id": "youth-stage-musical",
+      "themeId": "stage-musical",
+      "order": 39,
+      "ageGroup": "youth",
+      "ageLabel": {
+        "zh-TW": "青少年",
+        "en": "Youth"
+      },
+      "ageRange": {
+        "zh-TW": "16–34 歲",
+        "en": "16–34"
+      },
+      "title": {
+        "zh-TW": "舞台音樂劇",
+        "en": "Stage Musical"
+      },
+      "summary": {
+        "zh-TW": "用序曲、場次、聚光燈與群像調度，建立有節奏的簡報演出。",
+        "en": "Structure the deck as an overture, acts, spotlights, and ensemble moments with theatrical rhythm."
+      },
+      "category": {
+        "zh-TW": "表演與文化",
+        "en": "Performance & Culture"
+      },
+      "vibe": "performance",
+      "energy": "lively",
+      "collections": [
+        "new",
+        "animated",
+        "adult-vivid"
+      ],
+      "prompt": "Please transform the uploaded source material into a NotebookLM presentation using the Stage Musical visual direction.\n\nUse only the uploaded source material. Keep the original meaning, key terms, quotations, data, and teaching points accurate. Do not invent facts, doctrines, scenes, characters, examples, or claims that are not supported by the source. If the source does not support a specific visual example, use a neutral symbolic visual rather than presenting it as fact.\n\nUse original visual language. Do not imitate or name any existing franchise, copyrighted character, logo, entertainment studio, living artist, or recognizable fictional universe.\n\nMake it appropriate for ages 16 to 34: stylish, energetic, emotionally resonant, and easy to share. Use clear structure, bold visual rhythm, relatable situations, and moderate depth without becoming childish or stiffly corporate.\n\nTheme Direction: Use show-poster typography, rehearsal-board details, bold spotlights, ensemble choreography, lyric-like callouts, and dramatic act changes.\n\nAudience Art Direction: Use show-poster typography, energetic blocking, spotlight contrast, ensemble movement, and dramatic act transitions.\n\nOutput Goal: Create a source-faithful slide flow with a compelling opening, purposeful progression, one clear visual job per slide, legible text, and a memorable conclusion. Use visual metaphors only when they do not add unsupported factual meaning.\n\nAvoid over-explaining, generic corporate templates, low-energy visuals, trend clutter, imitation of existing franchises, or childish treatment that weakens credibility.",
+      "status": "complete",
+      "notes": "專案原創分齡視覺方向；保留來源限定，並避免仿作特定角色、作品或品牌。",
+      "sources": [
+        "https://support.google.com/notebooklm/answer/16757456?hl=en",
+        "https://blog.google/innovation-and-ai/models-and-research/google-labs/8-ways-to-make-the-most-out-of-slide-decks-in-notebooklm/"
+      ],
+      "sourceName": "Project-authored original visual direction informed by current Gemini Notebook slide-deck guidance.",
+      "licenseNote": "Project-authored prompt data licensed under CC BY 4.0; linked product guidance is cited for workflow context only."
+    },
+    {
+      "id": "youth-ballroom-waltz",
+      "themeId": "ballroom-waltz",
+      "order": 40,
+      "ageGroup": "youth",
+      "ageLabel": {
+        "zh-TW": "青少年",
+        "en": "Youth"
+      },
+      "ageRange": {
+        "zh-TW": "16–34 歲",
+        "en": "16–34"
+      },
+      "title": {
+        "zh-TW": "華爾滋舞會",
+        "en": "Ballroom Waltz"
+      },
+      "summary": {
+        "zh-TW": "用三拍節奏、旋轉動線與優雅光影，呈現關係、步驟與轉折。",
+        "en": "Use three-beat rhythm, sweeping movement, and elegant light to explain relationships, steps, and transitions."
+      },
+      "category": {
+        "zh-TW": "表演與文化",
+        "en": "Performance & Culture"
+      },
+      "vibe": "elegant",
+      "energy": "lively",
+      "collections": [
+        "new",
+        "adult-vivid"
+      ],
+      "prompt": "Please transform the uploaded source material into a NotebookLM presentation using the Ballroom Waltz visual direction.\n\nUse only the uploaded source material. Keep the original meaning, key terms, quotations, data, and teaching points accurate. Do not invent facts, doctrines, scenes, characters, examples, or claims that are not supported by the source. If the source does not support a specific visual example, use a neutral symbolic visual rather than presenting it as fact.\n\nUse original visual language. Do not imitate or name any existing franchise, copyrighted character, logo, entertainment studio, living artist, or recognizable fictional universe.\n\nMake it appropriate for ages 16 to 34: stylish, energetic, emotionally resonant, and easy to share. Use clear structure, bold visual rhythm, relatable situations, and moderate depth without becoming childish or stiffly corporate.\n\nTheme Direction: Use fashion-editorial ballroom imagery, dynamic turns, sweeping lines, modern jewel color, rhythmic typography, and cinematic motion.\n\nAudience Art Direction: Pair refined typography with rhythmic movement, contemporary color, and fashion-editorial composition.\n\nOutput Goal: Create a source-faithful slide flow with a compelling opening, purposeful progression, one clear visual job per slide, legible text, and a memorable conclusion. Use visual metaphors only when they do not add unsupported factual meaning.\n\nAvoid over-explaining, generic corporate templates, low-energy visuals, trend clutter, imitation of existing franchises, or childish treatment that weakens credibility.",
+      "status": "complete",
+      "notes": "專案原創分齡視覺方向；保留來源限定，並避免仿作特定角色、作品或品牌。",
+      "sources": [
+        "https://support.google.com/notebooklm/answer/16757456?hl=en",
+        "https://blog.google/innovation-and-ai/models-and-research/google-labs/8-ways-to-make-the-most-out-of-slide-decks-in-notebooklm/"
+      ],
+      "sourceName": "Project-authored original visual direction informed by current Gemini Notebook slide-deck guidance.",
+      "licenseNote": "Project-authored prompt data licensed under CC BY 4.0; linked product guidance is cited for workflow context only."
+    },
+    {
+      "id": "youth-mahjong-geometry",
+      "themeId": "mahjong-geometry",
+      "order": 41,
+      "ageGroup": "youth",
+      "ageLabel": {
+        "zh-TW": "青少年",
+        "en": "Youth"
+      },
+      "ageRange": {
+        "zh-TW": "16–34 歲",
+        "en": "16–34"
+      },
+      "title": {
+        "zh-TW": "麻將幾何美學",
+        "en": "Mahjong Social Geometry"
+      },
+      "summary": {
+        "zh-TW": "從牌面幾何、排列、配對與社交桌面發展出清楚又有文化質感的版面。",
+        "en": "Use tile geometry, matching, sequencing, and social-table composition as a culturally respectful design system."
+      },
+      "category": {
+        "zh-TW": "表演與文化",
+        "en": "Performance & Culture"
+      },
+      "vibe": "cultural",
+      "energy": "balanced",
+      "collections": [
+        "new",
+        "adult-vivid"
+      ],
+      "prompt": "Please transform the uploaded source material into a NotebookLM presentation using the Mahjong Social Geometry visual direction.\n\nUse only the uploaded source material. Keep the original meaning, key terms, quotations, data, and teaching points accurate. Do not invent facts, doctrines, scenes, characters, examples, or claims that are not supported by the source. If the source does not support a specific visual example, use a neutral symbolic visual rather than presenting it as fact.\n\nUse original visual language. Do not imitate or name any existing franchise, copyrighted character, logo, entertainment studio, living artist, or recognizable fictional universe.\n\nMake it appropriate for ages 16 to 34: stylish, energetic, emotionally resonant, and easy to share. Use clear structure, bold visual rhythm, relatable situations, and moderate depth without becoming childish or stiffly corporate.\n\nTheme Direction: Use modular tile geometry, contemporary pattern systems, tactile table layouts, matching logic, and social connection without betting imagery or stereotypes.\n\nAudience Art Direction: Use contemporary pattern systems, cultural texture, modular grids, and social storytelling without stereotypes.\n\nOutput Goal: Create a source-faithful slide flow with a compelling opening, purposeful progression, one clear visual job per slide, legible text, and a memorable conclusion. Use visual metaphors only when they do not add unsupported factual meaning.\n\nAvoid over-explaining, generic corporate templates, low-energy visuals, trend clutter, imitation of existing franchises, or childish treatment that weakens credibility.",
+      "status": "complete",
+      "notes": "專案原創分齡視覺方向；保留來源限定，並避免仿作特定角色、作品或品牌。",
+      "sources": [
+        "https://support.google.com/notebooklm/answer/16757456?hl=en",
+        "https://blog.google/innovation-and-ai/models-and-research/google-labs/8-ways-to-make-the-most-out-of-slide-decks-in-notebooklm/"
+      ],
+      "sourceName": "Project-authored original visual direction informed by current Gemini Notebook slide-deck guidance.",
+      "licenseNote": "Project-authored prompt data licensed under CC BY 4.0; linked product guidance is cited for workflow context only."
+    },
+    {
+      "id": "youth-midnight-jazz-vinyl",
+      "themeId": "midnight-jazz-vinyl",
+      "order": 42,
+      "ageGroup": "youth",
+      "ageLabel": {
+        "zh-TW": "青少年",
+        "en": "Youth"
+      },
+      "ageRange": {
+        "zh-TW": "16–34 歲",
+        "en": "16–34"
+      },
+      "title": {
+        "zh-TW": "午夜爵士唱片",
+        "en": "Midnight Jazz & Vinyl"
+      },
+      "summary": {
+        "zh-TW": "用唱片封套、爵士節奏、舞台燈與即興版面，讓成人簡報更有生命力。",
+        "en": "Use vinyl sleeves, jazz rhythm, stage light, and visual improvisation to give mature decks more life."
+      },
+      "category": {
+        "zh-TW": "表演與文化",
+        "en": "Performance & Culture"
+      },
+      "vibe": "elegant",
+      "energy": "lively",
+      "collections": [
+        "new",
+        "adult-vivid"
+      ],
+      "prompt": "Please transform the uploaded source material into a NotebookLM presentation using the Midnight Jazz & Vinyl visual direction.\n\nUse only the uploaded source material. Keep the original meaning, key terms, quotations, data, and teaching points accurate. Do not invent facts, doctrines, scenes, characters, examples, or claims that are not supported by the source. If the source does not support a specific visual example, use a neutral symbolic visual rather than presenting it as fact.\n\nUse original visual language. Do not imitate or name any existing franchise, copyrighted character, logo, entertainment studio, living artist, or recognizable fictional universe.\n\nMake it appropriate for ages 16 to 34: stylish, energetic, emotionally resonant, and easy to share. Use clear structure, bold visual rhythm, relatable situations, and moderate depth without becoming childish or stiffly corporate.\n\nTheme Direction: Use contemporary vinyl-cover graphics, syncopated grids, neon stage accents, bold photography-inspired crops, and visual improvisation.\n\nAudience Art Direction: Pair refined typography with rhythmic movement, contemporary color, and fashion-editorial composition.\n\nOutput Goal: Create a source-faithful slide flow with a compelling opening, purposeful progression, one clear visual job per slide, legible text, and a memorable conclusion. Use visual metaphors only when they do not add unsupported factual meaning.\n\nAvoid over-explaining, generic corporate templates, low-energy visuals, trend clutter, imitation of existing franchises, or childish treatment that weakens credibility.",
+      "status": "complete",
+      "notes": "專案原創分齡視覺方向；保留來源限定，並避免仿作特定角色、作品或品牌。",
+      "sources": [
+        "https://support.google.com/notebooklm/answer/16757456?hl=en",
+        "https://blog.google/innovation-and-ai/models-and-research/google-labs/8-ways-to-make-the-most-out-of-slide-decks-in-notebooklm/"
+      ],
+      "sourceName": "Project-authored original visual direction informed by current Gemini Notebook slide-deck guidance.",
+      "licenseNote": "Project-authored prompt data licensed under CC BY 4.0; linked product guidance is cited for workflow context only."
+    },
+    {
+      "id": "youth-vintage-circus-poster",
+      "themeId": "vintage-circus-poster",
+      "order": 43,
+      "ageGroup": "youth",
+      "ageLabel": {
+        "zh-TW": "青少年",
+        "en": "Youth"
+      },
+      "ageRange": {
+        "zh-TW": "16–34 歲",
+        "en": "16–34"
+      },
+      "title": {
+        "zh-TW": "復古奇想馬戲",
+        "en": "Vintage Wonder Circus"
+      },
+      "summary": {
+        "zh-TW": "用原創馬戲海報、帳篷、表演場次與大膽字體，做出歡樂又安全的視覺節奏。",
+        "en": "Use original circus-poster language, acts, tents, and bold type for a joyful, safe, high-energy visual rhythm."
+      },
+      "category": {
+        "zh-TW": "表演與文化",
+        "en": "Performance & Culture"
+      },
+      "vibe": "performance",
+      "energy": "lively",
+      "collections": [
+        "new",
+        "animated",
+        "adult-vivid",
+        "kids-favorite"
+      ],
+      "prompt": "Please transform the uploaded source material into a NotebookLM presentation using the Vintage Wonder Circus visual direction.\n\nUse only the uploaded source material. Keep the original meaning, key terms, quotations, data, and teaching points accurate. Do not invent facts, doctrines, scenes, characters, examples, or claims that are not supported by the source. If the source does not support a specific visual example, use a neutral symbolic visual rather than presenting it as fact.\n\nUse original visual language. Do not imitate or name any existing franchise, copyrighted character, logo, entertainment studio, living artist, or recognizable fictional universe.\n\nMake it appropriate for ages 16 to 34: stylish, energetic, emotionally resonant, and easy to share. Use clear structure, bold visual rhythm, relatable situations, and moderate depth without becoming childish or stiffly corporate.\n\nTheme Direction: Use kinetic poster typography, bold stripes, playful spotlights, original performance acts, ticket-stub details, and fast but readable composition.\n\nAudience Art Direction: Use show-poster typography, energetic blocking, spotlight contrast, ensemble movement, and dramatic act transitions.\n\nOutput Goal: Create a source-faithful slide flow with a compelling opening, purposeful progression, one clear visual job per slide, legible text, and a memorable conclusion. Use visual metaphors only when they do not add unsupported factual meaning.\n\nAvoid over-explaining, generic corporate templates, low-energy visuals, trend clutter, imitation of existing franchises, or childish treatment that weakens credibility.",
+      "status": "complete",
+      "notes": "專案原創分齡視覺方向；保留來源限定，並避免仿作特定角色、作品或品牌。",
+      "sources": [
+        "https://support.google.com/notebooklm/answer/16757456?hl=en",
+        "https://blog.google/innovation-and-ai/models-and-research/google-labs/8-ways-to-make-the-most-out-of-slide-decks-in-notebooklm/"
+      ],
+      "sourceName": "Project-authored original visual direction informed by current Gemini Notebook slide-deck guidance.",
+      "licenseNote": "Project-authored prompt data licensed under CC BY 4.0; linked product guidance is cited for workflow context only."
+    },
+    {
+      "id": "youth-kinetic-editorial",
+      "themeId": "kinetic-editorial",
+      "order": 44,
+      "ageGroup": "youth",
+      "ageLabel": {
+        "zh-TW": "青少年",
+        "en": "Youth"
+      },
+      "ageRange": {
+        "zh-TW": "16–34 歲",
+        "en": "16–34"
+      },
+      "title": {
+        "zh-TW": "動態編輯實驗室",
+        "en": "Kinetic Editorial Lab"
+      },
+      "summary": {
+        "zh-TW": "用大字、斜向網格、拼貼與節奏變化，做出成熟但不沉悶的現代簡報。",
+        "en": "Use oversized type, diagonal grids, collage, and rhythm changes for mature presentations that never feel dull."
+      },
+      "category": {
+        "zh-TW": "表演與文化",
+        "en": "Performance & Culture"
+      },
+      "vibe": "editorial",
+      "energy": "lively",
+      "collections": [
+        "new",
+        "adult-vivid"
+      ],
+      "prompt": "Please transform the uploaded source material into a NotebookLM presentation using the Kinetic Editorial Lab visual direction.\n\nUse only the uploaded source material. Keep the original meaning, key terms, quotations, data, and teaching points accurate. Do not invent facts, doctrines, scenes, characters, examples, or claims that are not supported by the source. If the source does not support a specific visual example, use a neutral symbolic visual rather than presenting it as fact.\n\nUse original visual language. Do not imitate or name any existing franchise, copyrighted character, logo, entertainment studio, living artist, or recognizable fictional universe.\n\nMake it appropriate for ages 16 to 34: stylish, energetic, emotionally resonant, and easy to share. Use clear structure, bold visual rhythm, relatable situations, and moderate depth without becoming childish or stiffly corporate.\n\nTheme Direction: Use oversized type, asymmetric grids, sharp crops, layered collage, vivid accents, and social-first visual hooks with disciplined hierarchy.\n\nAudience Art Direction: Use bold editorial type, asymmetrical grids, collage, strong crops, and shareable visual hooks.\n\nOutput Goal: Create a source-faithful slide flow with a compelling opening, purposeful progression, one clear visual job per slide, legible text, and a memorable conclusion. Use visual metaphors only when they do not add unsupported factual meaning.\n\nAvoid over-explaining, generic corporate templates, low-energy visuals, trend clutter, imitation of existing franchises, or childish treatment that weakens credibility.",
+      "status": "complete",
+      "notes": "專案原創分齡視覺方向；保留來源限定，並避免仿作特定角色、作品或品牌。",
+      "sources": [
+        "https://support.google.com/notebooklm/answer/16757456?hl=en",
+        "https://blog.google/innovation-and-ai/models-and-research/google-labs/8-ways-to-make-the-most-out-of-slide-decks-in-notebooklm/"
+      ],
+      "sourceName": "Project-authored original visual direction informed by current Gemini Notebook slide-deck guidance.",
+      "licenseNote": "Project-authored prompt data licensed under CC BY 4.0; linked product guidance is cited for workflow context only."
+    },
+    {
+      "id": "adult-stage-musical",
+      "themeId": "stage-musical",
+      "order": 39,
+      "ageGroup": "adult",
+      "ageLabel": {
+        "zh-TW": "成人",
+        "en": "Adults"
+      },
+      "ageRange": {
+        "zh-TW": "35 歲以上",
+        "en": "35 and above"
+      },
+      "title": {
+        "zh-TW": "舞台音樂劇",
+        "en": "Stage Musical"
+      },
+      "summary": {
+        "zh-TW": "用序曲、場次、聚光燈與群像調度，建立有節奏的簡報演出。",
+        "en": "Structure the deck as an overture, acts, spotlights, and ensemble moments with theatrical rhythm."
+      },
+      "category": {
+        "zh-TW": "表演與文化",
+        "en": "Performance & Culture"
+      },
+      "vibe": "performance",
+      "energy": "lively",
+      "collections": [
+        "new",
+        "animated",
+        "adult-vivid"
+      ],
+      "prompt": "Please transform the uploaded source material into a NotebookLM presentation using the Stage Musical visual direction.\n\nUse only the uploaded source material. Keep the original meaning, key terms, quotations, data, and teaching points accurate. Do not invent facts, doctrines, scenes, characters, examples, or claims that are not supported by the source. If the source does not support a specific visual example, use a neutral symbolic visual rather than presenting it as fact.\n\nUse original visual language. Do not imitate or name any existing franchise, copyrighted character, logo, entertainment studio, living artist, or recognizable fictional universe.\n\nMake it appropriate for adults aged 35 and above: highly readable, substantive, emotionally intelligent, and visually confident. Preserve mature clarity without assuming that mature means quiet or low-energy. Match pacing, color intensity, and movement to the theme: calm for reflection, lively for momentum, and cinematic for drama.\n\nTheme Direction: Use sophisticated theatre-program design, stage depth, expressive lighting, overture-to-finale pacing, and confident ensemble composition with strong narrative momentum.\n\nAudience Art Direction: Use theatrical scale, sophisticated lighting, expressive typography, and rhythmic scene changes with both polish and momentum.\n\nOutput Goal: Create a source-faithful slide flow with a compelling opening, purposeful progression, one clear visual job per slide, legible text, and a memorable conclusion. Use visual metaphors only when they do not add unsupported factual meaning.\n\nAvoid tiny text, noisy clutter, empty decoration, patronizing simplification, or defaulting every mature deck to dark navy, sepia, muted gold, and static compositions.",
+      "status": "complete",
+      "notes": "專案原創分齡視覺方向；保留來源限定，並避免仿作特定角色、作品或品牌。",
+      "sources": [
+        "https://support.google.com/notebooklm/answer/16757456?hl=en",
+        "https://blog.google/innovation-and-ai/models-and-research/google-labs/8-ways-to-make-the-most-out-of-slide-decks-in-notebooklm/"
+      ],
+      "sourceName": "Project-authored original visual direction informed by current Gemini Notebook slide-deck guidance.",
+      "licenseNote": "Project-authored prompt data licensed under CC BY 4.0; linked product guidance is cited for workflow context only."
+    },
+    {
+      "id": "adult-ballroom-waltz",
+      "themeId": "ballroom-waltz",
+      "order": 40,
+      "ageGroup": "adult",
+      "ageLabel": {
+        "zh-TW": "成人",
+        "en": "Adults"
+      },
+      "ageRange": {
+        "zh-TW": "35 歲以上",
+        "en": "35 and above"
+      },
+      "title": {
+        "zh-TW": "華爾滋舞會",
+        "en": "Ballroom Waltz"
+      },
+      "summary": {
+        "zh-TW": "用三拍節奏、旋轉動線與優雅光影，呈現關係、步驟與轉折。",
+        "en": "Use three-beat rhythm, sweeping movement, and elegant light to explain relationships, steps, and transitions."
+      },
+      "category": {
+        "zh-TW": "表演與文化",
+        "en": "Performance & Culture"
+      },
+      "vibe": "elegant",
+      "energy": "lively",
+      "collections": [
+        "new",
+        "adult-vivid"
+      ],
+      "prompt": "Please transform the uploaded source material into a NotebookLM presentation using the Ballroom Waltz visual direction.\n\nUse only the uploaded source material. Keep the original meaning, key terms, quotations, data, and teaching points accurate. Do not invent facts, doctrines, scenes, characters, examples, or claims that are not supported by the source. If the source does not support a specific visual example, use a neutral symbolic visual rather than presenting it as fact.\n\nUse original visual language. Do not imitate or name any existing franchise, copyrighted character, logo, entertainment studio, living artist, or recognizable fictional universe.\n\nMake it appropriate for adults aged 35 and above: highly readable, substantive, emotionally intelligent, and visually confident. Preserve mature clarity without assuming that mature means quiet or low-energy. Match pacing, color intensity, and movement to the theme: calm for reflection, lively for momentum, and cinematic for drama.\n\nTheme Direction: Use graceful but energetic choreography, rich material detail, sweeping camera angles, three-beat visual rhythm, and refined typography without becoming static or ceremonial.\n\nAudience Art Direction: Use expressive refinement: elegant type, rich materials, rhythmic spacing, confident color, and movement without visual stiffness.\n\nOutput Goal: Create a source-faithful slide flow with a compelling opening, purposeful progression, one clear visual job per slide, legible text, and a memorable conclusion. Use visual metaphors only when they do not add unsupported factual meaning.\n\nAvoid tiny text, noisy clutter, empty decoration, patronizing simplification, or defaulting every mature deck to dark navy, sepia, muted gold, and static compositions.",
+      "status": "complete",
+      "notes": "專案原創分齡視覺方向；保留來源限定，並避免仿作特定角色、作品或品牌。",
+      "sources": [
+        "https://support.google.com/notebooklm/answer/16757456?hl=en",
+        "https://blog.google/innovation-and-ai/models-and-research/google-labs/8-ways-to-make-the-most-out-of-slide-decks-in-notebooklm/"
+      ],
+      "sourceName": "Project-authored original visual direction informed by current Gemini Notebook slide-deck guidance.",
+      "licenseNote": "Project-authored prompt data licensed under CC BY 4.0; linked product guidance is cited for workflow context only."
+    },
+    {
+      "id": "adult-mahjong-geometry",
+      "themeId": "mahjong-geometry",
+      "order": 41,
+      "ageGroup": "adult",
+      "ageLabel": {
+        "zh-TW": "成人",
+        "en": "Adults"
+      },
+      "ageRange": {
+        "zh-TW": "35 歲以上",
+        "en": "35 and above"
+      },
+      "title": {
+        "zh-TW": "麻將幾何美學",
+        "en": "Mahjong Social Geometry"
+      },
+      "summary": {
+        "zh-TW": "從牌面幾何、排列、配對與社交桌面發展出清楚又有文化質感的版面。",
+        "en": "Use tile geometry, matching, sequencing, and social-table composition as a culturally respectful design system."
+      },
+      "category": {
+        "zh-TW": "表演與文化",
+        "en": "Performance & Culture"
+      },
+      "vibe": "cultural",
+      "energy": "balanced",
+      "collections": [
+        "new",
+        "adult-vivid"
+      ],
+      "prompt": "Please transform the uploaded source material into a NotebookLM presentation using the Mahjong Social Geometry visual direction.\n\nUse only the uploaded source material. Keep the original meaning, key terms, quotations, data, and teaching points accurate. Do not invent facts, doctrines, scenes, characters, examples, or claims that are not supported by the source. If the source does not support a specific visual example, use a neutral symbolic visual rather than presenting it as fact.\n\nUse original visual language. Do not imitate or name any existing franchise, copyrighted character, logo, entertainment studio, living artist, or recognizable fictional universe.\n\nMake it appropriate for adults aged 35 and above: highly readable, substantive, emotionally intelligent, and visually confident. Preserve mature clarity without assuming that mature means quiet or low-energy. Match pacing, color intensity, and movement to the theme: calm for reflection, lively for momentum, and cinematic for drama.\n\nTheme Direction: Use culturally respectful tile materials, elegant modular grids, social-table atmosphere, strategy diagrams, and vivid green-red-ivory accents without emphasizing wagering.\n\nAudience Art Direction: Use culturally respectful materials, confident geometry, social atmosphere, and editorial explanation without reducing the theme to decoration.\n\nOutput Goal: Create a source-faithful slide flow with a compelling opening, purposeful progression, one clear visual job per slide, legible text, and a memorable conclusion. Use visual metaphors only when they do not add unsupported factual meaning.\n\nAvoid tiny text, noisy clutter, empty decoration, patronizing simplification, or defaulting every mature deck to dark navy, sepia, muted gold, and static compositions.",
+      "status": "complete",
+      "notes": "專案原創分齡視覺方向；保留來源限定，並避免仿作特定角色、作品或品牌。",
+      "sources": [
+        "https://support.google.com/notebooklm/answer/16757456?hl=en",
+        "https://blog.google/innovation-and-ai/models-and-research/google-labs/8-ways-to-make-the-most-out-of-slide-decks-in-notebooklm/"
+      ],
+      "sourceName": "Project-authored original visual direction informed by current Gemini Notebook slide-deck guidance.",
+      "licenseNote": "Project-authored prompt data licensed under CC BY 4.0; linked product guidance is cited for workflow context only."
+    },
+    {
+      "id": "adult-midnight-jazz-vinyl",
+      "themeId": "midnight-jazz-vinyl",
+      "order": 42,
+      "ageGroup": "adult",
+      "ageLabel": {
+        "zh-TW": "成人",
+        "en": "Adults"
+      },
+      "ageRange": {
+        "zh-TW": "35 歲以上",
+        "en": "35 and above"
+      },
+      "title": {
+        "zh-TW": "午夜爵士唱片",
+        "en": "Midnight Jazz & Vinyl"
+      },
+      "summary": {
+        "zh-TW": "用唱片封套、爵士節奏、舞台燈與即興版面，讓成人簡報更有生命力。",
+        "en": "Use vinyl sleeves, jazz rhythm, stage light, and visual improvisation to give mature decks more life."
+      },
+      "category": {
+        "zh-TW": "表演與文化",
+        "en": "Performance & Culture"
+      },
+      "vibe": "elegant",
+      "energy": "lively",
+      "collections": [
+        "new",
+        "adult-vivid"
+      ],
+      "prompt": "Please transform the uploaded source material into a NotebookLM presentation using the Midnight Jazz & Vinyl visual direction.\n\nUse only the uploaded source material. Keep the original meaning, key terms, quotations, data, and teaching points accurate. Do not invent facts, doctrines, scenes, characters, examples, or claims that are not supported by the source. If the source does not support a specific visual example, use a neutral symbolic visual rather than presenting it as fact.\n\nUse original visual language. Do not imitate or name any existing franchise, copyrighted character, logo, entertainment studio, living artist, or recognizable fictional universe.\n\nMake it appropriate for adults aged 35 and above: highly readable, substantive, emotionally intelligent, and visually confident. Preserve mature clarity without assuming that mature means quiet or low-energy. Match pacing, color intensity, and movement to the theme: calm for reflection, lively for momentum, and cinematic for drama.\n\nTheme Direction: Use sophisticated album-cover typography, smoky color gradients without muddy contrast, spotlight drama, syncopated grids, and expressive visual solos.\n\nAudience Art Direction: Use expressive refinement: elegant type, rich materials, rhythmic spacing, confident color, and movement without visual stiffness.\n\nOutput Goal: Create a source-faithful slide flow with a compelling opening, purposeful progression, one clear visual job per slide, legible text, and a memorable conclusion. Use visual metaphors only when they do not add unsupported factual meaning.\n\nAvoid tiny text, noisy clutter, empty decoration, patronizing simplification, or defaulting every mature deck to dark navy, sepia, muted gold, and static compositions.",
+      "status": "complete",
+      "notes": "專案原創分齡視覺方向；保留來源限定，並避免仿作特定角色、作品或品牌。",
+      "sources": [
+        "https://support.google.com/notebooklm/answer/16757456?hl=en",
+        "https://blog.google/innovation-and-ai/models-and-research/google-labs/8-ways-to-make-the-most-out-of-slide-decks-in-notebooklm/"
+      ],
+      "sourceName": "Project-authored original visual direction informed by current Gemini Notebook slide-deck guidance.",
+      "licenseNote": "Project-authored prompt data licensed under CC BY 4.0; linked product guidance is cited for workflow context only."
+    },
+    {
+      "id": "adult-vintage-circus-poster",
+      "themeId": "vintage-circus-poster",
+      "order": 43,
+      "ageGroup": "adult",
+      "ageLabel": {
+        "zh-TW": "成人",
+        "en": "Adults"
+      },
+      "ageRange": {
+        "zh-TW": "35 歲以上",
+        "en": "35 and above"
+      },
+      "title": {
+        "zh-TW": "復古奇想馬戲",
+        "en": "Vintage Wonder Circus"
+      },
+      "summary": {
+        "zh-TW": "用原創馬戲海報、帳篷、表演場次與大膽字體，做出歡樂又安全的視覺節奏。",
+        "en": "Use original circus-poster language, acts, tents, and bold type for a joyful, safe, high-energy visual rhythm."
+      },
+      "category": {
+        "zh-TW": "表演與文化",
+        "en": "Performance & Culture"
+      },
+      "vibe": "performance",
+      "energy": "lively",
+      "collections": [
+        "new",
+        "animated",
+        "adult-vivid"
+      ],
+      "prompt": "Please transform the uploaded source material into a NotebookLM presentation using the Vintage Wonder Circus visual direction.\n\nUse only the uploaded source material. Keep the original meaning, key terms, quotations, data, and teaching points accurate. Do not invent facts, doctrines, scenes, characters, examples, or claims that are not supported by the source. If the source does not support a specific visual example, use a neutral symbolic visual rather than presenting it as fact.\n\nUse original visual language. Do not imitate or name any existing franchise, copyrighted character, logo, entertainment studio, living artist, or recognizable fictional universe.\n\nMake it appropriate for adults aged 35 and above: highly readable, substantive, emotionally intelligent, and visually confident. Preserve mature clarity without assuming that mature means quiet or low-energy. Match pacing, color intensity, and movement to the theme: calm for reflection, lively for momentum, and cinematic for drama.\n\nTheme Direction: Use refined vintage-poster references, bold display type, theatrical scale, deep jewel colors, and kinetic act-to-act pacing without creepy or chaotic imagery.\n\nAudience Art Direction: Use theatrical scale, sophisticated lighting, expressive typography, and rhythmic scene changes with both polish and momentum.\n\nOutput Goal: Create a source-faithful slide flow with a compelling opening, purposeful progression, one clear visual job per slide, legible text, and a memorable conclusion. Use visual metaphors only when they do not add unsupported factual meaning.\n\nAvoid tiny text, noisy clutter, empty decoration, patronizing simplification, or defaulting every mature deck to dark navy, sepia, muted gold, and static compositions.",
+      "status": "complete",
+      "notes": "專案原創分齡視覺方向；保留來源限定，並避免仿作特定角色、作品或品牌。",
+      "sources": [
+        "https://support.google.com/notebooklm/answer/16757456?hl=en",
+        "https://blog.google/innovation-and-ai/models-and-research/google-labs/8-ways-to-make-the-most-out-of-slide-decks-in-notebooklm/"
+      ],
+      "sourceName": "Project-authored original visual direction informed by current Gemini Notebook slide-deck guidance.",
+      "licenseNote": "Project-authored prompt data licensed under CC BY 4.0; linked product guidance is cited for workflow context only."
+    },
+    {
+      "id": "adult-kinetic-editorial",
+      "themeId": "kinetic-editorial",
+      "order": 44,
+      "ageGroup": "adult",
+      "ageLabel": {
+        "zh-TW": "成人",
+        "en": "Adults"
+      },
+      "ageRange": {
+        "zh-TW": "35 歲以上",
+        "en": "35 and above"
+      },
+      "title": {
+        "zh-TW": "動態編輯實驗室",
+        "en": "Kinetic Editorial Lab"
+      },
+      "summary": {
+        "zh-TW": "用大字、斜向網格、拼貼與節奏變化，做出成熟但不沉悶的現代簡報。",
+        "en": "Use oversized type, diagonal grids, collage, and rhythm changes for mature presentations that never feel dull."
+      },
+      "category": {
+        "zh-TW": "表演與文化",
+        "en": "Performance & Culture"
+      },
+      "vibe": "editorial",
+      "energy": "lively",
+      "collections": [
+        "new",
+        "adult-vivid"
+      ],
+      "prompt": "Please transform the uploaded source material into a NotebookLM presentation using the Kinetic Editorial Lab visual direction.\n\nUse only the uploaded source material. Keep the original meaning, key terms, quotations, data, and teaching points accurate. Do not invent facts, doctrines, scenes, characters, examples, or claims that are not supported by the source. If the source does not support a specific visual example, use a neutral symbolic visual rather than presenting it as fact.\n\nUse original visual language. Do not imitate or name any existing franchise, copyrighted character, logo, entertainment studio, living artist, or recognizable fictional universe.\n\nMake it appropriate for adults aged 35 and above: highly readable, substantive, emotionally intelligent, and visually confident. Preserve mature clarity without assuming that mature means quiet or low-energy. Match pacing, color intensity, and movement to the theme: calm for reflection, lively for momentum, and cinematic for drama.\n\nTheme Direction: Use magazine-grade kinetic typography, asymmetric evidence layouts, decisive scale shifts, sophisticated collage, and vivid focal color while preserving effortless readability.\n\nAudience Art Direction: Use magazine-grade hierarchy, confident typography, layered evidence, unexpected crops, and energetic yet controlled composition.\n\nOutput Goal: Create a source-faithful slide flow with a compelling opening, purposeful progression, one clear visual job per slide, legible text, and a memorable conclusion. Use visual metaphors only when they do not add unsupported factual meaning.\n\nAvoid tiny text, noisy clutter, empty decoration, patronizing simplification, or defaulting every mature deck to dark navy, sepia, muted gold, and static compositions.",
+      "status": "complete",
+      "notes": "專案原創分齡視覺方向；保留來源限定，並避免仿作特定角色、作品或品牌。",
+      "sources": [
+        "https://support.google.com/notebooklm/answer/16757456?hl=en",
+        "https://blog.google/innovation-and-ai/models-and-research/google-labs/8-ways-to-make-the-most-out-of-slide-decks-in-notebooklm/"
+      ],
+      "sourceName": "Project-authored original visual direction informed by current Gemini Notebook slide-deck guidance.",
+      "licenseNote": "Project-authored prompt data licensed under CC BY 4.0; linked product guidance is cited for workflow context only."
+    }
+  ]
+}

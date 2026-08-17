@@ -8,8 +8,8 @@
 
 [English](README.md) · [🚀 直接打開網站](https://dennis23100.github.io/gemini-notebook-prompt-lab/) · [🖼️ 可重現 Showcase](https://dennis23100.github.io/gemini-notebook-prompt-lab/showcase.html) · [最新版本](https://github.com/dennis23100/gemini-notebook-prompt-lab/releases/latest) · [Issues](https://github.com/dennis23100/gemini-notebook-prompt-lab/issues)
 
-![Prompts](https://img.shields.io/badge/prompts-90-665fe8)
-![Themes](https://img.shields.io/badge/themes-30-15977f)
+![Prompts](https://img.shields.io/badge/prompts-132-665fe8)
+![Themes](https://img.shields.io/badge/themes-44-15977f)
 ![Audiences](https://img.shields.io/badge/audiences-3-7a74f0)
 ![Workflows](https://img.shields.io/badge/workflows-10-5357e8)
 ![Tests](https://img.shields.io/badge/tests-automated-success)
@@ -45,17 +45,21 @@ Gemini Notebook 提示詞工作室會維持來源內容的忠實度，同時依�
 
 ## 你可以做什麼？
 
-- **📚 提示詞庫**：90 組 Prompt = 30 種視覺主題 × 3 種受眾。
+- **📚 提示詞庫**：132 組 Prompt = 44 種視覺主題 × 3 種受眾。
 - **🧪 提示詞工作室**：依工作流、受眾、聚焦主題、視覺主題、難度、角色與額外要求快速組合 Prompt。
 - **🔗 流程串接**：把「萃取 → 產出 → 驗證」做成可重複工作流。
-- **✅ 品質檢查**：用透明本機規則檢查來源限定、防杜撰、受眾、任務、格式與約束。
+- **✅ 結構檢查**：用透明本機規則檢查來源限定、防杜撰、受眾、任務、格式與約束；不把它包裝成成品品質分數。
 - **⭐ 收藏／最近使用／匯入／匯出**：全部存在瀏覽器本機。
 - **🔗 可分享篩選網址**：目前提示詞庫的篩選狀態可以放進 URL。
 - **📦 JSON / Markdown / CSV**：可匯出目前篩選結果。
 - **🌐 獨立成品語言**：Prompt 維持一致的英文核心，成品可跟隨 Gemini Notebook，或明確指定繁體中文／English。
 - **📱 PWA / 離線**：不需要專案帳號或後端。
 
-提示詞庫會**預設選擇「兒童」**，一開始只顯示 30 組，不再把 90 組全部混在一起。年齡是三選一，永遠保留一個選擇；分類／風格則可以再次點擊目前選項來取消，立刻回到該年齡的全部 30 種主題。
+### 新增的原創特色主題
+
+提示詞庫新增十四種避開特定 IP 仿作的方向：星光動畫夢境、迷你花園探險、天空島與飛行船、奇幻海上冒險、原創魔法學院筆記、奇幻夥伴小隊、紙藝立體世界、奇想科學手帳、舞台音樂劇、華爾滋舞會、麻將幾何美學、午夜爵士唱片、復古奇想馬戲與動態編輯實驗室。每個主題都有真正不同的兒童、青少年與成人美術方向，不再只套用同一段風格文字。
+
+提示詞庫會**預設選擇「兒童」**，一開始只顯示 44 組中的前 12 組，不再一次載入全部 132 組。年齡是三選一，永遠保留一個選擇；分類／風格則可以再次點擊目前選項來取消，立刻回到該年齡的全部 44 種主題。
 
 ## 使用方式
 

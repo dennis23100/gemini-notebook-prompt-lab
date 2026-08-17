@@ -27,6 +27,28 @@ test('output language is independent from the interface language', () => {
   assert.match(app, /#outputLanguageSelect/);
 });
 
+test('library discovery is paginated, collection-aware, and uses honest structure labels', () => {
+  assert.match(html, /id="collectionFilters"/);
+  assert.match(html, /id="loadMoreBtn"/);
+  assert.match(app, /const PAGE_SIZE = 12/);
+  assert.match(app, /state\.collection/);
+  assert.match(app, /ruleComplete/);
+  assert.doesNotMatch(app, /<span class="badge score-good">\$\{lint\.score\}\/100<\/span>/);
+});
+
+test('shareable collection filters are restored before the first library render', () => {
+  assert.match(app, /function restoreSimpleFiltersFromUrl\(\)/);
+  assert.match(app, /params\.get\('collection'\)/);
+  assert.match(app, /restoreSimpleFiltersFromUrl\(\);\s*renderFilters\(\);/);
+});
+
+test('slide composer applies role, depth, and the non-overlapping youth range', () => {
+  assert.match(app, /Role and delivery lens:/);
+  assert.match(app, /Depth setting: advanced/);
+  assert.match(app, /ages 16 to 34/);
+  assert.doesNotMatch(app, /ages 16 to 35/);
+});
+
 test('all static element ids referenced with $(#id) exist in index.html', () => {
   const htmlIds = new Set([...html.matchAll(/id=["']([^"']+)/g)].map((m) => m[1]));
   const usedIds = new Set([...app.matchAll(/\$\('#([^']+)'\)/g)].map((m) => m[1]));

@@ -1,0 +1,1035 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "wonder-adventure",
+  "category": {
+    "zh-TW": "夢幻與冒險",
+    "en": "Wonder & Adventure"
+  },
+  "promptCount": 24,
+  "prompts": [
+    {
+      "id": "children-cel-dreamscape",
+      "themeId": "cel-dreamscape",
+      "order": 31,
+      "ageGroup": "children",
+      "ageLabel": {
+        "zh-TW": "兒童",
+        "en": "Children"
+      },
+      "ageRange": {
+        "zh-TW": "15 歲以下",
+        "en": "15 and below"
+      },
+      "title": {
+        "zh-TW": "星光動畫夢境",
+        "en": "Starlit Cel-Animation Dreamscape"
+      },
+      "summary": {
+        "zh-TW": "用原創動畫分鏡、星光與夢境層次，把內容變成充滿吸引力的視覺旅程。",
+        "en": "Turn the source into an original cel-animation journey with starlight, dream layers, and cinematic emotion."
+      },
+      "category": {
+        "zh-TW": "夢幻與冒險",
+        "en": "Wonder & Adventure"
+      },
+      "vibe": "dreamy",
+      "energy": "cinematic",
+      "collections": [
+        "new",
+        "dreamy",
+        "animated",
+        "kids-favorite"
+      ],
+      "prompt": "Please transform the uploaded source material into a NotebookLM presentation using the Starlit Cel-Animation Dreamscape visual direction.\n\nUse only the uploaded source material. Keep the original meaning, key terms, quotations, data, and teaching points accurate. Do not invent facts, doctrines, scenes, characters, examples, or claims that are not supported by the source. If the source does not support a specific visual example, use a neutral symbolic visual rather than presenting it as fact.\n\nUse original visual language. Do not imitate or name any existing franchise, copyrighted character, logo, entertainment studio, living artist, or recognizable fictional universe.\n\nMake it appropriate for learners aged 15 and below: warm, lively, visually clear, emotionally safe, and easy to follow. Use short sentences, familiar words, one main idea per slide, bright but comfortable contrast, and friendly original imagery.\n\nTheme Direction: Create a bright original animated dream world with floating stars, friendly cloud paths, expressive characters, and one safe magical discovery per slide.\n\nAudience Art Direction: Build each slide around one luminous focal scene, soft layered depth, friendly wonder, and a clear visual path that a child can follow immediately.\n\nOutput Goal: Create a source-faithful slide flow with a compelling opening, purposeful progression, one clear visual job per slide, legible text, and a memorable conclusion. Use visual metaphors only when they do not add unsupported factual meaning.\n\nAvoid dense text, heavy abstraction, frightening imagery, sarcasm, unsafe situations, imitation of existing characters, and layouts that feel too busy.",
+      "status": "complete",
+      "notes": "專案原創分齡視覺方向；保留來源限定，並避免仿作特定角色、作品或品牌。",
+      "sources": [
+        "https://support.google.com/notebooklm/answer/16757456?hl=en",
+        "https://blog.google/innovation-and-ai/models-and-research/google-labs/8-ways-to-make-the-most-out-of-slide-decks-in-notebooklm/"
+      ],
+      "sourceName": "Project-authored original visual direction informed by current Gemini Notebook slide-deck guidance.",
+      "licenseNote": "Project-authored prompt data licensed under CC BY 4.0; linked product guidance is cited for workflow context only."
+    },
+    {
+      "id": "children-miniature-garden",
+      "themeId": "miniature-garden",
+      "order": 32,
+      "ageGroup": "children",
+      "ageLabel": {
+        "zh-TW": "兒童",
+        "en": "Children"
+      },
+      "ageRange": {
+        "zh-TW": "15 歲以下",
+        "en": "15 and below"
+      },
+      "title": {
+        "zh-TW": "迷你花園探險",
+        "en": "Miniature Garden Expedition"
+      },
+      "summary": {
+        "zh-TW": "從微小視角穿越花園、露珠與葉片，把知識變成探索關卡。",
+        "en": "Explore leaves, dew, and garden pathways from a tiny perspective, turning ideas into memorable checkpoints."
+      },
+      "category": {
+        "zh-TW": "夢幻與冒險",
+        "en": "Wonder & Adventure"
+      },
+      "vibe": "dreamy",
+      "energy": "lively",
+      "collections": [
+        "new",
+        "dreamy",
+        "adventure",
+        "kids-favorite"
+      ],
+      "prompt": "Please transform the uploaded source material into a NotebookLM presentation using the Miniature Garden Expedition visual direction.\n\nUse only the uploaded source material. Keep the original meaning, key terms, quotations, data, and teaching points accurate. Do not invent facts, doctrines, scenes, characters, examples, or claims that are not supported by the source. If the source does not support a specific visual example, use a neutral symbolic visual rather than presenting it as fact.\n\nUse original visual language. Do not imitate or name any existing franchise, copyrighted character, logo, entertainment studio, living artist, or recognizable fictional universe.\n\nMake it appropriate for learners aged 15 and below: warm, lively, visually clear, emotionally safe, and easy to follow. Use short sentences, familiar words, one main idea per slide, bright but comfortable contrast, and friendly original imagery.\n\nTheme Direction: Use an original pocket-sized garden world with tiny friendly guides, oversized leaves, dew-drop landmarks, safe discoveries, and playful scale.\n\nAudience Art Direction: Build each slide around one luminous focal scene, soft layered depth, friendly wonder, and a clear visual path that a child can follow immediately.\n\nOutput Goal: Create a source-faithful slide flow with a compelling opening, purposeful progression, one clear visual job per slide, legible text, and a memorable conclusion. Use visual metaphors only when they do not add unsupported factual meaning.\n\nAvoid dense text, heavy abstraction, frightening imagery, sarcasm, unsafe situations, imitation of existing characters, and layouts that feel too busy.",
+      "status": "complete",
+      "notes": "專案原創分齡視覺方向；保留來源限定，並避免仿作特定角色、作品或品牌。",
+      "sources": [
+        "https://support.google.com/notebooklm/answer/16757456?hl=en",
+        "https://blog.google/innovation-and-ai/models-and-research/google-labs/8-ways-to-make-the-most-out-of-slide-decks-in-notebooklm/"
+      ],
+      "sourceName": "Project-authored original visual direction informed by current Gemini Notebook slide-deck guidance.",
+      "licenseNote": "Project-authored prompt data licensed under CC BY 4.0; linked product guidance is cited for workflow context only."
+    },
+    {
+      "id": "children-sky-islands",
+      "themeId": "sky-islands",
+      "order": 33,
+      "ageGroup": "children",
+      "ageLabel": {
+        "zh-TW": "兒童",
+        "en": "Children"
+      },
+      "ageRange": {
+        "zh-TW": "15 歲以下",
+        "en": "15 and below"
+      },
+      "title": {
+        "zh-TW": "天空島與飛行船",
+        "en": "Sky Islands & Airships"
+      },
+      "summary": {
+        "zh-TW": "以漂浮島嶼、雲海航線與飛行船，呈現具有前進感的夢幻冒險。",
+        "en": "Use floating islands, cloud routes, and original airships to build a dreamlike journey with strong forward motion."
+      },
+      "category": {
+        "zh-TW": "夢幻與冒險",
+        "en": "Wonder & Adventure"
+      },
+      "vibe": "adventure",
+      "energy": "cinematic",
+      "collections": [
+        "new",
+        "dreamy",
+        "adventure",
+        "kids-favorite"
+      ],
+      "prompt": "Please transform the uploaded source material into a NotebookLM presentation using the Sky Islands & Airships visual direction.\n\nUse only the uploaded source material. Keep the original meaning, key terms, quotations, data, and teaching points accurate. Do not invent facts, doctrines, scenes, characters, examples, or claims that are not supported by the source. If the source does not support a specific visual example, use a neutral symbolic visual rather than presenting it as fact.\n\nUse original visual language. Do not imitate or name any existing franchise, copyrighted character, logo, entertainment studio, living artist, or recognizable fictional universe.\n\nMake it appropriate for learners aged 15 and below: warm, lively, visually clear, emotionally safe, and easy to follow. Use short sentences, familiar words, one main idea per slide, bright but comfortable contrast, and friendly original imagery.\n\nTheme Direction: Build a safe sky expedition with colorful floating islands, a friendly original airship, cloud checkpoints, clear destinations, and gentle excitement.\n\nAudience Art Direction: Turn the sequence into a safe guided quest with a friendly map, visible checkpoints, one challenge at a time, and a rewarding destination.\n\nOutput Goal: Create a source-faithful slide flow with a compelling opening, purposeful progression, one clear visual job per slide, legible text, and a memorable conclusion. Use visual metaphors only when they do not add unsupported factual meaning.\n\nAvoid dense text, heavy abstraction, frightening imagery, sarcasm, unsafe situations, imitation of existing characters, and layouts that feel too busy.",
+      "status": "complete",
+      "notes": "專案原創分齡視覺方向；保留來源限定，並避免仿作特定角色、作品或品牌。",
+      "sources": [
+        "https://support.google.com/notebooklm/answer/16757456?hl=en",
+        "https://blog.google/innovation-and-ai/models-and-research/google-labs/8-ways-to-make-the-most-out-of-slide-decks-in-notebooklm/"
+      ],
+      "sourceName": "Project-authored original visual direction informed by current Gemini Notebook slide-deck guidance.",
+      "licenseNote": "Project-authored prompt data licensed under CC BY 4.0; linked product guidance is cited for workflow context only."
+    },
+    {
+      "id": "children-high-seas-adventure",
+      "themeId": "high-seas-adventure",
+      "order": 34,
+      "ageGroup": "children",
+      "ageLabel": {
+        "zh-TW": "兒童",
+        "en": "Children"
+      },
+      "ageRange": {
+        "zh-TW": "15 歲以下",
+        "en": "15 and below"
+      },
+      "title": {
+        "zh-TW": "奇幻海上冒險",
+        "en": "High-Seas Adventure Comic"
+      },
+      "summary": {
+        "zh-TW": "用原創船隊、航海圖與漫畫節奏，把重點變成一場海上任務。",
+        "en": "Turn key ideas into an original high-seas mission with maps, a fresh crew, and energetic comic pacing."
+      },
+      "category": {
+        "zh-TW": "夢幻與冒險",
+        "en": "Wonder & Adventure"
+      },
+      "vibe": "animated",
+      "energy": "lively",
+      "collections": [
+        "new",
+        "animated",
+        "adventure",
+        "kids-favorite"
+      ],
+      "prompt": "Please transform the uploaded source material into a NotebookLM presentation using the High-Seas Adventure Comic visual direction.\n\nUse only the uploaded source material. Keep the original meaning, key terms, quotations, data, and teaching points accurate. Do not invent facts, doctrines, scenes, characters, examples, or claims that are not supported by the source. If the source does not support a specific visual example, use a neutral symbolic visual rather than presenting it as fact.\n\nUse original visual language. Do not imitate or name any existing franchise, copyrighted character, logo, entertainment studio, living artist, or recognizable fictional universe.\n\nMake it appropriate for learners aged 15 and below: warm, lively, visually clear, emotionally safe, and easy to follow. Use short sentences, familiar words, one main idea per slide, bright but comfortable contrast, and friendly original imagery.\n\nTheme Direction: Use an original friendly crew, a colorful ship, simple treasure-map checkpoints, cooperative problem solving, and safe ocean action with no recognizable franchise symbols.\n\nAudience Art Direction: Use an original expressive cast, readable poses, clear emotions, playful motion cues, and simple scene-to-scene continuity.\n\nOutput Goal: Create a source-faithful slide flow with a compelling opening, purposeful progression, one clear visual job per slide, legible text, and a memorable conclusion. Use visual metaphors only when they do not add unsupported factual meaning.\n\nAvoid dense text, heavy abstraction, frightening imagery, sarcasm, unsafe situations, imitation of existing characters, and layouts that feel too busy.",
+      "status": "complete",
+      "notes": "專案原創分齡視覺方向；保留來源限定，並避免仿作特定角色、作品或品牌。",
+      "sources": [
+        "https://support.google.com/notebooklm/answer/16757456?hl=en",
+        "https://blog.google/innovation-and-ai/models-and-research/google-labs/8-ways-to-make-the-most-out-of-slide-decks-in-notebooklm/"
+      ],
+      "sourceName": "Project-authored original visual direction informed by current Gemini Notebook slide-deck guidance.",
+      "licenseNote": "Project-authored prompt data licensed under CC BY 4.0; linked product guidance is cited for workflow context only."
+    },
+    {
+      "id": "children-original-magic-academy",
+      "themeId": "original-magic-academy",
+      "order": 35,
+      "ageGroup": "children",
+      "ageLabel": {
+        "zh-TW": "兒童",
+        "en": "Children"
+      },
+      "ageRange": {
+        "zh-TW": "15 歲以下",
+        "en": "15 and below"
+      },
+      "title": {
+        "zh-TW": "原創魔法學院筆記",
+        "en": "Original Magic Academy Notes"
+      },
+      "summary": {
+        "zh-TW": "把概念變成魔法課程、符號筆記與安全的學習試煉，保持完全原創。",
+        "en": "Frame concepts as original magic lessons, symbolic notes, and safe learning trials with no franchise imitation."
+      },
+      "category": {
+        "zh-TW": "夢幻與冒險",
+        "en": "Wonder & Adventure"
+      },
+      "vibe": "dreamy",
+      "energy": "lively",
+      "collections": [
+        "new",
+        "dreamy",
+        "animated",
+        "kids-favorite"
+      ],
+      "prompt": "Please transform the uploaded source material into a NotebookLM presentation using the Original Magic Academy Notes visual direction.\n\nUse only the uploaded source material. Keep the original meaning, key terms, quotations, data, and teaching points accurate. Do not invent facts, doctrines, scenes, characters, examples, or claims that are not supported by the source. If the source does not support a specific visual example, use a neutral symbolic visual rather than presenting it as fact.\n\nUse original visual language. Do not imitate or name any existing franchise, copyrighted character, logo, entertainment studio, living artist, or recognizable fictional universe.\n\nMake it appropriate for learners aged 15 and below: warm, lively, visually clear, emotionally safe, and easy to follow. Use short sentences, familiar words, one main idea per slide, bright but comfortable contrast, and friendly original imagery.\n\nTheme Direction: Create a wholly original friendly academy with colorful lesson rooms, simple glowing symbols, helpful mentors, safe practice quests, and no references to existing schools or characters.\n\nAudience Art Direction: Build each slide around one luminous focal scene, soft layered depth, friendly wonder, and a clear visual path that a child can follow immediately.\n\nOutput Goal: Create a source-faithful slide flow with a compelling opening, purposeful progression, one clear visual job per slide, legible text, and a memorable conclusion. Use visual metaphors only when they do not add unsupported factual meaning.\n\nAvoid dense text, heavy abstraction, frightening imagery, sarcasm, unsafe situations, imitation of existing characters, and layouts that feel too busy.",
+      "status": "complete",
+      "notes": "專案原創分齡視覺方向；保留來源限定，並避免仿作特定角色、作品或品牌。",
+      "sources": [
+        "https://support.google.com/notebooklm/answer/16757456?hl=en",
+        "https://blog.google/innovation-and-ai/models-and-research/google-labs/8-ways-to-make-the-most-out-of-slide-decks-in-notebooklm/"
+      ],
+      "sourceName": "Project-authored original visual direction informed by current Gemini Notebook slide-deck guidance.",
+      "licenseNote": "Project-authored prompt data licensed under CC BY 4.0; linked product guidance is cited for workflow context only."
+    },
+    {
+      "id": "children-friendly-creature-team",
+      "themeId": "friendly-creature-team",
+      "order": 36,
+      "ageGroup": "children",
+      "ageLabel": {
+        "zh-TW": "兒童",
+        "en": "Children"
+      },
+      "ageRange": {
+        "zh-TW": "15 歲以下",
+        "en": "15 and below"
+      },
+      "title": {
+        "zh-TW": "奇幻夥伴小隊",
+        "en": "Friendly Creature Team"
+      },
+      "summary": {
+        "zh-TW": "由原創小生物分工合作，引導觀眾理解角色、步驟與關係。",
+        "en": "Use a team of original friendly creatures to clarify roles, steps, relationships, and teamwork."
+      },
+      "category": {
+        "zh-TW": "夢幻與冒險",
+        "en": "Wonder & Adventure"
+      },
+      "vibe": "animated",
+      "energy": "lively",
+      "collections": [
+        "new",
+        "dreamy",
+        "animated",
+        "kids-favorite"
+      ],
+      "prompt": "Please transform the uploaded source material into a NotebookLM presentation using the Friendly Creature Team visual direction.\n\nUse only the uploaded source material. Keep the original meaning, key terms, quotations, data, and teaching points accurate. Do not invent facts, doctrines, scenes, characters, examples, or claims that are not supported by the source. If the source does not support a specific visual example, use a neutral symbolic visual rather than presenting it as fact.\n\nUse original visual language. Do not imitate or name any existing franchise, copyrighted character, logo, entertainment studio, living artist, or recognizable fictional universe.\n\nMake it appropriate for learners aged 15 and below: warm, lively, visually clear, emotionally safe, and easy to follow. Use short sentences, familiar words, one main idea per slide, bright but comfortable contrast, and friendly original imagery.\n\nTheme Direction: Invent a small team of friendly, non-scary creatures with distinct simple shapes and helpful roles; use clear emotions, cooperation, and one task per scene.\n\nAudience Art Direction: Use an original expressive cast, readable poses, clear emotions, playful motion cues, and simple scene-to-scene continuity.\n\nOutput Goal: Create a source-faithful slide flow with a compelling opening, purposeful progression, one clear visual job per slide, legible text, and a memorable conclusion. Use visual metaphors only when they do not add unsupported factual meaning.\n\nAvoid dense text, heavy abstraction, frightening imagery, sarcasm, unsafe situations, imitation of existing characters, and layouts that feel too busy.",
+      "status": "complete",
+      "notes": "專案原創分齡視覺方向；保留來源限定，並避免仿作特定角色、作品或品牌。",
+      "sources": [
+        "https://support.google.com/notebooklm/answer/16757456?hl=en",
+        "https://blog.google/innovation-and-ai/models-and-research/google-labs/8-ways-to-make-the-most-out-of-slide-decks-in-notebooklm/"
+      ],
+      "sourceName": "Project-authored original visual direction informed by current Gemini Notebook slide-deck guidance.",
+      "licenseNote": "Project-authored prompt data licensed under CC BY 4.0; linked product guidance is cited for workflow context only."
+    },
+    {
+      "id": "children-paper-craft-diorama",
+      "themeId": "paper-craft-diorama",
+      "order": 37,
+      "ageGroup": "children",
+      "ageLabel": {
+        "zh-TW": "兒童",
+        "en": "Children"
+      },
+      "ageRange": {
+        "zh-TW": "15 歲以下",
+        "en": "15 and below"
+      },
+      "title": {
+        "zh-TW": "紙藝立體世界",
+        "en": "Paper-Craft Diorama"
+      },
+      "summary": {
+        "zh-TW": "用剪紙、摺頁、立體書與層疊場景，做出有觸感又清楚的內容。",
+        "en": "Build a tactile paper world with cutouts, folds, pop-up layers, and clear visual hierarchy."
+      },
+      "category": {
+        "zh-TW": "夢幻與冒險",
+        "en": "Wonder & Adventure"
+      },
+      "vibe": "dreamy",
+      "energy": "balanced",
+      "collections": [
+        "new",
+        "dreamy",
+        "playful",
+        "kids-favorite"
+      ],
+      "prompt": "Please transform the uploaded source material into a NotebookLM presentation using the Paper-Craft Diorama visual direction.\n\nUse only the uploaded source material. Keep the original meaning, key terms, quotations, data, and teaching points accurate. Do not invent facts, doctrines, scenes, characters, examples, or claims that are not supported by the source. If the source does not support a specific visual example, use a neutral symbolic visual rather than presenting it as fact.\n\nUse original visual language. Do not imitate or name any existing franchise, copyrighted character, logo, entertainment studio, living artist, or recognizable fictional universe.\n\nMake it appropriate for learners aged 15 and below: warm, lively, visually clear, emotionally safe, and easy to follow. Use short sentences, familiar words, one main idea per slide, bright but comfortable contrast, and friendly original imagery.\n\nTheme Direction: Use bright paper cutouts, rounded folds, pop-up scenes, large labels, safe tactile shapes, and one layered idea at a time.\n\nAudience Art Direction: Build each slide around one luminous focal scene, soft layered depth, friendly wonder, and a clear visual path that a child can follow immediately.\n\nOutput Goal: Create a source-faithful slide flow with a compelling opening, purposeful progression, one clear visual job per slide, legible text, and a memorable conclusion. Use visual metaphors only when they do not add unsupported factual meaning.\n\nAvoid dense text, heavy abstraction, frightening imagery, sarcasm, unsafe situations, imitation of existing characters, and layouts that feel too busy.",
+      "status": "complete",
+      "notes": "專案原創分齡視覺方向；保留來源限定，並避免仿作特定角色、作品或品牌。",
+      "sources": [
+        "https://support.google.com/notebooklm/answer/16757456?hl=en",
+        "https://blog.google/innovation-and-ai/models-and-research/google-labs/8-ways-to-make-the-most-out-of-slide-decks-in-notebooklm/"
+      ],
+      "sourceName": "Project-authored original visual direction informed by current Gemini Notebook slide-deck guidance.",
+      "licenseNote": "Project-authored prompt data licensed under CC BY 4.0; linked product guidance is cited for workflow context only."
+    },
+    {
+      "id": "children-wonder-science-sketch",
+      "themeId": "wonder-science-sketch",
+      "order": 38,
+      "ageGroup": "children",
+      "ageLabel": {
+        "zh-TW": "兒童",
+        "en": "Children"
+      },
+      "ageRange": {
+        "zh-TW": "15 歲以下",
+        "en": "15 and below"
+      },
+      "title": {
+        "zh-TW": "奇想科學手帳",
+        "en": "Wonder Science Sketch Lab"
+      },
+      "summary": {
+        "zh-TW": "把來源內容整理成觀察圖、手繪註記、實驗步驟與發現頁面。",
+        "en": "Turn source material into observation drawings, annotated notes, experiment steps, and discovery pages."
+      },
+      "category": {
+        "zh-TW": "夢幻與冒險",
+        "en": "Wonder & Adventure"
+      },
+      "vibe": "adventure",
+      "energy": "lively",
+      "collections": [
+        "new",
+        "adventure",
+        "playful",
+        "kids-favorite"
+      ],
+      "prompt": "Please transform the uploaded source material into a NotebookLM presentation using the Wonder Science Sketch Lab visual direction.\n\nUse only the uploaded source material. Keep the original meaning, key terms, quotations, data, and teaching points accurate. Do not invent facts, doctrines, scenes, characters, examples, or claims that are not supported by the source. If the source does not support a specific visual example, use a neutral symbolic visual rather than presenting it as fact.\n\nUse original visual language. Do not imitate or name any existing franchise, copyrighted character, logo, entertainment studio, living artist, or recognizable fictional universe.\n\nMake it appropriate for learners aged 15 and below: warm, lively, visually clear, emotionally safe, and easy to follow. Use short sentences, familiar words, one main idea per slide, bright but comfortable contrast, and friendly original imagery.\n\nTheme Direction: Use friendly observation sketches, safe experiment icons, magnified details, sticker-like labels, and a question-discover-explain rhythm based only on the source.\n\nAudience Art Direction: Turn the sequence into a safe guided quest with a friendly map, visible checkpoints, one challenge at a time, and a rewarding destination.\n\nOutput Goal: Create a source-faithful slide flow with a compelling opening, purposeful progression, one clear visual job per slide, legible text, and a memorable conclusion. Use visual metaphors only when they do not add unsupported factual meaning.\n\nAvoid dense text, heavy abstraction, frightening imagery, sarcasm, unsafe situations, imitation of existing characters, and layouts that feel too busy.",
+      "status": "complete",
+      "notes": "專案原創分齡視覺方向；保留來源限定，並避免仿作特定角色、作品或品牌。",
+      "sources": [
+        "https://support.google.com/notebooklm/answer/16757456?hl=en",
+        "https://blog.google/innovation-and-ai/models-and-research/google-labs/8-ways-to-make-the-most-out-of-slide-decks-in-notebooklm/"
+      ],
+      "sourceName": "Project-authored original visual direction informed by current Gemini Notebook slide-deck guidance.",
+      "licenseNote": "Project-authored prompt data licensed under CC BY 4.0; linked product guidance is cited for workflow context only."
+    },
+    {
+      "id": "youth-cel-dreamscape",
+      "themeId": "cel-dreamscape",
+      "order": 31,
+      "ageGroup": "youth",
+      "ageLabel": {
+        "zh-TW": "青少年",
+        "en": "Youth"
+      },
+      "ageRange": {
+        "zh-TW": "16–34 歲",
+        "en": "16–34"
+      },
+      "title": {
+        "zh-TW": "星光動畫夢境",
+        "en": "Starlit Cel-Animation Dreamscape"
+      },
+      "summary": {
+        "zh-TW": "用原創動畫分鏡、星光與夢境層次，把內容變成充滿吸引力的視覺旅程。",
+        "en": "Turn the source into an original cel-animation journey with starlight, dream layers, and cinematic emotion."
+      },
+      "category": {
+        "zh-TW": "夢幻與冒險",
+        "en": "Wonder & Adventure"
+      },
+      "vibe": "dreamy",
+      "energy": "cinematic",
+      "collections": [
+        "new",
+        "dreamy",
+        "animated",
+        "kids-favorite"
+      ],
+      "prompt": "Please transform the uploaded source material into a NotebookLM presentation using the Starlit Cel-Animation Dreamscape visual direction.\n\nUse only the uploaded source material. Keep the original meaning, key terms, quotations, data, and teaching points accurate. Do not invent facts, doctrines, scenes, characters, examples, or claims that are not supported by the source. If the source does not support a specific visual example, use a neutral symbolic visual rather than presenting it as fact.\n\nUse original visual language. Do not imitate or name any existing franchise, copyrighted character, logo, entertainment studio, living artist, or recognizable fictional universe.\n\nMake it appropriate for ages 16 to 34: stylish, energetic, emotionally resonant, and easy to share. Use clear structure, bold visual rhythm, relatable situations, and moderate depth without becoming childish or stiffly corporate.\n\nTheme Direction: Use original cel-animation framing, twilight gradients, luminous particles, dramatic skies, expressive silhouettes, and emotionally resonant scene transitions.\n\nAudience Art Direction: Use atmospheric gradients, cinematic crops, luminous accents, and confident type so the dreamlike mood feels current rather than childish.\n\nOutput Goal: Create a source-faithful slide flow with a compelling opening, purposeful progression, one clear visual job per slide, legible text, and a memorable conclusion. Use visual metaphors only when they do not add unsupported factual meaning.\n\nAvoid over-explaining, generic corporate templates, low-energy visuals, trend clutter, imitation of existing franchises, or childish treatment that weakens credibility.",
+      "status": "complete",
+      "notes": "專案原創分齡視覺方向；保留來源限定，並避免仿作特定角色、作品或品牌。",
+      "sources": [
+        "https://support.google.com/notebooklm/answer/16757456?hl=en",
+        "https://blog.google/innovation-and-ai/models-and-research/google-labs/8-ways-to-make-the-most-out-of-slide-decks-in-notebooklm/"
+      ],
+      "sourceName": "Project-authored original visual direction informed by current Gemini Notebook slide-deck guidance.",
+      "licenseNote": "Project-authored prompt data licensed under CC BY 4.0; linked product guidance is cited for workflow context only."
+    },
+    {
+      "id": "youth-miniature-garden",
+      "themeId": "miniature-garden",
+      "order": 32,
+      "ageGroup": "youth",
+      "ageLabel": {
+        "zh-TW": "青少年",
+        "en": "Youth"
+      },
+      "ageRange": {
+        "zh-TW": "16–34 歲",
+        "en": "16–34"
+      },
+      "title": {
+        "zh-TW": "迷你花園探險",
+        "en": "Miniature Garden Expedition"
+      },
+      "summary": {
+        "zh-TW": "從微小視角穿越花園、露珠與葉片，把知識變成探索關卡。",
+        "en": "Explore leaves, dew, and garden pathways from a tiny perspective, turning ideas into memorable checkpoints."
+      },
+      "category": {
+        "zh-TW": "夢幻與冒險",
+        "en": "Wonder & Adventure"
+      },
+      "vibe": "dreamy",
+      "energy": "lively",
+      "collections": [
+        "new",
+        "dreamy",
+        "adventure",
+        "kids-favorite"
+      ],
+      "prompt": "Please transform the uploaded source material into a NotebookLM presentation using the Miniature Garden Expedition visual direction.\n\nUse only the uploaded source material. Keep the original meaning, key terms, quotations, data, and teaching points accurate. Do not invent facts, doctrines, scenes, characters, examples, or claims that are not supported by the source. If the source does not support a specific visual example, use a neutral symbolic visual rather than presenting it as fact.\n\nUse original visual language. Do not imitate or name any existing franchise, copyrighted character, logo, entertainment studio, living artist, or recognizable fictional universe.\n\nMake it appropriate for ages 16 to 34: stylish, energetic, emotionally resonant, and easy to share. Use clear structure, bold visual rhythm, relatable situations, and moderate depth without becoming childish or stiffly corporate.\n\nTheme Direction: Use macro-garden cinematography, miniature expedition gear, layered foliage, map fragments, and surprising scale shifts with contemporary visual polish.\n\nAudience Art Direction: Use atmospheric gradients, cinematic crops, luminous accents, and confident type so the dreamlike mood feels current rather than childish.\n\nOutput Goal: Create a source-faithful slide flow with a compelling opening, purposeful progression, one clear visual job per slide, legible text, and a memorable conclusion. Use visual metaphors only when they do not add unsupported factual meaning.\n\nAvoid over-explaining, generic corporate templates, low-energy visuals, trend clutter, imitation of existing franchises, or childish treatment that weakens credibility.",
+      "status": "complete",
+      "notes": "專案原創分齡視覺方向；保留來源限定，並避免仿作特定角色、作品或品牌。",
+      "sources": [
+        "https://support.google.com/notebooklm/answer/16757456?hl=en",
+        "https://blog.google/innovation-and-ai/models-and-research/google-labs/8-ways-to-make-the-most-out-of-slide-decks-in-notebooklm/"
+      ],
+      "sourceName": "Project-authored original visual direction informed by current Gemini Notebook slide-deck guidance.",
+      "licenseNote": "Project-authored prompt data licensed under CC BY 4.0; linked product guidance is cited for workflow context only."
+    },
+    {
+      "id": "youth-sky-islands",
+      "themeId": "sky-islands",
+      "order": 33,
+      "ageGroup": "youth",
+      "ageLabel": {
+        "zh-TW": "青少年",
+        "en": "Youth"
+      },
+      "ageRange": {
+        "zh-TW": "16–34 歲",
+        "en": "16–34"
+      },
+      "title": {
+        "zh-TW": "天空島與飛行船",
+        "en": "Sky Islands & Airships"
+      },
+      "summary": {
+        "zh-TW": "以漂浮島嶼、雲海航線與飛行船，呈現具有前進感的夢幻冒險。",
+        "en": "Use floating islands, cloud routes, and original airships to build a dreamlike journey with strong forward motion."
+      },
+      "category": {
+        "zh-TW": "夢幻與冒險",
+        "en": "Wonder & Adventure"
+      },
+      "vibe": "adventure",
+      "energy": "cinematic",
+      "collections": [
+        "new",
+        "dreamy",
+        "adventure",
+        "kids-favorite"
+      ],
+      "prompt": "Please transform the uploaded source material into a NotebookLM presentation using the Sky Islands & Airships visual direction.\n\nUse only the uploaded source material. Keep the original meaning, key terms, quotations, data, and teaching points accurate. Do not invent facts, doctrines, scenes, characters, examples, or claims that are not supported by the source. If the source does not support a specific visual example, use a neutral symbolic visual rather than presenting it as fact.\n\nUse original visual language. Do not imitate or name any existing franchise, copyrighted character, logo, entertainment studio, living artist, or recognizable fictional universe.\n\nMake it appropriate for ages 16 to 34: stylish, energetic, emotionally resonant, and easy to share. Use clear structure, bold visual rhythm, relatable situations, and moderate depth without becoming childish or stiffly corporate.\n\nTheme Direction: Use dramatic cloud oceans, original airship silhouettes, aerial maps, wind trails, wide-to-close cinematic cuts, and bold sky color.\n\nAudience Art Direction: Use map fragments, dramatic scale changes, energetic diagonals, checkpoints, and discovery reveals to create forward momentum.\n\nOutput Goal: Create a source-faithful slide flow with a compelling opening, purposeful progression, one clear visual job per slide, legible text, and a memorable conclusion. Use visual metaphors only when they do not add unsupported factual meaning.\n\nAvoid over-explaining, generic corporate templates, low-energy visuals, trend clutter, imitation of existing franchises, or childish treatment that weakens credibility.",
+      "status": "complete",
+      "notes": "專案原創分齡視覺方向；保留來源限定，並避免仿作特定角色、作品或品牌。",
+      "sources": [
+        "https://support.google.com/notebooklm/answer/16757456?hl=en",
+        "https://blog.google/innovation-and-ai/models-and-research/google-labs/8-ways-to-make-the-most-out-of-slide-decks-in-notebooklm/"
+      ],
+      "sourceName": "Project-authored original visual direction informed by current Gemini Notebook slide-deck guidance.",
+      "licenseNote": "Project-authored prompt data licensed under CC BY 4.0; linked product guidance is cited for workflow context only."
+    },
+    {
+      "id": "youth-high-seas-adventure",
+      "themeId": "high-seas-adventure",
+      "order": 34,
+      "ageGroup": "youth",
+      "ageLabel": {
+        "zh-TW": "青少年",
+        "en": "Youth"
+      },
+      "ageRange": {
+        "zh-TW": "16–34 歲",
+        "en": "16–34"
+      },
+      "title": {
+        "zh-TW": "奇幻海上冒險",
+        "en": "High-Seas Adventure Comic"
+      },
+      "summary": {
+        "zh-TW": "用原創船隊、航海圖與漫畫節奏，把重點變成一場海上任務。",
+        "en": "Turn key ideas into an original high-seas mission with maps, a fresh crew, and energetic comic pacing."
+      },
+      "category": {
+        "zh-TW": "夢幻與冒險",
+        "en": "Wonder & Adventure"
+      },
+      "vibe": "animated",
+      "energy": "lively",
+      "collections": [
+        "new",
+        "animated",
+        "adventure",
+        "kids-favorite"
+      ],
+      "prompt": "Please transform the uploaded source material into a NotebookLM presentation using the High-Seas Adventure Comic visual direction.\n\nUse only the uploaded source material. Keep the original meaning, key terms, quotations, data, and teaching points accurate. Do not invent facts, doctrines, scenes, characters, examples, or claims that are not supported by the source. If the source does not support a specific visual example, use a neutral symbolic visual rather than presenting it as fact.\n\nUse original visual language. Do not imitate or name any existing franchise, copyrighted character, logo, entertainment studio, living artist, or recognizable fictional universe.\n\nMake it appropriate for ages 16 to 34: stylish, energetic, emotionally resonant, and easy to share. Use clear structure, bold visual rhythm, relatable situations, and moderate depth without becoming childish or stiffly corporate.\n\nTheme Direction: Use original adventure-comic panels, sea charts, bold horizon lines, crew teamwork, motion-filled reveals, and cinematic ocean color without imitating an existing series.\n\nAudience Art Direction: Use original cel-animation language, dynamic framing, expressive acting, bold silhouettes, speed cues, and cinematic transitions.\n\nOutput Goal: Create a source-faithful slide flow with a compelling opening, purposeful progression, one clear visual job per slide, legible text, and a memorable conclusion. Use visual metaphors only when they do not add unsupported factual meaning.\n\nAvoid over-explaining, generic corporate templates, low-energy visuals, trend clutter, imitation of existing franchises, or childish treatment that weakens credibility.",
+      "status": "complete",
+      "notes": "專案原創分齡視覺方向；保留來源限定，並避免仿作特定角色、作品或品牌。",
+      "sources": [
+        "https://support.google.com/notebooklm/answer/16757456?hl=en",
+        "https://blog.google/innovation-and-ai/models-and-research/google-labs/8-ways-to-make-the-most-out-of-slide-decks-in-notebooklm/"
+      ],
+      "sourceName": "Project-authored original visual direction informed by current Gemini Notebook slide-deck guidance.",
+      "licenseNote": "Project-authored prompt data licensed under CC BY 4.0; linked product guidance is cited for workflow context only."
+    },
+    {
+      "id": "youth-original-magic-academy",
+      "themeId": "original-magic-academy",
+      "order": 35,
+      "ageGroup": "youth",
+      "ageLabel": {
+        "zh-TW": "青少年",
+        "en": "Youth"
+      },
+      "ageRange": {
+        "zh-TW": "16–34 歲",
+        "en": "16–34"
+      },
+      "title": {
+        "zh-TW": "原創魔法學院筆記",
+        "en": "Original Magic Academy Notes"
+      },
+      "summary": {
+        "zh-TW": "把概念變成魔法課程、符號筆記與安全的學習試煉，保持完全原創。",
+        "en": "Frame concepts as original magic lessons, symbolic notes, and safe learning trials with no franchise imitation."
+      },
+      "category": {
+        "zh-TW": "夢幻與冒險",
+        "en": "Wonder & Adventure"
+      },
+      "vibe": "dreamy",
+      "energy": "lively",
+      "collections": [
+        "new",
+        "dreamy",
+        "animated",
+        "kids-favorite"
+      ],
+      "prompt": "Please transform the uploaded source material into a NotebookLM presentation using the Original Magic Academy Notes visual direction.\n\nUse only the uploaded source material. Keep the original meaning, key terms, quotations, data, and teaching points accurate. Do not invent facts, doctrines, scenes, characters, examples, or claims that are not supported by the source. If the source does not support a specific visual example, use a neutral symbolic visual rather than presenting it as fact.\n\nUse original visual language. Do not imitate or name any existing franchise, copyrighted character, logo, entertainment studio, living artist, or recognizable fictional universe.\n\nMake it appropriate for ages 16 to 34: stylish, energetic, emotionally resonant, and easy to share. Use clear structure, bold visual rhythm, relatable situations, and moderate depth without becoming childish or stiffly corporate.\n\nTheme Direction: Use an original arcane-campus editorial style with constellation diagrams, notebook marginalia, luminous classrooms, symbolic skill levels, and dramatic but readable composition.\n\nAudience Art Direction: Use atmospheric gradients, cinematic crops, luminous accents, and confident type so the dreamlike mood feels current rather than childish.\n\nOutput Goal: Create a source-faithful slide flow with a compelling opening, purposeful progression, one clear visual job per slide, legible text, and a memorable conclusion. Use visual metaphors only when they do not add unsupported factual meaning.\n\nAvoid over-explaining, generic corporate templates, low-energy visuals, trend clutter, imitation of existing franchises, or childish treatment that weakens credibility.",
+      "status": "complete",
+      "notes": "專案原創分齡視覺方向；保留來源限定，並避免仿作特定角色、作品或品牌。",
+      "sources": [
+        "https://support.google.com/notebooklm/answer/16757456?hl=en",
+        "https://blog.google/innovation-and-ai/models-and-research/google-labs/8-ways-to-make-the-most-out-of-slide-decks-in-notebooklm/"
+      ],
+      "sourceName": "Project-authored original visual direction informed by current Gemini Notebook slide-deck guidance.",
+      "licenseNote": "Project-authored prompt data licensed under CC BY 4.0; linked product guidance is cited for workflow context only."
+    },
+    {
+      "id": "youth-friendly-creature-team",
+      "themeId": "friendly-creature-team",
+      "order": 36,
+      "ageGroup": "youth",
+      "ageLabel": {
+        "zh-TW": "青少年",
+        "en": "Youth"
+      },
+      "ageRange": {
+        "zh-TW": "16–34 歲",
+        "en": "16–34"
+      },
+      "title": {
+        "zh-TW": "奇幻夥伴小隊",
+        "en": "Friendly Creature Team"
+      },
+      "summary": {
+        "zh-TW": "由原創小生物分工合作，引導觀眾理解角色、步驟與關係。",
+        "en": "Use a team of original friendly creatures to clarify roles, steps, relationships, and teamwork."
+      },
+      "category": {
+        "zh-TW": "夢幻與冒險",
+        "en": "Wonder & Adventure"
+      },
+      "vibe": "animated",
+      "energy": "lively",
+      "collections": [
+        "new",
+        "dreamy",
+        "animated",
+        "kids-favorite"
+      ],
+      "prompt": "Please transform the uploaded source material into a NotebookLM presentation using the Friendly Creature Team visual direction.\n\nUse only the uploaded source material. Keep the original meaning, key terms, quotations, data, and teaching points accurate. Do not invent facts, doctrines, scenes, characters, examples, or claims that are not supported by the source. If the source does not support a specific visual example, use a neutral symbolic visual rather than presenting it as fact.\n\nUse original visual language. Do not imitate or name any existing franchise, copyrighted character, logo, entertainment studio, living artist, or recognizable fictional universe.\n\nMake it appropriate for ages 16 to 34: stylish, energetic, emotionally resonant, and easy to share. Use clear structure, bold visual rhythm, relatable situations, and moderate depth without becoming childish or stiffly corporate.\n\nTheme Direction: Use an original creature ensemble with graphic silhouettes, expressive teamwork, collectible-card-like role introductions, and dynamic group composition without copying known species.\n\nAudience Art Direction: Use original cel-animation language, dynamic framing, expressive acting, bold silhouettes, speed cues, and cinematic transitions.\n\nOutput Goal: Create a source-faithful slide flow with a compelling opening, purposeful progression, one clear visual job per slide, legible text, and a memorable conclusion. Use visual metaphors only when they do not add unsupported factual meaning.\n\nAvoid over-explaining, generic corporate templates, low-energy visuals, trend clutter, imitation of existing franchises, or childish treatment that weakens credibility.",
+      "status": "complete",
+      "notes": "專案原創分齡視覺方向；保留來源限定，並避免仿作特定角色、作品或品牌。",
+      "sources": [
+        "https://support.google.com/notebooklm/answer/16757456?hl=en",
+        "https://blog.google/innovation-and-ai/models-and-research/google-labs/8-ways-to-make-the-most-out-of-slide-decks-in-notebooklm/"
+      ],
+      "sourceName": "Project-authored original visual direction informed by current Gemini Notebook slide-deck guidance.",
+      "licenseNote": "Project-authored prompt data licensed under CC BY 4.0; linked product guidance is cited for workflow context only."
+    },
+    {
+      "id": "youth-paper-craft-diorama",
+      "themeId": "paper-craft-diorama",
+      "order": 37,
+      "ageGroup": "youth",
+      "ageLabel": {
+        "zh-TW": "青少年",
+        "en": "Youth"
+      },
+      "ageRange": {
+        "zh-TW": "16–34 歲",
+        "en": "16–34"
+      },
+      "title": {
+        "zh-TW": "紙藝立體世界",
+        "en": "Paper-Craft Diorama"
+      },
+      "summary": {
+        "zh-TW": "用剪紙、摺頁、立體書與層疊場景，做出有觸感又清楚的內容。",
+        "en": "Build a tactile paper world with cutouts, folds, pop-up layers, and clear visual hierarchy."
+      },
+      "category": {
+        "zh-TW": "夢幻與冒險",
+        "en": "Wonder & Adventure"
+      },
+      "vibe": "dreamy",
+      "energy": "balanced",
+      "collections": [
+        "new",
+        "dreamy",
+        "playful",
+        "kids-favorite"
+      ],
+      "prompt": "Please transform the uploaded source material into a NotebookLM presentation using the Paper-Craft Diorama visual direction.\n\nUse only the uploaded source material. Keep the original meaning, key terms, quotations, data, and teaching points accurate. Do not invent facts, doctrines, scenes, characters, examples, or claims that are not supported by the source. If the source does not support a specific visual example, use a neutral symbolic visual rather than presenting it as fact.\n\nUse original visual language. Do not imitate or name any existing franchise, copyrighted character, logo, entertainment studio, living artist, or recognizable fictional universe.\n\nMake it appropriate for ages 16 to 34: stylish, energetic, emotionally resonant, and easy to share. Use clear structure, bold visual rhythm, relatable situations, and moderate depth without becoming childish or stiffly corporate.\n\nTheme Direction: Use contemporary paper sculpture, bold cut-paper shadows, collage typography, folded transitions, and crafted depth with clean editorial restraint.\n\nAudience Art Direction: Use atmospheric gradients, cinematic crops, luminous accents, and confident type so the dreamlike mood feels current rather than childish.\n\nOutput Goal: Create a source-faithful slide flow with a compelling opening, purposeful progression, one clear visual job per slide, legible text, and a memorable conclusion. Use visual metaphors only when they do not add unsupported factual meaning.\n\nAvoid over-explaining, generic corporate templates, low-energy visuals, trend clutter, imitation of existing franchises, or childish treatment that weakens credibility.",
+      "status": "complete",
+      "notes": "專案原創分齡視覺方向；保留來源限定，並避免仿作特定角色、作品或品牌。",
+      "sources": [
+        "https://support.google.com/notebooklm/answer/16757456?hl=en",
+        "https://blog.google/innovation-and-ai/models-and-research/google-labs/8-ways-to-make-the-most-out-of-slide-decks-in-notebooklm/"
+      ],
+      "sourceName": "Project-authored original visual direction informed by current Gemini Notebook slide-deck guidance.",
+      "licenseNote": "Project-authored prompt data licensed under CC BY 4.0; linked product guidance is cited for workflow context only."
+    },
+    {
+      "id": "youth-wonder-science-sketch",
+      "themeId": "wonder-science-sketch",
+      "order": 38,
+      "ageGroup": "youth",
+      "ageLabel": {
+        "zh-TW": "青少年",
+        "en": "Youth"
+      },
+      "ageRange": {
+        "zh-TW": "16–34 歲",
+        "en": "16–34"
+      },
+      "title": {
+        "zh-TW": "奇想科學手帳",
+        "en": "Wonder Science Sketch Lab"
+      },
+      "summary": {
+        "zh-TW": "把來源內容整理成觀察圖、手繪註記、實驗步驟與發現頁面。",
+        "en": "Turn source material into observation drawings, annotated notes, experiment steps, and discovery pages."
+      },
+      "category": {
+        "zh-TW": "夢幻與冒險",
+        "en": "Wonder & Adventure"
+      },
+      "vibe": "adventure",
+      "energy": "lively",
+      "collections": [
+        "new",
+        "adventure",
+        "playful",
+        "kids-favorite"
+      ],
+      "prompt": "Please transform the uploaded source material into a NotebookLM presentation using the Wonder Science Sketch Lab visual direction.\n\nUse only the uploaded source material. Keep the original meaning, key terms, quotations, data, and teaching points accurate. Do not invent facts, doctrines, scenes, characters, examples, or claims that are not supported by the source. If the source does not support a specific visual example, use a neutral symbolic visual rather than presenting it as fact.\n\nUse original visual language. Do not imitate or name any existing franchise, copyrighted character, logo, entertainment studio, living artist, or recognizable fictional universe.\n\nMake it appropriate for ages 16 to 34: stylish, energetic, emotionally resonant, and easy to share. Use clear structure, bold visual rhythm, relatable situations, and moderate depth without becoming childish or stiffly corporate.\n\nTheme Direction: Use field-notebook energy, annotated diagrams, bold marker accents, specimen frames, hypothesis-to-evidence flow, and contemporary sketchbook composition.\n\nAudience Art Direction: Use map fragments, dramatic scale changes, energetic diagonals, checkpoints, and discovery reveals to create forward momentum.\n\nOutput Goal: Create a source-faithful slide flow with a compelling opening, purposeful progression, one clear visual job per slide, legible text, and a memorable conclusion. Use visual metaphors only when they do not add unsupported factual meaning.\n\nAvoid over-explaining, generic corporate templates, low-energy visuals, trend clutter, imitation of existing franchises, or childish treatment that weakens credibility.",
+      "status": "complete",
+      "notes": "專案原創分齡視覺方向；保留來源限定，並避免仿作特定角色、作品或品牌。",
+      "sources": [
+        "https://support.google.com/notebooklm/answer/16757456?hl=en",
+        "https://blog.google/innovation-and-ai/models-and-research/google-labs/8-ways-to-make-the-most-out-of-slide-decks-in-notebooklm/"
+      ],
+      "sourceName": "Project-authored original visual direction informed by current Gemini Notebook slide-deck guidance.",
+      "licenseNote": "Project-authored prompt data licensed under CC BY 4.0; linked product guidance is cited for workflow context only."
+    },
+    {
+      "id": "adult-cel-dreamscape",
+      "themeId": "cel-dreamscape",
+      "order": 31,
+      "ageGroup": "adult",
+      "ageLabel": {
+        "zh-TW": "成人",
+        "en": "Adults"
+      },
+      "ageRange": {
+        "zh-TW": "35 歲以上",
+        "en": "35 and above"
+      },
+      "title": {
+        "zh-TW": "星光動畫夢境",
+        "en": "Starlit Cel-Animation Dreamscape"
+      },
+      "summary": {
+        "zh-TW": "用原創動畫分鏡、星光與夢境層次，把內容變成充滿吸引力的視覺旅程。",
+        "en": "Turn the source into an original cel-animation journey with starlight, dream layers, and cinematic emotion."
+      },
+      "category": {
+        "zh-TW": "夢幻與冒險",
+        "en": "Wonder & Adventure"
+      },
+      "vibe": "dreamy",
+      "energy": "cinematic",
+      "collections": [
+        "new",
+        "dreamy",
+        "animated"
+      ],
+      "prompt": "Please transform the uploaded source material into a NotebookLM presentation using the Starlit Cel-Animation Dreamscape visual direction.\n\nUse only the uploaded source material. Keep the original meaning, key terms, quotations, data, and teaching points accurate. Do not invent facts, doctrines, scenes, characters, examples, or claims that are not supported by the source. If the source does not support a specific visual example, use a neutral symbolic visual rather than presenting it as fact.\n\nUse original visual language. Do not imitate or name any existing franchise, copyrighted character, logo, entertainment studio, living artist, or recognizable fictional universe.\n\nMake it appropriate for adults aged 35 and above: highly readable, substantive, emotionally intelligent, and visually confident. Preserve mature clarity without assuming that mature means quiet or low-energy. Match pacing, color intensity, and movement to the theme: calm for reflection, lively for momentum, and cinematic for drama.\n\nTheme Direction: Use sophisticated animated-film composition, cosmic light, symbolic dream spaces, restrained character acting, and cinematic transitions that preserve intellectual depth.\n\nAudience Art Direction: Use sophisticated luminosity, spatial depth, refined typography, and selective moments of wonder; keep the deck imaginative without losing authority.\n\nOutput Goal: Create a source-faithful slide flow with a compelling opening, purposeful progression, one clear visual job per slide, legible text, and a memorable conclusion. Use visual metaphors only when they do not add unsupported factual meaning.\n\nAvoid tiny text, noisy clutter, empty decoration, patronizing simplification, or defaulting every mature deck to dark navy, sepia, muted gold, and static compositions.",
+      "status": "complete",
+      "notes": "專案原創分齡視覺方向；保留來源限定，並避免仿作特定角色、作品或品牌。",
+      "sources": [
+        "https://support.google.com/notebooklm/answer/16757456?hl=en",
+        "https://blog.google/innovation-and-ai/models-and-research/google-labs/8-ways-to-make-the-most-out-of-slide-decks-in-notebooklm/"
+      ],
+      "sourceName": "Project-authored original visual direction informed by current Gemini Notebook slide-deck guidance.",
+      "licenseNote": "Project-authored prompt data licensed under CC BY 4.0; linked product guidance is cited for workflow context only."
+    },
+    {
+      "id": "adult-miniature-garden",
+      "themeId": "miniature-garden",
+      "order": 32,
+      "ageGroup": "adult",
+      "ageLabel": {
+        "zh-TW": "成人",
+        "en": "Adults"
+      },
+      "ageRange": {
+        "zh-TW": "35 歲以上",
+        "en": "35 and above"
+      },
+      "title": {
+        "zh-TW": "迷你花園探險",
+        "en": "Miniature Garden Expedition"
+      },
+      "summary": {
+        "zh-TW": "從微小視角穿越花園、露珠與葉片，把知識變成探索關卡。",
+        "en": "Explore leaves, dew, and garden pathways from a tiny perspective, turning ideas into memorable checkpoints."
+      },
+      "category": {
+        "zh-TW": "夢幻與冒險",
+        "en": "Wonder & Adventure"
+      },
+      "vibe": "dreamy",
+      "energy": "lively",
+      "collections": [
+        "new",
+        "dreamy",
+        "adventure"
+      ],
+      "prompt": "Please transform the uploaded source material into a NotebookLM presentation using the Miniature Garden Expedition visual direction.\n\nUse only the uploaded source material. Keep the original meaning, key terms, quotations, data, and teaching points accurate. Do not invent facts, doctrines, scenes, characters, examples, or claims that are not supported by the source. If the source does not support a specific visual example, use a neutral symbolic visual rather than presenting it as fact.\n\nUse original visual language. Do not imitate or name any existing franchise, copyrighted character, logo, entertainment studio, living artist, or recognizable fictional universe.\n\nMake it appropriate for adults aged 35 and above: highly readable, substantive, emotionally intelligent, and visually confident. Preserve mature clarity without assuming that mature means quiet or low-energy. Match pacing, color intensity, and movement to the theme: calm for reflection, lively for momentum, and cinematic for drama.\n\nTheme Direction: Use botanical macro detail, elegant miniature scale, expedition notes, tactile materials, and a vivid path through layered ideas without copying any game universe.\n\nAudience Art Direction: Use sophisticated luminosity, spatial depth, refined typography, and selective moments of wonder; keep the deck imaginative without losing authority.\n\nOutput Goal: Create a source-faithful slide flow with a compelling opening, purposeful progression, one clear visual job per slide, legible text, and a memorable conclusion. Use visual metaphors only when they do not add unsupported factual meaning.\n\nAvoid tiny text, noisy clutter, empty decoration, patronizing simplification, or defaulting every mature deck to dark navy, sepia, muted gold, and static compositions.",
+      "status": "complete",
+      "notes": "專案原創分齡視覺方向；保留來源限定，並避免仿作特定角色、作品或品牌。",
+      "sources": [
+        "https://support.google.com/notebooklm/answer/16757456?hl=en",
+        "https://blog.google/innovation-and-ai/models-and-research/google-labs/8-ways-to-make-the-most-out-of-slide-decks-in-notebooklm/"
+      ],
+      "sourceName": "Project-authored original visual direction informed by current Gemini Notebook slide-deck guidance.",
+      "licenseNote": "Project-authored prompt data licensed under CC BY 4.0; linked product guidance is cited for workflow context only."
+    },
+    {
+      "id": "adult-sky-islands",
+      "themeId": "sky-islands",
+      "order": 33,
+      "ageGroup": "adult",
+      "ageLabel": {
+        "zh-TW": "成人",
+        "en": "Adults"
+      },
+      "ageRange": {
+        "zh-TW": "35 歲以上",
+        "en": "35 and above"
+      },
+      "title": {
+        "zh-TW": "天空島與飛行船",
+        "en": "Sky Islands & Airships"
+      },
+      "summary": {
+        "zh-TW": "以漂浮島嶼、雲海航線與飛行船，呈現具有前進感的夢幻冒險。",
+        "en": "Use floating islands, cloud routes, and original airships to build a dreamlike journey with strong forward motion."
+      },
+      "category": {
+        "zh-TW": "夢幻與冒險",
+        "en": "Wonder & Adventure"
+      },
+      "vibe": "adventure",
+      "energy": "cinematic",
+      "collections": [
+        "new",
+        "dreamy",
+        "adventure"
+      ],
+      "prompt": "Please transform the uploaded source material into a NotebookLM presentation using the Sky Islands & Airships visual direction.\n\nUse only the uploaded source material. Keep the original meaning, key terms, quotations, data, and teaching points accurate. Do not invent facts, doctrines, scenes, characters, examples, or claims that are not supported by the source. If the source does not support a specific visual example, use a neutral symbolic visual rather than presenting it as fact.\n\nUse original visual language. Do not imitate or name any existing franchise, copyrighted character, logo, entertainment studio, living artist, or recognizable fictional universe.\n\nMake it appropriate for adults aged 35 and above: highly readable, substantive, emotionally intelligent, and visually confident. Preserve mature clarity without assuming that mature means quiet or low-energy. Match pacing, color intensity, and movement to the theme: calm for reflection, lively for momentum, and cinematic for drama.\n\nTheme Direction: Use atmospheric aerial cartography, elegant speculative engineering, cinematic scale, purposeful routes, and sophisticated sky palettes.\n\nAudience Art Direction: Use documentary adventure pacing, purposeful maps, milestones, expansive compositions, and decisive visual progression.\n\nOutput Goal: Create a source-faithful slide flow with a compelling opening, purposeful progression, one clear visual job per slide, legible text, and a memorable conclusion. Use visual metaphors only when they do not add unsupported factual meaning.\n\nAvoid tiny text, noisy clutter, empty decoration, patronizing simplification, or defaulting every mature deck to dark navy, sepia, muted gold, and static compositions.",
+      "status": "complete",
+      "notes": "專案原創分齡視覺方向；保留來源限定，並避免仿作特定角色、作品或品牌。",
+      "sources": [
+        "https://support.google.com/notebooklm/answer/16757456?hl=en",
+        "https://blog.google/innovation-and-ai/models-and-research/google-labs/8-ways-to-make-the-most-out-of-slide-decks-in-notebooklm/"
+      ],
+      "sourceName": "Project-authored original visual direction informed by current Gemini Notebook slide-deck guidance.",
+      "licenseNote": "Project-authored prompt data licensed under CC BY 4.0; linked product guidance is cited for workflow context only."
+    },
+    {
+      "id": "adult-high-seas-adventure",
+      "themeId": "high-seas-adventure",
+      "order": 34,
+      "ageGroup": "adult",
+      "ageLabel": {
+        "zh-TW": "成人",
+        "en": "Adults"
+      },
+      "ageRange": {
+        "zh-TW": "35 歲以上",
+        "en": "35 and above"
+      },
+      "title": {
+        "zh-TW": "奇幻海上冒險",
+        "en": "High-Seas Adventure Comic"
+      },
+      "summary": {
+        "zh-TW": "用原創船隊、航海圖與漫畫節奏，把重點變成一場海上任務。",
+        "en": "Turn key ideas into an original high-seas mission with maps, a fresh crew, and energetic comic pacing."
+      },
+      "category": {
+        "zh-TW": "夢幻與冒險",
+        "en": "Wonder & Adventure"
+      },
+      "vibe": "animated",
+      "energy": "lively",
+      "collections": [
+        "new",
+        "animated",
+        "adventure"
+      ],
+      "prompt": "Please transform the uploaded source material into a NotebookLM presentation using the High-Seas Adventure Comic visual direction.\n\nUse only the uploaded source material. Keep the original meaning, key terms, quotations, data, and teaching points accurate. Do not invent facts, doctrines, scenes, characters, examples, or claims that are not supported by the source. If the source does not support a specific visual example, use a neutral symbolic visual rather than presenting it as fact.\n\nUse original visual language. Do not imitate or name any existing franchise, copyrighted character, logo, entertainment studio, living artist, or recognizable fictional universe.\n\nMake it appropriate for adults aged 35 and above: highly readable, substantive, emotionally intelligent, and visually confident. Preserve mature clarity without assuming that mature means quiet or low-energy. Match pacing, color intensity, and movement to the theme: calm for reflection, lively for momentum, and cinematic for drama.\n\nTheme Direction: Use graphic-novel maritime storytelling, navigation diagrams, ensemble decision points, storm-to-calm contrast, and confident editorial captions.\n\nAudience Art Direction: Treat animation as a mature visual medium: use editorial character acting, graphic silhouettes, controlled motion, and cinematic sequencing.\n\nOutput Goal: Create a source-faithful slide flow with a compelling opening, purposeful progression, one clear visual job per slide, legible text, and a memorable conclusion. Use visual metaphors only when they do not add unsupported factual meaning.\n\nAvoid tiny text, noisy clutter, empty decoration, patronizing simplification, or defaulting every mature deck to dark navy, sepia, muted gold, and static compositions.",
+      "status": "complete",
+      "notes": "專案原創分齡視覺方向；保留來源限定，並避免仿作特定角色、作品或品牌。",
+      "sources": [
+        "https://support.google.com/notebooklm/answer/16757456?hl=en",
+        "https://blog.google/innovation-and-ai/models-and-research/google-labs/8-ways-to-make-the-most-out-of-slide-decks-in-notebooklm/"
+      ],
+      "sourceName": "Project-authored original visual direction informed by current Gemini Notebook slide-deck guidance.",
+      "licenseNote": "Project-authored prompt data licensed under CC BY 4.0; linked product guidance is cited for workflow context only."
+    },
+    {
+      "id": "adult-original-magic-academy",
+      "themeId": "original-magic-academy",
+      "order": 35,
+      "ageGroup": "adult",
+      "ageLabel": {
+        "zh-TW": "成人",
+        "en": "Adults"
+      },
+      "ageRange": {
+        "zh-TW": "35 歲以上",
+        "en": "35 and above"
+      },
+      "title": {
+        "zh-TW": "原創魔法學院筆記",
+        "en": "Original Magic Academy Notes"
+      },
+      "summary": {
+        "zh-TW": "把概念變成魔法課程、符號筆記與安全的學習試煉，保持完全原創。",
+        "en": "Frame concepts as original magic lessons, symbolic notes, and safe learning trials with no franchise imitation."
+      },
+      "category": {
+        "zh-TW": "夢幻與冒險",
+        "en": "Wonder & Adventure"
+      },
+      "vibe": "dreamy",
+      "energy": "lively",
+      "collections": [
+        "new",
+        "dreamy",
+        "animated"
+      ],
+      "prompt": "Please transform the uploaded source material into a NotebookLM presentation using the Original Magic Academy Notes visual direction.\n\nUse only the uploaded source material. Keep the original meaning, key terms, quotations, data, and teaching points accurate. Do not invent facts, doctrines, scenes, characters, examples, or claims that are not supported by the source. If the source does not support a specific visual example, use a neutral symbolic visual rather than presenting it as fact.\n\nUse original visual language. Do not imitate or name any existing franchise, copyrighted character, logo, entertainment studio, living artist, or recognizable fictional universe.\n\nMake it appropriate for adults aged 35 and above: highly readable, substantive, emotionally intelligent, and visually confident. Preserve mature clarity without assuming that mature means quiet or low-energy. Match pacing, color intensity, and movement to the theme: calm for reflection, lively for momentum, and cinematic for drama.\n\nTheme Direction: Treat the academy as a refined visual metaphor for mastery: use scholarly diagrams, luminous manuscripts, architectural depth, and structured progression without franchise references.\n\nAudience Art Direction: Use sophisticated luminosity, spatial depth, refined typography, and selective moments of wonder; keep the deck imaginative without losing authority.\n\nOutput Goal: Create a source-faithful slide flow with a compelling opening, purposeful progression, one clear visual job per slide, legible text, and a memorable conclusion. Use visual metaphors only when they do not add unsupported factual meaning.\n\nAvoid tiny text, noisy clutter, empty decoration, patronizing simplification, or defaulting every mature deck to dark navy, sepia, muted gold, and static compositions.",
+      "status": "complete",
+      "notes": "專案原創分齡視覺方向；保留來源限定，並避免仿作特定角色、作品或品牌。",
+      "sources": [
+        "https://support.google.com/notebooklm/answer/16757456?hl=en",
+        "https://blog.google/innovation-and-ai/models-and-research/google-labs/8-ways-to-make-the-most-out-of-slide-decks-in-notebooklm/"
+      ],
+      "sourceName": "Project-authored original visual direction informed by current Gemini Notebook slide-deck guidance.",
+      "licenseNote": "Project-authored prompt data licensed under CC BY 4.0; linked product guidance is cited for workflow context only."
+    },
+    {
+      "id": "adult-friendly-creature-team",
+      "themeId": "friendly-creature-team",
+      "order": 36,
+      "ageGroup": "adult",
+      "ageLabel": {
+        "zh-TW": "成人",
+        "en": "Adults"
+      },
+      "ageRange": {
+        "zh-TW": "35 歲以上",
+        "en": "35 and above"
+      },
+      "title": {
+        "zh-TW": "奇幻夥伴小隊",
+        "en": "Friendly Creature Team"
+      },
+      "summary": {
+        "zh-TW": "由原創小生物分工合作，引導觀眾理解角色、步驟與關係。",
+        "en": "Use a team of original friendly creatures to clarify roles, steps, relationships, and teamwork."
+      },
+      "category": {
+        "zh-TW": "夢幻與冒險",
+        "en": "Wonder & Adventure"
+      },
+      "vibe": "animated",
+      "energy": "lively",
+      "collections": [
+        "new",
+        "dreamy",
+        "animated"
+      ],
+      "prompt": "Please transform the uploaded source material into a NotebookLM presentation using the Friendly Creature Team visual direction.\n\nUse only the uploaded source material. Keep the original meaning, key terms, quotations, data, and teaching points accurate. Do not invent facts, doctrines, scenes, characters, examples, or claims that are not supported by the source. If the source does not support a specific visual example, use a neutral symbolic visual rather than presenting it as fact.\n\nUse original visual language. Do not imitate or name any existing franchise, copyrighted character, logo, entertainment studio, living artist, or recognizable fictional universe.\n\nMake it appropriate for adults aged 35 and above: highly readable, substantive, emotionally intelligent, and visually confident. Preserve mature clarity without assuming that mature means quiet or low-energy. Match pacing, color intensity, and movement to the theme: calm for reflection, lively for momentum, and cinematic for drama.\n\nTheme Direction: Use original symbolic creature archetypes as an editorial system for roles and relationships, with sophisticated illustration, clear legends, and restrained humor.\n\nAudience Art Direction: Treat animation as a mature visual medium: use editorial character acting, graphic silhouettes, controlled motion, and cinematic sequencing.\n\nOutput Goal: Create a source-faithful slide flow with a compelling opening, purposeful progression, one clear visual job per slide, legible text, and a memorable conclusion. Use visual metaphors only when they do not add unsupported factual meaning.\n\nAvoid tiny text, noisy clutter, empty decoration, patronizing simplification, or defaulting every mature deck to dark navy, sepia, muted gold, and static compositions.",
+      "status": "complete",
+      "notes": "專案原創分齡視覺方向；保留來源限定，並避免仿作特定角色、作品或品牌。",
+      "sources": [
+        "https://support.google.com/notebooklm/answer/16757456?hl=en",
+        "https://blog.google/innovation-and-ai/models-and-research/google-labs/8-ways-to-make-the-most-out-of-slide-decks-in-notebooklm/"
+      ],
+      "sourceName": "Project-authored original visual direction informed by current Gemini Notebook slide-deck guidance.",
+      "licenseNote": "Project-authored prompt data licensed under CC BY 4.0; linked product guidance is cited for workflow context only."
+    },
+    {
+      "id": "adult-paper-craft-diorama",
+      "themeId": "paper-craft-diorama",
+      "order": 37,
+      "ageGroup": "adult",
+      "ageLabel": {
+        "zh-TW": "成人",
+        "en": "Adults"
+      },
+      "ageRange": {
+        "zh-TW": "35 歲以上",
+        "en": "35 and above"
+      },
+      "title": {
+        "zh-TW": "紙藝立體世界",
+        "en": "Paper-Craft Diorama"
+      },
+      "summary": {
+        "zh-TW": "用剪紙、摺頁、立體書與層疊場景，做出有觸感又清楚的內容。",
+        "en": "Build a tactile paper world with cutouts, folds, pop-up layers, and clear visual hierarchy."
+      },
+      "category": {
+        "zh-TW": "夢幻與冒險",
+        "en": "Wonder & Adventure"
+      },
+      "vibe": "dreamy",
+      "energy": "balanced",
+      "collections": [
+        "new",
+        "dreamy",
+        "playful"
+      ],
+      "prompt": "Please transform the uploaded source material into a NotebookLM presentation using the Paper-Craft Diorama visual direction.\n\nUse only the uploaded source material. Keep the original meaning, key terms, quotations, data, and teaching points accurate. Do not invent facts, doctrines, scenes, characters, examples, or claims that are not supported by the source. If the source does not support a specific visual example, use a neutral symbolic visual rather than presenting it as fact.\n\nUse original visual language. Do not imitate or name any existing franchise, copyrighted character, logo, entertainment studio, living artist, or recognizable fictional universe.\n\nMake it appropriate for adults aged 35 and above: highly readable, substantive, emotionally intelligent, and visually confident. Preserve mature clarity without assuming that mature means quiet or low-energy. Match pacing, color intensity, and movement to the theme: calm for reflection, lively for momentum, and cinematic for drama.\n\nTheme Direction: Use refined paper engineering, museum-quality material texture, precise shadow, architectural folds, and layered evidence with tactile sophistication.\n\nAudience Art Direction: Use sophisticated luminosity, spatial depth, refined typography, and selective moments of wonder; keep the deck imaginative without losing authority.\n\nOutput Goal: Create a source-faithful slide flow with a compelling opening, purposeful progression, one clear visual job per slide, legible text, and a memorable conclusion. Use visual metaphors only when they do not add unsupported factual meaning.\n\nAvoid tiny text, noisy clutter, empty decoration, patronizing simplification, or defaulting every mature deck to dark navy, sepia, muted gold, and static compositions.",
+      "status": "complete",
+      "notes": "專案原創分齡視覺方向；保留來源限定，並避免仿作特定角色、作品或品牌。",
+      "sources": [
+        "https://support.google.com/notebooklm/answer/16757456?hl=en",
+        "https://blog.google/innovation-and-ai/models-and-research/google-labs/8-ways-to-make-the-most-out-of-slide-decks-in-notebooklm/"
+      ],
+      "sourceName": "Project-authored original visual direction informed by current Gemini Notebook slide-deck guidance.",
+      "licenseNote": "Project-authored prompt data licensed under CC BY 4.0; linked product guidance is cited for workflow context only."
+    },
+    {
+      "id": "adult-wonder-science-sketch",
+      "themeId": "wonder-science-sketch",
+      "order": 38,
+      "ageGroup": "adult",
+      "ageLabel": {
+        "zh-TW": "成人",
+        "en": "Adults"
+      },
+      "ageRange": {
+        "zh-TW": "35 歲以上",
+        "en": "35 and above"
+      },
+      "title": {
+        "zh-TW": "奇想科學手帳",
+        "en": "Wonder Science Sketch Lab"
+      },
+      "summary": {
+        "zh-TW": "把來源內容整理成觀察圖、手繪註記、實驗步驟與發現頁面。",
+        "en": "Turn source material into observation drawings, annotated notes, experiment steps, and discovery pages."
+      },
+      "category": {
+        "zh-TW": "夢幻與冒險",
+        "en": "Wonder & Adventure"
+      },
+      "vibe": "adventure",
+      "energy": "lively",
+      "collections": [
+        "new",
+        "adventure",
+        "playful"
+      ],
+      "prompt": "Please transform the uploaded source material into a NotebookLM presentation using the Wonder Science Sketch Lab visual direction.\n\nUse only the uploaded source material. Keep the original meaning, key terms, quotations, data, and teaching points accurate. Do not invent facts, doctrines, scenes, characters, examples, or claims that are not supported by the source. If the source does not support a specific visual example, use a neutral symbolic visual rather than presenting it as fact.\n\nUse original visual language. Do not imitate or name any existing franchise, copyrighted character, logo, entertainment studio, living artist, or recognizable fictional universe.\n\nMake it appropriate for adults aged 35 and above: highly readable, substantive, emotionally intelligent, and visually confident. Preserve mature clarity without assuming that mature means quiet or low-energy. Match pacing, color intensity, and movement to the theme: calm for reflection, lively for momentum, and cinematic for drama.\n\nTheme Direction: Use rigorous visual notes, elegant technical sketching, evidence callouts, process diagrams, and vivid annotation while distinguishing source facts from visual metaphor.\n\nAudience Art Direction: Use documentary adventure pacing, purposeful maps, milestones, expansive compositions, and decisive visual progression.\n\nOutput Goal: Create a source-faithful slide flow with a compelling opening, purposeful progression, one clear visual job per slide, legible text, and a memorable conclusion. Use visual metaphors only when they do not add unsupported factual meaning.\n\nAvoid tiny text, noisy clutter, empty decoration, patronizing simplification, or defaulting every mature deck to dark navy, sepia, muted gold, and static compositions.",
+      "status": "complete",
+      "notes": "專案原創分齡視覺方向；保留來源限定，並避免仿作特定角色、作品或品牌。",
+      "sources": [
+        "https://support.google.com/notebooklm/answer/16757456?hl=en",
+        "https://blog.google/innovation-and-ai/models-and-research/google-labs/8-ways-to-make-the-most-out-of-slide-decks-in-notebooklm/"
+      ],
+      "sourceName": "Project-authored original visual direction informed by current Gemini Notebook slide-deck guidance.",
+      "licenseNote": "Project-authored prompt data licensed under CC BY 4.0; linked product guidance is cited for workflow context only."
+    }
+  ]
+}

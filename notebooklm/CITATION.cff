@@ -8,8 +8,8 @@ authors:
     alias: "dennis23100"
 repository-code: "https://github.com/dennis23100/gemini-notebook-prompt-lab"
 url: "https://dennis23100.github.io/gemini-notebook-prompt-lab/"
-version: "1.2.1"
-date-released: "2026-08-13"
+version: "1.3.0"
+date-released: "2026-08-17"
 license: MIT
 keywords:
   - Gemini Notebook
