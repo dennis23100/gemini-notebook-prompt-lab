@@ -57,10 +57,23 @@ for (const [index, item] of prompts.entries()) {
   if (item.ageGroup === 'youth') {
     assert(/ages 16 to 34/i.test(item.prompt), `${where}: youth range must be 16 to 34`);
     assert(!/ages 16 to 35/i.test(item.prompt), `${where}: overlapping youth range detected`);
+    assert(/premium original stylized-animation language/i.test(item.prompt), `${where}: premium youth animation art direction missing`);
+    assert(/cinematic cel animation, refined anime-inspired illustration, manga or graphic-novel sequencing, luminous fantasy animation, or polished painterly animation/i.test(item.prompt), `${where}: youth animation style family missing`);
+    assert(/broad gender-inclusive appeal/i.test(item.prompt), `${where}: gender-inclusive youth appeal missing`);
+    assert(/anime influence is a quality and visual-energy reference, not a command to make every deck use the same drawing style or character scene/i.test(item.prompt), `${where}: anime quality-reference guardrail missing`);
+    assert(/selected theme must determine the visual mode, setting, motifs, palette, era, subjects, and layout/i.test(item.prompt), `${where}: youth theme identity must control the scene`);
+    assert(/preserve the theme-specific visual identity instead of applying one universal anime template/i.test(item.prompt), `${where}: youth universal-template guardrail missing`);
+    assert(/avoid stock-photo realism/i.test(item.prompt), `${where}: youth stock-photo guardrail missing`);
   }
   if (item.ageGroup === 'adult') {
     assert(/adults aged 35 and above/i.test(item.prompt), `${where}: adult range must begin at 35`);
     assert(!/mature, steady, warm, dignified|Use calm pacing/i.test(item.prompt), `${where}: legacy low-energy adult rule detected`);
+    assert(/semi-realistic illustration, cinematic painterly scenes, or refined 2D\/3D hybrid art/i.test(item.prompt), `${where}: adult semi-realistic art direction missing`);
+    assert(/maturity and rendering standard rather than one luxury template/i.test(item.prompt), `${where}: adult theme-diversity guardrail missing`);
+  }
+  if (item.ageGroup === 'children') {
+    assert(/cute, dreamy, playful/i.test(item.prompt), `${where}: child dreamlike art direction missing`);
+    assert(/age-level visual language rather than a fixed template/i.test(item.prompt), `${where}: child theme-diversity guardrail missing`);
   }
   if (item.preview) {
     assert(item.preview.kind === 'real-output', `${where}: invalid preview kind`);
