@@ -17,29 +17,11 @@
 
 </div>
 
-## 先看成果，再決定要不要用
+## 直接在網站看成果
 
-以下是 Gemini Notebook 匯出的原始 `1376 × 768` PNG。每張圖片都獨立顯示，不再經過容易損壞、裁切或被放大的 sprite 拼接圖。
+網站提示詞庫會顯示 7 個主題、兒童／青年／成熟讀者三種受眾的 Gemini Notebook 實際輸出範例。Repository README 改為文字導覽，不再嵌入預覽圖；請直接開啟網站，以卡片尺寸瀏覽真實預覽。
 
-### 漫畫（不拘）
-
-| **兒童 · 15 歲以下** | **青年 · 16–34 歲** | **成熟讀者 · 35 歲以上** |
-|---|---|---|
-| <img src="notebooklm/assets/real-previews/comic-children.png" alt="漫畫（不拘）的兒童實際輸出" width="420" /> | <img src="notebooklm/assets/real-previews/comic-youth.png" alt="漫畫（不拘）的青年實際輸出" width="420" /> | <img src="notebooklm/assets/real-previews/comic-mature.png" alt="漫畫（不拘）的成熟讀者實際輸出" width="420" /> |
-
-### 星星
-
-| **兒童 · 15 歲以下** | **青年 · 16–34 歲** | **成熟讀者 · 35 歲以上** |
-|---|---|---|
-| <img src="notebooklm/assets/real-previews/stars-children.png" alt="星星的兒童實際輸出" width="420" /> | <img src="notebooklm/assets/real-previews/stars-youth.png" alt="星星的青年實際輸出" width="420" /> | <img src="notebooklm/assets/real-previews/stars-mature.png" alt="星星的成熟讀者實際輸出" width="420" /> |
-
-### 童話動畫電影
-
-| **兒童 · 15 歲以下** | **青年 · 16–34 歲** | **成熟讀者 · 35 歲以上** |
-|---|---|---|
-| <img src="notebooklm/assets/real-previews/fairy-animation-children.png" alt="童話動畫電影的兒童實際輸出" width="420" /> | <img src="notebooklm/assets/real-previews/fairy-animation-youth.png" alt="童話動畫電影的青年實際輸出" width="420" /> | <img src="notebooklm/assets/real-previews/fairy-animation-mature.png" alt="童話動畫電影的成熟讀者實際輸出" width="420" /> |
-
-**同一份來源概念 × 三種視覺方向 × 三種受眾。** 上面都是代表性的**實際生成範例**，不是手畫 mockup。
+**預覽狀態：** 真實輸出卡片使用原始 `1376 × 768` PNG，不使用 sprite 拼接、JPEG 轉檔或放大的縮圖；其他卡片會明確標示為 CSS 風格預覽。
 
 | 受眾 | 預設年齡區間 | 呈現方向 |
 |---|---:|---|
@@ -49,7 +31,7 @@
 
 實際生成不是固定模板，因此不同來源、不同次生成仍可能出現不同視覺表現。像 **「漫畫（不拘）」** 本來就是方向而不是死板畫風；它可以依來源與受眾變成漫畫、水墨式敘事、電影感分鏡或其他合適的視覺語言。
 
-網站中對應的 Prompt 卡片會直接使用同一批原始 PNG，並維持原生 16:9 比例；其他卡片則繼續使用輕量的 CSS 風格預覽。
+網站中對應的 Prompt 卡片會直接使用原始 PNG，並維持原生 16:9 比例；其他卡片則繼續使用輕量的 CSS 風格預覽。
 
 ### 🚀 [直接打開 Prompt Lab 試用](https://dennis23100.github.io/gemini-notebook-prompt-lab/)
 
@@ -90,7 +72,7 @@ Gemini Notebook 提示詞工作室會維持來源內容的忠實度，同時依�
 
 ## 真實範例、風格預覽與可重現 Benchmark
 
-上面的 9 張範例與網站中對應的 Prompt 卡片，使用的是逐張驗證過的原始 PNG；其他卡片仍採用快速的 CSS 風格預覽，並明確標示為示意。如此能清楚區分真實輸出與風格方向，也不會再依賴格式損壞、解析度不足或被拉伸的圖片。
+網站提示詞庫目前有 21 張逐張驗證過的原始 PNG 範例；其他卡片仍採用快速的 CSS 風格預覽，並明確標示為示意。如此能清楚區分真實輸出與風格方向，也不會再依賴格式損壞、解析度不足或被拉伸的圖片。
 
 另外，專案仍保留一套**可重現 Showcase**：使用固定的專案自製測試來源與精確 Prompt manifest，讓貢獻者不用猜來源或 Prompt 就能重做真實成果比較。
 

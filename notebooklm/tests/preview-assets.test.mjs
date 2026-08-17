@@ -14,6 +14,18 @@ const previews = [
   ['children-comic-flex', 'comic-children.png'],
   ['youth-comic-flex', 'comic-youth.png'],
   ['adult-comic-flex', 'comic-mature.png'],
+  ['children-comic-panels', 'comic-panels-children.png'],
+  ['youth-comic-panels', 'comic-panels-youth.png'],
+  ['adult-comic-panels', 'comic-panels-mature.png'],
+  ['children-cartoon', 'cartoon-children.png'],
+  ['youth-cartoon', 'cartoon-youth.png'],
+  ['adult-cartoon', 'cartoon-mature.png'],
+  ['children-fairy-tale', 'fairy-tale-children.png'],
+  ['youth-fairy-tale', 'fairy-tale-youth.png'],
+  ['adult-fairy-tale', 'fairy-tale-mature.png'],
+  ['children-animals', 'animals-children.png'],
+  ['youth-animals', 'animals-youth.png'],
+  ['adult-animals', 'animals-mature.png'],
   ['children-stars', 'stars-children.png'],
   ['youth-stars', 'stars-youth.png'],
   ['adult-stars', 'stars-mature.png'],
@@ -85,7 +97,7 @@ function inspectPng(buffer, name) {
   return { width, height, bitDepth, colorType };
 }
 
-test('all nine original PNG previews are complete, sharp, and unique', async () => {
+test('all twenty-one original PNG previews are complete, sharp, and unique', async () => {
   const hashes = new Set();
 
   for (const [, file] of previews) {
@@ -103,18 +115,18 @@ test('all nine original PNG previews are complete, sharp, and unique', async () 
   assert.equal(hashes.size, previews.length, 'every audience/theme preview is distinct');
 });
 
-test('READMEs, card CSS, and offline cache reference every independent PNG', () => {
+test('README stays text-first while card CSS and offline cache reference every independent PNG', () => {
+  assert.doesNotMatch(readme, /notebooklm\/assets\/real-previews\//);
+  assert.doesNotMatch(readmeZh, /notebooklm\/assets\/real-previews\//);
+
   for (const [id, file] of previews) {
-    const readmePath = `${previewRoot}/${file}`;
-    assert.ok(readme.includes(readmePath), `README.md: ${file}`);
-    assert.ok(readmeZh.includes(readmePath), `README.zh-TW.md: ${file}`);
     assert.ok(galleryCss.includes(`data-id="${id}"`), `audience-gallery.css: ${id}`);
     assert.ok(galleryCss.includes(`./real-previews/${file}`), `audience-gallery.css: ${file}`);
     assert.ok(serviceWorker.includes(`./assets/real-previews/${file}`), `service-worker.js: ${file}`);
   }
 
   assert.match(galleryCss, /aspect-ratio:\s*1376\s*\/\s*768/);
-  assert.match(serviceWorker, /const CACHE='gnpl-v16'/);
+  assert.match(serviceWorker, /const CACHE='gnpl-v17'/);
   assert.doesNotMatch(`${readme}\n${readmeZh}\n${galleryCss}`, /real-previews\/[\w-]*sprite\.(?:png|jpe?g|webp)/i);
 });
 
