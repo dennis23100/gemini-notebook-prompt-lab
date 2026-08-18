@@ -23,6 +23,7 @@ assert(workflows.length === 10, `expected 10 workflows; found ${workflows.length
 const ids = new Set();
 const themeGroups = new Map();
 const ages = new Map();
+const themeIdentityLocks = new Map();
 const unsafeTokens = [
   'DATA_SPREADSHEET_ID',
   'script.google.com/macros/s/',
@@ -54,6 +55,25 @@ for (const [index, item] of prompts.entries()) {
   assert(!/output language should match the user's prompt and source language/i.test(item.prompt), `${where}: ambiguous source-language output rule detected`);
   assert(!/[\u3400-\u9fff]/u.test(item.prompt), `${where}: built-in prompt must remain canonical English`);
   assert(/Audience Art Direction:/i.test(item.prompt), `${where}: audience-specific art direction required`);
+  assert(/Visual Priority - NON-NEGOTIABLE:/i.test(item.prompt), `${where}: visual priority hierarchy required`);
+  assert(/source controls facts\/message/i.test(item.prompt), `${where}: source must control factual subject`);
+  assert(/theme controls visual grammar, medium, motifs, spatial logic and layout/i.test(item.prompt), `${where}: theme must control visual grammar`);
+  assert(/audience controls readability, safety, density and rendering maturity/i.test(item.prompt), `${where}: audience role must be bounded`);
+  assert(/Character Continuity - REQUIRED:/i.test(item.prompt), `${where}: recurring character continuity lock required`);
+  assert(/choose neutral original visual anchors once before rendering/i.test(item.prompt), `${where}: character identity sheet required`);
+  assert(/Reuse them unchanged across slides/i.test(item.prompt), `${where}: cross-slide identity reuse required`);
+  assert(/Change identity or appearance only when the source requires it/i.test(item.prompt), `${where}: sourced appearance-change guard required`);
+  assert(/keep multiple figures distinct/i.test(item.prompt), `${where}: multi-character distinction required`);
+  assert(/Content-Theme Boundary:/i.test(item.prompt), `${where}: content-theme boundary required`);
+  assert(/use the theme only as visual grammar and navigation, never as a new story or claim/i.test(item.prompt), `${where}: off-topic theme guardrail required`);
+  assert(/Slide Variety Plan:/i.test(item.prompt), `${where}: slide variety plan required`);
+  assert(/do not repeat the same hero composition, room, scene, character pose, palette wash, decorative prop, or information layout/i.test(item.prompt), `${where}: repeated-template guardrail required`);
+  assert(/Each major visual must clarify a source idea; decoration must not become the topic/i.test(item.prompt), `${where}: decorative-substitution guardrail required`);
+  const identityLock = item.prompt.match(/Theme Identity Lock - NON-NEGOTIABLE:\s*([^\n]+)/i)?.[1]?.trim();
+  assert(identityLock, `${where}: unique theme identity lock required`);
+  const locks = themeIdentityLocks.get(item.themeId) ?? new Set();
+  if (identityLock) locks.add(identityLock);
+  themeIdentityLocks.set(item.themeId, locks);
   if (item.ageGroup === 'youth') {
     assert(/ages 16 to 34/i.test(item.prompt), `${where}: youth range must be 16 to 34`);
     assert(!/ages 16 to 35/i.test(item.prompt), `${where}: overlapping youth range detected`);
@@ -97,7 +117,9 @@ for (const [themeId, items] of themeGroups) {
   assert(set.size === 3 && ['children','youth','adult'].every((age) => set.has(age)), `theme ${themeId}: missing age variant`);
   const audienceDirections = new Set(items.map(item => item.prompt.match(/Audience Art Direction:\s*([^\n]+)/i)?.[1]).filter(Boolean));
   assert(audienceDirections.size === 3, `theme ${themeId}: audience art directions must differ across all three ages`);
+  assert(themeIdentityLocks.get(themeId)?.size === 1, `theme ${themeId}: identity lock must stay consistent across ages`);
 }
+assert(new Set([...themeIdentityLocks.values()].map(values => [...values][0])).size === data.counts?.themes, 'every theme must have a unique identity lock');
 for (const age of ['children','youth','adult']) {
   assert(ages.get(age) === data.counts?.themes, `age ${age}: expected ${data.counts?.themes} prompts; found ${ages.get(age) ?? 0}`);
 }

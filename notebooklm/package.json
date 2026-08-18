@@ -6,9 +6,12 @@
   "type": "module",
   "scripts": {
     "dev": "node scripts/dev-server.mjs",
+    "prompts:build": "node scripts/refine-theme-prompts.mjs --write",
+    "prompts:check": "node scripts/refine-theme-prompts.mjs --check",
+    "prompts:audit": "node scripts/audit-theme-prompts.mjs",
     "validate": "node scripts/validate-prompts.mjs",
     "test": "node --test tests/*.test.mjs",
-    "check": "npm run validate && npm test",
+    "check": "npm run prompts:check && npm run prompts:audit && npm run validate && npm test",
     "showcase:export": "node scripts/export-showcase-prompts.mjs"
   },
   "engines": {
