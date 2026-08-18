@@ -163,7 +163,7 @@ test('README stays text-first while prompt metadata lazy-loads every independent
   assert.match(appJs, /loading="lazy"/);
   assert.match(appJs, /decoding="async"/);
   assert.match(appJs, /fetchpriority="low"/);
-  assert.match(serviceWorker, /const CACHE='gnpl-v20'/);
+  assert.match(serviceWorker, /const CACHE='gnpl-v21'/);
   assert.doesNotMatch(`${readme}\n${readmeZh}\n${galleryCss}`, /real-previews\/[\w-]*sprite\.(?:png|jpe?g|webp)/i);
 });
 

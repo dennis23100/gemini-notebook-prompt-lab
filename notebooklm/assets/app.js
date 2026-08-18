@@ -35,7 +35,7 @@ const i18n = {
     lintTitle: '在送進 Gemini Notebook 前先做結構檢查', lintBody: '這不是成品品質保證，而是一套透明的本機規則：來源限定、受眾、任務、輸出格式、約束與防杜撰。', runCheck: '執行檢查', useSelected: '使用目前選取 Prompt', qualityScore: 'Prompt 結構完整度', lintIdle: '貼上 Prompt 後執行檢查。',
     collectionsTitle: '靈感捷徑', collectionsHint: '先選一種感覺，再用年齡與分類縮小範圍。', ruleComplete: '規則完整', realOutput: '實際輸出', newTheme: 'NEW', loadMore: '載入更多', showing: '目前顯示', of: '／共', referenceTip: '小技巧：若你有品牌手冊、既有簡報或喜歡的版面，可先把它加入 Notebook 作為風格參考來源。',
     whyEyebrow: 'Why this repo?', whyTitle: '不是「Prompt 越多越好」，而是要能被使用、修改、驗證與貢獻。', f1Title: '分齡對照', f1Body: '同一主題可以直接比較三種年齡層的表達差異。', f2Title: 'Source-grounded', f2Body: 'Prompt 明確要求只使用來源，降低內容被風格指令帶偏。', f3Title: '可組合工作流', f3Body: 'Slide、Audio、Video、Quiz、Report 等任務用同一套 Composer 組合。', f4Title: 'Privacy-first', f4Body: '收藏、自訂與 Chain 儲存在 localStorage；沒有帳號與伺服器。',
-    footerOrigin: '起源於分齡佛堂教學需求，設計成可被任何教育與知識工作者 fork 的開源工具。', share: '分享', copyOpenShort: '複製並開啟 ↗', sources: '來源與授權', all: '全部', view: '查看', copied: '已複製', opened: '已複製，正在開啟 Gemini Notebook', favoriteAdded: '已加入收藏', favoriteRemoved: '已取消收藏', shared: '分享連結已複製', imported: '已匯入 Prompt', importError: '匯入失敗：JSON 格式不符合需求', exported: '已匯出目前篩選結果', addedChain: '已加入 Chain', chainCopied: 'Chain 已複製', chainLoaded: '範例 Chain 已載入', noFocus: '請先輸入聚焦主題', results: '個 Prompt', custom: '自訂', compare: '比較年齡版本'
+    footerOrigin: '起源於分齡佛堂教學需求，設計成可被任何教育與知識工作者 fork 的開源工具。', share: '分享', copyOpenShort: '複製並開啟 ↗', sources: '來源與授權', all: '全部', view: '查看', copied: '已複製', copyFailed: '無法複製，請再試一次', opened: '已複製，正在開啟 Gemini Notebook', favoriteAdded: '已加入收藏', favoriteRemoved: '已取消收藏', shared: '分享連結已複製', imported: '已匯入 Prompt', importError: '匯入失敗：JSON 格式不符合需求', exported: '已匯出目前篩選結果', addedChain: '已加入 Chain', chainCopied: 'Chain 已複製', chainLoaded: '範例 Chain 已載入', noFocus: '請先輸入聚焦主題', results: '個 Prompt', custom: '自訂', compare: '比較年齡版本'
   },
   en: {
     install: 'Install App', openNotebook: '📓 Open Gemini Notebook ↗', eyebrow: 'Source-grounded · Age-adaptive · Shareable · Privacy-first',
@@ -50,7 +50,7 @@ const i18n = {
     lintTitle: 'Check prompt structure before sending it to Gemini Notebook', lintBody: 'This is not an output-quality guarantee. It is a transparent local rubric for source grounding, audience, task, format, constraints, and anti-hallucination language.', runCheck: 'Run check', useSelected: 'Use selected prompt', qualityScore: 'Prompt structure completeness', lintIdle: 'Paste a prompt and run the check.',
     collectionsTitle: 'Inspiration shortcuts', collectionsHint: 'Choose a feeling first, then narrow it by audience and category.', ruleComplete: 'Rules complete', realOutput: 'Real output', newTheme: 'NEW', loadMore: 'Load more', showing: 'Showing', of: 'of', referenceTip: 'Tip: add a brand guide, an existing deck, or a style reference to the Notebook sources before generating when visual consistency matters.',
     whyEyebrow: 'Why this repo?', whyTitle: 'A useful prompt project needs more than a large count — it should be usable, editable, testable, and contributable.', f1Title: 'Age comparison', f1Body: 'Compare three audience adaptations of the same theme side by side.', f2Title: 'Source-grounded', f2Body: 'Prompts explicitly keep content inside the selected sources.', f3Title: 'Composable workflows', f3Body: 'Slides, audio, video, quizzes, reports and more share one composer.', f4Title: 'Privacy-first', f4Body: 'Favorites, custom prompts, and chains stay in localStorage. No server required.',
-    footerOrigin: 'Originated from age-adaptive temple teaching needs, then redesigned as an open tool any educator or knowledge worker can fork.', share: 'Share', copyOpenShort: 'Copy & open ↗', sources: 'Sources & licensing', all: 'All', view: 'View', copied: 'Copied', opened: 'Copied — opening Gemini Notebook', favoriteAdded: 'Added to favorites', favoriteRemoved: 'Removed from favorites', shared: 'Share link copied', imported: 'Prompt imported', importError: 'Import failed: incompatible JSON format', exported: 'Current results exported', addedChain: 'Added to chain', chainCopied: 'Chain copied', chainLoaded: 'Example chain loaded', noFocus: 'Add a focus topic first', results: 'prompts', custom: 'Custom', compare: 'Compare age variants'
+    footerOrigin: 'Originated from age-adaptive temple teaching needs, then redesigned as an open tool any educator or knowledge worker can fork.', share: 'Share', copyOpenShort: 'Copy & open ↗', sources: 'Sources & licensing', all: 'All', view: 'View', copied: 'Copied', copyFailed: 'Couldn’t copy. Please try again.', opened: 'Copied — opening Gemini Notebook', favoriteAdded: 'Added to favorites', favoriteRemoved: 'Removed from favorites', shared: 'Share link copied', imported: 'Prompt imported', importError: 'Import failed: incompatible JSON format', exported: 'Current results exported', addedChain: 'Added to chain', chainCopied: 'Chain copied', chainLoaded: 'Example chain loaded', noFocus: 'Add a focus topic first', results: 'prompts', custom: 'Custom', compare: 'Compare age variants'
   }
 };
 
@@ -60,7 +60,7 @@ const state = {
   age: 'all', category: 'all', collection: 'all', search: '', favoritesOnly: false, visibleLimit: PAGE_SIZE,
   favorites: new Set(JSON.parse(localStorage.getItem('gnpl.favorites') || '[]')),
   prompts: [], workflows: [], customPrompts: JSON.parse(localStorage.getItem('gnpl.customPrompts') || '[]'),
-  chain: JSON.parse(localStorage.getItem('gnpl.chain') || '[]'), selectedPromptId: null,
+  chain: JSON.parse(localStorage.getItem('gnpl.chain') || '[]'), selectedPromptId: null, lastCopy: null,
   deferredInstallPrompt: null
 };
 
@@ -100,8 +100,74 @@ function saveCustomPrompts() { localStorage.setItem('gnpl.customPrompts', JSON.s
 function toast(msg) { const el = $('#toast'); el.textContent = msg; el.classList.add('show'); clearTimeout(toast.timer); toast.timer = setTimeout(() => el.classList.remove('show'), 1800); }
 
 async function copyText(text) {
-  try { await navigator.clipboard.writeText(text); }
-  catch { const ta = document.createElement('textarea'); ta.value = text; ta.style.position='fixed'; ta.style.opacity='0'; document.body.appendChild(ta); ta.select(); document.execCommand('copy'); ta.remove(); }
+  const value = String(text ?? '');
+  let clipboardError;
+  try {
+    if (!navigator.clipboard?.writeText) throw new Error('Clipboard API unavailable');
+    await navigator.clipboard.writeText(value);
+    return;
+  } catch (error) {
+    clipboardError = error;
+  }
+
+  const ta = document.createElement('textarea');
+  ta.value = value;
+  ta.style.position = 'fixed';
+  ta.style.opacity = '0';
+  document.body.appendChild(ta);
+  let copied = false;
+  try {
+    ta.focus();
+    ta.select();
+    ta.setSelectionRange(0, ta.value.length);
+    copied = document.execCommand('copy');
+  } finally {
+    ta.remove();
+  }
+  if (!copied) throw clipboardError || new Error('Copy command failed');
+}
+
+function copiedLabel() { return `✓ ${t('copied')}`; }
+function promptCopyMatches(prompt, text = promptForOutput(prompt)) {
+  return state.lastCopy?.source === 'prompt' && state.lastCopy.promptId === prompt?.id && state.lastCopy.text === text;
+}
+function labCopyMatches(text) { return Boolean(text) && state.lastCopy?.source === 'lab' && state.lastCopy.text === text; }
+function setCopyButtonState(button, copied) {
+  if (!button) return;
+  button.classList.toggle('is-copied', copied);
+  button.textContent = copied ? copiedLabel() : t('copy');
+}
+function syncCopyButtons() {
+  $$('[data-copy]').forEach(button => {
+    const prompt = getPrompt(button.dataset.copy);
+    setCopyButtonState(button, Boolean(prompt && promptCopyMatches(prompt)));
+  });
+  const selectedPrompt = getPrompt(state.selectedPromptId);
+  setCopyButtonState($('#copyDialogBtn'), Boolean(selectedPrompt && promptCopyMatches(selectedPrompt, $('#dialogPrompt').value)));
+  setCopyButtonState($('#copyLabBtn'), labCopyMatches($('#labOutput').value));
+}
+function replayCopyConfirmation(button) {
+  if (!button) return;
+  button.classList.remove('copy-confirmation-pulse');
+  void button.offsetWidth;
+  button.classList.add('copy-confirmation-pulse');
+  button.addEventListener('animationend', () => button.classList.remove('copy-confirmation-pulse'), {once:true});
+}
+async function copyWithFeedback(text, button, copyState) {
+  const value = String(text ?? '');
+  if (!value) return false;
+  try {
+    await copyText(value);
+    state.lastCopy = {...copyState, text: value};
+    syncCopyButtons();
+    replayCopyConfirmation(button);
+    toast(t('copied'));
+    return true;
+  } catch (error) {
+    console.error('Unable to copy text', error);
+    toast(t('copyFailed'));
+    return false;
+  }
 }
 
 function openNotebook() { window.open(NOTEBOOK_URL, '_blank', 'noopener,noreferrer'); }
@@ -120,6 +186,7 @@ function applyLanguage() {
   localStorage.setItem('gnpl.lang', state.lang);
   updateI18n(); renderOutputLanguageOptions(); renderFilters(); renderLibrary(); renderWorkflowOptions(); renderThemeOptions(); renderChain();
   if (state.selectedPromptId) openPrompt(state.selectedPromptId, false);
+  syncCopyButtons();
 }
 
 function renderOutputLanguageOptions() {
@@ -144,6 +211,7 @@ function setOutputLanguage(value) {
     $('#labScore').textContent = lint.score;
     renderMiniLint(lint);
   }
+  syncCopyButtons();
   toast(t('outputLanguageChanged'));
 }
 
@@ -212,11 +280,12 @@ function renderLibrary() {
     const preview = previewPath ? `<figure class="card-preview"><img src="${previewPath}" alt="${escapeHtml(localized(p.title))}" width="1376" height="768" loading="lazy" decoding="async" fetchpriority="low" /><figcaption>${t('realOutput')}</figcaption></figure>` : '';
     const newBadge = (p.collections || []).includes('new') ? `<span class="badge badge-new">${t('newTheme')}</span>` : '';
     const structureBadge = lint.score >= 90 ? `<span class="badge score-good" title="${lint.score}/100">✓ ${t('ruleComplete')}</span>` : `<span class="badge" title="${lint.score}/100">${lint.score}/100</span>`;
+    const copied = promptCopyMatches(p);
     return `<article class="prompt-card ${previewPath?'has-real-preview':''}" data-id="${escapeHtml(p.id)}" data-vibe="${escapeHtml(p.vibe || 'editorial')}">
       ${preview}
       <div class="card-top"><div class="badges"><span class="badge age">${escapeHtml(localized(p.ageLabel) || p.ageGroup)}</span><span class="badge vibe">${escapeHtml(vibeLabel(p.vibe) || localized(p.category))}</span>${structureBadge}${newBadge}${p.custom?`<span class="badge">${t('custom')}</span>`:''}</div><button class="favorite-button ${fav?'active':''}" type="button" data-favorite="${escapeHtml(p.id)}" aria-label="Favorite">${fav?'★':'☆'}</button></div>
       <h3>${escapeHtml(localized(p.title))}</h3><p>${escapeHtml(localized(p.summary))}</p>
-      <div class="card-actions"><button class="button ghost compact" type="button" data-view="${escapeHtml(p.id)}">${t('view')}</button><button class="button primary compact" type="button" data-copy="${escapeHtml(p.id)}">${t('copy')}</button></div>
+      <div class="card-actions"><button class="button ghost compact" type="button" data-view="${escapeHtml(p.id)}">${t('view')}</button><button class="button primary compact${copied?' is-copied':''}" type="button" data-copy="${escapeHtml(p.id)}">${copied?copiedLabel():t('copy')}</button></div>
     </article>`;
   }).join('');
 }
@@ -245,6 +314,7 @@ function openPrompt(id, show = true) {
   const sources = (p.sources || []).map(safeHttpUrl).filter(Boolean).map(u => `<li><a href="${escapeHtml(u)}" target="_blank" rel="noopener noreferrer">${escapeHtml(u)}</a></li>`).join('');
   $('#dialogSources').innerHTML = `${p.sourceName?`<p>${escapeHtml(p.sourceName)}</p>`:''}<ul>${sources}</ul><p>${escapeHtml(p.licenseNote || '')}</p>`;
   const url = new URL(location.href); url.searchParams.set('prompt', id); history.replaceState({}, '', url);
+  syncCopyButtons();
   if (show && !$('#promptDialog').open) $('#promptDialog').showModal();
 }
 
@@ -300,6 +370,7 @@ function composePrompt() {
   body = applyOutputLanguage(body, state.outputLanguage);
   $('#labOutput').value = body;
   const lint = scorePrompt(body, audience); $('#labScore').textContent = lint.score; renderMiniLint(lint);
+  syncCopyButtons();
   return body;
 }
 
@@ -372,15 +443,17 @@ function bindEvents() {
   $('#favoritesOnlyBtn').addEventListener('click',()=>{state.favoritesOnly=!state.favoritesOnly;$('#favoritesOnlyBtn').setAttribute('aria-pressed',String(state.favoritesOnly));resetVisibleLimit();renderLibrary();});
   $('#clearFiltersBtn').addEventListener('click',()=>{state.age='all';state.category='all';state.collection='all';state.search='';state.favoritesOnly=false;resetVisibleLimit();$('#searchInput').value='';$('#favoritesOnlyBtn').setAttribute('aria-pressed','false');renderFilters();renderLibrary();});
   $('#loadMoreBtn').addEventListener('click',()=>{state.visibleLimit+=PAGE_SIZE;renderLibrary();});
-  $('#promptGrid').addEventListener('click',async e=>{const f=e.target.closest('[data-favorite]');if(f){toggleFavorite(f.dataset.favorite);return;} const v=e.target.closest('[data-view]');if(v){openPrompt(v.dataset.view);return;} const c=e.target.closest('[data-copy]');if(c){const p=getPrompt(c.dataset.copy);if(p){await copyText(promptForOutput(p));toast(t('copied'));}}});
+  $('#promptGrid').addEventListener('click',async e=>{const f=e.target.closest('[data-favorite]');if(f){toggleFavorite(f.dataset.favorite);return;} const v=e.target.closest('[data-view]');if(v){openPrompt(v.dataset.view);return;} const c=e.target.closest('[data-copy]');if(c){const p=getPrompt(c.dataset.copy);if(p)await copyWithFeedback(promptForOutput(p),c,{source:'prompt',promptId:p.id});}});
   $('#exportBtn').addEventListener('click',exportResults); $('#importInput').addEventListener('change',e=>{if(e.target.files[0]) importFile(e.target.files[0]);e.target.value='';});
   $('#promptDialog').addEventListener('close',closePromptUrl); $('#compareBar').addEventListener('click',e=>{const b=e.target.closest('[data-variant]');if(b)openPrompt(b.dataset.variant,false);});
   $('#favoriteDialogBtn').addEventListener('click',()=>state.selectedPromptId&&toggleFavorite(state.selectedPromptId));
-  $('#copyDialogBtn').addEventListener('click',async()=>{await copyText($('#dialogPrompt').value);toast(t('copied'));}); $('#copyOpenDialogBtn').addEventListener('click',()=>copyAndOpen($('#dialogPrompt').value));
+  $('#copyDialogBtn').addEventListener('click',async e=>{await copyWithFeedback($('#dialogPrompt').value,e.currentTarget,{source:'prompt',promptId:state.selectedPromptId});}); $('#copyOpenDialogBtn').addEventListener('click',()=>copyAndOpen($('#dialogPrompt').value));
+  $('#dialogPrompt').addEventListener('input',syncCopyButtons);
   $('#shareDialogBtn').addEventListener('click',async()=>{const url=location.href;if(navigator.share){try{await navigator.share({title:$('#dialogTitle').textContent,url});return;}catch{}}await copyText(url);toast(t('shared'));});
   $('#addDialogChainBtn').addEventListener('click',()=>addToChain($('#dialogPrompt').value,$('#dialogTitle').textContent));
   $('#workflowSelect').addEventListener('change',()=>{$('#themeField').style.display=$('#workflowSelect').value==='slide-deck'?'grid':'none';});
-  $('#generatePromptBtn').addEventListener('click',composePrompt); $('#copyLabBtn').addEventListener('click',async()=>{if(!$('#labOutput').value)composePrompt();if($('#labOutput').value){await copyText($('#labOutput').value);toast(t('copied'));}}); $('#copyOpenLabBtn').addEventListener('click',()=>{if(!$('#labOutput').value)composePrompt();if($('#labOutput').value)copyAndOpen($('#labOutput').value);});
+  $('#generatePromptBtn').addEventListener('click',composePrompt); $('#copyLabBtn').addEventListener('click',async e=>{if(!$('#labOutput').value)composePrompt();if($('#labOutput').value)await copyWithFeedback($('#labOutput').value,e.currentTarget,{source:'lab'});}); $('#copyOpenLabBtn').addEventListener('click',()=>{if(!$('#labOutput').value)composePrompt();if($('#labOutput').value)copyAndOpen($('#labOutput').value);});
+  $('#labOutput').addEventListener('input',syncCopyButtons);
   $('#lintLabBtn').addEventListener('click',()=>{const text=$('#labOutput').value||composePrompt();if(text){$('#lintInput').value=text;renderLint(scorePrompt(text,$('#audienceSelect').value));switchTab('lint');}});
   $('#addLabToChainBtn').addEventListener('click',()=>{const text=$('#labOutput').value||composePrompt();if(text)addToChain(text,localized(state.workflows.find(w=>w.id===$('#workflowSelect').value)?.name)||'Prompt Lab');});
   $('#defaultChainBtn').addEventListener('click',loadDefaultChain); $('#copyChainBtn').addEventListener('click',async()=>{const text=chainText();if(text){await copyText(text);toast(t('chainCopied'));}}); $('#clearChainBtn').addEventListener('click',()=>{state.chain=[];saveChain();renderChain();});

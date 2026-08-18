@@ -1,4 +1,4 @@
-const CACHE='gnpl-v20';
+const CACHE='gnpl-v21';
 const ASSETS=[
   './','./index.html',
   './assets/styles.css','./assets/ui-polish.css','./assets/productivity.css','./assets/accessibility.css','./assets/audience-gallery.css',

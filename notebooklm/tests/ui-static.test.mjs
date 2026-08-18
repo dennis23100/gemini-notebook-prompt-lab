@@ -6,6 +6,7 @@ import { resolve } from 'node:path';
 const root = resolve(import.meta.dirname, '..');
 const html = await readFile(resolve(root, 'index.html'), 'utf8');
 const app = await readFile(resolve(root, 'assets/app.js'), 'utf8');
+const accessibility = await readFile(resolve(root, 'assets/accessibility.css'), 'utf8');
 
 test('Gemini Notebook links open in a new tab without opener access', () => {
   assert.match(html, /href="https:\/\/notebook\.google\.com\/"[^>]*target="_blank"[^>]*rel="noopener noreferrer"/);
@@ -47,6 +48,19 @@ test('slide composer applies role, depth, and the non-overlapping youth range', 
   assert.match(app, /Depth setting: advanced/);
   assert.match(app, /ages 16 to 34/);
   assert.doesNotMatch(app, /ages 16 to 35/);
+});
+
+test('copy confirmation persists and repeated clicks replay visible feedback', () => {
+  assert.match(app, /lastCopy: null/);
+  assert.match(app, /state\.lastCopy = \{\.\.\.copyState, text: value\}/);
+  assert.match(app, /await copyText\(value\);\s*state\.lastCopy/);
+  assert.match(app, /button\.classList\.remove\('copy-confirmation-pulse'\);\s*void button\.offsetWidth;\s*button\.classList\.add\('copy-confirmation-pulse'\)/);
+  assert.match(app, /state\.lastCopy\.text === text/);
+  assert.match(app, /copyWithFeedback\(promptForOutput\(p\),c,\{source:'prompt',promptId:p\.id\}\)/);
+  assert.match(accessibility, /\[data-copy\]\.is-copied/);
+  assert.match(accessibility, /@keyframes copy-confirmation-pulse/);
+  assert.doesNotMatch(accessibility, /:focus:not\(:focus-visible\)::after/);
+  assert.doesNotMatch(accessibility, /copy-confirmation 1\.8s/);
 });
 
 test('all static element ids referenced with $(#id) exist in index.html', () => {

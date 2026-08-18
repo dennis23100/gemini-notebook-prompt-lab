@@ -32,10 +32,9 @@
   transform: none !important;
 }
 
-/* Visible copy confirmation.
-   The normal page toast can sit behind a modal <dialog> because dialogs render in
-   the browser top layer. Mirror copy success directly on the clicked button so
-   users always get immediate confirmation. */
+/* Persistent copy confirmation.
+   JavaScript keeps the most recently copied content marked and replays the pulse
+   on every successful click, including repeated clicks on the same button. */
 #copyDialogBtn,
 #copyLabBtn,
 [data-copy] {
@@ -43,31 +42,30 @@
   overflow: hidden;
 }
 
-#copyDialogBtn:focus:not(:focus-visible)::after,
-#copyLabBtn:focus:not(:focus-visible)::after,
-[data-copy]:focus:not(:focus-visible)::after {
-  content: "✓ 已複製";
-  position: absolute;
-  inset: 0;
-  display: grid;
-  place-items: center;
-  border-radius: inherit;
-  background: var(--primary);
+#copyDialogBtn.is-copied,
+#copyLabBtn.is-copied,
+[data-copy].is-copied {
+  background: color-mix(in srgb, var(--primary) 72%, #0aa37f 28%);
   color: #fff;
-  font-weight: 800;
-  pointer-events: none;
-  animation: copy-confirmation 1.8s ease both;
+  box-shadow: 0 0 0 2px color-mix(in srgb, #0aa37f 24%, transparent);
 }
 
-html[lang="en"] #copyDialogBtn:focus:not(:focus-visible)::after,
-html[lang="en"] #copyLabBtn:focus:not(:focus-visible)::after,
-html[lang="en"] [data-copy]:focus:not(:focus-visible)::after {
-  content: "✓ Copied";
+#copyDialogBtn.is-copied:hover,
+#copyLabBtn.is-copied:hover,
+[data-copy].is-copied:hover {
+  background: color-mix(in srgb, var(--primary-2) 68%, #0aa37f 32%);
 }
 
-@keyframes copy-confirmation {
-  0%, 78% { opacity: 1; }
-  100% { opacity: 0; }
+.copy-confirmation-pulse {
+  animation: copy-confirmation-pulse 480ms ease-out;
+}
+
+@keyframes copy-confirmation-pulse {
+  0%, 100% { filter: brightness(1); }
+  38% {
+    filter: brightness(1.42);
+    box-shadow: 0 0 0 6px color-mix(in srgb, #35d8ad 38%, transparent);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
