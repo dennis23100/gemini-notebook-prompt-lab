@@ -23,6 +23,7 @@ assert(workflows.length === 10, `expected 10 workflows; found ${workflows.length
 const ids = new Set();
 const themeGroups = new Map();
 const ages = new Map();
+const themeIdentityLocks = new Map();
 const unsafeTokens = [
   'DATA_SPREADSHEET_ID',
   'script.google.com/macros/s/',
@@ -54,6 +55,20 @@ for (const [index, item] of prompts.entries()) {
   assert(!/output language should match the user's prompt and source language/i.test(item.prompt), `${where}: ambiguous source-language output rule detected`);
   assert(!/[\u3400-\u9fff]/u.test(item.prompt), `${where}: built-in prompt must remain canonical English`);
   assert(/Audience Art Direction:/i.test(item.prompt), `${where}: audience-specific art direction required`);
+  assert(/Visual Priority - NON-NEGOTIABLE:/i.test(item.prompt), `${where}: visual priority hierarchy required`);
+  assert(/uploaded source determines the factual subject and message/i.test(item.prompt), `${where}: source must control factual subject`);
+  assert(/named theme determines the visual grammar, medium, motifs, spatial logic, and layout/i.test(item.prompt), `${where}: theme must control visual grammar`);
+  assert(/audience profile determines readability, emotional safety, density, and rendering maturity/i.test(item.prompt), `${where}: audience role must be bounded`);
+  assert(/Content-Theme Boundary:/i.test(item.prompt), `${where}: content-theme boundary required`);
+  assert(/only as a visual grammar and navigation system, never as a new story or factual claim/i.test(item.prompt), `${where}: off-topic theme guardrail required`);
+  assert(/Slide Variety Plan:/i.test(item.prompt), `${where}: slide variety plan required`);
+  assert(/do not repeat the same hero composition, room, scene, character pose, palette wash, decorative prop, or information layout/i.test(item.prompt), `${where}: repeated-template guardrail required`);
+  assert(/Every major visual must clarify a source idea; decoration must never become the topic/i.test(item.prompt), `${where}: decorative-substitution guardrail required`);
+  const identityLock = item.prompt.match(/Theme Identity Lock - NON-NEGOTIABLE:\s*([^\n]+)/i)?.[1]?.trim();
+  assert(identityLock, `${where}: unique theme identity lock required`);
+  const locks = themeIdentityLocks.get(item.themeId) ?? new Set();
+  if (identityLock) locks.add(identityLock);
+  themeIdentityLocks.set(item.themeId, locks);
   if (item.ageGroup === 'youth') {
     assert(/ages 16 to 34/i.test(item.prompt), `${where}: youth range must be 16 to 34`);
     assert(!/ages 16 to 35/i.test(item.prompt), `${where}: overlapping youth range detected`);
@@ -97,7 +112,9 @@ for (const [themeId, items] of themeGroups) {
   assert(set.size === 3 && ['children','youth','adult'].every((age) => set.has(age)), `theme ${themeId}: missing age variant`);
   const audienceDirections = new Set(items.map(item => item.prompt.match(/Audience Art Direction:\s*([^\n]+)/i)?.[1]).filter(Boolean));
   assert(audienceDirections.size === 3, `theme ${themeId}: audience art directions must differ across all three ages`);
+  assert(themeIdentityLocks.get(themeId)?.size === 1, `theme ${themeId}: identity lock must stay consistent across ages`);
 }
+assert(new Set([...themeIdentityLocks.values()].map(values => [...values][0])).size === data.counts?.themes, 'every theme must have a unique identity lock');
 for (const age of ['children','youth','adult']) {
   assert(ages.get(age) === data.counts?.themes, `age ${age}: expected ${data.counts?.themes} prompts; found ${ages.get(age) ?? 0}`);
 }
