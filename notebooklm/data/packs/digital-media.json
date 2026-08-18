@@ -9,6 +9,10 @@
   "prompts": [
     {
       "id": "children-pixel",
+      "preview": {
+        "kind": "real-output",
+        "src": "./assets/real-previews/pixel-children.png"
+      },
       "themeId": "pixel",
       "order": 16,
       "ageGroup": "children",
@@ -47,6 +51,10 @@
     },
     {
       "id": "children-tech",
+      "preview": {
+        "kind": "real-output",
+        "src": "./assets/real-previews/tech-children.png"
+      },
       "themeId": "tech",
       "order": 17,
       "ageGroup": "children",
@@ -85,6 +93,10 @@
     },
     {
       "id": "children-cinema",
+      "preview": {
+        "kind": "real-output",
+        "src": "./assets/real-previews/cinema-children.png"
+      },
       "themeId": "cinema",
       "order": 18,
       "ageGroup": "children",
@@ -123,6 +135,10 @@
     },
     {
       "id": "children-magazine",
+      "preview": {
+        "kind": "real-output",
+        "src": "./assets/real-previews/magazine-children.png"
+      },
       "themeId": "magazine",
       "order": 19,
       "ageGroup": "children",

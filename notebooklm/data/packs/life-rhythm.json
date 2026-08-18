@@ -9,6 +9,10 @@
   "prompts": [
     {
       "id": "children-music",
+      "preview": {
+        "kind": "real-output",
+        "src": "./assets/real-previews/music-children.png"
+      },
       "themeId": "music",
       "order": 13,
       "ageGroup": "children",
@@ -47,6 +51,10 @@
     },
     {
       "id": "children-sports",
+      "preview": {
+        "kind": "real-output",
+        "src": "./assets/real-previews/sports-children.png"
+      },
       "themeId": "sports",
       "order": 14,
       "ageGroup": "children",
@@ -85,6 +93,10 @@
     },
     {
       "id": "children-street",
+      "preview": {
+        "kind": "real-output",
+        "src": "./assets/real-previews/street-children.png"
+      },
       "themeId": "street",
       "order": 15,
       "ageGroup": "children",

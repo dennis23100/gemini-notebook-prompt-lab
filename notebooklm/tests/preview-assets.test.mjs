@@ -52,7 +52,21 @@ const previews = [
   ['children-classical', 'classical-children.png'],
   ['children-ink', 'ink-children.png'],
   ['children-spiritual', 'spiritual-children.png'],
-  ['children-finance', 'finance-children.png']
+  ['children-finance', 'finance-children.png'],
+  ['children-pixel', 'pixel-children.png'],
+  ['children-tech', 'tech-children.png'],
+  ['children-cinema', 'cinema-children.png'],
+  ['children-magazine', 'magazine-children.png'],
+  ['children-family', 'family-children.png'],
+  ['children-travel', 'travel-children.png'],
+  ['children-festival', 'festival-children.png'],
+  ['children-nostalgia', 'nostalgia-children.png'],
+  ['children-light', 'light-children.png'],
+  ['children-music', 'music-children.png'],
+  ['children-sports', 'sports-children.png'],
+  ['children-street', 'street-children.png'],
+  ['children-stage-musical', 'stage-musical-children.png'],
+  ['children-ballroom-waltz', 'ballroom-waltz-children.png']
 ];
 
 const [readme, readmeZh, appReadme, appReadmeZh, previewSvg, galleryCss, uiPolishCss, serviceWorker, appJs, promptManifest] = await Promise.all([
@@ -125,7 +139,7 @@ function inspectPng(buffer, name) {
   return { width, height, bitDepth, colorType };
 }
 
-test('all forty-two original PNG previews are complete, sharp, and unique', async () => {
+test('all supplied PNG previews are complete, sharp, and unique', async () => {
   const hashes = new Set();
 
   for (const [, file] of previews) {
