@@ -76,16 +76,28 @@ test('age art direction stays distinctive without flattening every theme into on
 test('source, theme, and audience roles stay separate in every generated prompt', () => {
   for (const p of prompts) {
     assert.match(p.prompt, /Visual Priority - NON-NEGOTIABLE:/i, p.id);
-    assert.match(p.prompt, /uploaded source determines the factual subject and message/i, p.id);
-    assert.match(p.prompt, /named theme determines the visual grammar, medium, motifs, spatial logic, and layout/i, p.id);
-    assert.match(p.prompt, /audience profile determines readability, emotional safety, density, and rendering maturity/i, p.id);
+    assert.match(p.prompt, /source controls facts\/message/i, p.id);
+    assert.match(p.prompt, /theme controls visual grammar, medium, motifs, spatial logic and layout/i, p.id);
+    assert.match(p.prompt, /audience controls readability, safety, density and rendering maturity/i, p.id);
     assert.match(p.prompt, /Theme Identity Lock - NON-NEGOTIABLE:/i, p.id);
     assert.match(p.prompt, /Content-Theme Boundary:/i, p.id);
-    assert.match(p.prompt, /uploaded source remains the factual subject/i, p.id);
-    assert.match(p.prompt, /only as a visual grammar and navigation system, never as a new story or factual claim/i, p.id);
+    assert.match(p.prompt, /Source remains the factual subject/i, p.id);
+    assert.match(p.prompt, /use the theme only as visual grammar and navigation, never as a new story or claim/i, p.id);
     assert.match(p.prompt, /Slide Variety Plan:/i, p.id);
     assert.match(p.prompt, /do not repeat the same hero composition, room, scene, character pose, palette wash, decorative prop, or information layout/i, p.id);
-    assert.match(p.prompt, /Every major visual must clarify a source idea; decoration must never become the topic/i, p.id);
+    assert.match(p.prompt, /Each major visual must clarify a source idea; decoration must not become the topic/i, p.id);
+  }
+});
+
+test('recurring people and creatures keep one visual identity across slides', () => {
+  for (const p of prompts) {
+    assert.match(p.prompt, /Character Continuity - REQUIRED:/i, p.id);
+    assert.match(p.prompt, /use sourced\/user-specified traits/i, p.id);
+    assert.match(p.prompt, /choose neutral original visual anchors once before rendering/i, p.id);
+    assert.match(p.prompt, /age range, face, hair, proportions, clothing silhouette\/colors and accessories/i, p.id);
+    assert.match(p.prompt, /Reuse them unchanged across slides/i, p.id);
+    assert.match(p.prompt, /Change identity or appearance only when the source requires it/i, p.id);
+    assert.match(p.prompt, /keep multiple figures distinct/i, p.id);
   }
 });
 

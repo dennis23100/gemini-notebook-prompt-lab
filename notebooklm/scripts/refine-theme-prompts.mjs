@@ -364,9 +364,11 @@ function buildPrompt(item) {
 
   return `Please transform the uploaded source material into a NotebookLM presentation using the ${title} visual direction.
 
-Use only the uploaded source material. Keep the original meaning, key terms, quotations, and teaching points accurate. Do not invent facts, doctrines, scenes, characters, dialogue, examples, measurements, or claims that are not supported by the source. If the source is spiritual or moral teaching, keep the tone respectful, but do not force religious iconography unless the source or user explicitly calls for it.
+Use only the uploaded sources. Preserve meaning, key terms, quotations, and teaching points. Do not invent facts, doctrines, scenes, characters, dialogue, examples, measurements, or claims. For spiritual or moral material, stay respectful and use religious imagery only when sourced or requested.
 
-Visual Priority - NON-NEGOTIABLE: The uploaded source determines the factual subject and message. The named theme determines the visual grammar, medium, motifs, spatial logic, and layout. The audience profile determines readability, emotional safety, density, and rendering maturity. Keep these three roles separate: neither theme decoration nor audience styling may replace the source topic or flatten every theme into the same look.
+Visual Priority - NON-NEGOTIABLE: Source controls facts/message; theme controls visual grammar, medium, motifs, spatial logic and layout; audience controls readability, safety, density and rendering maturity. Keep these roles separate: styling must neither replace the topic nor flatten themes into one look.
+
+Character Continuity - REQUIRED: For each recurring person or creature, use sourced/user-specified traits; otherwise choose neutral original visual anchors once before rendering: age range, face, hair, proportions, clothing silhouette/colors and accessories. Reuse them unchanged across slides. Change identity or appearance only when the source requires it; keep multiple figures distinct.
 
 ${ageProfiles[item.ageGroup]}
 
@@ -374,13 +376,13 @@ Theme Direction: ${spec.direction}
 
 Theme Identity Lock - NON-NEGOTIABLE: ${spec.identity}
 
-Content-Theme Boundary: The uploaded source remains the factual subject. If it is not literally about ${title}, use ${title} only as a visual grammar and navigation system, never as a new story or factual claim. ${spec.boundary}
+Content-Theme Boundary: Source remains the factual subject. When the source is not about ${title}, use the theme only as visual grammar and navigation, never as a new story or claim. ${spec.boundary}
 
 Audience Art Direction: ${audience}
 
 Slide Variety Plan: ${spec.variety} Keep a coherent design system, but do not repeat the same hero composition, room, scene, character pose, palette wash, decorative prop, or information layout from slide to slide.
 
-Output Goal: First identify the source's core ideas and assign every slide one source-supported communication job. Create clear titles, strong visual hierarchy, readable text surfaces, memorable theme-native visuals, and accurate content transfer. Every major visual must clarify a source idea; decoration must never become the topic.
+Output Goal: Give each slide one sourced communication job, clear title, strong hierarchy, readable text and theme-native visual. Each major visual must clarify a source idea; decoration must not become the topic.
 
 Avoid: ${ageAvoid[item.ageGroup]} ${spec.avoid}`;
 }
