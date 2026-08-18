@@ -9,6 +9,10 @@
   "prompts": [
     {
       "id": "children-family",
+      "preview": {
+        "kind": "real-output",
+        "src": "./assets/real-previews/family-children.png"
+      },
       "themeId": "family",
       "order": 26,
       "ageGroup": "children",
@@ -47,6 +51,10 @@
     },
     {
       "id": "children-travel",
+      "preview": {
+        "kind": "real-output",
+        "src": "./assets/real-previews/travel-children.png"
+      },
       "themeId": "travel",
       "order": 27,
       "ageGroup": "children",
@@ -87,6 +95,10 @@
     },
     {
       "id": "children-festival",
+      "preview": {
+        "kind": "real-output",
+        "src": "./assets/real-previews/festival-children.png"
+      },
       "themeId": "festival",
       "order": 28,
       "ageGroup": "children",
@@ -125,6 +137,10 @@
     },
     {
       "id": "children-nostalgia",
+      "preview": {
+        "kind": "real-output",
+        "src": "./assets/real-previews/nostalgia-children.png"
+      },
       "themeId": "nostalgia",
       "order": 29,
       "ageGroup": "children",
@@ -163,6 +179,10 @@
     },
     {
       "id": "children-light",
+      "preview": {
+        "kind": "real-output",
+        "src": "./assets/real-previews/light-children.png"
+      },
       "themeId": "light",
       "order": 30,
       "ageGroup": "children",

@@ -9,6 +9,10 @@
   "prompts": [
     {
       "id": "children-stage-musical",
+      "preview": {
+        "kind": "real-output",
+        "src": "./assets/real-previews/stage-musical-children.png"
+      },
       "themeId": "stage-musical",
       "order": 39,
       "ageGroup": "children",
@@ -51,6 +55,10 @@
     },
     {
       "id": "children-ballroom-waltz",
+      "preview": {
+        "kind": "real-output",
+        "src": "./assets/real-previews/ballroom-waltz-children.png"
+      },
       "themeId": "ballroom-waltz",
       "order": 40,
       "ageGroup": "children",
