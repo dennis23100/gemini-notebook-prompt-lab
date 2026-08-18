@@ -43,7 +43,13 @@
       "licenseNote": "Project-authored adaptation; upstream inspiration links preserved.",
       "vibe": "editorial",
       "energy": "balanced",
-      "collections": []
+      "collections": [
+        "real-output"
+      ],
+      "preview": {
+        "kind": "real-output",
+        "src": "./assets/real-previews/architecture-children.png"
+      }
     },
     {
       "id": "children-classical",
@@ -81,7 +87,13 @@
       "licenseNote": "Project-authored adaptation; upstream inspiration links preserved.",
       "vibe": "elegant",
       "energy": "balanced",
-      "collections": []
+      "collections": [
+        "real-output"
+      ],
+      "preview": {
+        "kind": "real-output",
+        "src": "./assets/real-previews/classical-children.png"
+      }
     },
     {
       "id": "children-ink",
@@ -119,7 +131,13 @@
       "licenseNote": "Project-authored adaptation; upstream inspiration links preserved.",
       "vibe": "calm",
       "energy": "balanced",
-      "collections": []
+      "collections": [
+        "real-output"
+      ],
+      "preview": {
+        "kind": "real-output",
+        "src": "./assets/real-previews/ink-children.png"
+      }
     },
     {
       "id": "children-spiritual",
@@ -157,7 +175,13 @@
       "licenseNote": "Project-authored adaptation; upstream inspiration links preserved.",
       "vibe": "dreamy",
       "energy": "balanced",
-      "collections": []
+      "collections": [
+        "real-output"
+      ],
+      "preview": {
+        "kind": "real-output",
+        "src": "./assets/real-previews/spiritual-children.png"
+      }
     },
     {
       "id": "children-finance",
@@ -195,7 +219,13 @@
       "licenseNote": "Project-authored adaptation; upstream inspiration links preserved.",
       "vibe": "editorial",
       "energy": "balanced",
-      "collections": []
+      "collections": [
+        "real-output"
+      ],
+      "preview": {
+        "kind": "real-output",
+        "src": "./assets/real-previews/finance-children.png"
+      }
     },
     {
       "id": "youth-architecture",
@@ -233,7 +263,13 @@
       "licenseNote": "Project-authored adaptation; upstream inspiration links preserved.",
       "vibe": "editorial",
       "energy": "balanced",
-      "collections": []
+      "collections": [
+        "real-output"
+      ],
+      "preview": {
+        "kind": "real-output",
+        "src": "./assets/real-previews/architecture-youth.png"
+      }
     },
     {
       "id": "youth-classical",
